@@ -1,4 +1,4 @@
-# HotBeanJuice
+# Hot Bean Juice
 
 A coffee mod for Minecraft
 

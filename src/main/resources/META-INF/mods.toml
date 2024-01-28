@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="${fml_version_range}"
+license="MIT"
+issueTrackerURL="https://github.com/sweetrpg/CraftTracker/issues"
+displayURL="https://minecraft.curseforge.com/projects/craft-tracker/"
+logoFile= "ct_logo.png"
+
+[[mods]]
+    modId="crafttracker"
+    version="${version}"
+    updateJSONURL="https://minecraft.sweetrpg.com/mods/crafttracker/version.json"
+    displayName="Craft Tracker"
+    credits="paulyhedral"
+    authors="paulyhedral"
+    description='''
+    Keep track of all the things you need to craft.
+    '''
+[[dependencies.crafttracker]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.crafttracker]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.crafttracker]]
+    modId="configured"
+    mandatory=false
+    versionRange="[1.5.4,)"
+    ordering="NONE"
+    side="BOTH"
+
+[modproperties.configured]
+    catalogueImageIcon="configured_icon.png"
+    configuredBackground="minecraft:textures/block/gray_wool.png"
