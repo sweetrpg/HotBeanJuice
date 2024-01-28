@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.crafttracker.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;

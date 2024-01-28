@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common.config;
+package com.sweetrpg.hotbeanjuice.common.config;
 
-import com.sweetrpg.crafttracker.CraftTracker;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;

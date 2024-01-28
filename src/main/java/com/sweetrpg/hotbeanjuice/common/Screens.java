@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common;
+package com.sweetrpg.hotbeanjuice.common;
 
-import com.sweetrpg.crafttracker.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;
@@ -31,7 +31,7 @@ public class Screens {
 //
 //        @Override
 //        public Component getDisplayName() {
-//            return new TranslatableComponent("container.crafttracker.pack_cat");
+//            return new TranslatableComponent("container.hotbeanjuice.pack_cat");
 //        }
 //    }
 //

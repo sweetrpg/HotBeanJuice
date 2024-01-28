@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.test.crafttracker.common.util;
+package com.sweetrpg.hotbeanjuice.test.hotbeanjuice.common.util;
 
-import static com.sweetrpg.crafttracker.common.util.Util.getRegistryId;
+import static com.sweetrpg.hotbeanjuice.common.util.Util.getRegistryId;
 import static org.junit.jupiter.api.Assertions.*;
 
 import net.minecraft.resources.ResourceLocation;

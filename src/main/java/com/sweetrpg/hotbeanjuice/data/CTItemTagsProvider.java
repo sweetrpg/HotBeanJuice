@@ -1,9 +1,9 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.crafttracker.common.registry.ModBlocks;
-import com.sweetrpg.crafttracker.common.registry.ModItems;
-import com.sweetrpg.crafttracker.common.registry.ModTags;
-import com.sweetrpg.crafttracker.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;

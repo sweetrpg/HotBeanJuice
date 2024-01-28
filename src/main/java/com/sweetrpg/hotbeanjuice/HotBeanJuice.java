@@ -1,15 +1,15 @@
 package com.sweetrpg.crafttracker;
 
-import com.sweetrpg.crafttracker.client.ClientSetup;
-import com.sweetrpg.crafttracker.client.event.ClientEventHandler;
-import com.sweetrpg.crafttracker.common.CommonSetup;
-import com.sweetrpg.crafttracker.common.addon.AddonManager;
-import com.sweetrpg.crafttracker.common.config.ConfigHandler;
-import com.sweetrpg.crafttracker.common.event.EventHandler;
-import com.sweetrpg.crafttracker.common.lib.Constants;
-import com.sweetrpg.crafttracker.common.registry.*;
-import com.sweetrpg.crafttracker.data.CTAdvancementProvider;
-import com.sweetrpg.crafttracker.data.CTLangProvider;
+import com.sweetrpg.hotbeanjuice.client.ClientSetup;
+import com.sweetrpg.hotbeanjuice.client.event.ClientEventHandler;
+import com.sweetrpg.hotbeanjuice.common.CommonSetup;
+import com.sweetrpg.hotbeanjuice.common.addon.AddonManager;
+import com.sweetrpg.hotbeanjuice.common.config.ConfigHandler;
+import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.*;
+import com.sweetrpg.hotbeanjuice.data.CTAdvancementProvider;
+import com.sweetrpg.hotbeanjuice.data.CTLangProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -36,10 +36,10 @@ public class CraftTracker {
 
     public static final Logger LOGGER = LogManager.getLogger(Constants.MOD_ID);
 
-    public static final SimpleChannel HANDLER = NetworkRegistry.ChannelBuilder.named(com.sweetrpg.crafttracker.common.lib.Constants.CHANNEL_NAME)
+    public static final SimpleChannel HANDLER = NetworkRegistry.ChannelBuilder.named(com.sweetrpg.hotbeanjuice.common.lib.Constants.CHANNEL_NAME)
             .clientAcceptedVersions(Constants.PROTOCOL_VERSION::equals)
             .serverAcceptedVersions(Constants.PROTOCOL_VERSION::equals)
-            .networkProtocolVersion(com.sweetrpg.crafttracker.common.lib.Constants.PROTOCOL_VERSION::toString)
+            .networkProtocolVersion(com.sweetrpg.hotbeanjuice.common.lib.Constants.PROTOCOL_VERSION::toString)
             .simpleChannel();
 
     public CraftTracker() {

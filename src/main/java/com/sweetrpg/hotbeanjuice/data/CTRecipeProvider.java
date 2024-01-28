@@ -1,11 +1,11 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.gson.JsonObject;
-import com.sweetrpg.crafttracker.CraftTracker;
-import com.sweetrpg.crafttracker.common.registry.ModBlocks;
-import com.sweetrpg.crafttracker.common.registry.ModItems;
-import com.sweetrpg.crafttracker.common.registry.ModRecipeSerializers;
-import com.sweetrpg.crafttracker.common.util.Util;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
+import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;

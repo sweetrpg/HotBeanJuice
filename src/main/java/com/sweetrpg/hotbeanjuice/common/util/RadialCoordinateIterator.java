@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.common.util;
+package com.sweetrpg.hotbeanjuice.common.util;
 
 //TODO
 public class RadialCoordinateIterator {

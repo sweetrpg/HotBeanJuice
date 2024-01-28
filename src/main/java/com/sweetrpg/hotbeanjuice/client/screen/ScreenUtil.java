@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.client.screen;
+package com.sweetrpg.hotbeanjuice.client.screen;
 
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;

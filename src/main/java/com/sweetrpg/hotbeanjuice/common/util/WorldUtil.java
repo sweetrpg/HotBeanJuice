@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.common.util;
+package com.sweetrpg.hotbeanjuice.common.util;
 
 import com.google.common.collect.AbstractIterator;
 import net.minecraft.core.BlockPos;

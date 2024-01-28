@@ -1,8 +1,8 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
-import com.sweetrpg.crafttracker.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.EntityLoot;

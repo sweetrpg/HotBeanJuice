@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
 import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;

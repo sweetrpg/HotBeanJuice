@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common.registry;
+package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.crafttracker.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.network.syncher.EntityDataSerializer;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraftforge.registries.RegistryObject;

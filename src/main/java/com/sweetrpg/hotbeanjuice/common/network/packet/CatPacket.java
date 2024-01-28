@@ -1,8 +1,8 @@
-//package com.sweetrpg.crafttracker.common.network.packet;
+//package com.sweetrpg.hotbeanjuice.common.network.packet;
 //
-//import com.sweetrpg.crafttracker.common.network.IPacket;
-//import com.sweetrpg.crafttracker.common.network.packet.data.CatData;
-//import com.sweetrpg.crafttracker.common.entity.CatEntity;
+//import com.sweetrpg.hotbeanjuice.common.network.IPacket;
+//import com.sweetrpg.hotbeanjuice.common.network.packet.data.CatData;
+//import com.sweetrpg.hotbeanjuice.common.entity.CatEntity;
 //import net.minecraft.network.FriendlyByteBuf;
 //import net.minecraft.world.entity.Entity;
 //import net.minecraftforge.network.NetworkEvent.Context;

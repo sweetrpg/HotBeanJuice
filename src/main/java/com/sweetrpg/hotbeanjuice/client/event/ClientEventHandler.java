@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.client.event;
+package com.sweetrpg.hotbeanjuice.client.event;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;

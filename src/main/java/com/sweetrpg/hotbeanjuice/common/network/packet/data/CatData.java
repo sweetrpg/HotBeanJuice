@@ -1,4 +1,4 @@
-//package com.sweetrpg.crafttracker.common.network.packet.data;
+//package com.sweetrpg.hotbeanjuice.common.network.packet.data;
 //
 //public class CatData {
 //

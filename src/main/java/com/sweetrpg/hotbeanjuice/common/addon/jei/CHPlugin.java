@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.common.addon.jei;
+package com.sweetrpg.hotbeanjuice.common.addon.jei;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;

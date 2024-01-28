@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;

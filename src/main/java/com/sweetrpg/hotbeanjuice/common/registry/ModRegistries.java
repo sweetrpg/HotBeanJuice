@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.common.registry;
+package com.sweetrpg.hotbeanjuice.common.registry;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.IForgeRegistryEntry;

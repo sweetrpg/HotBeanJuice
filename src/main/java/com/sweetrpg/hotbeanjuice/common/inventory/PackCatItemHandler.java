@@ -1,4 +1,4 @@
-//package com.sweetrpg.crafttracker.common.inventory;
+//package com.sweetrpg.hotbeanjuice.common.inventory;
 //
 //import net.minecraft.nbt.CompoundTag;
 //import net.minecraft.nbt.ListTag;

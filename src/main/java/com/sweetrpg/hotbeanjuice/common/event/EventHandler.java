@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common.event;
+package com.sweetrpg.hotbeanjuice.common.event;
 
-import com.sweetrpg.crafttracker.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;

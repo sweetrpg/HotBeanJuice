@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common.network;
+package com.sweetrpg.hotbeanjuice.common.network;
 
-import com.sweetrpg.crafttracker.CraftTracker;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
 import net.minecraftforge.network.PacketDistributor;
 
 public final class PacketHandler {

@@ -1,7 +1,7 @@
-package com.sweetrpg.crafttracker.common.registry;
+package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.crafttracker.CraftTracker;
-import com.sweetrpg.crafttracker.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;

@@ -1,10 +1,10 @@
-package com.sweetrpg.crafttracker.test;
+package com.sweetrpg.hotbeanjuice.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.sweetrpg.crafttracker.common.util.Cache;
+import com.sweetrpg.hotbeanjuice.common.util.Cache;
 
 public class CacheTest {
 

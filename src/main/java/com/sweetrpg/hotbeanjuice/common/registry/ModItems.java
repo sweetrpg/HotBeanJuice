@@ -1,7 +1,7 @@
-package com.sweetrpg.crafttracker.common.registry;
+package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.crafttracker.common.lib.Constants;
-import com.sweetrpg.crafttracker.common.util.Util;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.world.item.*;
 import net.minecraftforge.client.event.ColorHandlerEvent;

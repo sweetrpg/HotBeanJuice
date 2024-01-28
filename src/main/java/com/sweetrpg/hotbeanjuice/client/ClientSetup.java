@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker.client;
+package com.sweetrpg.hotbeanjuice.client;
 
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;

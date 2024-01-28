@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common.util;
+package com.sweetrpg.hotbeanjuice.common.util;
 
-import com.sweetrpg.crafttracker.CraftTracker;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;

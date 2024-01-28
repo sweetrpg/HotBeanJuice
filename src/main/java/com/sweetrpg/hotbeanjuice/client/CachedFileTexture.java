@@ -1,9 +1,9 @@
-package com.sweetrpg.crafttracker.client;
+package com.sweetrpg.hotbeanjuice.client;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.sweetrpg.crafttracker.CraftTracker;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.SimpleTexture;
 import net.minecraft.resources.ResourceLocation;

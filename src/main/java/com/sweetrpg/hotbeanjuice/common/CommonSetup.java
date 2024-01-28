@@ -1,6 +1,6 @@
-package com.sweetrpg.crafttracker.common;
+package com.sweetrpg.hotbeanjuice.common;
 
-import com.sweetrpg.crafttracker.common.network.PacketHandler;
+import com.sweetrpg.hotbeanjuice.common.network.PacketHandler;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class CommonSetup {

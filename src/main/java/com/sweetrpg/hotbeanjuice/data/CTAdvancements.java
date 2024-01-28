@@ -1,8 +1,8 @@
-package com.sweetrpg.crafttracker.data;
+package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.Maps;
-import com.sweetrpg.crafttracker.common.registry.ModItems;
-import com.sweetrpg.crafttracker.common.util.Util;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.network.chat.Component;

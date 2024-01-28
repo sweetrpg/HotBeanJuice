@@ -1,7 +1,7 @@
-package com.sweetrpg.crafttracker.common.addon;
+package com.sweetrpg.hotbeanjuice.common.addon;
 
 import com.google.common.collect.Lists;
-import com.sweetrpg.crafttracker.CraftTracker;
+import com.sweetrpg.hotbeanjuice.CraftTracker;
 
 import java.util.Collections;
 import java.util.List;
