@@ -14,7 +14,7 @@ public class CTLangProvider extends LanguageProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Language Provider";
+        return "HotBeanJuice Language Provider";
     }
 
     @Override

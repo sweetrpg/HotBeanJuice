@@ -43,7 +43,7 @@ public class ClientEventHandler {
 //            modelRegistry.put(new ModelResourceLocation(resourceLocation, "inventory"), customModel);
 //        }
 //        catch(Exception e) {
-//            CraftTracker.LOGGER.warn("Could not get base Cat Tree model. Reverting to default textures...");
+//            HotBeanJuice.LOGGER.warn("Could not get base Cat Tree model. Reverting to default textures...");
 //            e.printStackTrace();
 //        }
 

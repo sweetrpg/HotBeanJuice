@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.addon;
 
 import com.google.common.collect.Lists;
-import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +22,7 @@ public class AddonManager {
     public static void exec() {
         // execs the addons that didn't error
         doWork(RUN, Addon::shouldLoad, Addon::exec, (addon, e) -> {
-            CraftTracker.LOGGER.warn("Failed to init {}", addon.getName());
+            HotBeanJuice.LOGGER.warn("Failed to init {}", addon.getName());
             e.printStackTrace();
         });
     }

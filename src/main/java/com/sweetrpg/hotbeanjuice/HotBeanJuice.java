@@ -1,4 +1,4 @@
-package com.sweetrpg.crafttracker;
+package com.sweetrpg.hotbeanjuice;
 
 import com.sweetrpg.hotbeanjuice.client.ClientSetup;
 import com.sweetrpg.hotbeanjuice.client.event.ClientEventHandler;
@@ -32,7 +32,7 @@ import org.apache.logging.log4j.Logger;
  * @author Paulyhedral, ProPercivalalb
  */
 @Mod(Constants.MOD_ID)
-public class CraftTracker {
+public class HotBeanJuice {
 
     public static final Logger LOGGER = LogManager.getLogger(Constants.MOD_ID);
 
@@ -42,7 +42,7 @@ public class CraftTracker {
             .networkProtocolVersion(com.sweetrpg.hotbeanjuice.common.lib.Constants.PROTOCOL_VERSION::toString)
             .simpleChannel();
 
-    public CraftTracker() {
+    public HotBeanJuice() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Mod lifecycle

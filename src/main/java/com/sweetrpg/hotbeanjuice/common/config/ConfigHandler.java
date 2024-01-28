@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.config;
 
-import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -25,7 +25,7 @@ public class ConfigHandler {
         Pair<ClientConfig, ForgeConfigSpec> clientPair = new ForgeConfigSpec.Builder().configure(ClientConfig::new);
         CONFIG_CLIENT_SPEC = clientPair.getRight();
         CLIENT = clientPair.getLeft();
-        CraftTracker.LOGGER.debug("Register configs");
+        HotBeanJuice.LOGGER.debug("Register configs");
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, CONFIG_SERVER_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, CONFIG_CLIENT_SPEC);

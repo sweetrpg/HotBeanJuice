@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.network;
 
-import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import net.minecraftforge.network.PacketDistributor;
 
 public final class PacketHandler {
@@ -22,10 +22,10 @@ public final class PacketHandler {
     }
 
     public static <MSG> void send(PacketDistributor.PacketTarget target, MSG message) {
-        CraftTracker.HANDLER.send(target, message);
+        HotBeanJuice.HANDLER.send(target, message);
     }
 
     public static <D> void registerPacket(IPacket<D> packet, Class<D> dataClass) {
-        CraftTracker.HANDLER.registerMessage(PacketHandler.disc++, dataClass, packet::encode, packet::decode, packet::handle);
+        HotBeanJuice.HANDLER.registerMessage(PacketHandler.disc++, dataClass, packet::encode, packet::decode, packet::handle);
     }
 }

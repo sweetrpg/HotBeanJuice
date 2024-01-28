@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.gson.JsonObject;
-import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
@@ -24,12 +24,12 @@ public class CTRecipeProvider extends RecipeProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Recipes";
+        return "HotBeanJuice Recipes";
     }
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        CraftTracker.LOGGER.debug("Build crafting recipes: {}", consumer);
+        HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
         // treats
 //        ShapelessRecipeBuilder.shapeless(ModItems.SUPER_TREAT.get(), 5)

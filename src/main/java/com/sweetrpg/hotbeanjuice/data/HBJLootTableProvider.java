@@ -30,7 +30,7 @@ public class CTLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Loot Tables";
+        return "HotBeanJuice Loot Tables";
     }
 
     @Override

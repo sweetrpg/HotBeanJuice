@@ -21,7 +21,7 @@ public class CTItemModelProvider extends ItemModelProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Item Models";
+        return "HotBeanJuice Item Models";
     }
 
     @Override

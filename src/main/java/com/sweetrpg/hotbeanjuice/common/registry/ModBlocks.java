@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.hotbeanjuice.CraftTracker;
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -65,9 +65,9 @@ public class ModBlocks {
 
     public static void logError() {
         // Only try to register if blocks were successfully registered
-        // Trying to avoid as reports like CraftTracker#242, where it says
-        // CraftTracker crashed but is not the CAUSE of the crash
+        // Trying to avoid as reports like HotBeanJuice#242, where it says
+        // HotBeanJuice crashed but is not the CAUSE of the crash
 
-        CraftTracker.LOGGER.info("Items/Blocks were not registered for some reason... probably because we are c...r..a..s.hing");
+        HotBeanJuice.LOGGER.info("Items/Blocks were not registered for some reason... probably because we are c...r..a..s.hing");
     }
 }

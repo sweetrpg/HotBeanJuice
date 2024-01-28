@@ -12,7 +12,7 @@ public class CHPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(ModIds.JEI_ID, "crafttracker");
+        return new ResourceLocation(ModIds.JEI_ID, "hotbeanjuice");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class CHPlugin implements IModPlugin {
 //            IColorMaterial colorMaterial = CatTreeUtil.getColorMaterial(stack);
 //
 //            String colorKey = colorMaterial != null ? colorMaterial.getRegistryName().toString()
-//                    : "CraftTracker:casing_missing";
+//                    : "HotBeanJuice:casing_missing";
 //
 //            return colorKey;
 //        });

@@ -13,7 +13,7 @@ public class CTBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Block Tags";
+        return "HotBeanJuice Block Tags";
     }
 
     @Override

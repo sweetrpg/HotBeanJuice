@@ -34,7 +34,7 @@ public class CTAdvancementProvider extends AdvancementProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Advancements";
+        return "HotBeanJuice Advancements";
     }
 
     @Override
@@ -60,7 +60,7 @@ public class CTAdvancementProvider extends AdvancementProvider {
         // training
 //        Advancement trainCat = Advancement.Builder.advancement()
 ////                .parent(Util.mcLoc("tame_animal"))
-//                .display(DisplayInfoBuilder.create().icon(ModItems.TRAINING_TREAT).frame(FrameType.TASK).translate("CraftTracker.main.train_cat").background("stone.png").build())
+//                .display(DisplayInfoBuilder.create().icon(ModItems.TRAINING_TREAT).frame(FrameType.TASK).translate("HotBeanJuice.main.train_cat").background("stone.png").build())
 //                .addCriterion("tame_cat", TameAnimalTrigger.TriggerInstance.tamedAnimal(EntityPredicate.Builder.entity().of(ModEntityTypes.CAT.get()).build()))
 //                //.withCriterion("get_cat", ItemUseTrigger.TameAnimalTrigger.Instance.create(EntityPredicate.Builder.create().type(CatEntityTypes.CAT.get()).build()))
 //                .requirements(RequirementsStrategy.OR)

@@ -21,7 +21,7 @@ public class Constants {
     public static final String LOCALE_DE_DE = "de_de";
 
     // Translation keys
-    public static final String TRANSLATION_KEY_GUI_CRAFTLIST_TITLE = "crafttracker.screen.list.title";
+    public static final String TRANSLATION_KEY_GUI_CRAFTLIST_TITLE = "hotbeanjuice.screen.list.title";
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_LIST_TITLE = "advancements.hotbeanjuice.main.make_list.title";
     public static final String TRANSLATION_KEY_ADVANCEMENT_TRAIN_CAT_DESCRIPTION = "advancements.hotbeanjuice.main.make_list.description";

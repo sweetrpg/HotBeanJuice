@@ -34,7 +34,7 @@ public class CTBlockstateProvider extends BlockStateProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Blockstates/Block Models";
+        return "HotBeanJuice Blockstates/Block Models";
     }
 
     @Override

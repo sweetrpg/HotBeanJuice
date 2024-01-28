@@ -25,7 +25,7 @@ public class CTItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return "CraftTracker Item Tags";
+        return "HotBeanJuice Item Tags";
     }
 
     @Override
