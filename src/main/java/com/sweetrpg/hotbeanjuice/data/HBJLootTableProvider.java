@@ -22,9 +22,9 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class CTLootTableProvider extends LootTableProvider {
+public class HBJLootTableProvider extends LootTableProvider {
 
-    public CTLootTableProvider(DataGenerator dataGeneratorIn) {
+    public HBJLootTableProvider(DataGenerator dataGeneratorIn) {
         super(dataGeneratorIn);
     }
 

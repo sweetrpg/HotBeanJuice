@@ -8,8 +8,8 @@ import com.sweetrpg.hotbeanjuice.common.config.ConfigHandler;
 import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.*;
-import com.sweetrpg.hotbeanjuice.data.CTAdvancementProvider;
-import com.sweetrpg.hotbeanjuice.data.CTLangProvider;
+import com.sweetrpg.hotbeanjuice.data.HBJAdvancementProvider;
+import com.sweetrpg.hotbeanjuice.data.HBJLangProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -29,7 +29,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @author Paulyhedral, ProPercivalalb
+ * @author Paulyhedral, Shazean, PrimalZerg
  */
 @Mod(Constants.MOD_ID)
 public class HotBeanJuice {
@@ -124,14 +124,14 @@ public class HotBeanJuice {
 //            BlockstateProvider blockstates = new BlockstateProvider(gen, event.getExistingFileHelper());
 //            gen.addProvider(blockstates);
 //            gen.addProvider(new ItemModelProvider(gen, blockstates.getExistingHelper()));
-            gen.addProvider(new CTLangProvider(gen, Constants.LOCALE_EN_US));
-            gen.addProvider(new CTLangProvider(gen, Constants.LOCALE_EN_GB));
-            gen.addProvider(new CTLangProvider(gen, Constants.LOCALE_DE_DE));
+            gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_EN_US));
+            gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_EN_GB));
+            gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_DE_DE));
         }
 
         if(event.includeServer()) {
             // gen.addProvider(new DTBlockTagsProvider(gen));
-            gen.addProvider(new CTAdvancementProvider(gen));
+            gen.addProvider(new HBJAdvancementProvider(gen));
 //            BlockTagsProvider blockTagProvider = new CHBlockTagsProvider(gen, event.getExistingFileHelper());
 //            gen.addProvider(blockTagProvider);
 //            gen.addProvider(new ItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));

@@ -4,10 +4,10 @@ import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
-public class CTLangProvider extends LanguageProvider {
+public class HBJLangProvider extends LanguageProvider {
     private final String locale;
 
-    public CTLangProvider(DataGenerator gen, String locale) {
+    public HBJLangProvider(DataGenerator gen, String locale) {
         super(gen, Constants.MOD_ID, locale);
         this.locale = locale;
     }

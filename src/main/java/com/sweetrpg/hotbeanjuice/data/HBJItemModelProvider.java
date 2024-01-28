@@ -13,9 +13,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
 
-public class CTItemModelProvider extends ItemModelProvider {
+public class HBJItemModelProvider extends ItemModelProvider {
 
-    public CTItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+    public HBJItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, Constants.MOD_ID, existingFileHelper);
     }
 

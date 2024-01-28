@@ -5,9 +5,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class CTBlockTagsProvider extends BlockTagsProvider {
+public class HBJBlockTagsProvider extends BlockTagsProvider {
 
-    public CTBlockTagsProvider(DataGenerator generatorIn, ExistingFileHelper existingFileHelper) {
+    public HBJBlockTagsProvider(DataGenerator generatorIn, ExistingFileHelper existingFileHelper) {
         super(generatorIn, Constants.MOD_ID, existingFileHelper);
     }
 

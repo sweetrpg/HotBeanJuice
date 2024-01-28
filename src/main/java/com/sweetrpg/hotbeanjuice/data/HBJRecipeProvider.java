@@ -16,9 +16,9 @@ import net.minecraft.world.level.block.Blocks;
 import java.nio.file.Path;
 import java.util.function.Consumer;
 
-public class CTRecipeProvider extends RecipeProvider {
+public class HBJRecipeProvider extends RecipeProvider {
 
-    public CTRecipeProvider(DataGenerator generatorIn) {
+    public HBJRecipeProvider(DataGenerator generatorIn) {
         super(generatorIn);
     }
 

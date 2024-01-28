@@ -17,13 +17,13 @@ import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Consumer;
 
-public class CTAdvancementProvider extends AdvancementProvider {
+public class HBJAdvancementProvider extends AdvancementProvider {
 
     private static final Logger LOGGER = LogManager.getLogger();
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
     private final DataGenerator generator;
 
-    public CTAdvancementProvider(DataGenerator generatorIn) {
+    public HBJAdvancementProvider(DataGenerator generatorIn) {
         super(generatorIn);
         this.generator = generatorIn;
     }

@@ -17,9 +17,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import java.util.Arrays;
 import java.util.function.Supplier;
 
-public class CTItemTagsProvider extends ItemTagsProvider {
+public class HBJItemTagsProvider extends ItemTagsProvider {
 
-    public CTItemTagsProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, ExistingFileHelper existingFileHelper) {
+    public HBJItemTagsProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, ExistingFileHelper existingFileHelper) {
         super(generatorIn, blockTagProvider, Constants.MOD_ID, existingFileHelper);
     }
 

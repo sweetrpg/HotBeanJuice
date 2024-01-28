@@ -19,12 +19,12 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
-public class CTBlockstateProvider extends BlockStateProvider {
+public class HBJBlockstateProvider extends BlockStateProvider {
 
     // Applies texture to all faces and for the input face culls that direction
     private static final BiFunction<String, Direction, BiConsumer<Direction, ModelBuilder<BlockModelBuilder>.ElementBuilder.FaceBuilder>> cullFaceFactory = (texture, input) -> (d, b) -> b.texture(texture).cullface(d == input ? d : null);
 
-    public CTBlockstateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
+    public HBJBlockstateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, Constants.MOD_ID, exFileHelper);
     }
 
