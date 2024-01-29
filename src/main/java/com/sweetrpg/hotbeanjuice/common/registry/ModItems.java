@@ -31,6 +31,10 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    // Kitchenware
+
+    // ----------------------------------------------------------------------------------------------------------------
+
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);
     }
