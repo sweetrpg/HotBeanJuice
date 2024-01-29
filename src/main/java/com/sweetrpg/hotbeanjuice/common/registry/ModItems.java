@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.CoffeeBeanItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.client.color.item.ItemColors;
@@ -16,6 +17,19 @@ import java.util.function.Supplier;
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.Keys.ITEMS, Constants.MOD_ID);
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee
+    public static final RegistryObject<Item> COFFEE_BUSH = register("coffee_bush", () -> new BlockItem(ModBlocks.COFFEE_BUSH.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_BEAN = register("coffee_bean", () -> new CoffeeBeanItem(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BEAN_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Tea
+
+    // ----------------------------------------------------------------------------------------------------------------
 
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);

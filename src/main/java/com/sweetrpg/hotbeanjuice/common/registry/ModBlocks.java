@@ -1,6 +1,8 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBeanBlock;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -21,6 +23,16 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.Keys.BLOCKS, Constants.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ModItems.ITEMS;
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Crops
+    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH = BLOCKS.register("coffee_bush",
+            () -> new CoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<CoffeeBeanBlock> COFFEE_BEAN_CROP = BLOCKS.register("coffee_bean",
+            () -> new CoffeeBeanBlock(Block.Properties.copy(Blocks.WHEAT)));
+
+    // ----------------------------------------------------------------------------------------------------------------
 
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);
