@@ -38,6 +38,8 @@ public class CoffeeCupBlock extends Block {
             return InteractionResult.SUCCESS;
         }
 
+        // TODO: drink the coffee
+
         return InteractionResult.SUCCESS;
     }
 
