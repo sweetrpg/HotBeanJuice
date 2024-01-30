@@ -8,11 +8,11 @@ import com.sweetrpg.hotbeanjuice.common.config.ConfigHandler;
 import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.*;
-import com.sweetrpg.hotbeanjuice.data.HBJAdvancementProvider;
-import com.sweetrpg.hotbeanjuice.data.HBJLangProvider;
+import com.sweetrpg.hotbeanjuice.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -121,22 +121,21 @@ public class HotBeanJuice {
         DataGenerator gen = event.getGenerator();
 
         if(event.includeClient()) {
-//            BlockstateProvider blockstates = new BlockstateProvider(gen, event.getExistingFileHelper());
-//            gen.addProvider(blockstates);
-//            gen.addProvider(new ItemModelProvider(gen, blockstates.getExistingHelper()));
+            HBJBlockstateProvider blockstates = new HBJBlockstateProvider(gen, event.getExistingFileHelper());
+            gen.addProvider(blockstates);
+            gen.addProvider(new HBJItemModelProvider(gen, blockstates.getExistingHelper()));
             gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_EN_US));
             gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_EN_GB));
             gen.addProvider(new HBJLangProvider(gen, Constants.LOCALE_DE_DE));
         }
 
         if(event.includeServer()) {
-            // gen.addProvider(new DTBlockTagsProvider(gen));
             gen.addProvider(new HBJAdvancementProvider(gen));
-//            BlockTagsProvider blockTagProvider = new CHBlockTagsProvider(gen, event.getExistingFileHelper());
-//            gen.addProvider(blockTagProvider);
-//            gen.addProvider(new ItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));
-//            gen.addProvider(new RecipeProvider(gen));
-//            gen.addProvider(new LootTableProvider(gen));
+            HBJBlockTagsProvider blockTagProvider = new HBJBlockTagsProvider(gen, event.getExistingFileHelper());
+            gen.addProvider(blockTagProvider);
+            gen.addProvider(new HBJItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));
+            gen.addProvider(new HBJRecipeProvider(gen));
+            gen.addProvider(new HBJLootTableProvider(gen));
         }
     }
 }

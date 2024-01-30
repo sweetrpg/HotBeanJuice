@@ -13,7 +13,7 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Block Tags";
+        return "Hot Bean Juice Block Tags";
     }
 
     @Override

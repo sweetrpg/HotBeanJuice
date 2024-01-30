@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common;
 
 import com.sweetrpg.hotbeanjuice.common.network.PacketHandler;
+import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class CommonSetup {
@@ -10,6 +11,8 @@ public class CommonSetup {
             //TODO CriteriaTriggers.register(criterion)
 
 //            CatRespawnCommand.registerSerilizers();
+
+            WildCropGeneration.registerWildCatnipGeneration();
 
         });
     }
