@@ -1,14 +1,14 @@
 {
   "block.hotbeanjuice.coffee_bush": "Kaffeebusch",
+  "block.hotbeanjuice.coffee_cup": "Kaffeetasse",
   "block.hotbeanjuice.wild_coffee_bush": "Kaffeebusch",
   "config.chance_coffee_bush.description": "Es besteht die M\u00F6glichkeit, dass Kaffeestr\u00E4ucher in freier Wildbahn auftauchen",
   "config.coffee_bush_spread.description": "Horizontale Ausbreitung von Kaffeeb\u00FCschen",
+  "item.hotbeanjuice.clay_mug": "Tonbecher",
   "item.hotbeanjuice.coffee_bean": "Kaffeebohne",
   "item.hotbeanjuice.coffee_bush": "Kaffeebusch",
   "item.hotbeanjuice.coffee_cherry": "Kaffeekirsche",
   "item.hotbeanjuice.coffee_grounds": "Kaffeesatz",
   "item.hotbeanjuice.coffee_seeds": "Kaffeesamen",
-  "itemGroup.hotbeanjuice": "Hei\u00DFer Bohnensaft",
-  "block.hotbeanjuice.coffee_cup": "Kaffeetasse",
-  "item.hotbeanjuice.clay_mug": "Tonbecher"
+  "itemGroup.hotbeanjuice": "Hei\u00DFer Bohnensaft"
 }
