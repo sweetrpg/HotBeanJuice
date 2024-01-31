@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBeanBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
+import com.sweetrpg.hotbeanjuice.common.block.DripCoffeeBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -10,6 +11,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,6 +34,13 @@ public class ModBlocks {
             () -> new CoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<CoffeeBeanBlock> COFFEE_BEAN_CROP = BLOCKS.register("coffee_bean",
             () -> new CoffeeBeanBlock(Block.Properties.copy(Blocks.WHEAT)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee Makers
+
+    public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
+            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
 
     // ----------------------------------------------------------------------------------------------------------------
 

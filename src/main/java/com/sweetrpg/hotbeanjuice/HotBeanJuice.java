@@ -9,6 +9,7 @@ import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.*;
 import com.sweetrpg.hotbeanjuice.data.HBJAdvancementProvider;
+import com.sweetrpg.hotbeanjuice.data.HBJItemModelProvider;
 import com.sweetrpg.hotbeanjuice.data.HBJLangProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
@@ -58,6 +59,7 @@ public class HotBeanJuice {
         ModContainerTypes.CONTAINERS.register(modEventBus);
         ModSerializers.SERIALIZERS.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(ModRegistries::newRegistry);
 //        modEventBus.addListener(ModEntityTypes::addEntityAttributes);
@@ -137,6 +139,8 @@ public class HotBeanJuice {
 //            gen.addProvider(new ItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));
 //            gen.addProvider(new RecipeProvider(gen));
 //            gen.addProvider(new LootTableProvider(gen));
+            gen.addProvider(new HBJItemModelProvider(gen, event.getExistingFileHelper()));
+
         }
     }
 }

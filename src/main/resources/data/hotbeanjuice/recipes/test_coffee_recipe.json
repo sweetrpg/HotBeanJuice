@@ -1,0 +1,11 @@
+{
+  "type": "hotbeanjuice:coffee_drip",
+  "group": "hotbeanjuice",
+  "ingredient": {
+    "item": "minecraft:cocoa_bean"
+  },
+  "result": "minecraft:water",
+  "experience": 0.1,
+  "cookingtime": 100,
+  "buckets": 0.11
+}
