@@ -2,8 +2,8 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
-import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeCupBlock;
+import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;

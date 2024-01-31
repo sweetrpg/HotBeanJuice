@@ -12,7 +12,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.BiConsumer;
