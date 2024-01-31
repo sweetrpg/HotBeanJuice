@@ -35,7 +35,7 @@ public class HBJRecipeProvider extends RecipeProvider {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
         // coffee beans
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 60)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
                 .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
                 .save(consumer);
 //        ShapelessRecipeBuilder.shapeless(ModItems.SUPER_TREAT.get(), 5)
