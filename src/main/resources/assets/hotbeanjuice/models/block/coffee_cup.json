@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "coffee_cup",
+	"parent": "minecraft:block/cube",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/coffee_cup",
-		"particle": "block/coffee_cup"
+		"0": "hotbeanjuice:block/coffee_cup",
+		"particle": "hotbeanjuice:block/coffee_cup"
 	},
 	"elements": [
 		{
