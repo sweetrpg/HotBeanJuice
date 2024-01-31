@@ -29,16 +29,19 @@ public class HBJLangProvider extends LanguageProvider {
     private void processENUS() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
+        add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Clay Mug");
     }
 
     private void processENGB() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
+        add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Clay Mug");
     }
 
     private void processDEDE() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Kaffeetasse");
+        add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Tonbecher");
     }
 
 }
