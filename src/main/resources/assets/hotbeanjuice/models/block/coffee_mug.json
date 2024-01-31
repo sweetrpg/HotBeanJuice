@@ -3,8 +3,8 @@
 	"parent": "coffee_mug",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/black_glazed_mug",
-		"particle": "block/black_glazed_mug"
+		"0": "block/ceramic_mug",
+		"particle": "block/ceramic_mug"
 	},
 	"elements": [
 		{
