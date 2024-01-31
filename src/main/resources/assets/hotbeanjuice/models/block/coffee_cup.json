@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "coffee_mug",
+	"parent": "coffee_cup",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/ceramic_mug",
-		"particle": "block/ceramic_mug"
+		"0": "block/coffee_cup",
+		"particle": "block/coffee_cup"
 	},
 	"elements": [
 		{

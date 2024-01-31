@@ -21,7 +21,7 @@ public class HBJItemModelProvider extends ItemModelProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Item Models";
+        return "Hot Bean Juice Item Models";
     }
 
     @Override

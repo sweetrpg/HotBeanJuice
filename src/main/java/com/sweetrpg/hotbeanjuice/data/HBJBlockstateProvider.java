@@ -34,11 +34,12 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Blockstates/Block Models";
+        return "Hot Bean Juice Blockstates/Block Models";
     }
 
     @Override
     protected void registerStatesAndModels() {
+
     }
 
     private String blockName(Block block) {

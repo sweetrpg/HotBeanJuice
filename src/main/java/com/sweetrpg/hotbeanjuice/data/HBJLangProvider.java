@@ -14,7 +14,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Language Provider";
+        return "Hot Bean Juice Language Provider";
     }
 
     @Override
@@ -28,15 +28,17 @@ public class HBJLangProvider extends LanguageProvider {
 
     private void processENUS() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
+        add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
     }
 
     private void processENGB() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
-
+        add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
     }
 
     private void processDEDE() {
         add(Constants.TRANSLATION_KEY_GUI_CRAFTLIST_TITLE, "Craft List");
+        add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Kaffeetasse");
     }
 
 }

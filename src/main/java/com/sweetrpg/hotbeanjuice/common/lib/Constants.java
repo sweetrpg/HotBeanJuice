@@ -22,6 +22,8 @@ public class Constants {
 
     // Translation keys
     public static final String TRANSLATION_KEY_GUI_CRAFTLIST_TITLE = "hotbeanjuice.screen.list.title";
+    public static final String TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE = "block.hotbeanjuice.coffee_cup";
+
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_LIST_TITLE = "advancements.hotbeanjuice.main.make_list.title";
     public static final String TRANSLATION_KEY_ADVANCEMENT_TRAIN_CAT_DESCRIPTION = "advancements.hotbeanjuice.main.make_list.description";
