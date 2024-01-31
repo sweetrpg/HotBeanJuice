@@ -4,14 +4,22 @@ import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
+import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.nio.file.Path;
 import java.util.function.Consumer;
@@ -31,7 +39,10 @@ public class HBJRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
-        // treats
+        // coffee beans
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
+                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+                .save(consumer);
 //        ShapelessRecipeBuilder.shapeless(ModItems.SUPER_TREAT.get(), 5)
 //                .requires(ModItems.TRAINING_TREAT.get(), 5)
 //                .requires(Items.GOLDEN_APPLE, 1)

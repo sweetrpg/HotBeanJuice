@@ -1,54 +1,65 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CoffeeBushBlock extends FlowerBlock {
+public class CoffeeBushBlock extends CropBlock {
 
-    protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-    private final boolean renderOffset;
+    public static final IntegerProperty COFFEE_BUSH_AGE = BlockStateProperties.AGE_3;
 
-    public CoffeeBushBlock(MobEffect suspiciousStewEffect, int effectDuration, Properties properties) {
-        super(suspiciousStewEffect, effectDuration, properties);
-        this.renderOffset = true;
-    }
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
-    }
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[] {
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D),
+//            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+//            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 9.0D, 16.0D),
+//			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 9.0D, 16.0D),
+//			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D)
+    };
 
-    @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(BlockTags.DIRT) || state.is(BlockTags.SAND);
-    }
-
-    @Override
-    public OffsetType getOffsetType() {
-        return renderOffset ? OffsetType.XZ : OffsetType.NONE;
+    public CoffeeBushBlock(Properties properties) {
+        super(properties);
     }
 
     @Override
-    public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
-        return false;
+    public IntegerProperty getAgeProperty() {
+        return COFFEE_BUSH_AGE;
     }
 
     @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 60;
+    public int getMaxAge() {
+        return 3;
+    }
+
+//	@Override
+//	public BlockState getPlant(BlockGetter world, BlockPos pos) {
+//		return ModBlocks.CATNIP_CROP.get().defaultBlockState();
+//	}
+
+    @Override
+    protected ItemLike getBaseSeedId() {
+        return ModItems.COFFEE_SEEDS.get();
     }
 
     @Override
-    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 100;
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_AGE[state.getValue(this.getAgeProperty())];
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(COFFEE_BUSH_AGE);
     }
 
 }

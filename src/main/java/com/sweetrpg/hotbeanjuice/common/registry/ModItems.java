@@ -1,11 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.common.item.CoffeeBeanItem;
+import com.sweetrpg.hotbeanjuice.common.item.CoffeeCherryItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.util.Util;
-import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.world.item.*;
-import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,9 +19,11 @@ public class ModItems {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Coffee
-    public static final RegistryObject<Item> COFFEE_BUSH = register("coffee_bush", () -> new BlockItem(ModBlocks.COFFEE_BUSH.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> COFFEE_BEAN = register("coffee_bean", () -> new CoffeeBeanItem(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BEAN_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> WILD_COFFEE_BUSH = register("wild_coffee_bush", () -> new BlockItem(ModBlocks.WILD_COFFEE_BUSH.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_CHERRY = ITEMS.register("coffee_cherry", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_BEAN = ITEMS.register("coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BUSH_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
 

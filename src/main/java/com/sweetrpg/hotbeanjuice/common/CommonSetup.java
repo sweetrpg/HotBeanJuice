@@ -1,6 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common;
 
 import com.sweetrpg.hotbeanjuice.common.network.PacketHandler;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class CommonSetup {
@@ -11,6 +14,9 @@ public class CommonSetup {
 
 //            CatRespawnCommand.registerSerilizers();
 
+            WildCropGeneration.registerWildCatnipGeneration();
+
+            registerCompostables();
         });
     }
 
@@ -18,5 +24,11 @@ public class CommonSetup {
 //
 //    }
 
-
+    public static void registerCompostables() {
+        ComposterBlock.COMPOSTABLES.put(ModItems.WILD_COFFEE_BUSH.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_SEEDS.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRY.get(), 1.0F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_GROUNDS.get(), 1.5F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_BEAN.get(), 1.0F);
+    }
 }
