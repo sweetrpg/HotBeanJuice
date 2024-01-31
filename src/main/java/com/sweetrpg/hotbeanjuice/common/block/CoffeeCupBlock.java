@@ -2,6 +2,7 @@ package com.sweetrpg.hotbeanjuice.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -20,12 +21,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.Random;
+
 public class CoffeeCupBlock extends Block {
 
     public static final BooleanProperty EMPTY = BooleanProperty.create("empty");
 
-    protected static final VoxelShape NORTH_SOUTH_SHAPE = Block.box(5.0D, 0.0D, 3.0D, 5.0D, 6.0D, 7.0D);
-    protected static final VoxelShape EAST_WEST_SHAPE = Block.box(3.0D, 0.0D, 5.0D, 7.0D, 6.0D, 5.0D);
+    protected static final VoxelShape NORTH_SOUTH_SHAPE = Block.box(5.5D, 0.0D, 3.5D, 10.5D, 6.0D, 10.5D);
+    protected static final VoxelShape EAST_WEST_SHAPE = Block.box(3.5D, 0.0D, 5.5D, 10.5D, 6.0D, 10.5D);
 
     public CoffeeCupBlock() {
         super(Block.Properties.of(Material.CLAY).strength(1.0F, 5.0F).sound(SoundType.STONE));
@@ -38,8 +41,8 @@ public class CoffeeCupBlock extends Block {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         return switch(state.getValue(BlockStateProperties.HORIZONTAL_FACING)) {
-            case UP, DOWN, NORTH, SOUTH -> NORTH_SOUTH_SHAPE;
-            case WEST, EAST -> EAST_WEST_SHAPE;
+            case UP, DOWN, NORTH, SOUTH -> EAST_WEST_SHAPE;
+            case WEST, EAST -> NORTH_SOUTH_SHAPE;
         };
     }
 
@@ -86,5 +89,14 @@ public class CoffeeCupBlock extends Block {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(BlockStateProperties.HORIZONTAL_FACING, EMPTY);
+    }
+
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRand) {
+        if(!pState.getValue(EMPTY)) {
+            double d0 = (double) pPos.getX() + 0.5D;
+            double d1 = (double) pPos.getY() + 0.7D;
+            double d2 = (double) pPos.getZ() + 0.5D;
+            pLevel.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+        }
     }
 }
