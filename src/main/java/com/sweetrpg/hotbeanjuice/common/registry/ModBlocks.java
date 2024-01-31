@@ -71,7 +71,7 @@ public class ModBlocks {
         return BLOCKS.register(name, blockSupplier);
     }
 
-    public static void registerBlockColours(final ColorHandlerEvent.Block event) {
+    public static void registerBlockColors(final ColorHandlerEvent.Block event) {
         BlockColors blockColors = event.getBlockColors();
 
 //        Util.acceptOrElse(CatBlocks.CAT_BATH, (block) -> {
