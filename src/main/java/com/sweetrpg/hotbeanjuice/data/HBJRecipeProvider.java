@@ -39,7 +39,7 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .save(consumer);
 
         // Kitchenware
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CLAY_MUG.get()), ModBlocks.COFFEE_CUP.get(), 0.1f, 60)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CLAY_MUG.get()), ModBlocks.COFFEE_CUP.get(), 0.1f, 240)
                 .unlockedBy("has_clay_mug", has(ModItems.CLAY_MUG.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.CLAY_MUG.get(), 1)
