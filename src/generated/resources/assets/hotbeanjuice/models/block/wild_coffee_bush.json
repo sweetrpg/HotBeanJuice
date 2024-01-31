@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hotbeanjuice:block/wild_coffee_bush"
+  }
+}
