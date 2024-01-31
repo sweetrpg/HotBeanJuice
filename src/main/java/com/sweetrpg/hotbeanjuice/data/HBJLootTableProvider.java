@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.data;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModEntityTypes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.EntityLoot;
@@ -46,6 +47,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
         @Override
         protected void addTables() {
+            dropsSelf(ModBlocks.COFFEE_CUP);
         }
 
 
@@ -72,7 +74,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
         @Override
         protected Iterable<EntityType<?>> getKnownEntities() {
-            return List.of(); // ModEntityTypes.ENTITIES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
+            return ModEntityTypes.ENTITIES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
         }
     }
 }
