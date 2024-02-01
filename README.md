@@ -22,8 +22,9 @@ A coffee mod for Minecraft
 ## Overview
 
 * Adds wild coffee plants and coffee crops
-* A variety of cups to drink your coffee from
-* Choose the right machine with which to make your coffee
+* Bake the beans and grind the coffee
+* Choose the right machine with which to make your coffee: French press, drip, percolator, etc.
+* Choose from a variety of cups from which to drink your coffee
 
 ## Integrations
 
