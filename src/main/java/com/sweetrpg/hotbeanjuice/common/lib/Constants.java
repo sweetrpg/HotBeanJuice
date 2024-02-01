@@ -32,6 +32,8 @@ public class Constants {
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
     public static final String TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE = "block.hotbeanjuice.coffee_cup";
+    public static final String TRANSLATION_KEY_TRAVEL_CUP_BLOCK_TITLE = "block.hotbeanjuice.travel_cup";
+    public static final String TRANSLATION_KEY_DISPOSABLE_CUP_BLOCK_TITLE = "block.hotbeanjuice.disposable_cup";
     public static final String TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE = "item.hotbeanjuice.clay_mug";
 
     // Advancements

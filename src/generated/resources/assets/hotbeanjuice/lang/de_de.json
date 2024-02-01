@@ -1,6 +1,8 @@
 {
   "block.hotbeanjuice.coffee_bush": "Kaffeebusch",
   "block.hotbeanjuice.coffee_cup": "Kaffeetasse",
+  "block.hotbeanjuice.disposable_cup": "Einwegbecher",
+  "block.hotbeanjuice.travel_cup": "Reisebecher",
   "block.hotbeanjuice.wild_coffee_bush": "Kaffeebusch",
   "config.chance_coffee_bush.description": "Es besteht die M\u00F6glichkeit, dass Kaffeestr\u00E4ucher in freier Wildbahn auftauchen",
   "config.coffee_bush_spread.description": "Horizontale Ausbreitung von Kaffeeb\u00FCschen",

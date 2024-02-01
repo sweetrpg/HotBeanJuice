@@ -1,9 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeCupBlock;
-import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
+import com.sweetrpg.hotbeanjuice.common.block.*;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -37,6 +35,8 @@ public class ModBlocks {
 
     // Kitchenware
     public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
+    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
+    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
