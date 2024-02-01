@@ -21,12 +21,25 @@ A coffee mod for Minecraft
 
 ## Overview
 
-TODO
+* Adds wild coffee plants and coffee crops
+* Bake the beans and grind the coffee
+* Choose the right machine with which to make your coffee: French press, drip, percolator, etc.
+* Choose from a variety of cups from which to drink your coffee
 
 ## Integrations
 
-TODO
+* [Create](https://www.curseforge.com/minecraft/mc-mods/create) &mdash; Use Create contraptions for coffee processing
 
 ## Contributing
 
-TODO
+Thanks to everyone that has contributed/helped/inspired. This includes but is not limited to...
+
+* [Farmer's Delight](https://www.curseforge.com/minecraft/mc-mods/farmers-delight) -- inspiration
+* **Katy Schifferer** -- programming, graphics, textures
+* **Beth Schifferer** -- models and textures
+* **Michelle Schifferer** -- testing and ideas
+
+Download it from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice) or [Modrinth](https://modrinth.com/mod/hot-bean-juice).
+
+Want to know more about the mod? Take a peek at the [wiki](https://github.com/sweetrpg/HotBeanJuice/wiki)!
+
