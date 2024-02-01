@@ -21,7 +21,9 @@ A coffee mod for Minecraft
 
 ## Overview
 
-TODO
+* Adds wild coffee plants and coffee crops
+* A variety of cups to drink your coffee from
+* Choose the right machine with which to make your coffee
 
 ## Integrations
 
