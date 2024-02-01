@@ -25,7 +25,7 @@ TODO
 
 ## Integrations
 
-TODO
+* [Create](https://www.curseforge.com/minecraft/mc-mods/create) &mdash; Use Create contraptions for coffee processing
 
 ## Contributing
 
