@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
 
     public static final TagKey<Block> WILD_CROPS = modBlockTag("wild_crops");
+    public static final TagKey<Block> COFFEE_CUPS = modBlockTag("coffee_cups");
 
     private static TagKey<Item> modItemTag(String name) {
         return ItemTags.create(Util.getResource(name));
