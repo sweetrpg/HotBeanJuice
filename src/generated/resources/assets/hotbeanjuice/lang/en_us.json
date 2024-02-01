@@ -1,3 +1,12 @@
 {
-  "hotbeanjuice.screen.list.title": "Craft List"
+  "block.hotbeanjuice.coffee_bush": "Coffea Bush",
+  "block.hotbeanjuice.wild_coffee_bush": "Wild Coffea Bush",
+  "config.chance_coffee_bush.description": "Chance that coffee bushes appear in the wild",
+  "config.coffee_bush_spread.description": "Horizontal spread of patches of coffee bushes",
+  "item.hotbeanjuice.coffee_bean": "Coffee Bean",
+  "item.hotbeanjuice.coffee_bush": "Coffea Bush",
+  "item.hotbeanjuice.coffee_cherry": "Coffea Cherry",
+  "item.hotbeanjuice.coffee_grounds": "Coffee Grounds",
+  "item.hotbeanjuice.coffee_seeds": "Coffea Seeds",
+  "itemGroup.hotbeanjuice": "Hot Bean Juice"
 }

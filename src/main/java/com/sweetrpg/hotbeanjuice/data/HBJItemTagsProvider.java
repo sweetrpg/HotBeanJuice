@@ -25,7 +25,7 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Item Tags";
+        return "Hot Bean Juice Item Tags";
     }
 
     @Override

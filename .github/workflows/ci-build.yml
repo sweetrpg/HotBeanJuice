@@ -37,16 +37,19 @@ jobs:
         name: Get last version
         run: |
           echo "latest_version=$(cat .release-info/${{ github.ref_name }}/VERSION)" >> $GITHUB_ENV
+          echo "bump_level=$(cat .release-info/${{ github.ref_name }}/LEVEL)" >> $GITHUB_ENV
+          echo "prerelease_tag=$(cat .release-info/${{ github.ref_name }}/TAG)" >> $GITHUB_ENV
       - id: bump_version
         name: Bump version
         uses: cbrgm/semver-bump-action@main
         with:
           current-version: ${{ env.latest_version }}
-          bump-level: patch
+          bump-level: ${{ env.bump_level || 'patch' }}
+          prerelease-tag: ${{ env.prerelease_tag }}
       - name: Build with Gradle
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
-          arguments: build test --scan
+          arguments: build test --console=verbose
         env:
           MOD_VERSION: "${{ steps.bump_version.outputs.new_version }}"
       - name: Commit version file
