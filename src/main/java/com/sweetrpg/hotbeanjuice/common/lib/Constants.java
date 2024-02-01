@@ -37,7 +37,7 @@ public class Constants {
     public static final String TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE = "item.hotbeanjuice.clay_mug";
 
     // Advancements
-    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_LIST_TITLE = "advancements.hotbeanjuice.main.make_list.title";
-    public static final String TRANSLATION_KEY_ADVANCEMENT_TRAIN_CAT_DESCRIPTION = "advancements.hotbeanjuice.main.make_list.description";
+    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements.hotbeanjuice.main.make_coffee.title";
+    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION = "advancements.hotbeanjuice.main.make_coffee.description";
 
 }

@@ -41,6 +41,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "We're Makin' Coffee");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Make your first cup of coffee");
     }
 
     private void processENGB() {
@@ -58,6 +60,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "We're Makin' Coffee");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Make your first cup of coffee");
     }
 
     private void processDEDE() {
@@ -75,6 +79,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Kaffeesatz");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "Wir machen Kaffee");
+        add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Machen Sie Ihre erste Tasse Kaffee");
     }
 
 }

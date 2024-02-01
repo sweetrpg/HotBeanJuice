@@ -1,4 +1,6 @@
 {
+  "advancements.hotbeanjuice.main.make_coffee.description": "Machen Sie Ihre erste Tasse Kaffee",
+  "advancements.hotbeanjuice.main.make_coffee.title": "Wir machen Kaffee",
   "block.hotbeanjuice.coffee_bush": "Kaffeebusch",
   "block.hotbeanjuice.coffee_cup": "Kaffeetasse",
   "block.hotbeanjuice.disposable_cup": "Einwegbecher",
