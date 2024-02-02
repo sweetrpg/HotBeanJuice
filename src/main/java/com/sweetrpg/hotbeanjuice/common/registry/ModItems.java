@@ -31,6 +31,12 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    // Coffee-making paraphernalia
+
+    public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
+
+    // ----------------------------------------------------------------------------------------------------------------
+
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);
     }

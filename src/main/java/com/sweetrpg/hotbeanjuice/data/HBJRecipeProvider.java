@@ -44,6 +44,15 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
 //                .save(consumer);
 
+        // Coffee-making paraphernalia
+        ShapedRecipeBuilder.shaped(ModItems.COFFEE_FILTER.get())
+                .group("coffee_paraphernalia")
+                .pattern("P P")
+                .pattern(" P ")
+                .define('P', Items.PAPER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .save(consumer);
+
     }
 
     @Override
