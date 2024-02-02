@@ -29,11 +29,12 @@ public class Constants {
     public static final String TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE = "item.hotbeanjuice.coffee_bean";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE = "item.hotbeanjuice.coffee_seeds";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE = "item.hotbeanjuice.coffee_grounds";
+    public static final String TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE = "item.hotbeanjuice.coffee_filter";
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
 
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_LIST_TITLE = "advancements.hotbeanjuice.main.make_list.title";
-    public static final String TRANSLATION_KEY_ADVANCEMENT_TRAIN_CAT_DESCRIPTION = "advancements.hotbeanjuice.main.make_list.description";
+    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_LIST_DESCRIPTION = "advancements.hotbeanjuice.main.make_list.description";
 
 }
