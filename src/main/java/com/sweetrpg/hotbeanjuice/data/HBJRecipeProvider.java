@@ -4,17 +4,14 @@ import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
-import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
-import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
-import net.minecraft.data.recipes.*;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
 
 import java.nio.file.Path;
 import java.util.function.Consumer;
@@ -43,6 +40,28 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .requires(Items.GOLDEN_APPLE, 1)
 //                .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
 //                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
+                .pattern("PBP")
+                .pattern("PBP")
+                .pattern("LLL")
+                .define('P', Items.PAPER)
+                .define('B', ModItems.COFFEE_BEAN.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_beans", has(ModItems.COFFEE_BEAN.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_GROUND.get())
+                .pattern("PGP")
+                .pattern("PGP")
+                .pattern("LLL")
+                .define('P', Items.PAPER)
+                .define('G', ModItems.COFFEE_GROUNDS.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
 
     }
 
