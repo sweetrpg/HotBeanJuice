@@ -36,11 +36,9 @@ Thanks to everyone that has contributed/helped/inspired. This includes but is no
 
 * [Farmer's Delight](https://www.curseforge.com/minecraft/mc-mods/farmers-delight) &mdash; inspiration
 * **Katy Schifferer** &mdash; programming, graphics, textures
-* **Beth Schifferer** &mdash; models and textures
 * **Matthew Schifferer** &mdash; models and textures
 * **Michelle Schifferer** &mdash; testing and ideas
 
 Download it from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice) or [Modrinth](https://modrinth.com/mod/hot-bean-juice).
 
 Want to know more about the mod? Take a peek at the [wiki](https://github.com/sweetrpg/HotBeanJuice/wiki)!
-

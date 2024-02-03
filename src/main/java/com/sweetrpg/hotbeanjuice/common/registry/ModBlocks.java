@@ -45,6 +45,13 @@ public class ModBlocks {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    // Coffee devices
+
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_GRINDER = registerWithItem("coffee_grinder",
+            () -> new CoffeeGrinderBlock(true, BlockBehaviour.Properties.copy(Blocks.REPEATING_COMMAND_BLOCK)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);
     }
