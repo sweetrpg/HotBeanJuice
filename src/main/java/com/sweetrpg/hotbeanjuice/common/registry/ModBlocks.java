@@ -27,10 +27,6 @@ public class ModBlocks {
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Professions
-
-    public static final RegistryObject<BaristaBlock> BARISTA_BLOCK = BLOCKS.register("barista",
-            () -> new BaristaBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
     // ----------------------------------------------------------------------------------------------------------------
 
     // Crops
