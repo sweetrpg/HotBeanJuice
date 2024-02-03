@@ -1,6 +1,8 @@
 {
   "advancements.hotbeanjuice.main.make_coffee.description": "Make your first cup of coffee",
   "advancements.hotbeanjuice.main.make_coffee.title": "We're Makin' Coffee",
+  "block.hotbeanjuice.coffee_bag_beans": "Coffee Bag (Beans)",
+  "block.hotbeanjuice.coffee_bag_ground": "Coffee Bag (Ground)",
   "block.hotbeanjuice.coffee_bush": "Coffea Bush",
   "block.hotbeanjuice.coffee_cup": "Coffee Cup",
   "block.hotbeanjuice.disposable_cup": "Disposable Cup",

@@ -40,6 +40,28 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .requires(Items.GOLDEN_APPLE, 1)
 //                .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
 //                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
+                .pattern("PBP")
+                .pattern("PBP")
+                .pattern("LLL")
+                .define('P', Items.PAPER)
+                .define('B', ModItems.COFFEE_BEAN.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_beans", has(ModItems.COFFEE_BEAN.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_GROUND.get())
+                .pattern("PGP")
+                .pattern("PGP")
+                .pattern("LLL")
+                .define('P', Items.PAPER)
+                .define('G', ModItems.COFFEE_GROUNDS.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
 
         // Kitchenware
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_CUP.get())
