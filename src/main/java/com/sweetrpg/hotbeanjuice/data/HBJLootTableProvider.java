@@ -48,8 +48,8 @@ public class HBJLootTableProvider extends LootTableProvider {
         @Override
         protected void addTables() {
             dropsSelf(ModBlocks.COFFEE_CUP);
-            dropsSelf(ModBlocks.DISPOSABLE_CUP);
-            dropsSelf(ModBlocks.TRAVEL_CUP);
+//            dropsSelf(ModBlocks.DISPOSABLE_CUP);
+//            dropsSelf(ModBlocks.TRAVEL_CUP);
         }
 
 

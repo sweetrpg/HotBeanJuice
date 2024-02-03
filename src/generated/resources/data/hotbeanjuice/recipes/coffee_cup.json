@@ -1,9 +1,16 @@
 {
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "hotbeanjuice:clay_mug"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:stone"
+    }
   },
-  "result": "hotbeanjuice:coffee_cup",
-  "experience": 0.1,
-  "cookingtime": 240
+  "result": {
+    "item": "hotbeanjuice:coffee_cup"
+  }
 }

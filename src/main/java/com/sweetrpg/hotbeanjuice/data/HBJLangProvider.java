@@ -28,6 +28,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     private void processENUS() {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
+        add(Constants.TRANSLATION_KEY_FIRED_COFFEE_CUP_BLOCK_TITLE, "Kiln-fired Coffee Cup");
         add(Constants.TRANSLATION_KEY_TRAVEL_CUP_BLOCK_TITLE, "Travel Cup");
         add(Constants.TRANSLATION_KEY_DISPOSABLE_CUP_BLOCK_TITLE, "Disposable Cup");
         add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Clay Mug");
@@ -47,6 +48,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     private void processENGB() {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
+        add(Constants.TRANSLATION_KEY_FIRED_COFFEE_CUP_BLOCK_TITLE, "Kiln-fired Coffee Cup");
         add(Constants.TRANSLATION_KEY_TRAVEL_CUP_BLOCK_TITLE, "Travel Cup");
         add(Constants.TRANSLATION_KEY_DISPOSABLE_CUP_BLOCK_TITLE, "Disposable Cup");
         add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Clay Mug");
@@ -66,6 +68,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     private void processDEDE() {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Kaffeetasse");
+        add(Constants.TRANSLATION_KEY_FIRED_COFFEE_CUP_BLOCK_TITLE, "Im Ofen gebrannte Kaffeetasse");
         add(Constants.TRANSLATION_KEY_TRAVEL_CUP_BLOCK_TITLE, "Reisebecher");
         add(Constants.TRANSLATION_KEY_DISPOSABLE_CUP_BLOCK_TITLE, "Einwegbecher");
         add(Constants.TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE, "Tonbecher");

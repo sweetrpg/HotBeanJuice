@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "hotbeanjuice:coffee_cup",
-    "hotbeanjuice:travel_cup",
-    "hotbeanjuice:disposable_cup"
+    "hotbeanjuice:coffee_cup"
   ]
 }
