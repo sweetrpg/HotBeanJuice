@@ -35,6 +35,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Coffea Cherry");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Coffee Bean");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Coffee Bag (Ground)");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
     }
@@ -48,6 +50,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Coffea Cherry");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Coffee Bean");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Coffee Bag (Ground)");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
     }
@@ -61,6 +65,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Kaffeekirsche");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Kaffeebohne");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Kaffeesatz");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Kaffeebeutel (Bohnen)");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Kaffeebeutel (gemahlen)");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
     }

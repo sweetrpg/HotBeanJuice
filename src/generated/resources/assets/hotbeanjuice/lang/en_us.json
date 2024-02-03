@@ -1,4 +1,6 @@
 {
+  "block.hotbeanjuice.coffee_bag_beans": "Coffee Bag (Beans)",
+  "block.hotbeanjuice.coffee_bag_ground": "Coffee Bag (Ground)",
   "block.hotbeanjuice.coffee_bush": "Coffea Bush",
   "block.hotbeanjuice.wild_coffee_bush": "Wild Coffea Bush",
   "config.chance_coffee_bush.description": "Chance that coffee bushes appear in the wild",

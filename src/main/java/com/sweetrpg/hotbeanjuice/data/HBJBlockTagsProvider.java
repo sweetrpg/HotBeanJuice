@@ -1,6 +1,8 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -43,6 +45,9 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     protected void registerModTags() {
 //        tag(ModTags.WILD_CROPS)
 //                .add(ModBlocks.WILD_CATNIP.get());
+        tag(ModTags.BAG_OF_COFFEE)
+                .add(ModBlocks.COFFEE_BAG_BEANS.get())
+                .add(ModBlocks.COFFEE_BAG_GROUND.get());
     }
 
 }

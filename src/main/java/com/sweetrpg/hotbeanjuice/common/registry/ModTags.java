@@ -17,8 +17,7 @@ public class ModTags {
     public static TagKey<Item> MEAT = modItemTag("meat");
     public static final TagKey<Block> WILD_CROPS = modBlockTag("wild_crops");
     public static final TagKey<Item> CAT_TREES = modItemTag("cat_trees");
-    public static final TagKey<Block> PET_DOORS = modBlockTag("pet_doors");
-//    public static Tag.Named<EntityType<?>> PESTS = modEntityTag("pests");
+    public static final TagKey<Block> BAG_OF_COFFEE = modBlockTag("bag_of_coffee");
 
     private static TagKey<Item> modItemTag(String name) {
         return ItemTags.create(Util.getResource(name));
