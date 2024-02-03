@@ -34,11 +34,11 @@ A coffee mod for Minecraft
 
 Thanks to everyone that has contributed/helped/inspired. This includes but is not limited to...
 
-* [Farmer's Delight](https://www.curseforge.com/minecraft/mc-mods/farmers-delight) -- inspiration
-* **Katy Schifferer** -- programming, graphics, textures
-* **Beth Schifferer** -- models and textures
-* **Matthew Schifferer** -- models and textures
-* **Michelle Schifferer** -- testing and ideas
+* [Farmer's Delight](https://www.curseforge.com/minecraft/mc-mods/farmers-delight) &mdash; inspiration
+* **Katy Schifferer** &mdash; programming, graphics, textures
+* **Beth Schifferer** &mdash; models and textures
+* **Matthew Schifferer** &mdash; models and textures
+* **Michelle Schifferer** &mdash; testing and ideas
 
 Download it from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice) or [Modrinth](https://modrinth.com/mod/hot-bean-juice).
 
