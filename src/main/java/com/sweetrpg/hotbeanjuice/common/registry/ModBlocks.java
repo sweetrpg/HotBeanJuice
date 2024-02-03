@@ -10,6 +10,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +25,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.Keys.BLOCKS, Constants.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ModItems.ITEMS;
 
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Professions
+
+    public static final RegistryObject<BaristaBlock> BARISTA_BLOCK = BLOCKS.register("barista",
+            () -> new BaristaBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
     // ----------------------------------------------------------------------------------------------------------------
 
     // Crops
