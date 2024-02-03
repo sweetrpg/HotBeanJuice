@@ -14,13 +14,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WildCoffeeBushBlock extends FlowerBlock {
 
-    protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-    private final boolean renderOffset;
+    protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
     public WildCoffeeBushBlock(MobEffect suspiciousStewEffect, int effectDuration, Properties properties) {
         super(suspiciousStewEffect, effectDuration, properties);
-        this.renderOffset = true;
+
     }
+
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
@@ -33,7 +33,7 @@ public class WildCoffeeBushBlock extends FlowerBlock {
 
     @Override
     public OffsetType getOffsetType() {
-        return renderOffset ? OffsetType.XZ : OffsetType.NONE;
+        return OffsetType.NONE;
     }
 
     @Override

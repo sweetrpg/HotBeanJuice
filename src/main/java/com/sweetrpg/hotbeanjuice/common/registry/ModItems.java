@@ -31,6 +31,13 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    // Kitchenware
+
+//    public static final RegistryObject<Item> COFFEE_CUP = ITEMS.register("coffee_cup", () -> new ItemNameBlockItem(ModBlocks.COFFEE_CUP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
+
+    // ----------------------------------------------------------------------------------------------------------------
+
     private static Item.Properties createInitialProp() {
         return new Item.Properties().tab(ModItemGroups.GENERAL);
     }
