@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:coffee_cup"
+  }
+}

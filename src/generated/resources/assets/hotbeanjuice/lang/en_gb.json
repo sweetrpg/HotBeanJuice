@@ -1,0 +1,21 @@
+{
+  "advancements.hotbeanjuice.main.make_coffee.description": "Make your first cup of coffee",
+  "advancements.hotbeanjuice.main.make_coffee.title": "We're Makin' Coffee",
+  "block.hotbeanjuice.coffee_bag_beans": "Coffee Bag (Beans)",
+  "block.hotbeanjuice.coffee_bag_ground": "Coffee Bag (Ground)",
+  "block.hotbeanjuice.coffee_bush": "Coffea Bush",
+  "block.hotbeanjuice.coffee_cup": "Coffee Cup",
+  "block.hotbeanjuice.disposable_cup": "Disposable Cup",
+  "block.hotbeanjuice.fired_coffee_cup": "Kiln-fired Coffee Cup",
+  "block.hotbeanjuice.travel_cup": "Travel Cup",
+  "block.hotbeanjuice.wild_coffee_bush": "Wild Coffea Bush",
+  "config.chance_coffee_bush.description": "Chance that coffee bushes appear in the wild",
+  "config.coffee_bush_spread.description": "Horizontal spread of patches of coffee bushes",
+  "item.hotbeanjuice.clay_mug": "Clay Mug",
+  "item.hotbeanjuice.coffee_bean": "Coffee Bean",
+  "item.hotbeanjuice.coffee_bush": "Coffea Bush",
+  "item.hotbeanjuice.coffee_cherry": "Coffea Cherry",
+  "item.hotbeanjuice.coffee_grounds": "Coffee Grounds",
+  "item.hotbeanjuice.coffee_seeds": "Coffea Seeds",
+  "itemGroup.hotbeanjuice": "Hot Bean Juice"
+}

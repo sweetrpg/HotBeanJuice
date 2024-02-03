@@ -1,8 +1,10 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBeanBlock;
+import com.sweetrpg.hotbeanjuice.common.block.*;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
+import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -10,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,10 +30,27 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Crops
-    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH = BLOCKS.register("coffee_bush",
-            () -> new CoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
-    public static final RegistryObject<CoffeeBeanBlock> COFFEE_BEAN_CROP = BLOCKS.register("coffee_bean",
-            () -> new CoffeeBeanBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Miscellaneous coffee items
+
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
+            () -> new CoffeeBagBlock(true, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
+            () -> new CoffeeBagBlock(false, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Kitchenware
+    public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
+    public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
+//    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
+//    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
@@ -65,7 +85,7 @@ public class ModBlocks {
         return BLOCKS.register(name, blockSupplier);
     }
 
-    public static void registerBlockColours(final ColorHandlerEvent.Block event) {
+    public static void registerBlockColors(final ColorHandlerEvent.Block event) {
         BlockColors blockColors = event.getBlockColors();
 
 //        Util.acceptOrElse(CatBlocks.CAT_BATH, (block) -> {

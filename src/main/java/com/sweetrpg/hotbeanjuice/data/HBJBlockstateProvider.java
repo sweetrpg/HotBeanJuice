@@ -12,7 +12,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -34,11 +34,13 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Blockstates/Block Models";
+        return "Hot Bean Juice Blockstates/Block Models";
     }
 
     @Override
     protected void registerStatesAndModels() {
+        stageBlock(ModBlocks.COFFEE_BUSH_CROP.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+        wildCropBlock(ModBlocks.WILD_COFFEE_BUSH.get());
     }
 
     private String blockName(Block block) {
@@ -47,6 +49,10 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     public ResourceLocation resourceBlock(String path) {
         return new ResourceLocation(Constants.MOD_ID, "block/" + path);
+    }
+
+    protected void wildCropBlock(Block block) {
+        this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))));
     }
 
     protected void createFromShape(Supplier<? extends Block> blockIn, AABB bb) {
