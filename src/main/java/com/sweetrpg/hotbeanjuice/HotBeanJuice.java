@@ -12,7 +12,6 @@ import com.sweetrpg.hotbeanjuice.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -52,7 +51,7 @@ public class HotBeanJuice {
 
         // Registries
         ModBlocks.BLOCKS.register(modEventBus);
-        ModBlockEntityTypes.TILE_ENTITIES.register(modEventBus);
+        ModBlockEntityTypes.ENTITIES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
 //        ModEntityTypes.ENTITIES.register(modEventBus);
         ModContainerTypes.CONTAINERS.register(modEventBus);
@@ -73,7 +72,7 @@ public class HotBeanJuice {
         // Client Events
         DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
             modEventBus.addListener(this::clientSetup);
-            modEventBus.addListener(ModBlocks::registerBlockColours);
+            modEventBus.addListener(ModBlocks::registerBlockColors);
             modEventBus.addListener(ClientEventHandler::onModelBakeEvent);
             modEventBus.addListener(ClientSetup::setupTileEntityRenderers);
             modEventBus.addListener(ClientSetup::setupEntityRenderers);

@@ -34,8 +34,8 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     protected void registerMinecraftTags() {
 //        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS)
 //                .add(ModBlocks.WILD_CATNIP.get());
-//        tag(net.minecraft.tags.BlockTags.CROPS)
-//                .add(ModBlocks.CATNIP_CROP.get());
+        tag(net.minecraft.tags.BlockTags.CROPS)
+                .add(ModBlocks.COFFEE_BUSH_CROP.get());
     }
 
     protected void registerForgeTags() {
@@ -43,6 +43,12 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     }
 
     protected void registerModTags() {
+        tag(ModTags.WILD_CROPS)
+                .add(ModBlocks.WILD_COFFEE_BUSH.get());
+        tag(ModTags.COFFEE_CUPS)
+                .add(ModBlocks.COFFEE_CUP.get())
+                /*.add(ModBlocks.TRAVEL_CUP.get())
+                .add(ModBlocks.DISPOSABLE_CUP.get())*/;
 //        tag(ModTags.WILD_CROPS)
 //                .add(ModBlocks.WILD_CATNIP.get());
         tag(ModTags.BAG_OF_COFFEE)

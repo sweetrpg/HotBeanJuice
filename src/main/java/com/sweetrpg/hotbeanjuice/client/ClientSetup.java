@@ -1,5 +1,8 @@
 package com.sweetrpg.hotbeanjuice.client;
 
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -7,6 +10,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientSetup {
 
     public static void setupScreenManagers(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEE_BUSH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COFFEE_BUSH_CROP.get(), RenderType.cutout());
+
 //        MenuScreens.register(ModContainerTypes.CAT_BOWL.get(), CatBowlScreen::new);
     }
 
