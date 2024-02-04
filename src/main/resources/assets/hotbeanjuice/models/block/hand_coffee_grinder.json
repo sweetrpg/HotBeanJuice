@@ -1,9 +1,10 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/hand coffee grinder",
-		"particle": "block/hand coffee grinder"
+		"0": "hotbeanjuice:block/hand_coffee_grinder",
+		"particle": "hotbeanjuice:block/hand_coffee_grinder"
 	},
 	"elements": [
 		{
