@@ -50,7 +50,7 @@ public class ModBlocks {
     // Coffee devices
 
     public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
-            () -> new HandCoffeeGrinderBlock(BlockBehaviour.Properties.copy(Blocks.REPEATING_COMMAND_BLOCK)));
+            HandCoffeeGrinderBlock::new);
 //    public static final RegistryObject<CoffeeBagBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
 //            () -> new PoweredCoffeeGrinderBlock(true, BlockBehaviour.Properties.copy(Blocks.REPEATING_COMMAND_BLOCK)));
 
