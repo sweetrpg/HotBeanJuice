@@ -8,16 +8,9 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
 
-    public static TagKey<Item> BEG_ITEMS_TAMED = modItemTag("beg_items_tamed");
-    public static TagKey<Item> BEG_ITEMS_UNTAMED = modItemTag("beg_items_untamed");
-    public static TagKey<Item> BREEDING_ITEMS = modItemTag("breeding_items");
-    public static TagKey<Item> PACK_CAT_BLACKLIST = modItemTag("pack_cat_blacklist");
-    public static TagKey<Item> TREATS = modItemTag("treats");
-    public static TagKey<Item> TOYS = modItemTag("toys");
-    public static TagKey<Item> MEAT = modItemTag("meat");
     public static final TagKey<Block> WILD_CROPS = modBlockTag("wild_crops");
-    public static final TagKey<Item> CAT_TREES = modItemTag("cat_trees");
     public static final TagKey<Block> BAG_OF_COFFEE = modBlockTag("bag_of_coffee");
+    public static final TagKey<Block> COFFEE_GRINDERS = modBlockTag("coffee_grinders");
 
     private static TagKey<Item> modItemTag(String name) {
         return ItemTags.create(Util.getResource(name));
