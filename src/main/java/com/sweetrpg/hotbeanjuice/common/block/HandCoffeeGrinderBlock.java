@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class HandCoffeeGrinderBlock extends BaseEntityBlock {
+public class HandCoffeeGrinderBlock extends Block {
 
     protected static final VoxelShape SHAPE = Block.box(3D, 0.0D, 3D, 13D, 9.0D, 13D);
 
@@ -39,17 +39,17 @@ public class HandCoffeeGrinderBlock extends BaseEntityBlock {
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH));
     }
 
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new HandCoffeeGrinderBlockEntity(pPos, pState);
-    }
-
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType) {
-        return createTickerHelper(blockEntityType, ModBlockEntityTypes.HAND_COFFEE_GRINDER.get(), HandCoffeeGrinderBlockEntity::tick);
-    }
+//    @Nullable
+//    @Override
+//    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+//        return new HandCoffeeGrinderBlockEntity(pPos, pState);
+//    }
+//
+//    @Nullable
+//    @Override
+//    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType) {
+//        return null; // createTickerHelper(blockEntityType, ModBlockEntityTypes.HAND_COFFEE_GRINDER.get(), HandCoffeeGrinderBlockEntity::tick);
+//    }
 
 //    @SuppressWarnings("deprecation")
 //    @Override
@@ -115,4 +115,25 @@ public class HandCoffeeGrinderBlock extends BaseEntityBlock {
 
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRand) {
     }
+
+//    @Override
+//    public SoundEvent getEatingSound() {
+//        return AllSoundEvents.SANDING_SHORT.getMainEvent();
+//    }
+//
+//    @Override
+//    public UseAnim getUseAnimation(ItemStack stack) {
+//        return UseAnim.EAT;
+//    }
+//
+//    @Override
+//    public int getUseDuration(ItemStack stack) {
+//        return 32;
+//    }
+//
+//    @Override
+//    public int getEnchantmentValue() {
+//        return 1;
+//    }
+
 }
