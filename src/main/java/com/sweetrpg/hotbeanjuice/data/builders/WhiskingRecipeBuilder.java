@@ -2,7 +2,7 @@ package com.sweetrpg.hotbeanjuice.data.builders;
 
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
+import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
@@ -15,33 +15,33 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-
-import javax.annotation.Nullable;
-import java.util.function.Consumer;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class GrindingRecipeBuilder implements RecipeBuilder {
+import javax.annotation.Nullable;
+import java.util.function.Consumer;
+
+public class WhiskingRecipeBuilder implements RecipeBuilder {
 
     private final ItemStack result;
     private final Ingredient ingredient;
     private final float experience;
-    private final int grindingTime;
+    private final int whiskingTime;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
     @Nullable
     private String group;
-    private final GrindingRecipe.Serializer serializer;
+    private final WhiskingRecipe.Serializer serializer;
 
-    private GrindingRecipeBuilder(Ingredient ingredient, ItemStack item, float experience, int grindingTime, GrindingRecipe.Serializer serializer) {
+    private WhiskingRecipeBuilder(Ingredient ingredient, ItemStack item, float experience, int whiskingTime, WhiskingRecipe.Serializer serializer) {
         this.result = item;
         this.ingredient = ingredient;
         this.experience = experience;
-        this.grindingTime = grindingTime;
+        this.whiskingTime = whiskingTime;
         this.serializer = serializer;
     }
 
-    public static GrindingRecipeBuilder grinding(Ingredient ingredient, ItemStack item, float experience, int grindingTime) {
-        return new GrindingRecipeBuilder(ingredient, item, experience, grindingTime, (GrindingRecipe.Serializer) ModRecipeSerializers.GRINDING_SERIALIZER.get());
+    public static WhiskingRecipeBuilder whisking(Ingredient ingredient, ItemStack item, float experience, int whiskingTime) {
+        return new WhiskingRecipeBuilder(ingredient, item, experience, whiskingTime, (WhiskingRecipe.Serializer) ModRecipeSerializers.WHISKING_SERIALIZER.get());
     }
 
     @Override
@@ -68,8 +68,8 @@ public class GrindingRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
-        consumer.accept(new GrindingRecipeBuilder.Result(resourceLocation,
-                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.grindingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/" + resourceLocation.getPath()), this.serializer));
+        consumer.accept(new WhiskingRecipeBuilder.Result(resourceLocation,
+                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.whiskingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/" + resourceLocation.getPath()), this.serializer));
     }
 
     private void ensureValid(ResourceLocation p_126266_) {
@@ -84,18 +84,18 @@ public class GrindingRecipeBuilder implements RecipeBuilder {
         private final Ingredient ingredient;
         private final ItemStack result;
         private final float experience;
-        private final int grindingTime;
+        private final int whiskingTime;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
-        private final GrindingRecipe.Serializer serializer;
+        private final WhiskingRecipe.Serializer serializer;
 
-        public Result(ResourceLocation id, String group, Ingredient ingredient, ItemStack result, float experience, int grindingTime, Advancement.Builder builder, ResourceLocation advancementId, GrindingRecipe.Serializer serializer) {
+        public Result(ResourceLocation id, String group, Ingredient ingredient, ItemStack result, float experience, int whiskingTime, Advancement.Builder builder, ResourceLocation advancementId, WhiskingRecipe.Serializer serializer) {
             this.id = id;
             this.group = group;
             this.ingredient = ingredient;
             this.result = result;
             this.experience = experience;
-            this.grindingTime = grindingTime;
+            this.whiskingTime = whiskingTime;
             this.advancement = builder;
             this.advancementId = advancementId;
             this.serializer = serializer;
@@ -109,7 +109,7 @@ public class GrindingRecipeBuilder implements RecipeBuilder {
             json.add("ingredient", this.ingredient.toJson());
             json.addProperty("result", ForgeRegistries.ITEMS.getKey(this.result.getItem()).toString());
             json.addProperty("experience", this.experience);
-            json.addProperty("grinding_time", this.grindingTime);
+            json.addProperty("whisking_time", this.whiskingTime);
 
         }
 

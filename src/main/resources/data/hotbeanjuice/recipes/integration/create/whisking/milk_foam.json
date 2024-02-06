@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:whisking",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:steamed_milk"
+    }
+  ],
+  "results": [
+    {
+      "item": "hobeanjuice:milk_foam",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

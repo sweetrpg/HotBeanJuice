@@ -4,13 +4,10 @@ import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
-import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -68,6 +65,9 @@ public class HBJRecipeProvider extends RecipeProvider {
         GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
                 .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
                 .save(consumer);
+        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
+                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+                .save(consumer);
 
         // Kitchenware
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_CUP.get())
@@ -84,8 +84,8 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .pattern("C C")
                 .pattern("C C")
                 .pattern("CCC")
-                .define('C', Items.CLAY)
-                .unlockedBy("has_clay", has(Items.CLAY))
+                .define('C', Items.CLAY_BALL)
+                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
 //                .group()
                 .save(consumer);
 
@@ -94,6 +94,67 @@ public class HBJRecipeProvider extends RecipeProvider {
         // Coffee pots
 
         // Drinks
+        ShapelessRecipeBuilder.shapeless(ModItems.MACCHIATO_DRINK.get())
+                .requires(ModItems.ESPRESSO_DRINK.get())
+                .requires(Items.MILK_BUCKET)
+                .unlockedBy("has_espresso", has(ModItems.ESPRESSO_DRINK.get()))
+                .unlockedBy("has_milk", has(Items.MILK_BUCKET))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ModItems.LATTE_DRINK.get())
+                .requires(ModItems.ESPRESSO_DRINK.get())
+                .requires(ModItems.STEAMED_MILK.get())
+                .unlockedBy("has_espresso", has(ModItems.ESPRESSO_DRINK.get()))
+                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ModItems.CAPPUCCINO_DRINK.get())
+                .requires(ModItems.ESPRESSO_DRINK.get())
+                .requires(ModItems.STEAMED_MILK.get())
+                .requires(ModItems.MILK_FOAM.get())
+                .unlockedBy("has_espresso", has(ModItems.ESPRESSO_DRINK.get()))
+                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+                .unlockedBy("has_milk_foam", has(ModItems.MILK_FOAM.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ModItems.MOCHA_DRINK.get())
+                .requires(ModItems.ESPRESSO_DRINK.get())
+                .requires(ModItems.STEAMED_MILK.get())
+                .requires(ModItems.COCOA_POWDER.get())
+                .requires(Items.SUGAR)
+                .unlockedBy("has_espresso", has(ModItems.ESPRESSO_DRINK.get()))
+                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+                .unlockedBy("has_cocoa_powder", has(ModItems.COCOA_POWDER.get()))
+                .unlockedBy("has_sugar", has(Items.SUGAR))
+                .save(consumer);
+//        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get())
+        CoffeeMakerRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeMakerRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
+                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeMakerRecipeBuilder.percolated(ModItems.COFFEE_DRINK.get(), 0.1f, 450)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeMakerRecipeBuilder.pod(ModItems.COFFEE_DRINK.get(), 0.1f, 180)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeMakerRecipeBuilder.espresso(ModItems.ESPRESSO_DRINK.get(), 0.3f, 300)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.FINE_COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_fine_coffee_grounds", has(ModItems.FINE_COFFEE_GROUNDS.get()))
+                .save(consumer);
 
         // Miscellaneous ingredients
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.MILK_BUCKET), ModItems.STEAMED_MILK.get(), 0.1f, 240)
