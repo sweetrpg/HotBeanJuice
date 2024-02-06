@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:coffee_grounds"
+    }
+  ],
+  "results": [
+    {
+      "item": "hobeanjuice:fine_coffee_grounds",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

@@ -1,0 +1,9 @@
+{
+  "type": "hotbeanjuice:grinding",
+  "ingredient": {
+    "item": "hotbeanjuice:coffee_bean"
+  },
+  "result": "hotbeanjuice:coffee_grounds",
+  "experience": 1.0,
+  "cookingtime": 180
+}

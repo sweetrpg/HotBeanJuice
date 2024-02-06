@@ -4,12 +4,14 @@ import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -31,15 +33,10 @@ public class HBJRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
-        // coffee beans
+        // Coffee ingredients
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
-                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+                .unlockedBy("has_coffee_cherry", has(ModItems.COFFEE_CHERRY.get()))
                 .save(consumer);
-//        ShapelessRecipeBuilder.shapeless(ModItems.SUPER_TREAT.get(), 5)
-//                .requires(ModItems.TRAINING_TREAT.get(), 5)
-//                .requires(Items.GOLDEN_APPLE, 1)
-//                .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
-//                .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
                 .pattern("PBP")
                 .pattern("PBP")
@@ -62,6 +59,15 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
                 .unlockedBy("has_leather", has(Items.LEATHER))
                 .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
+                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+                .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_GROUNDS.get()), new ItemStack(ModItems.FINE_COFFEE_GROUNDS.get()), 1, 180)
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
+                .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
+                .save(consumer);
 
         // Kitchenware
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_CUP.get())
@@ -82,6 +88,21 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_clay", has(Items.CLAY))
 //                .group()
                 .save(consumer);
+
+        // Tea ingredients
+
+        // Coffee pots
+
+        // Drinks
+
+        // Miscellaneous ingredients
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.MILK_BUCKET), ModItems.STEAMED_MILK.get(), 0.1f, 240)
+                .unlockedBy("has_milk", has(Items.MILK_BUCKET))
+                .save(consumer);
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .save(consumer);
+
     }
 
     @Override

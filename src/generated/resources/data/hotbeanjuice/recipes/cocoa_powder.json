@@ -1,0 +1,9 @@
+{
+  "type": "hotbeanjuice:grinding",
+  "ingredient": {
+    "item": "minecraft:cocoa_beans"
+  },
+  "result": "hotbeanjuice:cocoa_powder",
+  "experience": 1.0,
+  "cookingtime": 180
+}
