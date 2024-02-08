@@ -1,7 +1,5 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.hotbeanjuice.common.item.CoffeeBeanItem;
-import com.sweetrpg.hotbeanjuice.common.item.CoffeeCherryItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,6 +22,8 @@ public class ModItems {
     public static final RegistryObject<Item> COFFEE_BEAN = ITEMS.register("coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BUSH_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
 
     // ----------------------------------------------------------------------------------------------------------------
 
