@@ -1,0 +1,14 @@
+{
+  "type": "hotbeanjuice:coffee_making",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:boiling_water"
+    },
+    {
+      "item": "hotbeanjuice:coffee_grounds"
+    }
+  ],
+  "result": "hotbeanjuice:coffee_drink",
+  "experience": 0.1,
+  "processing_time": 300
+}

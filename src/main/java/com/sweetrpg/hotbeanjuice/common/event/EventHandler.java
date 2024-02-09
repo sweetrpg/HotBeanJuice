@@ -39,10 +39,20 @@ public class EventHandler {
                 event.getCategory().equals(Biome.BiomeCategory.SAVANNA) ||
                 event.getCategory().equals(Biome.BiomeCategory.MUSHROOM) ||
                 event.getCategory().equals(Biome.BiomeCategory.TAIGA) ||
-                event.getCategory().equals(Biome.BiomeCategory.MOUNTAIN) ||
-                event.getCategory().equals(Biome.BiomeCategory.JUNGLE)) &&
+                event.getCategory().equals(Biome.BiomeCategory.MOUNTAIN)) &&
                 (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
-            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEE_BUSH);
+            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_ARABICA);
+        }
+        else if((event.getCategory().equals(Biome.BiomeCategory.DESERT) ||
+                event.getCategory().equals(Biome.BiomeCategory.SAVANNA)) &&
+                (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
+            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_CANEPHORA);
+        }
+        else if((event.getCategory().equals(Biome.BiomeCategory.PLAINS) ||
+                event.getCategory().equals(Biome.BiomeCategory.EXTREME_HILLS) ||
+                event.getCategory().equals(Biome.BiomeCategory.TAIGA)) &&
+                (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
+            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_RACEMOSA);
         }
     }
 

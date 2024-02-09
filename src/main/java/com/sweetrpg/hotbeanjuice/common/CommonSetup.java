@@ -14,7 +14,7 @@ public class CommonSetup {
 
 //            CatRespawnCommand.registerSerilizers();
 
-            WildCropGeneration.registerWildCatnipGeneration();
+            WildCropGeneration.registerWildCropGeneration();
 
             registerCompostables();
         });

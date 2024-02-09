@@ -19,7 +19,10 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CoffeeMakerRecipe implements Recipe<SimpleContainer> {
     public static final String RECIPE_TYPE_NAME = "coffee_making";
@@ -40,7 +43,16 @@ public class CoffeeMakerRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer container, Level level) {
-        return TODO ingredient.test(container.getItem(0));
+        List<Item> containerItems = new ArrayList<>();
+        for(int i=0; i<container.getContainerSize(); i++) {
+            containerItems.add(container.getItem(i).getItem());
+        }
+        long nonIngredientItems = containerItems.stream()
+                .map(Ingredient::of)
+                .dropWhile(this.ingredients::contains)
+                .count();
+
+        return nonIngredientItems == 0;
     }
 
     @Override
