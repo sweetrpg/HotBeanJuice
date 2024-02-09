@@ -29,7 +29,7 @@ public class HBJItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         generated(ModItems.COFFEE_BEAN);
-        generated(ModItems.COFFEE_CHERRY);
+        generated(ModItems.COFFEE_CHERRY_ARABICA);
         generated(ModItems.COFFEE_GROUNDS);
 //        generated(ModItems.COFFEE_SEEDS);
 

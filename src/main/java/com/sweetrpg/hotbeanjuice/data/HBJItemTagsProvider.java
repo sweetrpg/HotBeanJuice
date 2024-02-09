@@ -1,16 +1,13 @@
 package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -30,7 +27,10 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public void addTags() {
-
+        tag(ModTags.COFFEE_CHERRIES)
+                .add(ModItems.COFFEE_CHERRY_ARABICA.get())
+                .add(ModItems.COFFEE_CHERRY_CANEPHORA.get())
+                .add(ModItems.COFFEE_CHERRY_RACEMOSA.get());
     }
 
     @SafeVarargs

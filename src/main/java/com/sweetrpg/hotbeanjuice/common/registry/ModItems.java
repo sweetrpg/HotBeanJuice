@@ -21,7 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> WILD_COFFEA_ARABICA = register("wild_coffea_arabica", () -> new BlockItem(ModBlocks.WILD_COFFEA_ARABICA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> WILD_COFFEA_CANEPHORA = register("wild_coffea_canephora", () -> new BlockItem(ModBlocks.WILD_COFFEA_CANEPHORA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> WILD_COFFEA_RACEMOSA = register("wild_coffea_racemosa", () -> new BlockItem(ModBlocks.WILD_COFFEA_RACEMOSA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> COFFEE_CHERRY = ITEMS.register("coffee_cherry", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_CHERRY_ARABICA = ITEMS.register("coffee_cherry_arabica", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_CHERRY_CANEPHORA = ITEMS.register("coffee_cherry_canephora", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_CHERRY_RACEMOSA = ITEMS.register("coffee_cherry_racemosa", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_BEAN = ITEMS.register("coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> BAD_COFFEE_BEAN = ITEMS.register("bad_coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
 //    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BUSH_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));

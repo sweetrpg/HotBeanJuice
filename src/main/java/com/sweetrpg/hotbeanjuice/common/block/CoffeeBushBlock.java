@@ -45,7 +45,7 @@ public class CoffeeBushBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.COFFEE_CHERRY.get();
+        return ModItems.COFFEE_CHERRY_ARABICA.get();
     }
 
     @Override

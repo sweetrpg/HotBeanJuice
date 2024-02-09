@@ -85,7 +85,7 @@ public class HBJLootTableProvider extends LootTableProvider {
                         .withPool(LootPool.lootPool()
                                 .name("pool1")
                                 .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
                                         .when(() -> {
                                             return LootItemRandomChanceCondition.randomChance(0.5f).build();
                                         })
@@ -107,7 +107,7 @@ public class HBJLootTableProvider extends LootTableProvider {
                                                     return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
                                                 })
                                         ,
-                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
                                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
                                                 .apply(ApplyExplosionDecay.explosionDecay())
                                 ))
@@ -125,7 +125,7 @@ public class HBJLootTableProvider extends LootTableProvider {
                         .withPool(LootPool.lootPool()
                                 .name("pool1")
                                 .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
                                         .when(() -> {
                                             return LootItemRandomChanceCondition.randomChance(0.5f).build();
                                         })
@@ -137,7 +137,7 @@ public class HBJLootTableProvider extends LootTableProvider {
                                 .name("pool2")
                                 .setRolls(ConstantValue.exactly(1))
                                 .add(AlternativesEntry.alternatives(
-                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
                                                 .when(() -> {
                                                     return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
                                                 })
