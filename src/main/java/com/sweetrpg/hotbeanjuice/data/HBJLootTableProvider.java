@@ -30,7 +30,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Loot Tables";
+        return "Hot Bean Juice Loot Tables";
     }
 
     @Override

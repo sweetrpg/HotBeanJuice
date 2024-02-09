@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.core.Direction;
@@ -39,6 +40,8 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        stageBlock(ModBlocks.COFFEE_BUSH_CROP.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+        wildCropBlock(ModBlocks.WILD_COFFEE_BUSH.get());
     }
 
     private String blockName(Block block) {
@@ -47,6 +50,10 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     public ResourceLocation resourceBlock(String path) {
         return new ResourceLocation(Constants.MOD_ID, "block/" + path);
+    }
+
+    protected void wildCropBlock(Block block) {
+        this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))));
     }
 
     protected void createFromShape(Supplier<? extends Block> blockIn, AABB bb) {

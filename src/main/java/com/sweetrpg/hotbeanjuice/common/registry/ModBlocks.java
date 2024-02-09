@@ -1,7 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.block.CarafeBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBeanBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.block.DripCoffeeBlock;
@@ -31,10 +30,10 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Crops
-    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH = BLOCKS.register("coffee_bush",
-            () -> new CoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
-    public static final RegistryObject<CoffeeBeanBlock> COFFEE_BEAN_CROP = BLOCKS.register("coffee_bean",
-            () -> new CoffeeBeanBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
 

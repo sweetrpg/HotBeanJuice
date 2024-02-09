@@ -2,6 +2,7 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
@@ -22,13 +23,18 @@ public class HBJItemModelProvider extends ItemModelProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Item Models";
+        return "Hot Bean Juice Item Models";
     }
 
     @Override
     protected void registerModels() {
-        blockItem(ModBlocks.DRIP_COFFEE_MAKER);
+        generated(ModItems.COFFEE_BEAN);
+        generated(ModItems.COFFEE_CHERRY);
+        generated(ModItems.COFFEE_GROUNDS);
+        generated(ModItems.COFFEE_SEEDS);
 
+        blockItem(ModBlocks.DRIP_COFFEE_MAKER);
+        blockItem(ModBlocks.WILD_COFFEE_BUSH);
     }
 
     private ResourceLocation itemTexture(Supplier<? extends ItemLike> item) {

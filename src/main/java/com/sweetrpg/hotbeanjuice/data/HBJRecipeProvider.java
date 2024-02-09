@@ -10,7 +10,10 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 
 import java.nio.file.Path;
@@ -24,19 +27,31 @@ public class HBJRecipeProvider extends RecipeProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Recipes";
+        return "Hot Bean Juice Recipes";
     }
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
-        // treats
+        // coffee beans
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
+                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+                .save(consumer);
 //        ShapelessRecipeBuilder.shapeless(ModItems.SUPER_TREAT.get(), 5)
 //                .requires(ModItems.TRAINING_TREAT.get(), 5)
 //                .requires(Items.GOLDEN_APPLE, 1)
 //                .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
 //                .save(consumer);
+
+        // Coffee-making paraphernalia
+        ShapedRecipeBuilder.shaped(ModItems.COFFEE_FILTER.get())
+                .group("coffee_paraphernalia")
+                .pattern("P P")
+                .pattern(" P ")
+                .define('P', Items.PAPER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .save(consumer);
 
     }
 

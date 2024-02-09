@@ -34,7 +34,7 @@ public class HBJAdvancementProvider extends AdvancementProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Advancements";
+        return "Hot Bean Juice Advancements";
     }
 
     @Override
