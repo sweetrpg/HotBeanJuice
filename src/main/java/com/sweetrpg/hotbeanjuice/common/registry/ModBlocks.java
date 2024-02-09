@@ -4,6 +4,7 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.*;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
+import com.sweetrpg.hotbeanjuice.common.block.HandCoffeeGrinderBlock;
 import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
@@ -51,6 +52,15 @@ public class ModBlocks {
             () -> new CoffeeBagBlock(true, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
     public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
             () -> new CoffeeBagBlock(false, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee devices
+
+    public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
+            HandCoffeeGrinderBlock::new);
+//    public static final RegistryObject<CoffeeBagBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
+//            () -> new PoweredCoffeeGrinderBlock(true, BlockBehaviour.Properties.copy(Blocks.REPEATING_COMMAND_BLOCK)));
 
     // ----------------------------------------------------------------------------------------------------------------
 

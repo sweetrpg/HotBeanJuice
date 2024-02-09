@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/hand_coffee_grinder"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/hand_coffee_grinder",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/hand_coffee_grinder",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/hand_coffee_grinder",
+      "y": 270
+    }
+  }
+}

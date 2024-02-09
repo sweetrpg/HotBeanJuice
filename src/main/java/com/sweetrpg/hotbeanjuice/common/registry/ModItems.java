@@ -1,7 +1,5 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.hotbeanjuice.common.item.CoffeeBeanItem;
-import com.sweetrpg.hotbeanjuice.common.item.CoffeeCherryItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
 import net.minecraft.world.item.*;
@@ -37,6 +35,8 @@ public class ModItems {
     public static final RegistryObject<Item> LATTE_DRINK = ITEMS.register("latte_drink", () -> new Item(new Item.Properties().food(FoodValues.LATTE).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> MACCHIATO_DRINK = ITEMS.register("macchiato_drink", () -> new Item(new Item.Properties().food(FoodValues.MACCHIATO).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> HOT_CHOCOLATE_DRINK = ITEMS.register("hot_chocolate_drink", () -> new Item(new Item.Properties().food(FoodValues.HOT_CHOCOLATE).tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
 
     // ----------------------------------------------------------------------------------------------------------------
 
