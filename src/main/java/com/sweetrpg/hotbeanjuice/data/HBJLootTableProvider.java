@@ -2,6 +2,8 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
+import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModEntityTypes;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
@@ -27,7 +29,9 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
@@ -59,7 +63,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
         @Override
         protected void addTables() {
-            dropWildCoffeeBush();
+            dropWildCoffeeBushes();
             dropCoffeeCrop();
             dropsSelf(ModBlocks.COFFEE_BAG_BEANS);
             dropsSelf(ModBlocks.COFFEE_BAG_GROUND);
@@ -75,68 +79,76 @@ public class HBJLootTableProvider extends LootTableProvider {
             dropSelf(block.get());
         }
 
-        private void dropWildCoffeeBush() {
-            LootTable.Builder builder = LootTable.lootTable()
-                    .withPool(LootPool.lootPool()
-                            .name("pool1")
-                            .setRolls(ConstantValue.exactly(1))
-                            .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
-                                    .when(() -> {
-                                        return LootItemRandomChanceCondition.randomChance(0.5f).build();
-                                    })
-                                    .when(() -> {
-                                        return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
-                                    })
-                            )
-                            .add(LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
-                                    .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
-                                    .apply(ApplyExplosionDecay.explosionDecay())
-                            ))
-                    .withPool(LootPool.lootPool()
-                            .name("pool2")
-                            .setRolls(ConstantValue.exactly(1))
-                            .add(AlternativesEntry.alternatives(
-                                    LootItem.lootTableItem(ModItems.WILD_COFFEE_BUSH.get())
-                                            .when(() -> {
-                                                return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
-                                            })
-                                    ,
-                                    LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
-                                            .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
-                                            .apply(ApplyExplosionDecay.explosionDecay())
-                            )));
+        private void dropWildCoffeeBushes() {
+            for(RegistryObject<WildCoffeeBushBlock> block : Arrays.asList(ModBlocks.WILD_COFFEA_ARABICA, ModBlocks.WILD_COFFEA_CANEPHORA, ModBlocks.WILD_COFFEA_RACEMOSA)) {
+                LootTable.Builder builder = LootTable.lootTable()
+                        .withPool(LootPool.lootPool()
+                                .name("pool1")
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                        .when(() -> {
+                                            return LootItemRandomChanceCondition.randomChance(0.5f).build();
+                                        })
+                                        .when(() -> {
+                                            return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
+                                        })
+                                )
+//                                .add(LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
+//                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
+//                                        .apply(ApplyExplosionDecay.explosionDecay())
+//                                )
+                        )
+                        .withPool(LootPool.lootPool()
+                                .name("pool2")
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(AlternativesEntry.alternatives(
+                                        LootItem.lootTableItem(block.get())
+                                                .when(() -> {
+                                                    return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
+                                                })
+                                        ,
+                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
+                                                .apply(ApplyExplosionDecay.explosionDecay())
+                                ))
+                        )
+                        ;
 
-            this.add(ModBlocks.WILD_COFFEE_BUSH.get(), builder);
+                this.add(block.get(), builder);
+            }
         }
 
         private void dropCoffeeCrop() {
-            LootTable.Builder builder = LootTable.lootTable()
-                    .withPool(LootPool.lootPool()
-                            .name("pool1")
-                            .setRolls(ConstantValue.exactly(1))
-                            .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
-                                    .when(() -> {
-                                        return LootItemRandomChanceCondition.randomChance(0.5f).build();
-                                    })
-                                    .when(() -> {
-                                        return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
-                                    })
-                            )                     )
-                    .withPool(LootPool.lootPool()
-                            .name("pool2")
-                            .setRolls(ConstantValue.exactly(1))
-                            .add(AlternativesEntry.alternatives(
-                                    LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
-                                            .when(() -> {
-                                                return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
-                                            })
-                                    ,
-                                    LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
-                                            .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
-                                            .apply(ApplyExplosionDecay.explosionDecay())
-                            )));
+            for(RegistryObject<CoffeeBushBlock> block : Arrays.asList(ModBlocks.CROP_COFFEE_ARABICA, ModBlocks.CROP_COFFEE_CANEPHORA, ModBlocks.CROP_COFFEE_RACEMOSA)) {
 
-            this.add(ModBlocks.COFFEE_BUSH_CROP.get(), builder);
+                LootTable.Builder builder = LootTable.lootTable()
+                        .withPool(LootPool.lootPool()
+                                .name("pool1")
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                        .when(() -> {
+                                            return LootItemRandomChanceCondition.randomChance(0.5f).build();
+                                        })
+                                        .when(() -> {
+                                            return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
+                                        })
+                                ))
+                        .withPool(LootPool.lootPool()
+                                .name("pool2")
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(AlternativesEntry.alternatives(
+                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY.get())
+                                                .when(() -> {
+                                                    return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
+                                                })
+//                                    ,
+//                                    LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
+//                                            .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
+//                                            .apply(ApplyExplosionDecay.explosionDecay())
+                                )));
+
+                this.add(block.get(), builder);
+            }
         }
 
         @Override
