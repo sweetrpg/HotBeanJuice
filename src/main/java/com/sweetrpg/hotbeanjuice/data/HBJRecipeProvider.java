@@ -33,10 +33,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 
         // Coffee ingredients
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.COFFEE_CHERRIES), ModItems.COFFEE_BEAN.get(), 1, 180)
-                .unlockedBy("has_coffee_cherry", has(ModItems.COFFEE_CHERRY_ARABICA.get()))
+                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
                 .save(consumer);
         CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
-                .unlockedBy("has_coffee_cherry", has(ModItems.COFFEE_CHERRY_ARABICA.get()))
+                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
                 .pattern("PBP")
