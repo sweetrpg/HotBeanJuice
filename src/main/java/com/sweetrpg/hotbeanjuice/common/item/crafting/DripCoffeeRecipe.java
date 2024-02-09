@@ -9,8 +9,8 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.fluids.FluidStack;
 
 public class DripCoffeeRecipe extends AbstractBrewingRecipe{
-    public DripCoffeeRecipe(ResourceLocation id, String group, FluidStack fluidResult, Ingredient ingredient, float experience, int brewingTime, float buckets) {
-        super(Type.INSTANCE, group, id, fluidResult, ingredient, experience, brewingTime, buckets);
+    public DripCoffeeRecipe(ResourceLocation id, String group, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
+        super(Type.INSTANCE, group, id, ingredient, experience, brewingTime, millibuckets);
     }
 
     @Override
@@ -23,5 +23,4 @@ public class DripCoffeeRecipe extends AbstractBrewingRecipe{
         public static final DripCoffeeRecipe.Type INSTANCE = new DripCoffeeRecipe.Type();
         public static final String ID = Constants.MOD_ID + ":drip_coffee";
     }
-
 }

@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.block.entity;
 
-import com.sweetrpg.hotbeanjuice.common.block.AbstractCoffeePotBlock;
+import com.sweetrpg.hotbeanjuice.common.block.AbstractCoffeeMakerBlock;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.AbstractBrewingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,7 +13,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -35,7 +34,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
-public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implements MenuProvider {
+public abstract class AbstractCoffeeMakerBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
@@ -56,16 +55,16 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final RecipeType<? extends AbstractBrewingRecipe> recipeType;
 
-    public AbstractCoffeePotBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState blockState, RecipeType<? extends AbstractBrewingRecipe> recipeType) {
+    public AbstractCoffeeMakerBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState blockState, RecipeType<? extends AbstractBrewingRecipe> recipeType) {
         super(type, pos, blockState);
         this.data = new ContainerData() {
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> AbstractCoffeePotBlockEntity.this.progress;
-                    case 1 -> AbstractCoffeePotBlockEntity.this.maxProgress;
-                    case 2 -> AbstractCoffeePotBlockEntity.this.fuelBurnTime;
-                    case 3 -> AbstractCoffeePotBlockEntity.this.maxFuelBurnTime;
-                    case 4 -> AbstractCoffeePotBlockEntity.this.fluidLevel;
+                    case 0 -> AbstractCoffeeMakerBlockEntity.this.progress;
+                    case 1 -> AbstractCoffeeMakerBlockEntity.this.maxProgress;
+                    case 2 -> AbstractCoffeeMakerBlockEntity.this.fuelBurnTime;
+                    case 3 -> AbstractCoffeeMakerBlockEntity.this.maxFuelBurnTime;
+                    case 4 -> AbstractCoffeeMakerBlockEntity.this.fluidLevel;
                     case 5 -> maxFluidLevel;
                     default -> 0;
                 };
@@ -73,11 +72,11 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
 
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> AbstractCoffeePotBlockEntity.this.progress = value;
-                    case 1 -> AbstractCoffeePotBlockEntity.this.maxProgress = value;
-                    case 2 -> AbstractCoffeePotBlockEntity.this.fuelBurnTime = value;
-                    case 3 -> AbstractCoffeePotBlockEntity.this.maxFuelBurnTime = value;
-                    case 4 -> AbstractCoffeePotBlockEntity.this.fluidLevel = value;
+                    case 0 -> AbstractCoffeeMakerBlockEntity.this.progress = value;
+                    case 1 -> AbstractCoffeeMakerBlockEntity.this.maxProgress = value;
+                    case 2 -> AbstractCoffeeMakerBlockEntity.this.fuelBurnTime = value;
+                    case 3 -> AbstractCoffeeMakerBlockEntity.this.maxFuelBurnTime = value;
+                    case 4 -> AbstractCoffeeMakerBlockEntity.this.fluidLevel = value;
                     case 5 -> maxFluidLevel = value;
                 }
             }
@@ -154,7 +153,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
         return this.fuelBurnTime > 0;
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, AbstractCoffeePotBlockEntity blockEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, AbstractCoffeeMakerBlockEntity blockEntity) {
         boolean lit = blockEntity.isLit();
         boolean changed = false;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
@@ -202,7 +201,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
                 recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
 
                 //recipe exists and we have room for more fluid/fluid is same type TODO
-                if (recipe.isPresent() && canAddFluid(blockEntity, recipe.get().getResultFluid())) {
+                if (recipe.isPresent()) { // && canAddFluid(blockEntity, recipe.get().getResultFluid())) {
 
                     //set values
                     blockEntity.fuelBurnTime = net.minecraftforge.common.ForgeHooks.getBurnTime(fuelItem, RecipeType.SMELTING);
@@ -230,7 +229,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
                 recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
 
                 //if recipe is present and fluid checks pass
-                if (recipe.isPresent() && canAddFluid(blockEntity, recipe.get().getResultFluid()) && hasRoomForFluid(blockEntity, recipe.get())) {
+                if (recipe.isPresent()) { // && canAddFluid(blockEntity, recipe.get().getResultFluid()) && hasRoomForFluid(blockEntity, recipe.get())) {
 
                     //get how long it will take to brew
                     blockEntity.maxProgress = recipe.get().getBrewingTime();
@@ -264,7 +263,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
         if (lit != blockEntity.isLit()) {
             //update block state
             changed = true;
-            state = state.setValue(AbstractCoffeePotBlock.LIT, blockEntity.isLit());
+            state = state.setValue(AbstractCoffeeMakerBlock.LIT, blockEntity.isLit());
             level.setBlock(pos, state, 3);
         }
 
@@ -273,7 +272,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
         }
     }
 
-    private static boolean hasRecipe(AbstractCoffeePotBlockEntity blockEntity) {
+    private static boolean hasRecipe(AbstractCoffeeMakerBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
@@ -286,7 +285,7 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
         return recipe.isPresent();
     }
 
-    private static void percolate(AbstractCoffeePotBlockEntity blockEntity) {
+    private static void percolate(AbstractCoffeeMakerBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
@@ -298,25 +297,26 @@ public abstract class AbstractCoffeePotBlockEntity extends BlockEntity implement
         if (recipe.isPresent()) {
             blockEntity.itemHandler.extractItem(0, 1, false);
 
-            FluidStack fluid = recipe.get().getResultFluid();
+            FluidStack water = new FluidStack(Fluids.WATER, recipe.get().getMillibuckets());
+            FluidStack coffee = new FluidStack(Fluids.LAVA, recipe.get().getMillibuckets()); //FIXME set to coffee fluid
 
             //update fluid amount with appropriate fluid
-            fluid.setAmount((int) ((float) FluidAttributes.BUCKET_VOLUME * recipe.get().getBuckets()));
-            blockEntity.fluidHandler.fill(fluid, IFluidHandler.FluidAction.EXECUTE);
+//            fluid.setAmount((int) ((float) FluidAttributes.BUCKET_VOLUME * recipe.get().getBuckets()));
+            blockEntity.fluidHandler.fill(coffee, IFluidHandler.FluidAction.EXECUTE);
+            blockEntity.fluidHandler.drain(water, IFluidHandler.FluidAction.EXECUTE);
+
             blockEntity.fluidLevel = blockEntity.fluidHandler.getFluidAmount();
 //            setFluidType(blockEntity);
         }
     }
 
-    private static boolean canAddFluid(AbstractCoffeePotBlockEntity blockEntity, FluidStack result) {
+    private static boolean canAddFluid(AbstractCoffeeMakerBlockEntity blockEntity, FluidStack result) {
         if (!blockEntity.fluidHandler.isFluidValid(result)) {
             return false;
         } else return blockEntity.fluidHandler.getSpace() != 0;
     }
 
-    //TODO
-    private static boolean hasRoomForFluid(AbstractCoffeePotBlockEntity blockEntity, AbstractBrewingRecipe recipe) {
-        return blockEntity.fluidHandler.getSpace() >= (int) (recipe.getBuckets() * (float) FluidAttributes.BUCKET_VOLUME);
+    private static boolean hasRoomForFluid(AbstractCoffeeMakerBlockEntity blockEntity, AbstractBrewingRecipe recipe) {
+        return blockEntity.fluidHandler.getSpace() >= (int) (recipe.getMillibuckets() * (float) FluidAttributes.BUCKET_VOLUME);
     }
-
 }
