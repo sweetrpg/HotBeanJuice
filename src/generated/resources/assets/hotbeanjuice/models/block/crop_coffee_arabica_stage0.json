@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hotbeanjuice:block/crop_coffee_arabica_stage0"
+  }
+}

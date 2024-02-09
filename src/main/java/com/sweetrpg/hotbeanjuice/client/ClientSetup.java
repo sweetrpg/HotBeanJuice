@@ -10,8 +10,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientSetup {
 
     public static void setupScreenManagers(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEE_BUSH.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COFFEE_BUSH_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_ARABICA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_CANEPHORA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_RACEMOSA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_ARABICA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_CANEPHORA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_RACEMOSA.get(), RenderType.cutout());
 
 //        MenuScreens.register(ModContainerTypes.CAT_BOWL.get(), CatBowlScreen::new);
     }

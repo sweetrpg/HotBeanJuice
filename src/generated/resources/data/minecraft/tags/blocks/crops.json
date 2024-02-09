@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "hotbeanjuice:coffee_bush"
+    "hotbeanjuice:crop_coffee_arabica",
+    "hotbeanjuice:crop_coffee_canephora",
+    "hotbeanjuice:crop_coffee_racemosa"
   ]
 }
