@@ -1,8 +1,11 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.block.*;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.block.DripCoffeeBlock;
+import com.sweetrpg.hotbeanjuice.common.block.HandCoffeeGrinderBlock;
 import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
@@ -38,9 +41,32 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Coffee Makers
-
     public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
             () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Miscellaneous coffee items
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
+            () -> new CoffeeBagBlock(true, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
+            () -> new CoffeeBagBlock(false, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee devices
+    public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
+            HandCoffeeGrinderBlock::new);
+//    public static final RegistryObject<CoffeeBagBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
+//            () -> new PoweredCoffeeGrinderBlock(true, BlockBehaviour.Properties.copy(Blocks.REPEATING_COMMAND_BLOCK)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Kitchenware
+    public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
+    public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
+//    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
+//    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
@@ -75,7 +101,7 @@ public class ModBlocks {
         return BLOCKS.register(name, blockSupplier);
     }
 
-    public static void registerBlockColours(final ColorHandlerEvent.Block event) {
+    public static void registerBlockColors(final ColorHandlerEvent.Block event) {
         BlockColors blockColors = event.getBlockColors();
 
 //        Util.acceptOrElse(CatBlocks.CAT_BATH, (block) -> {

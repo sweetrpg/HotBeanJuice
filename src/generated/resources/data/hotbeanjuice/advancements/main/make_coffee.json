@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "hotbeanjuice:coffee_cup"
+    },
+    "title": {
+      "translate": "advancements.hotbeanjuice.main.make_coffee.title"
+    },
+    "description": {
+      "translate": "advancements.hotbeanjuice.main.make_coffee.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "make_coffee": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hotbeanjuice:coffee_cup"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "make_coffee"
+    ]
+  ]
+}

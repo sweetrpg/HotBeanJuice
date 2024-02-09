@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "celestialexploration"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "celestialexploration:ceramic_tile"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:coffee_cup"
+  }}

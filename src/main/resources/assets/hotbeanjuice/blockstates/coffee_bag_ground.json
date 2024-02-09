@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/coffee_bag_ground"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/coffee_bag_ground",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/coffee_bag_ground",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/coffee_bag_ground",
+      "y": 270
+    }
+  }
+}
