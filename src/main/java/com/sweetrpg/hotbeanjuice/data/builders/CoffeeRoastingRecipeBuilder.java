@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.data.builders;
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
+import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
@@ -30,9 +31,9 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
     @Nullable
     private String group;
-    private final GrindingRecipe.Serializer serializer;
+    private final RoastingRecipe.Serializer serializer;
 
-    private CoffeeRoastingRecipeBuilder(Ingredient ingredient, ItemStack item, float experience, int roastingTime, GrindingRecipe.Serializer serializer) {
+    private CoffeeRoastingRecipeBuilder(Ingredient ingredient, ItemStack item, float experience, int roastingTime, RoastingRecipe.Serializer serializer) {
         this.result = item;
         this.ingredient = ingredient;
         this.experience = experience;
@@ -41,7 +42,7 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
     }
 
     public static CoffeeRoastingRecipeBuilder roasting(Ingredient ingredient, ItemStack item, float experience, int roastingTime) {
-        return new CoffeeRoastingRecipeBuilder(ingredient, item, experience, roastingTime, (GrindingRecipe.Serializer) ModRecipeSerializers.GRINDING_SERIALIZER.get());
+        return new CoffeeRoastingRecipeBuilder(ingredient, item, experience, roastingTime, (RoastingRecipe.Serializer) ModRecipeSerializers.ROASTING_SERIALIZER.get());
     }
 
     @Override
@@ -69,7 +70,7 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
         consumer.accept(new CoffeeRoastingRecipeBuilder.Result(resourceLocation,
-                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.roastingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/" + resourceLocation.getPath()), this.serializer));
+                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.roastingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/roasting/" + resourceLocation.getPath()), this.serializer));
     }
 
     private void ensureValid(ResourceLocation p_126266_) {
@@ -87,9 +88,9 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
         private final int roastingTime;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
-        private final GrindingRecipe.Serializer serializer;
+        private final RoastingRecipe.Serializer serializer;
 
-        public Result(ResourceLocation id, String group, Ingredient ingredient, ItemStack result, float experience, int roastingTime, Advancement.Builder builder, ResourceLocation advancementId, GrindingRecipe.Serializer serializer) {
+        public Result(ResourceLocation id, String group, Ingredient ingredient, ItemStack result, float experience, int roastingTime, Advancement.Builder builder, ResourceLocation advancementId, RoastingRecipe.Serializer serializer) {
             this.id = id;
             this.group = group;
             this.ingredient = ingredient;

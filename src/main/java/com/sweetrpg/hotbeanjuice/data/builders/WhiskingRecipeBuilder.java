@@ -69,7 +69,7 @@ public class WhiskingRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
         consumer.accept(new WhiskingRecipeBuilder.Result(resourceLocation,
-                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.whiskingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/" + resourceLocation.getPath()), this.serializer));
+                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.whiskingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/whisking/" + resourceLocation.getPath()), this.serializer));
     }
 
     private void ensureValid(ResourceLocation p_126266_) {

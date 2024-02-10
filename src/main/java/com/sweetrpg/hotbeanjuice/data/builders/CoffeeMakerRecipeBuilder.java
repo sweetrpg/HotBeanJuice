@@ -105,7 +105,7 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
         consumer.accept(new CoffeeMakerRecipeBuilder.Result(resourceLocation,
-                this.group == null ? "" : this.group, this.ingredients, this.result, this.experience, this.processingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/" + resourceLocation.getPath()), this.serializer));
+                this.group == null ? "" : this.group, this.ingredients, this.result, this.experience, this.processingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/brewing/" + resourceLocation.getPath()), this.serializer));
     }
 
     private void ensureValid(ResourceLocation p_126266_) {

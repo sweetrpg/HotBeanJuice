@@ -18,9 +18,9 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class GrindingRecipe implements Recipe<SimpleContainer> {
+public class RoastingRecipe implements Recipe<SimpleContainer> {
 
-    public static final String RECIPE_TYPE_NAME = "grinding";
+    public static final String RECIPE_TYPE_NAME = "roasting";
 
     private final ResourceLocation id;
     private final ItemStack result;
@@ -28,7 +28,7 @@ public class GrindingRecipe implements Recipe<SimpleContainer> {
     private final float experience;
     private final int processingTime;
 
-    public GrindingRecipe(ResourceLocation id, ItemStack result, Ingredient ingredient, float experience, int processingTime) {
+    public RoastingRecipe(ResourceLocation id, ItemStack result, Ingredient ingredient, float experience, int processingTime) {
         this.id = id;
         this.result = result;
         this.ingredient = ingredient;
@@ -80,48 +80,48 @@ public class GrindingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public @NotNull RecipeSerializer<?> getSerializer() {
-        return GrindingRecipe.Serializer.INSTANCE;
+        return RoastingRecipe.Serializer.INSTANCE;
     }
 
     @Override
     public @NotNull RecipeType<?> getType() {
-        return GrindingRecipe.Type.INSTANCE;
+        return RoastingRecipe.Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<GrindingRecipe> {
+    public static class Type implements RecipeType<RoastingRecipe> {
         private Type() { }
-        public static final GrindingRecipe.Type INSTANCE = new GrindingRecipe.Type();
+        public static final RoastingRecipe.Type INSTANCE = new RoastingRecipe.Type();
         public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 
-    public static class Serializer implements RecipeSerializer<GrindingRecipe> {
-        public static final GrindingRecipe.Serializer INSTANCE = new GrindingRecipe.Serializer();
+    public static class Serializer implements RecipeSerializer<RoastingRecipe> {
+        public static final RoastingRecipe.Serializer INSTANCE = new RoastingRecipe.Serializer();
         public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID,RECIPE_TYPE_NAME);
 
         @Override
-        public GrindingRecipe fromJson(ResourceLocation id, JsonObject json) {
+        public RoastingRecipe fromJson(ResourceLocation id, JsonObject json) {
             ItemStack result = new ItemStack(GsonHelper.getAsItem(json, "result"));
 
             JsonElement jsonelement = GsonHelper.isArrayNode(json, "ingredient") ? GsonHelper.getAsJsonArray(json, "ingredient") : GsonHelper.getAsJsonObject(json, "ingredient");
             Ingredient ingredient = Ingredient.fromJson(jsonelement);
 
             float experience = GsonHelper.getAsFloat(json, "experience", 0.0F);
-            int cookingTime = GsonHelper.getAsInt(json, "grinding_time", 100);
-            return new GrindingRecipe(id, result, ingredient, experience, cookingTime);
+            int cookingTime = GsonHelper.getAsInt(json, "roasting_time", 100);
+            return new RoastingRecipe(id, result, ingredient, experience, cookingTime);
         }
 
         @Override
-        public GrindingRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+        public RoastingRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
             Ingredient ingredient = Ingredient.fromNetwork(buf);
 
             ItemStack result = buf.readItem();
             float experience = buf.readFloat();
             int cookingTime = buf.readVarInt();
-            return new GrindingRecipe(id, result, ingredient, experience, cookingTime);
+            return new RoastingRecipe(id, result, ingredient, experience, cookingTime);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf buf, GrindingRecipe recipe) {
+        public void toNetwork(FriendlyByteBuf buf, RoastingRecipe recipe) {
             recipe.ingredient.toNetwork(buf);
 
             buf.writeItem(recipe.getResultItem());
@@ -142,7 +142,7 @@ public class GrindingRecipe implements Recipe<SimpleContainer> {
 
         @Override
         public Class<RecipeSerializer<?>> getRegistryType() {
-            return GrindingRecipe.Serializer.castClass(RecipeSerializer.class);
+            return RoastingRecipe.Serializer.castClass(RecipeSerializer.class);
         }
 
         @SuppressWarnings("unchecked") // Need this wrapper, because generics
