@@ -7,6 +7,8 @@
   "block.hotbeanjuice.coffee_cup": "Coffee Cup",
   "block.hotbeanjuice.disposable_cup": "Disposable Cup",
   "block.hotbeanjuice.fired_coffee_cup": "Kiln-fired Coffee Cup",
+  "block.hotbeanjuice.hand_coffee_grinder": "Hand Burr Coffee Grinder",
+  "block.hotbeanjuice.powered_coffee_grinder": "Powered Burr Coffee Grinder",
   "block.hotbeanjuice.travel_cup": "Travel Cup",
   "block.hotbeanjuice.wild_coffee_bush": "Wild Coffea Bush",
   "config.chance_coffee_bush.description": "Chance that coffee bushes appear in the wild",

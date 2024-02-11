@@ -31,7 +31,8 @@ public class HBJRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
-        // coffee beans
+
+        // Coffee beans
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
                 .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
                 .save(consumer);
@@ -81,6 +82,32 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .define('C', Items.CLAY)
                 .unlockedBy("has_clay", has(Items.CLAY))
 //                .group()
+                .save(consumer);
+
+        // Coffee support devices
+        ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
+                .pattern(" G ")
+                .pattern("IFI")
+                .pattern(" I ")
+                .define('G', Items.GLASS)
+                .define('I', Items.IRON_INGOT)
+                .define('F', Items.FLINT)
+                .unlockedBy("has_glass", has(Items.GLASS))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.POWERED_COFFEE_GRINDER.get(), 1)
+                .pattern(" G ")
+                .pattern("IFI")
+                .pattern("IRI")
+                .define('G', Items.GLASS)
+                .define('I', Items.IRON_INGOT)
+                .define('F', Items.FLINT)
+                .define('R', Items.REDSTONE)
+                .unlockedBy("has_glass", has(Items.GLASS))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
                 .save(consumer);
     }
 
