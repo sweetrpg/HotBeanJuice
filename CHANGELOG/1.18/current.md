@@ -1,0 +1,1 @@
+- `[NEW]` Powered coffee grinder

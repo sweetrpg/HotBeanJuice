@@ -37,6 +37,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .save(consumer);
         CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
                 .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
+
+        // Coffee beans
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COFFEE_CHERRY.get()), ModItems.COFFEE_BEAN.get(), 1, 180)
+                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
                 .pattern("PBP")
@@ -168,6 +172,31 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_water", has(Items.WATER_BUCKET))
                 .save(consumer);
 
+        // Coffee support devices
+        ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
+                .pattern(" G ")
+                .pattern("IFI")
+                .pattern(" I ")
+                .define('G', Items.GLASS)
+                .define('I', Items.IRON_INGOT)
+                .define('F', Items.FLINT)
+                .unlockedBy("has_glass", has(Items.GLASS))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.POWERED_COFFEE_GRINDER.get(), 1)
+                .pattern(" G ")
+                .pattern("IFI")
+                .pattern("IRI")
+                .define('G', Items.GLASS)
+                .define('I', Items.IRON_INGOT)
+                .define('F', Items.FLINT)
+                .define('R', Items.REDSTONE)
+                .unlockedBy("has_glass", has(Items.GLASS))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .save(consumer);
     }
 
     @Override

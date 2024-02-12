@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "hotbeanjuice:hand_coffee_grinder"
+    "hotbeanjuice:hand_coffee_grinder",
+    "hotbeanjuice:powered_coffee_grinder"
   ]
 }
