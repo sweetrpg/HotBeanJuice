@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class PoweredCoffeeGrinderBlock extends Block {
 
-    protected static final VoxelShape SHAPE = Block.box(3D, 0.0D, 3D, 13D, 9.0D, 13D);
+    protected static final VoxelShape SHAPE = Block.box(4D, 0.0D, 4D, 12D, 14.0D, 12D);
 
     public PoweredCoffeeGrinderBlock() {
         super(Properties.of(Material.BUILDABLE_GLASS).strength(1, 5).sound(SoundType.GLASS));
