@@ -21,6 +21,8 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_ARABICA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_CANEPHORA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_RACEMOSA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAND_COFFEE_GRINDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POWERED_COFFEE_GRINDER.get(), RenderType.cutout());
 
         MenuScreens.register(ModContainerTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
     }
