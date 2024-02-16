@@ -14,7 +14,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Language Provider";
+        return "Hot Bean Juice Language Provider";
     }
 
     @Override
@@ -32,6 +32,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Coffee Bag (Ground)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BUSH_TITLE, "Coffea Bush");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_ROASTER_TITLE, "Coffee Roaster");
         add(Constants.TRANSLATION_KEY_BLOCK_DISPOSABLE_CUP_TITLE, "Disposable Cup");
         add(Constants.TRANSLATION_KEY_BLOCK_FIRED_COFFEE_CUP_TITLE, "Kiln-fired Coffee Cup");
         add(Constants.TRANSLATION_KEY_BLOCK_HAND_COFFEE_GRINDER_TITLE, "Hand-crank Burr Coffee Grinder");
@@ -41,6 +42,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+        add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_ITEM_CLAY_MUG_TITLE, "Clay Mug");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Coffee Bean");
@@ -56,6 +58,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Coffee Bag (Ground)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BUSH_TITLE, "Coffea Bush");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_ROASTER_TITLE, "Coffee Roaster");
         add(Constants.TRANSLATION_KEY_BLOCK_DISPOSABLE_CUP_TITLE, "Disposable Cup");
         add(Constants.TRANSLATION_KEY_BLOCK_FIRED_COFFEE_CUP_TITLE, "Kiln-fired Coffee Cup");
         add(Constants.TRANSLATION_KEY_BLOCK_HAND_COFFEE_GRINDER_TITLE, "Hand-crank Burr Coffee Grinder");
@@ -65,6 +68,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Coffee Cup");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+        add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_ITEM_CLAY_MUG_TITLE, "Clay Mug");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Coffee Bean");
@@ -80,6 +84,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Kaffeebeutel (Bohnen)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE, "Kaffeebeutel (gemahlen)");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BUSH_TITLE, "Kaffeebusch");
+        add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_ROASTER_TITLE, "Kaffeeröster");
         add(Constants.TRANSLATION_KEY_BLOCK_DISPOSABLE_CUP_TITLE, "Einwegbecher");
         add(Constants.TRANSLATION_KEY_BLOCK_FIRED_COFFEE_CUP_TITLE, "Im Ofen gebrannte Kaffeetasse");
         add(Constants.TRANSLATION_KEY_BLOCK_HAND_COFFEE_GRINDER_TITLE, "Kaffeemühle mit Handkurbel");
@@ -89,6 +94,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Kaffeetasse");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
+        add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Röster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Heißer Bohnensaft");
         add(Constants.TRANSLATION_KEY_ITEM_CLAY_MUG_TITLE, "Tonbecher");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE, "Kaffeebohne");

@@ -68,9 +68,9 @@ public class RoastingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        NonNullList<Ingredient> nonnulllist = NonNullList.create();
-        nonnulllist.add(this.ingredient);
-        return nonnulllist;
+        NonNullList<Ingredient> nonNullList = NonNullList.create();
+        nonNullList.add(this.ingredient);
+        return nonNullList;
     }
 
     @Override
@@ -89,14 +89,16 @@ public class RoastingRecipe implements Recipe<SimpleContainer> {
     }
 
     public static class Type implements RecipeType<RoastingRecipe> {
-        private Type() { }
+        private Type() {
+        }
+
         public static final RoastingRecipe.Type INSTANCE = new RoastingRecipe.Type();
         public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 
     public static class Serializer implements RecipeSerializer<RoastingRecipe> {
         public static final RoastingRecipe.Serializer INSTANCE = new RoastingRecipe.Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID,RECIPE_TYPE_NAME);
+        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID, RECIPE_TYPE_NAME);
 
         @Override
         public RoastingRecipe fromJson(ResourceLocation id, JsonObject json) {
@@ -147,7 +149,7 @@ public class RoastingRecipe implements Recipe<SimpleContainer> {
 
         @SuppressWarnings("unchecked") // Need this wrapper, because generics
         private static <G> Class<G> castClass(Class<?> cls) {
-            return (Class<G>)cls;
+            return (Class<G>) cls;
         }
     }
 }

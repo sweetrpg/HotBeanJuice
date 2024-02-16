@@ -2,10 +2,6 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.*;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
-import com.sweetrpg.hotbeanjuice.common.block.HandCoffeeGrinderBlock;
-import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -55,7 +51,7 @@ public class ModBlocks {
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Coffee devices
+    // Coffee-making devices
 
     public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
             HandCoffeeGrinderBlock::new);
@@ -69,6 +65,11 @@ public class ModBlocks {
     public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
 //    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
 //    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee-processing devices
+    public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 

@@ -1,6 +1,11 @@
 package com.sweetrpg.hotbeanjuice.client;
 
+import com.sweetrpg.hotbeanjuice.client.screen.CoffeeRoasterScreen;
+import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModContainerTypes;
+import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -17,7 +22,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_CANEPHORA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_RACEMOSA.get(), RenderType.cutout());
 
-//        MenuScreens.register(ModContainerTypes.CAT_BOWL.get(), CatBowlScreen::new);
+        MenuScreens.register(ModContainerTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
     }
 
     public static void setupEntityRenderers(final EntityRenderersEvent.RegisterLayerDefinitions event) {
