@@ -34,7 +34,7 @@ public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvide
     private int fuelBurnTime = 0;
     private int maxFuelBurnTime;
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(6) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(11) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
