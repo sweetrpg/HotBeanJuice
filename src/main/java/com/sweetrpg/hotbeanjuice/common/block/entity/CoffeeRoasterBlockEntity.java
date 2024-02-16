@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.block.entity;
 
 import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +23,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -42,11 +43,11 @@ public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvide
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     public CoffeeRoasterBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntityTypes.POWERED_COFFEE_GRINDER.get(), pPos, pBlockState);
+        super(ModBlockEntityTypes.COFFEE_ROASTER.get(), pPos, pBlockState);
 
         this.data = new ContainerData() {
             public int get(int index) {
-                return switch (index) {
+                return switch(index) {
                     case 0 -> CoffeeRoasterBlockEntity.this.progress;
                     case 1 -> CoffeeRoasterBlockEntity.this.maxProgress;
                     case 2 -> CoffeeRoasterBlockEntity.this.fuelBurnTime;
@@ -56,7 +57,7 @@ public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvide
             }
 
             public void set(int index, int value) {
-                switch (index) {
+                switch(index) {
                     case 0 -> CoffeeRoasterBlockEntity.this.progress = value;
                     case 1 -> CoffeeRoasterBlockEntity.this.maxProgress = value;
                     case 2 -> CoffeeRoasterBlockEntity.this.fuelBurnTime = value;
@@ -75,7 +76,7 @@ public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvide
         // TODO
     }
 
-        @Override
+    @Override
     public @NotNull Component getDisplayName() {
         return new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE);
     }
@@ -89,7 +90,7 @@ public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvide
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if(cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
         }
 

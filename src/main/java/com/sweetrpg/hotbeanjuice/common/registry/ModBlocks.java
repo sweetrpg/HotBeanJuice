@@ -116,9 +116,6 @@ public class ModBlocks {
 
     public static void logError() {
         // Only try to register if blocks were successfully registered
-        // Trying to avoid as reports like HotBeanJuice#242, where it says
-        // HotBeanJuice crashed but is not the CAUSE of the crash
-
         HotBeanJuice.LOGGER.info("Items/Blocks were not registered for some reason... probably because we are c...r..a..s.hing");
     }
 }
