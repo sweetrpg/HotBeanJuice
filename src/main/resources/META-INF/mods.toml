@@ -10,8 +10,8 @@ logoFile= "hbj_logo.png"
     version="${version}"
     updateJSONURL="https://minecraft.sweetrpg.com/mods/hotbeanjuice/version.json"
     displayName="Hot Bean Juice"
-    credits="paulyhedral"
-    authors="paulyhedral"
+    credits="paulyhedral shimaginary primal_zerg_"
+    authors="paulyhedral shimaginary primal_zerg_"
     description='''
     Coffee!
     '''

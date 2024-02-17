@@ -1,6 +1,8 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -32,8 +34,8 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     protected void registerMinecraftTags() {
 //        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS)
 //                .add(ModBlocks.WILD_CATNIP.get());
-//        tag(net.minecraft.tags.BlockTags.CROPS)
-//                .add(ModBlocks.CATNIP_CROP.get());
+        tag(net.minecraft.tags.BlockTags.CROPS)
+                .add(ModBlocks.COFFEE_BUSH_CROP.get());
     }
 
     protected void registerForgeTags() {
@@ -41,8 +43,19 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     }
 
     protected void registerModTags() {
+        tag(ModTags.WILD_CROPS)
+                .add(ModBlocks.WILD_COFFEE_BUSH.get());
+        tag(ModTags.COFFEE_CUPS)
+                .add(ModBlocks.COFFEE_CUP.get())
+                /*.add(ModBlocks.TRAVEL_CUP.get())
+                .add(ModBlocks.DISPOSABLE_CUP.get())*/;
 //        tag(ModTags.WILD_CROPS)
 //                .add(ModBlocks.WILD_CATNIP.get());
+        tag(ModTags.BAGS_OF_COFFEE)
+                .add(ModBlocks.COFFEE_BAG_BEANS.get())
+                .add(ModBlocks.COFFEE_BAG_GROUND.get());
+        tag(ModTags.COFFEE_GRINDERS)
+                .add(ModBlocks.HAND_COFFEE_GRINDER.get());
     }
 
 }

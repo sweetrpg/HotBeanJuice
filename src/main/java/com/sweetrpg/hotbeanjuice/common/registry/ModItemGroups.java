@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public class ModItemGroups {
 
-    public static final CreativeModeTab GENERAL = new CustomItemGroup("hotbeanjuice", () -> new ItemStack(Items.CRAFTING_TABLE));
+    public static final CreativeModeTab GENERAL = new CustomItemGroup("hotbeanjuice", () -> new ItemStack(ModBlocks.COFFEE_CUP.get()));
 
     public static class CustomItemGroup extends CreativeModeTab {
 

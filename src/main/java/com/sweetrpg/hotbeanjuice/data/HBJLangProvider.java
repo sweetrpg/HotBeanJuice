@@ -42,6 +42,7 @@ public class HBJLangProvider extends LanguageProvider {
 
         add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
+
     }
 
     private void processENGB() {
