@@ -1,9 +1,10 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBeanBlock;
+import com.sweetrpg.hotbeanjuice.common.block.CarafeBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.block.DripCoffeeBlock;
+import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
@@ -42,10 +43,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
             () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
 
-
     public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
             () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
-
 
     // ----------------------------------------------------------------------------------------------------------------
 

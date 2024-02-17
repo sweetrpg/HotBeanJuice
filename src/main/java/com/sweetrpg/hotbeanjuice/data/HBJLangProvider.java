@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -38,6 +39,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE, "Coffee Filter");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+
+        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
+        add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
     }
 
     private void processENGB() {

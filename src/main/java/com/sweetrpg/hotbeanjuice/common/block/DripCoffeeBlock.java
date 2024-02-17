@@ -55,7 +55,7 @@ public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
             if (state.getValue(OCCUPIED)) {
                 state = state.setValue(OCCUPIED, false).setValue(FULLNESS, 0);
                 if (blockEntity instanceof DripCoffeeBlockEntity dripCoffeeBlockEntity) {
-                    dripCoffeeBlockEntity.emptyCoffee();
+//                    dripCoffeeBlockEntity.emptyCoffee();
                 }
                 //TODO transfer fluid capability/contents to carafe item
                 player.addItem(new ItemStack(ModItems.DRIP_COFFEE_CARAFE.get(), 1));

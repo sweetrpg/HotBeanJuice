@@ -166,21 +166,11 @@ public abstract class AbstractPoweredCoffeeMakerBlockEntity extends BlockEntity 
 
     private boolean isLit(BlockState state) {
         return state.getValue(AbstractPoweredCoffeeMakerBlock.LIT);
-//        return this.fuelBurnTime > 0;
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, AbstractPoweredCoffeeMakerBlockEntity blockEntity) {
         boolean lit = blockEntity.isLit(state);
-//        boolean changed = false;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-
-//        HotBeanJuice.LOGGER.debug("water handler amount: " + blockEntity.waterHandler.getFluidAmount() + ", waterLevel amount: " + blockEntity.waterLevel);
-
-        //water slot/tank, holds 4? buckets worth
-        //fuel slot for coal, etc.
-        //slot for coffee filter
-        //does filter need to be replaced every pot or every few pots? perhaps every 4 bucket-fulls (so 1 full pot)?
-        //coffee grinds slot
 
         //TODO when checking for recipe, check for coffee filter as well
 
@@ -214,41 +204,13 @@ public abstract class AbstractPoweredCoffeeMakerBlockEntity extends BlockEntity 
 
         //lit OR has fuel & coffee grinds slot isn't empty
         if (lit && !coffeeGrindsSlot.isEmpty()) {
-            Optional<AbstractBrewingRecipe> recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
+//            Optional<AbstractBrewingRecipe> recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
 //            FluidStack fluid = new FluidStack(Fluids.WATER, 10); //recipe.get().getResultFluid();
 
-            //not lit and has recipe
-//            if (!lit && hasRecipe(blockEntity)) {
-//                //get recipe for coffee
-//                recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
-//
-//                //recipe exists, and we have room for more fluid/fluid is same type
-//                if (recipe.isPresent() && canAddFluid(blockEntity, recipe.get().getResultFluid())) {
-//
-//                    //set values
-////                    blockEntity.fuelBurnTime = net.minecraftforge.common.ForgeHooks.getBurnTime(fuelItem, RecipeType.SMELTING);
-////                    blockEntity.maxFuelBurnTime = blockEntity.fuelBurnTime;
-//
-//                    //if lit by now
-////                    if (blockEntity.isLit()) {
-////                        changed = true;
-////
-////                        //use up 1 fuel item
-////                        if (fuelItem.hasContainerItem())
-////                            blockEntity.itemHandler.setStackInSlot(1, fuelItem.getContainerItem());
-////                        else if (!fuelItem.isEmpty()) {
-////                            fuelItem.shrink(1);
-////                            if (fuelItem.isEmpty()) {
-////                                blockEntity.itemHandler.setStackInSlot(1, fuelItem.getContainerItem());
-////                            }
-////                        }
-////                    }
-//                }
-//            }
             //lit and has recipe
             if (lit && hasRecipe(blockEntity)) {
                 //get recipe
-                recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
+                Optional<AbstractBrewingRecipe> recipe = level.getRecipeManager().getRecipeFor((RecipeType<AbstractBrewingRecipe>) blockEntity.recipeType, inventory, level);
                 FluidStack coffee = new FluidStack(Fluids.LAVA, recipe.get().getMillibuckets()); //FIXME set to coffee fluid
 
                 //if recipe is present and fluid checks pass

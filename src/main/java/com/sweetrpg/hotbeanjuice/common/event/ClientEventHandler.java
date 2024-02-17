@@ -23,6 +23,7 @@ public class ClientEventHandler {
 
         //RENDER LAYERS
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MAKER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
 
     }
 }

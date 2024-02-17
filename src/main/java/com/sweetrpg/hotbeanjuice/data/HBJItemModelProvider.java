@@ -34,6 +34,8 @@ public class HBJItemModelProvider extends ItemModelProvider {
         generated(ModItems.COFFEE_SEEDS);
 
         blockItem(ModBlocks.DRIP_COFFEE_MAKER);
+        blockItem(ModBlocks.DRIP_COFFEE_CARAFE);
+
         blockItem(ModBlocks.WILD_COFFEE_BUSH);
     }
 
