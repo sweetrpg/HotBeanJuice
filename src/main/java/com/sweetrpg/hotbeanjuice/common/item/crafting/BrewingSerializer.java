@@ -2,13 +2,17 @@ package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.sweetrpg.hotbeanjuice.common.util.ModJsonHelper;
+import net.minecraft.core.Registry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.*;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistryEntry;
 
-public class BrewingSerializer<T extends AbstractBrewingRecipe> extends net.minecraftforge.registries.ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<T> {
+public class BrewingSerializer<T extends AbstractBrewingRecipe> extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<T> {
     private final int defaultBrewingTime;
     public final BrewingSerializer.Brewer<T> factory;
 

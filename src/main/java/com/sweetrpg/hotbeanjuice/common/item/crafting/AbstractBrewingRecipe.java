@@ -44,7 +44,7 @@ public abstract class AbstractBrewingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public boolean canCraftInDimensions(int p_43999_, int p_44000_) {
+    public boolean canCraftInDimensions(int width, int height) {
         return true;
     }
 
@@ -72,9 +72,9 @@ public abstract class AbstractBrewingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        NonNullList<Ingredient> nonnulllist = NonNullList.create();
-        nonnulllist.add(this.ingredient);
-        return nonnulllist;
+        NonNullList<Ingredient> nonNullList = NonNullList.create();
+        nonNullList.add(this.ingredient);
+        return nonNullList;
     }
 
     @Override
