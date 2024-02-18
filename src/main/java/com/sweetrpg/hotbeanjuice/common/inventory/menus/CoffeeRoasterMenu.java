@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.common.inventory.menu;
+package com.sweetrpg.hotbeanjuice.common.inventory.menus;
 
 import com.sweetrpg.hotbeanjuice.common.block.entity.CoffeeRoasterBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.inventory.container.CoffeeRoastingContainer;

@@ -1,10 +1,8 @@
 package com.sweetrpg.hotbeanjuice.client;
 
 import com.sweetrpg.hotbeanjuice.client.screen.CoffeeRoasterScreen;
-import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModContainerTypes;
-import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;

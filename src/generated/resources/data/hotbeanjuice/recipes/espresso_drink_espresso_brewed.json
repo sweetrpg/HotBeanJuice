@@ -1,0 +1,14 @@
+{
+  "type": "hotbeanjuice:espresso_coffee",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "hotbeanjuice:fine_coffee_grounds"
+    }
+  ],
+  "result": "hotbeanjuice:espresso_drink",
+  "experience": 0.3,
+  "processing_time": 300
+}

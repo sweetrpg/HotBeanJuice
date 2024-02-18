@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  H",
+    "III",
+    "IRB"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:coffee_roaster"
+  }
+}

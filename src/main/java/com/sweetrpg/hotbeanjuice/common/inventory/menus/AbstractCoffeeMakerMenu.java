@@ -91,7 +91,7 @@ public abstract class AbstractCoffeeMakerMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.DRIP_COFFEE_MAKER.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.DRIP_COFFEE_MACHINE.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

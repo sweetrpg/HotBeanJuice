@@ -3,29 +3,16 @@ package com.sweetrpg.hotbeanjuice.client.screen;
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
-import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
+import com.sweetrpg.hotbeanjuice.common.inventory.menus.CoffeeRoasterMenu;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.network.chat.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.InventoryMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fluids.FluidStack;
 
-import java.util.Collections;
 import java.util.List;
 
 @OnlyIn(Dist.CLIENT)

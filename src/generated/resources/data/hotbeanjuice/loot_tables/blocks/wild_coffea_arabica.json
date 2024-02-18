@@ -23,7 +23,7 @@
               }
             }
           ],
-          "name": "hotbeanjuice:coffee_cherry"
+          "name": "hotbeanjuice:coffee_cherry_arabica"
         }
       ]
     },
@@ -45,7 +45,7 @@
                   }
                 }
               ],
-              "name": "hotbeanjuice:coffee_cherry"
+              "name": "hotbeanjuice:wild_coffea_arabica"
             },
             {
               "type": "minecraft:item",
@@ -62,7 +62,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "hotbeanjuice:coffee_seeds"
+              "name": "hotbeanjuice:coffee_cherry_arabica"
             }
           ]
         }

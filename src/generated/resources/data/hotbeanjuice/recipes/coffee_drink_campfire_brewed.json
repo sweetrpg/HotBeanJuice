@@ -1,5 +1,5 @@
 {
-  "type": "hotbeanjuice:coffee_making",
+  "type": "hotbeanjuice:campfire_coffee",
   "ingredients": [
     {
       "item": "hotbeanjuice:boiling_water"
@@ -9,6 +9,6 @@
     }
   ],
   "result": "hotbeanjuice:coffee_drink",
-  "experience": 0.1,
-  "processing_time": 300
+  "experience": 0.2,
+  "processing_time": 600
 }

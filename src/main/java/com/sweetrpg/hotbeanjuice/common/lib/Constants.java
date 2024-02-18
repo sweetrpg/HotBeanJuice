@@ -40,6 +40,7 @@ public class Constants {
     public static final String TRANSLATION_KEY_ITEM_COFFEE_BEAN_TITLE = "item.hotbeanjuice.coffee_bean";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_BUSH_TITLE = "item.hotbeanjuice.coffee_bush";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE = "item.hotbeanjuice.coffee_cherry";
+    public static final String TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE = "item.hotbeanjuice.coffee_filter";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE = "item.hotbeanjuice.coffee_grounds";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE = "item.hotbeanjuice.coffee_seeds";
 

@@ -10,7 +10,7 @@
         "facing": "east"
       },
       "apply": {
-        "model": "hotbeanjuice:block/drip_coffee",
+        "model": "hotbeanjuice:block/drip_coffee_machine",
         "y": 90
       }
     },
@@ -19,7 +19,7 @@
         "facing": "north"
       },
       "apply": {
-        "model": "hotbeanjuice:block/drip_coffee"
+        "model": "hotbeanjuice:block/drip_coffee_machine"
       }
     },
     {
@@ -27,7 +27,7 @@
         "facing": "south"
       },
       "apply": {
-        "model": "hotbeanjuice:block/drip_coffee",
+        "model": "hotbeanjuice:block/drip_coffee_machine",
         "y": 180
       }
     },
@@ -36,7 +36,7 @@
         "facing": "west"
       },
       "apply": {
-        "model": "hotbeanjuice:block/drip_coffee",
+        "model": "hotbeanjuice:block/drip_coffee_machine",
         "y": 270
       }
     },

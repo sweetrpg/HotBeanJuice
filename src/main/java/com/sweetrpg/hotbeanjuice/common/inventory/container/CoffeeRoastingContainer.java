@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.inventory.container;
 
-import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
+import com.sweetrpg.hotbeanjuice.common.inventory.menus.CoffeeRoasterMenu;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;

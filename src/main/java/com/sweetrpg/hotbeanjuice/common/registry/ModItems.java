@@ -1,11 +1,12 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
+import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
 import javax.annotation.Nullable;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -43,9 +44,13 @@ public class ModItems {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Coffee-making paraphernalia
-
     public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
     public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Kitchenware
+    public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
 
     // ----------------------------------------------------------------------------------------------------------------
 

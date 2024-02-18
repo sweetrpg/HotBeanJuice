@@ -7,21 +7,20 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 
-public class DripCoffeeRecipe extends AbstractBrewingRecipe {
+public class EspressoCoffeeRecipe extends AbstractBrewingRecipe {
 
-    public DripCoffeeRecipe(ResourceLocation id, String group, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
+    public EspressoCoffeeRecipe(ResourceLocation id, String group, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredient, experience, brewingTime, millibuckets);
     }
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipeSerializers.DRIP_COFFEE_RECIPE.get();
+        return ModRecipeSerializers.ESPRESSO_COFFEE_RECIPE.get();
     }
 
-    public static class Type implements RecipeType<DripCoffeeRecipe> {
+    public static class Type implements RecipeType<EspressoCoffeeRecipe> {
         private Type() { }
-
-        public static final DripCoffeeRecipe.Type INSTANCE = new DripCoffeeRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":drip_coffee";
+        public static final EspressoCoffeeRecipe.Type INSTANCE = new EspressoCoffeeRecipe.Type();
+        public static final String ID = Constants.MOD_ID + ":espresso_coffee";
     }
 }

@@ -22,7 +22,7 @@ public class ClientEventHandler {
         MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MENU.get(), DripCoffeeScreen::new);
 
         //RENDER LAYERS
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MAKER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MACHINE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
 
     }

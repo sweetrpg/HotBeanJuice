@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.block.entity;
 
-import com.sweetrpg.hotbeanjuice.common.inventory.menu.CoffeeRoasterMenu;
+import com.sweetrpg.hotbeanjuice.common.inventory.menus.CoffeeRoasterMenu;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;

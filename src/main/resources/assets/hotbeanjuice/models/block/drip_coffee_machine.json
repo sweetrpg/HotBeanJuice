@@ -1,9 +1,10 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "hotbeanjuice:block/drip_coffee",
-		"particle": "hotbeanjuice:block/drip_coffee"
+		"0": "hotbeanjuice:block/drip_coffee_machine",
+		"particle": "hotbeanjuice:block/drip_coffee_machine"
 	},
 	"elements": [
 		{
