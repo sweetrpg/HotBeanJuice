@@ -49,6 +49,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.CLAY_MUG.get(), "Clay Mug");
         add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
         add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
@@ -81,6 +82,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.CLAY_MUG.get(), "Clay Mug");
         add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
         add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
@@ -122,6 +124,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa-Kaffeekirsche");
         add(ModItems.COFFEE_FILTER.get(), "Kaffeefilter");
         add(ModItems.COFFEE_GROUNDS.get(), "Kaffeesatz");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
 //        add(ModBlocks.DISPOSABLE_CUP.get(),"Einwegbecher");
 //        add(ModBlocks.TRAVEL_CUP.get(), "Reisebecher");
     }
