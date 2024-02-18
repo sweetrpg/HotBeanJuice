@@ -58,7 +58,7 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
     }
 
     public static CoffeeMakerRecipeBuilder espresso(Item item, float experience, int heatingTime) {
-        return new CoffeeMakerRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.ESPRESSO_COFFEE_RECIPE.get());
+        return new CoffeeMakerRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.ESPRESSO_RECIPE.get());
     }
 
     public CoffeeMakerRecipeBuilder requires(Ingredient pIngredient) {

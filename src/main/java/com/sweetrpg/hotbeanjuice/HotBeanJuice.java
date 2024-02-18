@@ -54,10 +54,9 @@ public class HotBeanJuice {
         ModBlockEntityTypes.ENTITIES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
 //        ModEntityTypes.ENTITIES.register(modEventBus);
-        ModContainerTypes.CONTAINERS.register(modEventBus);
+        ModMenuTypes.MENUS.register(modEventBus);
         ModSerializers.SERIALIZERS.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(ModRegistries::newRegistry);
 //        modEventBus.addListener(ModEntityTypes::addEntityAttributes);
