@@ -23,6 +23,6 @@ public class EspressoRecipe extends AbstractBrewingRecipe {
     public static class Type implements RecipeType<EspressoRecipe> {
         private Type() { }
         public static final EspressoRecipe.Type INSTANCE = new EspressoRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":espresso_coffee";
+        public static final String ID = Constants.MOD_ID + ":espresso";
     }
 }
