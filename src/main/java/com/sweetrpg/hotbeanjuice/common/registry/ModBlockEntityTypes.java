@@ -22,7 +22,7 @@ public class ModBlockEntityTypes {
     public static final RegistryObject<BlockEntityType<PoweredCoffeeGrinderBlockEntity>> POWERED_COFFEE_GRINDER = register("powered_coffee_grinder", PoweredCoffeeGrinderBlockEntity::new, ModBlocks.POWERED_COFFEE_GRINDER);
     public static final RegistryObject<BlockEntityType<CoffeeRoasterBlockEntity>> COFFEE_ROASTER = register("coffee_roaster", CoffeeRoasterBlockEntity::new, ModBlocks.COFFEE_ROASTER);
 
-    public static final RegistryObject<BlockEntityType<DripCoffeeBlockEntity>> DRIP_COFFEE_BLOCK_ENTITY = register("drip_coffee",
+    public static final RegistryObject<BlockEntityType<DripCoffeeBlockEntity>> DRIP_COFFEE_MACHINE_BLOCK_ENTITY = register("drip_coffee_machine",
             () -> BlockEntityType.Builder.of(DripCoffeeBlockEntity::new, ModBlocks.DRIP_COFFEE_MACHINE.get()).build(null));
 
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(final String name, final BlockEntityType.BlockEntitySupplier<T> sup, Supplier<? extends Block> validBlock) {

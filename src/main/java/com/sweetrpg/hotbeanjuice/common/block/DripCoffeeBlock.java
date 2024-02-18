@@ -3,11 +3,9 @@ package com.sweetrpg.hotbeanjuice.common.block;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.entity.AbstractPoweredCoffeeMakerBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -16,16 +14,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
@@ -110,6 +105,6 @@ public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
-        return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_BLOCK_ENTITY.get(), DripCoffeeBlockEntity::tick);
+        return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_MACHINE_BLOCK_ENTITY.get(), DripCoffeeBlockEntity::tick);
     }
 }

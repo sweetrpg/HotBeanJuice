@@ -26,7 +26,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
 
         MenuScreens.register(ModMenuTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
-        MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MENU.get(), DripCoffeeScreen::new);
+        MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeScreen::new);
     }
 
     public static void setupEntityRenderers(final EntityRenderersEvent.RegisterLayerDefinitions event) {
