@@ -1,14 +1,15 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.crafting.AbstractBrewingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.BrewingSerializer;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.recipes.CoffeeMakerRecipe;
 import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SimpleRecipeSerializer;
+import net.minecraft.world.item.crafting.*;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +25,8 @@ public class ModRecipeSerializers {
     public static final RegistryObject<RecipeSerializer<RoastingRecipe>> ROASTING_SERIALIZER = SERIALIZERS.register("roasting", () -> RoastingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<WhiskingRecipe>> WHISKING_SERIALIZER = SERIALIZERS.register("whisking", () -> WhiskingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<CoffeeMakerRecipe>> COFFEE_MAKING_SERIALIZER = SERIALIZERS.register("coffee_making", () -> CoffeeMakerRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<BrewingSerializer<DripCoffeeRecipe>> DRIP_COFFEE_RECIPE = register("drip_coffee", () -> new BrewingSerializer<>(DripCoffeeRecipe::new, 100));
 
     private static <R extends Recipe<?>, T extends RecipeSerializer<R>> RegistryObject<SimpleRecipeSerializer<R>> register(final String name, Function<ResourceLocation, R> factory) {
         return register(name, () -> new SimpleRecipeSerializer<>(factory));

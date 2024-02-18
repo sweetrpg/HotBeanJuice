@@ -1,7 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,7 +16,7 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Coffee items
+    // Coffee resources
     public static final RegistryObject<Item> WILD_COFFEA_ARABICA = register("wild_coffea_arabica", () -> new BlockItem(ModBlocks.WILD_COFFEA_ARABICA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> WILD_COFFEA_CANEPHORA = register("wild_coffea_canephora", () -> new BlockItem(ModBlocks.WILD_COFFEA_CANEPHORA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> WILD_COFFEA_RACEMOSA = register("wild_coffea_racemosa", () -> new BlockItem(ModBlocks.WILD_COFFEA_RACEMOSA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
@@ -43,16 +42,14 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    // Coffee-making paraphernalia
+
+    public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
+    public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+
     // ----------------------------------------------------------------------------------------------------------------
 
     // Tea
-
-    // ----------------------------------------------------------------------------------------------------------------
-
-    // Kitchenware
-
-//    public static final RegistryObject<Item> COFFEE_CUP = ITEMS.register("coffee_cup", () -> new ItemNameBlockItem(ModBlocks.COFFEE_CUP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
 
     // ----------------------------------------------------------------------------------------------------------------
 
