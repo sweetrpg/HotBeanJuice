@@ -14,10 +14,12 @@ public class ModMenuTypes {
 
     private static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, Constants.MOD_ID);
 
+    public static final RegistryObject<MenuType<DripCoffeeMenu>> DRIP_COFFEE_MENU = MENUS.register("drip_coffee", () -> IForgeMenuType.create(DripCoffeeMenu::new));
+    public static final RegistryObject<MenuType<CoffeeRoasterMenu>> COFFEE_ROASTER_MENU = MENUS.register("coffee_roaster", () -> IForgeMenuType.create(CoffeeRoasterMenu::new));
+
     public static void register(IEventBus event) {
         MENUS.register(event);
     }
 
-    public static final RegistryObject<MenuType<DripCoffeeMenu>> DRIP_COFFEE_MENU = MENUS.register("drip_coffee", () -> IForgeMenuType.create(DripCoffeeMenu::new));
 
 }

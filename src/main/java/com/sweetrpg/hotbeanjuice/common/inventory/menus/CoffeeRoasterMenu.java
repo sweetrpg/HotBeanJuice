@@ -4,7 +4,7 @@ import com.sweetrpg.hotbeanjuice.common.block.entity.CoffeeRoasterBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.inventory.container.CoffeeRoastingContainer;
 import com.sweetrpg.hotbeanjuice.common.inventory.container.slot.CoffeeRoasterResultSlot;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
-import com.sweetrpg.hotbeanjuice.common.registry.ModContainerTypes;
+import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +36,7 @@ public class CoffeeRoasterMenu extends RecipeBookMenu<CoffeeRoastingContainer> {
     }
 
     public CoffeeRoasterMenu(int containerId, Inventory inv, BlockEntity entity, ContainerData data, ContainerLevelAccess access) {
-        super(ModContainerTypes.COFFEE_ROASTER_MENU.get(), containerId);
+        super(ModMenuTypes.COFFEE_ROASTER_MENU.get(), containerId);
 
         checkContainerSize(inv, 11);
         this.blockEntity = (CoffeeRoasterBlockEntity) entity;
