@@ -14,6 +14,7 @@ import net.minecraft.data.loot.EntityLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -84,19 +85,23 @@ public class HBJLootTableProvider extends LootTableProvider {
         }
 
         private void dropWildCoffeeBushes() {
-            for(RegistryObject<WildCoffeeBushBlock> block : Arrays.asList(ModBlocks.WILD_COFFEA_ARABICA, ModBlocks.WILD_COFFEA_CANEPHORA, ModBlocks.WILD_COFFEA_RACEMOSA)) {
+            for(Pair<RegistryObject<WildCoffeeBushBlock>, RegistryObject<Item>> coffeeType : Arrays.asList(
+                    Pair.of(ModBlocks.WILD_COFFEA_ARABICA, ModItems.COFFEE_CHERRY_ARABICA),
+                    Pair.of(ModBlocks.WILD_COFFEA_CANEPHORA, ModItems.COFFEE_CHERRY_CANEPHORA),
+                    Pair.of(ModBlocks.WILD_COFFEA_RACEMOSA, ModItems.COFFEE_CHERRY_RACEMOSA))
+            ) {
                 LootTable.Builder builder = LootTable.lootTable()
                         .withPool(LootPool.lootPool()
-                                .name("pool1")
-                                .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
-                                        .when(() -> {
-                                            return LootItemRandomChanceCondition.randomChance(0.5f).build();
-                                        })
-                                        .when(() -> {
-                                            return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
-                                        })
-                                )
+                                        .name("pool1")
+                                        .setRolls(ConstantValue.exactly(1))
+                                        .add(LootItem.lootTableItem(coffeeType.getSecond().get())
+                                                .when(() -> {
+                                                    return LootItemRandomChanceCondition.randomChance(0.5f).build();
+                                                })
+                                                .when(() -> {
+                                                    return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build();
+                                                })
+                                        )
 //                                .add(LootItem.lootTableItem(ModItems.COFFEE_SEEDS.get())
 //                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
 //                                        .apply(ApplyExplosionDecay.explosionDecay())
@@ -106,30 +111,32 @@ public class HBJLootTableProvider extends LootTableProvider {
                                 .name("pool2")
                                 .setRolls(ConstantValue.exactly(1))
                                 .add(AlternativesEntry.alternatives(
-                                        LootItem.lootTableItem(block.get())
+                                        LootItem.lootTableItem(coffeeType.getFirst().get())
                                                 .when(() -> {
                                                     return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
                                                 })
                                         ,
-                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
+                                        LootItem.lootTableItem(coffeeType.getSecond().get())
                                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
                                                 .apply(ApplyExplosionDecay.explosionDecay())
                                 ))
-                        )
-                        ;
+                        );
 
-                this.add(block.get(), builder);
+                this.add(coffeeType.getFirst().get(), builder);
             }
         }
 
         private void dropCoffeeCrop() {
-            for(RegistryObject<CoffeeBushBlock> block : Arrays.asList(ModBlocks.CROP_COFFEE_ARABICA, ModBlocks.CROP_COFFEE_CANEPHORA, ModBlocks.CROP_COFFEE_RACEMOSA)) {
-
+            for(Pair<RegistryObject<CoffeeBushBlock>, RegistryObject<Item>> coffeeType : Arrays.asList(
+                    Pair.of(ModBlocks.CROP_COFFEE_ARABICA, ModItems.COFFEE_CHERRY_ARABICA),
+                    Pair.of(ModBlocks.CROP_COFFEE_CANEPHORA, ModItems.COFFEE_CHERRY_CANEPHORA),
+                    Pair.of(ModBlocks.CROP_COFFEE_RACEMOSA, ModItems.COFFEE_CHERRY_RACEMOSA))
+            ) {
                 LootTable.Builder builder = LootTable.lootTable()
                         .withPool(LootPool.lootPool()
                                 .name("pool1")
                                 .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
+                                .add(LootItem.lootTableItem(coffeeType.getSecond().get())
                                         .when(() -> {
                                             return LootItemRandomChanceCondition.randomChance(0.5f).build();
                                         })
@@ -141,7 +148,7 @@ public class HBJLootTableProvider extends LootTableProvider {
                                 .name("pool2")
                                 .setRolls(ConstantValue.exactly(1))
                                 .add(AlternativesEntry.alternatives(
-                                        LootItem.lootTableItem(ModItems.COFFEE_CHERRY_ARABICA.get())
+                                        LootItem.lootTableItem(coffeeType.getSecond().get())
                                                 .when(() -> {
                                                     return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).build();
                                                 })
@@ -151,7 +158,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 //                                            .apply(ApplyExplosionDecay.explosionDecay())
                                 )));
 
-                this.add(block.get(), builder);
+                this.add(coffeeType.getFirst().get(), builder);
             }
         }
 
