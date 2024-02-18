@@ -26,7 +26,7 @@ public class BrewingSerializer<T extends AbstractBrewingRecipe> extends ForgeReg
     public T fromJson(ResourceLocation id, JsonObject json) {
         String group = GsonHelper.getAsString(json, "group", "");
 
-        JsonElement jsonelement = GsonHelper.isArrayNode(json, "ingredient") ? GsonHelper.getAsJsonArray(json, "ingredient") : GsonHelper.getAsJsonObject(json, "ingredient");
+        JsonElement jsonelement = GsonHelper.isArrayNode(json, "ingredients") ? GsonHelper.getAsJsonArray(json, "ingredients") : GsonHelper.getAsJsonObject(json, "ingredient");
         Ingredient ingredient = Ingredient.fromJson(jsonelement);
 
         float experience = GsonHelper.getAsFloat(json, "experience", 0.0F);

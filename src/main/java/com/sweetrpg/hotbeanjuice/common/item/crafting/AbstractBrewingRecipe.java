@@ -11,23 +11,26 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.fluids.FluidStack;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class AbstractBrewingRecipe implements Recipe<SimpleContainer> {
     protected final RecipeType<?> type;
     protected final String group;
     protected final ResourceLocation id;
 //    protected final FluidStack fluidResult;
-    protected final Ingredient ingredient;
+    protected final List<Ingredient> ingredients;
     protected final float experience;
     protected final int brewingTime;
     protected final int millibuckets;
 
-    public AbstractBrewingRecipe(RecipeType<?> type, String group, ResourceLocation id, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
+    public AbstractBrewingRecipe(RecipeType<?> type, String group, ResourceLocation id, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         this.type = type;
         this.group = group;
         this.id = id;
 
 //        this.fluidResult = fluidResult;
-        this.ingredient = ingredient;
+        this.ingredients = ingredients;
         this.experience = experience;
         this.brewingTime = brewingTime;
         this.millibuckets = millibuckets;
@@ -35,7 +38,7 @@ public abstract class AbstractBrewingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer container, Level level) {
-        return ingredient.test(container.getItem(0));
+        return false; /* TODO ingredients.test(container.getItem(0)); */
     }
 
     @Override
@@ -73,7 +76,7 @@ public abstract class AbstractBrewingRecipe implements Recipe<SimpleContainer> {
     @Override
     public NonNullList<Ingredient> getIngredients() {
         NonNullList<Ingredient> nonNullList = NonNullList.create();
-        nonNullList.add(this.ingredient);
+        nonNullList.addAll(this.ingredients);
         return nonNullList;
     }
 
