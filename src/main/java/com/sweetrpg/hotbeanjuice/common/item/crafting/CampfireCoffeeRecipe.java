@@ -7,10 +7,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 
+import java.util.List;
+
 public class CampfireCoffeeRecipe extends AbstractBrewingRecipe {
 
-    public CampfireCoffeeRecipe(ResourceLocation id, String group, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
-        super(Type.INSTANCE, group, id, ingredient, experience, brewingTime, millibuckets);
+    public CampfireCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
+        super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
 
     @Override
