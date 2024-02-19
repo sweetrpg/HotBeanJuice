@@ -6,6 +6,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 
 public class TextUtils {
+
     private static final MutableComponent NO_EFFECTS = (new TranslatableComponent("effect.none")).withStyle(ChatFormatting.GRAY);
 
     /**
@@ -13,6 +14,10 @@ public class TextUtils {
      */
     public static MutableComponent getTranslation(String type, String key, Object... args) {
         return new TranslatableComponent(type + "." + Constants.MOD_ID + "." + key, args);
+    }
+
+    public static MutableComponent getTranslation(String type) {
+        return new TranslatableComponent(type + "." + Constants.MOD_ID);
     }
 
 }

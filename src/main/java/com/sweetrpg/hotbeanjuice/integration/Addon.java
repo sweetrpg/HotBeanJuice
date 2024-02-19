@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.common.addon;
+package com.sweetrpg.hotbeanjuice.integration;
 
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;

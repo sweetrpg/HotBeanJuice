@@ -16,7 +16,7 @@ public class ModRecipeTypes {
 
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, Constants.MOD_ID);
 
-    public static final RegistryObject<RecipeType<?>> GRINDING = register("grinding", () -> GrindingRecipe.Type.INSTANCE);
+    public static final RegistryObject<RecipeType<?>> GRINDING = register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> WHISKING = register("whisking", () -> WhiskingRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> BREWING = register("brewing", () -> CoffeeMakerRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> ROASTING = register("roasting", () -> RoastingRecipe.Type.INSTANCE);

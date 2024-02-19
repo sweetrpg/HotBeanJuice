@@ -3,7 +3,7 @@ package com.sweetrpg.hotbeanjuice;
 import com.sweetrpg.hotbeanjuice.client.ClientSetup;
 import com.sweetrpg.hotbeanjuice.client.event.ClientEventHandler;
 import com.sweetrpg.hotbeanjuice.common.CommonSetup;
-import com.sweetrpg.hotbeanjuice.common.addon.AddonManager;
+import com.sweetrpg.hotbeanjuice.integration.AddonManager;
 import com.sweetrpg.hotbeanjuice.common.config.ConfigHandler;
 import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
@@ -51,12 +51,14 @@ public class HotBeanJuice {
 
         // Registries
         ModBlocks.BLOCKS.register(modEventBus);
-        ModBlockEntityTypes.ENTITIES.register(modEventBus);
+        ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-//        ModEntityTypes.ENTITIES.register(modEventBus);
-        ModMenuTypes.MENUS.register(modEventBus);
+        ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+        ModMenuTypes.MENU_TYPES.register(modEventBus);
         ModSerializers.SERIALIZERS.register(modEventBus);
+        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        ModSounds.SOUNDS.register(modEventBus);
 
         modEventBus.addListener(ModRegistries::newRegistry);
 //        modEventBus.addListener(ModEntityTypes::addEntityAttributes);

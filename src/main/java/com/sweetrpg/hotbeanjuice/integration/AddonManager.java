@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.common.addon;
+package com.sweetrpg.hotbeanjuice.integration;
 
 import com.google.common.collect.Lists;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;

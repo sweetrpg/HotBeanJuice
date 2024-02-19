@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BHI",
-    " CI",
-    "III"
+    "KHB",
+    " CF",
+    "IRI"
   ],
   "key": {
     "B": {
@@ -14,6 +14,15 @@
     },
     "I": {
       "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "K": {
+      "item": "minecraft:clock"
+    },
+    "F": {
+      "item": "minecraft:furnace"
     },
     "C": {
       "item": "hotbeanjuice:drip_coffee_carafe"

@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "  H",
-    "IFI",
+    "IFD",
     "IRB"
   ],
   "key": {
     "H": {
       "item": "minecraft:hopper"
+    },
+    "D": {
+      "item": "minecraft:dispenser"
     },
     "F": {
       "item": "minecraft:furnace"

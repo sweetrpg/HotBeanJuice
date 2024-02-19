@@ -181,7 +181,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
         @Override
         protected Iterable<EntityType<?>> getKnownEntities() {
-            return ModEntityTypes.ENTITIES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
+            return ModEntityTypes.ENTITY_TYPES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
         }
     }
 }

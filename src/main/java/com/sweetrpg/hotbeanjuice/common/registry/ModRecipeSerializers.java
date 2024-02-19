@@ -18,7 +18,7 @@ public class ModRecipeSerializers {
 
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Constants.MOD_ID);
 
-    public static final RegistryObject<RecipeSerializer<GrindingRecipe>> GRINDING_SERIALIZER = RECIPE_SERIALIZERS.register("grinding", () -> GrindingRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<GrindingRecipe>> GRINDING_SERIALIZER = RECIPE_SERIALIZERS.register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<RoastingRecipe>> ROASTING_SERIALIZER = RECIPE_SERIALIZERS.register("roasting", () -> RoastingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<WhiskingRecipe>> WHISKING_SERIALIZER = RECIPE_SERIALIZERS.register("whisking", () -> WhiskingRecipe.Serializer.INSTANCE);
 

@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public class ModBlockEntityTypes {
 
-    public static final DeferredRegister<BlockEntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES, Constants.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES, Constants.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<HandCoffeeGrinderBlockEntity>> HAND_COFFEE_GRINDER = register("hand_coffee_grinder", HandCoffeeGrinderBlockEntity::new, ModBlocks.HAND_COFFEE_GRINDER);
     public static final RegistryObject<BlockEntityType<PoweredCoffeeGrinderBlockEntity>> POWERED_COFFEE_GRINDER = register("powered_coffee_grinder", PoweredCoffeeGrinderBlockEntity::new, ModBlocks.POWERED_COFFEE_GRINDER);
@@ -30,7 +30,7 @@ public class ModBlockEntityTypes {
     }
 
     private static <T extends BlockEntityType<?>> RegistryObject<T> register(final String name, final Supplier<T> sup) {
-        return ENTITIES.register(name, sup);
+        return BLOCK_ENTITY_TYPES.register(name, sup);
     }
 
 }

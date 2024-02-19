@@ -12,13 +12,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
 
-    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, Constants.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, Constants.MOD_ID);
 
-    public static final RegistryObject<MenuType<DripCoffeeMachineMenu>> DRIP_COFFEE_MACHINE_MENU = MENUS.register("drip_coffee_machine", () -> IForgeMenuType.create(DripCoffeeMachineMenu::new));
-    public static final RegistryObject<MenuType<CoffeeRoasterMenu>> COFFEE_ROASTER_MENU = MENUS.register("coffee_roaster", () -> IForgeMenuType.create(CoffeeRoasterMenu::new));
+    public static final RegistryObject<MenuType<DripCoffeeMachineMenu>> DRIP_COFFEE_MACHINE_MENU = MENU_TYPES.register("drip_coffee_machine", () -> IForgeMenuType.create(DripCoffeeMachineMenu::new));
+    public static final RegistryObject<MenuType<CoffeeRoasterMenu>> COFFEE_ROASTER_MENU = MENU_TYPES.register("coffee_roaster", () -> IForgeMenuType.create(CoffeeRoasterMenu::new));
 
     public static void register(IEventBus event) {
-        MENUS.register(event);
+        MENU_TYPES.register(event);
     }
 
 
