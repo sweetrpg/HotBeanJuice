@@ -1,0 +1,239 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee_base"
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee"
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "occupied": "true"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee_carafe",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "occupied": "true"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee_carafe"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "occupied": "true"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee_carafe",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "occupied": "true"
+      },
+      "apply": {
+        "model": "hotbeanjuice:block/drip_coffee_carafe",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "fullness": "1"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "fullness": "1"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_1"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "fullness": "1"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "fullness": "1"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "fullness": "2"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_2",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "fullness": "2"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_2"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "fullness": "2"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_2",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "fullness": "2"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_2",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "fullness": "3"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_3",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "fullness": "3"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_3"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "fullness": "3"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_3",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "fullness": "3"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_3",
+        "y": 270
+      }
+    },
+   {
+      "when": {
+        "facing": "east",
+        "fullness": "4"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_4",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "fullness": "4"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_4"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "fullness": "4"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_4",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "fullness": "4"
+      },
+      "apply": {
+       "model": "hotbeanjuice:block/drip_coffee_contents_4",
+        "y": 270
+      }
+    }
+  ]
+}

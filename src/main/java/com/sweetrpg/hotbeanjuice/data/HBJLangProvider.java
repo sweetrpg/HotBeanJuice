@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -14,7 +15,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     @Override
     public String getName() {
-        return "HotBeanJuice Language Provider";
+        return "Hot Bean Juice Language Provider";
     }
 
     @Override
@@ -27,6 +28,7 @@ public class HBJLangProvider extends LanguageProvider {
     }
 
     private void processENUS() {
+        add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Make your first cup of coffee");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "We're Makin' Coffee");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
@@ -47,10 +49,18 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BUSH_TITLE, "Coffea Bush");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Coffea Cherry");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
-        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE, "Coffea Seeds");
+        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE, "Coffee Filter");
+        add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
+        add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
+
+        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
+        add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
+
     }
 
     private void processENGB() {
+        add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
+        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE, "Coffea Seeds");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Make your first cup of coffee");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "We're Makin' Coffee");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Coffee Bag (Beans)");
@@ -71,10 +81,14 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BUSH_TITLE, "Coffea Bush");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Coffea Cherry");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Coffee Grounds");
-        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE, "Coffea Seeds");
+        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE, "Coffee Filter");
+        add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
+        add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
     }
 
     private void processDEDE() {
+        add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Heißer Bohnensaft");
+        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE, "Coffea Seeds");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Machen Sie Ihre erste Tasse Kaffee");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "Wir machen Kaffee");
         add(Constants.TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE, "Kaffeebeutel (Bohnen)");
@@ -95,6 +109,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_BUSH_TITLE, "Kaffeebusch");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE, "Kaffeekirsche");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE, "Kaffeesatz");
+        add(Constants.TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE, "Kaffeefilter");
+        add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
+        add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
         add(Constants.TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE, "Kaffeesamen");
     }
 
