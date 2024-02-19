@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHI",
+    " CI",
+    "III"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "hotbeanjuice:drip_coffee_carafe"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:drip_coffee_machine"
+  }
+}
