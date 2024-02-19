@@ -8,7 +8,7 @@ import mezz.jei.api.registration.ISubtypeRegistration;
 import net.minecraft.resources.ResourceLocation;
 
 @JeiPlugin
-public class CHPlugin implements IModPlugin {
+public class HBJPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -29,7 +29,6 @@ public class CHPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-//        registration.addRecipes(CatTreeRecipeMaker.createCatTreeRecipes(), RecipeTypes.CRAFTING.getUid());
-//        registration.addRecipes(PetDoorRecipeMaker.createPetDoorRecipes(), RecipeTypes.CRAFTING.getUid());
+//        registration.addRecipes(ModRecipeTypes.BREWING.get(), List.of());
     }
 }
