@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "  H",
-    "III",
+    "IFI",
     "IRB"
   ],
   "key": {
     "H": {
       "item": "minecraft:hopper"
+    },
+    "F": {
+      "item": "minecraft:furnace"
     },
     "I": {
       "item": "minecraft:iron_ingot"
