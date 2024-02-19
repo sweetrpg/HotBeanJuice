@@ -46,7 +46,7 @@ public class HandGrindingRecipeCategory implements IRecipeCategory<GrindingRecip
         title = TextUtils.getTranslation("jei." + GrindingRecipe.RECIPE_TYPE_NAME);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/grinding.png");
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.HAND_COFFEE_GRINDER.get()));
-        arrow = helper.drawableBuilder(backgroundImage, 176, 15, 24, 17)
+        arrow = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
                 .buildAnimated(200, IDrawableAnimated.StartDirection.LEFT, false);
         slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
         slotChance = helper.createDrawable(backgroundImage, 18, 58, 18, 18);
@@ -90,7 +90,7 @@ public class HandGrindingRecipeCategory implements IRecipeCategory<GrindingRecip
 
     @Override
     public void draw(GrindingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
-        arrow.draw(poseStack, 60, 9);
+        arrow.draw(poseStack, 49, 21);
 
 //        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
 //
