@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "hotbeanjuice:fired_coffee_cup"
+    "item": "hotbeanjuice:clay_mug"
   },
   "result": "hotbeanjuice:fired_coffee_cup",
   "experience": 0.1,
