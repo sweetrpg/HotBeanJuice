@@ -2,7 +2,7 @@ package com.sweetrpg.hotbeanjuice.common.block;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.entity.AbstractPoweredCoffeeMakerBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeBlockEntity;
+import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeMachineBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
@@ -49,7 +49,7 @@ public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
             HotBeanJuice.LOGGER.debug("Occupied: " + state.getValue(OCCUPIED));
             if (state.getValue(OCCUPIED)) {
                 state = state.setValue(OCCUPIED, false).setValue(FULLNESS, 0);
-                if (blockEntity instanceof DripCoffeeBlockEntity dripCoffeeBlockEntity) {
+                if (blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
 //                    dripCoffeeBlockEntity.emptyCoffee();
                 }
                 //TODO transfer fluid capability/contents to carafe item
@@ -63,17 +63,17 @@ public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
                 level.setBlock(pos, state, 3);
                 //TODO transfer contents of carafe item to pot
             }
-        } else if (itemStack.is(Items.WATER_BUCKET) && blockEntity instanceof DripCoffeeBlockEntity dripCoffeeBlockEntity) {
-            if (AbstractPoweredCoffeeMakerBlockEntity.hasRoomForWater(dripCoffeeBlockEntity)) {
-                dripCoffeeBlockEntity.addWater(1000);
+        } else if (itemStack.is(Items.WATER_BUCKET) && blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
+            if (AbstractPoweredCoffeeMakerBlockEntity.hasRoomForWater(dripCoffeeMachineBlockEntity)) {
+                dripCoffeeMachineBlockEntity.addWater(1000);
                 itemStack.shrink(1);
                 player.addItem(new ItemStack(Items.BUCKET, 1));
             }
         } else {
                 if (!level.isClientSide()) {
                     BlockEntity entity = level.getBlockEntity(pos);
-                    if (entity instanceof DripCoffeeBlockEntity) {
-                        NetworkHooks.openGui(((ServerPlayer) player), (DripCoffeeBlockEntity) entity, pos);
+                    if (entity instanceof DripCoffeeMachineBlockEntity) {
+                        NetworkHooks.openGui(((ServerPlayer) player), (DripCoffeeMachineBlockEntity) entity, pos);
                     } else {
                         throw new IllegalStateException("Our Container provider is missing!");
                     }
@@ -99,12 +99,12 @@ public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
     @javax.annotation.Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new DripCoffeeBlockEntity(pos, state);
+        return new DripCoffeeMachineBlockEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
-        return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_MACHINE_BLOCK_ENTITY.get(), DripCoffeeBlockEntity::tick);
+        return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_MACHINE_BLOCK_ENTITY.get(), DripCoffeeMachineBlockEntity::tick);
     }
 }

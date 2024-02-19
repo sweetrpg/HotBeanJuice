@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.inventory.menus;
 
-import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeBlockEntity;
+import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeMachineBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.AbstractBrewingRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.network.FriendlyByteBuf;
@@ -17,7 +17,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 public abstract class AbstractCoffeeMakerMenu extends AbstractContainerMenu {
-    private final DripCoffeeBlockEntity blockEntity;
+    private final DripCoffeeMachineBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
     RecipeType<? extends AbstractBrewingRecipe> recipeType;
@@ -31,7 +31,7 @@ public abstract class AbstractCoffeeMakerMenu extends AbstractContainerMenu {
         this.recipeType = recipeType;
 
         checkContainerSize(inv, 5);
-        blockEntity = ((DripCoffeeBlockEntity) entity);
+        blockEntity = ((DripCoffeeMachineBlockEntity) entity);
         this.level = inv.player.level;
         this.data = data;
 

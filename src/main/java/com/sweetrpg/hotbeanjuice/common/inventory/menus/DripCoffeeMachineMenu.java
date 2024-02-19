@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.inventory.menus;
 
-import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeBlockEntity;
+import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeMachineBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
@@ -14,7 +14,7 @@ public class DripCoffeeMachineMenu extends AbstractCoffeeMakerMenu {
         super(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeRecipe.Type.INSTANCE, containerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
     }
 
-    public DripCoffeeMachineMenu(int containerId, Inventory inv, DripCoffeeBlockEntity blockEntity, ContainerData data) {
+    public DripCoffeeMachineMenu(int containerId, Inventory inv, DripCoffeeMachineBlockEntity blockEntity, ContainerData data) {
         super(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeRecipe.Type.INSTANCE, containerId, inv, blockEntity, data);
     }
 }
