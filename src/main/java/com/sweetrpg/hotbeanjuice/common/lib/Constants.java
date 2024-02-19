@@ -27,6 +27,7 @@ public class Constants {
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
     public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui.hotbeanjuice.coffee_roaster";
     public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
+    public static final String TRANSLATION_KEY_RECIPE_TYPE_GRINDING_TITLE = "grinding";
 
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements.hotbeanjuice.main.make_coffee.title";
