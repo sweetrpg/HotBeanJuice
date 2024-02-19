@@ -20,6 +20,7 @@
   "config.chance_coffee_bush.description": "Es besteht die M\u00F6glichkeit, dass Kaffeestr\u00E4ucher in freier Wildbahn auftauchen",
   "config.coffee_bush_spread.description": "Horizontale Ausbreitung von Kaffeeb\u00FCschen",
   "gui.hotbeanjuice.coffee_roaster": "R\u00F6ster",
+  "item.hotbeanjuice.bad_coffee_bean": "Schlechte Kaffeebohne",
   "item.hotbeanjuice.clay_mug": "Tonbecher",
   "item.hotbeanjuice.coffee_bean": "Kaffeebohne",
   "item.hotbeanjuice.coffee_cherry_arabica": "Arabica-Kaffeekirsche",
