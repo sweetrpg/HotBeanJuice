@@ -42,9 +42,25 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
             () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
-
     public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
             () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee devices
+
+    public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
+            HandCoffeeGrinderBlock::new);
+    public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
+            PoweredCoffeeGrinderBlock::new);
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Kitchenware
+    public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
+    public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
+//    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
+//    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
