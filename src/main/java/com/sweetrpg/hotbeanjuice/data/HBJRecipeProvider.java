@@ -180,15 +180,17 @@ public class HBJRecipeProvider extends RecipeProvider {
 
         // Coffee-processing devices
         ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
+                .pattern("LI ")
+                .pattern("GFG")
                 .pattern(" G ")
-                .pattern("IFI")
-                .pattern(" I ")
                 .define('G', Items.GLASS)
                 .define('I', Items.IRON_INGOT)
                 .define('F', Items.FLINT)
+                .define('L', Items.LEVER)
                 .unlockedBy("has_glass", has(Items.GLASS))
                 .unlockedBy("has_iron", has(Items.IRON_INGOT))
                 .unlockedBy("has_flint", has(Items.FLINT))
+                .unlockedBy("has_lever", has(Items.LEVER))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.POWERED_COFFEE_GRINDER.get(), 1)
                 .pattern(" G ")
@@ -205,9 +207,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_ROASTER.get(), 1)
                 .pattern("  H")
-                .pattern("III")
+                .pattern("IFI")
                 .pattern("IRB")
                 .define('H', Items.HOPPER)
+                .define('F', Items.FURNACE)
                 .define('I', Items.IRON_INGOT)
                 .define('B', Items.BUCKET)
                 .define('R', Items.REDSTONE)
@@ -218,6 +221,30 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .save(consumer);
 
         // Coffee-making devices
+        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_CARAFE.get(), 1)
+                .pattern("GHG")
+                .pattern("III")
+                .pattern("GGG")
+                .define('G', Items.GLASS)
+                .define('H', Items.HOPPER)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_hopper", has(Items.HOPPER))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_glass", has(Items.GLASS))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_MACHINE.get(), 1)
+                .pattern("BHI")
+                .pattern(" CI")
+                .pattern("III")
+                .define('B', Items.BUCKET)
+                .define('H', Items.HOPPER)
+                .define('I', Items.IRON_INGOT)
+                .define('C', ModBlocks.DRIP_COFFEE_CARAFE.get())
+                .unlockedBy("has_hopper", has(Items.HOPPER))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_bucket", has(Items.BUCKET))
+                .unlockedBy("has_carafe", has(ModBlocks.DRIP_COFFEE_CARAFE.get()))
+                .save(consumer);
     }
 
     @Override
