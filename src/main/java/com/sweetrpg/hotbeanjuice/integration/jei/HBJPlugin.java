@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.integration.jei;
 
-import com.sweetrpg.hotbeanjuice.integration.jei.category.HandGrindingRecipeCategory;
+import com.sweetrpg.hotbeanjuice.integration.jei.category.GrindingRecipeCategory;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeTypes;
 import mezz.jei.api.IModPlugin;
@@ -25,7 +25,7 @@ public class HBJPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
 //        registration.addRecipeCategories(new CofeeBrewingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new HandGrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new GrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 //        registration.addRecipeCategories(new RoastingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 //        registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
@@ -41,7 +41,7 @@ public class HBJPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.GRINDING.get()), HandGrindingRecipeCategory.UID);
+        registration.addRecipes(findRecipesByType(ModRecipeTypes.GRINDING.get()), GrindingRecipeCategory.UID);
 
     }
 
