@@ -36,7 +36,8 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
                 .save(consumer);
         CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
-                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES));
+                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
+                .save(consumer);
 
         // Coffee beans
         ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())

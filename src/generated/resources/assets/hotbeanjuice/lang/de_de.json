@@ -30,5 +30,8 @@
   "item.hotbeanjuice.coffee_grounds": "Kaffeesatz",
   "itemGroup.hotbeanjuice": "Hei\u00DFer Bohnensaft",
   "jei.category.grinding.time.seconds": "%1$d s",
-  "jei.grinding.hotbeanjuice": "Schleifen"
+  "jei.category.roasting.time.seconds": "%1$d s",
+  "jei.category.roasting.xp": "%f XP",
+  "jei.grinding.hotbeanjuice": "Schleifen",
+  "jei.roasting.hotbeanjuice": "Knallhei\u00DF"
 }

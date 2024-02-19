@@ -97,17 +97,16 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
 
+        this.advancement.parent(new ResourceLocation("recipes/root"))
+                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
+                .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
+                .requirements(RequirementsStrategy.OR);
+
         String newPath = resourceLocation.getPath();
         if(!this.serializer.suffix.isEmpty()) {
             newPath += "_" + this.serializer.suffix + "_brewed";
         }
         ResourceLocation resLoc = new ResourceLocation(resourceLocation.getNamespace(), newPath);
-
-        this.advancement.parent(new ResourceLocation("recipes/root"))
-                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resLoc))
-                .rewards(AdvancementRewards.Builder.recipe(resLoc))
-                .requirements(RequirementsStrategy.OR);
-
         consumer.accept(new CoffeeMakerRecipeBuilder.Result(resLoc,
                 this.group == null ? "" : this.group,
                 this.ingredients,

@@ -36,7 +36,10 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
@@ -71,7 +74,10 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
@@ -108,7 +114,10 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Röster");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Heißer Bohnensaft");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Schleifen");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Knallheiß");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Kaffeebeutel (Bohnen)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Kaffeebeutel (gemahlen)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Kaffeeröster");

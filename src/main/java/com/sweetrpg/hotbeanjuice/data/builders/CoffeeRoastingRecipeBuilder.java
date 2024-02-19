@@ -2,7 +2,6 @@ package com.sweetrpg.hotbeanjuice.data.builders;
 
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.advancements.Advancement;
@@ -65,16 +64,26 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
+
         this.advancement.parent(new ResourceLocation("recipes/root"))
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
-        consumer.accept(new CoffeeRoastingRecipeBuilder.Result(resourceLocation,
-                this.group == null ? "" : this.group, this.ingredient, this.result, this.experience, this.roastingTime, this.advancement, new ResourceLocation(Constants.MOD_ID, "recipes/roasting/" + resourceLocation.getPath()), this.serializer));
+
+        ResourceLocation resLoc = new ResourceLocation(resourceLocation.getNamespace(), resourceLocation.getPath() + "_roasted");
+        consumer.accept(new CoffeeRoastingRecipeBuilder.Result(resLoc,
+                this.group == null ? "" : this.group,
+                this.ingredient,
+                this.result,
+                this.experience,
+                this.roastingTime,
+                this.advancement,
+                new ResourceLocation(Constants.MOD_ID, "recipes/" + resLoc.getPath()),
+                this.serializer));
     }
 
     private void ensureValid(ResourceLocation p_126266_) {
-        if (this.advancement.getCriteria().isEmpty()) {
+        if(this.advancement.getCriteria().isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + p_126266_);
         }
     }
@@ -103,7 +112,7 @@ public class CoffeeRoastingRecipeBuilder implements RecipeBuilder {
         }
 
         public void serializeRecipeData(JsonObject json) {
-            if (!this.group.isEmpty()) {
+            if(!this.group.isEmpty()) {
                 json.addProperty("group", this.group);
             }
 

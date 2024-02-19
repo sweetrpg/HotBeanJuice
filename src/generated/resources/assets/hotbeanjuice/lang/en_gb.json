@@ -28,5 +28,8 @@
   "item.hotbeanjuice.coffee_grounds": "Coffee Grounds",
   "itemGroup.hotbeanjuice": "Hot Bean Juice",
   "jei.category.grinding.time.seconds": "%1$d s",
-  "jei.grinding.hotbeanjuice": "Grinding"
+  "jei.category.roasting.time.seconds": "%1$d s",
+  "jei.category.roasting.xp": "%f XP",
+  "jei.grinding.hotbeanjuice": "Grinding",
+  "jei.roasting.hotbeanjuice": "Roasting"
 }
