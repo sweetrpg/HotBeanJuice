@@ -5,7 +5,7 @@
       "modid": "create"
     }
   ],
-  "type": "create:whisking",
+  "type": "create:mixing",
   "ingredients": [
     {
       "item": "hotbeanjuice:steamed_milk"
@@ -13,7 +13,7 @@
   ],
   "results": [
     {
-      "item": "hobeanjuice:milk_foam",
+      "item": "hotbeanjuice:milk_foam",
       "count": 1
     }
   ],
