@@ -2,6 +2,7 @@ package com.sweetrpg.hotbeanjuice.common.lib;
 
 import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
+import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.resources.ResourceLocation;
 
@@ -28,12 +29,15 @@ public class Constants {
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
     public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui.hotbeanjuice.coffee_roaster";
-    public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
-    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP = "jei.category.grinding.time.seconds";
     public static final String TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP = "jei.category.roasting.time.seconds";
     public static final String TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP = "jei.category.roasting.xp";
+    public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_TIME_TOOLTIP = "jei.category.whisking.xp";
+    public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_XP_TOOLTIP = "jei.category.whisking.time.seconds";
+    public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
+    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+    public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+    public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
 
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements.hotbeanjuice.main.make_coffee.title";

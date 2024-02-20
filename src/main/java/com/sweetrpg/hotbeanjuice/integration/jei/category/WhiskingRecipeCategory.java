@@ -2,8 +2,8 @@ package com.sweetrpg.hotbeanjuice.integration.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
-import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
 import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
@@ -27,9 +27,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
+public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, GrindingRecipe.RECIPE_TYPE_NAME);
+    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, WhiskingRecipe.RECIPE_TYPE_NAME);
 
     private final Component title;
     private final IDrawable background;
@@ -38,10 +38,10 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     private final IDrawable slotChance;
     protected final IDrawableAnimated arrow;
 
-    public GrindingRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + GrindingRecipe.RECIPE_TYPE_NAME);
-        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/grinding.png");
-        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.HAND_COFFEE_GRINDER.get()));
+    public WhiskingRecipeCategory(IGuiHelper helper) {
+        title = TextUtils.getTranslation("jei." + WhiskingRecipe.RECIPE_TYPE_NAME);
+        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/whisking.png");
+        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.WHISK.get()));
         arrow = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
                 .buildAnimated(200, IDrawableAnimated.StartDirection.LEFT, false);
         slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
@@ -50,19 +50,19 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     }
 
     @Override
-    public void setIngredients(GrindingRecipe grindingRecipe, IIngredients ingredients) {
-        ingredients.setInputIngredients(grindingRecipe.getIngredients());
-        ingredients.setOutput(VanillaTypes.ITEM, grindingRecipe.getResultItem());
+    public void setIngredients(WhiskingRecipe whiskingRecipe, IIngredients ingredients) {
+        ingredients.setInputIngredients(whiskingRecipe.getIngredients());
+        ingredients.setOutput(VanillaTypes.ITEM, whiskingRecipe.getResultItem());
     }
 
     @Override
-    public void setRecipe(IRecipeLayout recipeLayout, GrindingRecipe recipe, IIngredients ingredients) {
+    public void setRecipe(IRecipeLayout recipeLayout, WhiskingRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw grinder
         itemStacks.init(0, true, 15, 30);
-        itemStacks.set(0, List.of(new ItemStack(ModBlocks.HAND_COFFEE_GRINDER.get()), new ItemStack(ModBlocks.POWERED_COFFEE_GRINDER.get())));
+        itemStacks.set(0, List.of(new ItemStack(ModItems.WHISK.get())));
 
         // Draw input
         itemStacks.init(1, true, 15, 8);
@@ -85,7 +85,7 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     }
 
     @Override
-    public void draw(GrindingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
+    public void draw(WhiskingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         arrow.draw(poseStack, 49, 21);
 
 //        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
@@ -108,25 +108,26 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     }
 
     @Override
-    public List<Component> getTooltipStrings(GrindingRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
-        if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 28, mouseX, mouseY)) {
-            List<Component> tooltipStrings = new ArrayList<>();
+    public List<Component> getTooltipStrings(WhiskingRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
+        List<Component> tooltipStrings = new ArrayList<>();
 
-            int processingTime = recipe.getProcessingTime();
+        if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
+            float experience = recipe.getExperience();
+            if(experience > 0) {
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, experience));
+            }
+        }
+        else if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 28, mouseX, mouseY)) {
+            int processingTime = recipe.getWhiskingTime();
             if(processingTime > 0) {
                 int processingTimeSeconds = processingTime / 20;
-                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, processingTimeSeconds));
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, processingTimeSeconds));
             }
-//            float experience = recipe.getExperience();
-//            if (experience > 0) {
-//                tooltipStrings.add(new TranslatableComponent("gui.jei.category.smelting.experience", experience));
-//            }
-
-            return tooltipStrings;
         }
 
-        return Collections.emptyList();
+        return tooltipStrings;
     }
+
 
     @Override
     public ResourceLocation getUid() {
@@ -134,13 +135,13 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     }
 
     @Override
-    public Class<? extends GrindingRecipe> getRecipeClass() {
+    public Class<? extends WhiskingRecipe> getRecipeClass() {
         return this.getRecipeType().getRecipeClass();
     }
 
     @Override
-    public RecipeType<GrindingRecipe> getRecipeType() {
-        return RecipeTypes.GRINDING;
+    public RecipeType<WhiskingRecipe> getRecipeType() {
+        return RecipeTypes.WHISKING;
     }
 
     @Override

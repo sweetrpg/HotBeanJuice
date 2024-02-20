@@ -24,7 +24,6 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class RoastingRecipeCategory implements IRecipeCategory<RoastingRecipe> {
@@ -112,29 +111,23 @@ public class RoastingRecipeCategory implements IRecipeCategory<RoastingRecipe> {
 
     @Override
     public List<Component> getTooltipStrings(RoastingRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
-        if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
-            List<Component> tooltipStrings = new ArrayList<>();
+        List<Component> tooltipStrings = new ArrayList<>();
 
+        if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
             float experience = recipe.getExperience();
-            if (experience > 0) {
+            if(experience > 0) {
                 tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, experience));
             }
-
-            return tooltipStrings;
         }
         else if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 38, mouseX, mouseY)) {
-            List<Component> tooltipStrings = new ArrayList<>();
-
             int processingTime = recipe.getProcessingTime();
             if(processingTime > 0) {
                 int processingTimeSeconds = processingTime / 20;
                 tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, processingTimeSeconds));
             }
-
-            return tooltipStrings;
         }
 
-        return Collections.emptyList();
+        return tooltipStrings;
     }
 
 
