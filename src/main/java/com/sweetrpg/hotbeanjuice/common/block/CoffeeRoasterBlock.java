@@ -30,7 +30,7 @@ import java.util.Random;
 
 public class CoffeeRoasterBlock extends BaseEntityBlock {
 
-    protected static final VoxelShape SHAPE = Block.box(3D, 0.0D, 3D, 13D, 9.0D, 13D);
+    protected static final VoxelShape SHAPE = Block.box(0D, 0.0D, 0D, 16D, 13.0D, 16D);
 
     public CoffeeRoasterBlock() {
         super(Properties.of(Material.METAL).strength(4, 15).sound(SoundType.METAL));
