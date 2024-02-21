@@ -77,13 +77,13 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
     }
 
     @Override
-    public RecipeBuilder unlockedBy(String key, CriterionTriggerInstance criterion) {
+    public CoffeeMakerRecipeBuilder unlockedBy(String key, CriterionTriggerInstance criterion) {
         this.advancement.addCriterion(key, criterion);
         return this;
     }
 
     @Override
-    public RecipeBuilder group(@Nullable String group) {
+    public CoffeeMakerRecipeBuilder group(@Nullable String group) {
         this.group = group;
         return this;
     }

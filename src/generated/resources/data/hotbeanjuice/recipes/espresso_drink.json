@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:espresso",
+  "group": "drinks",
   "ingredients": [
     {
       "item": "minecraft:water_bucket"

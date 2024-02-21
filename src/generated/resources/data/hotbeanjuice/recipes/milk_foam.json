@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:whisking",
+  "group": "coffee_beans",
   "ingredient": {
     "item": "hotbeanjuice:steamed_milk"
   },

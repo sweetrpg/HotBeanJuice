@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:french_press_coffee",
+  "group": "drinks",
   "ingredients": [
     {
       "item": "hotbeanjuice:boiling_water"

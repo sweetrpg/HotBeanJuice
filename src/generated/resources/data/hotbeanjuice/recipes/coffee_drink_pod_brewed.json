@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:pod_coffee",
+  "group": "drinks",
   "ingredients": [
     {
       "item": "minecraft:water_bucket"

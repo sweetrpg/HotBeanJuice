@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:campfire_coffee",
+  "group": "drinks",
   "ingredients": [
     {
       "item": "hotbeanjuice:boiling_water"

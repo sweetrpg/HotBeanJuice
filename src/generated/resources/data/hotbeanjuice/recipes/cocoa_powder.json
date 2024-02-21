@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:grinding",
+  "group": "coffee_beans",
   "ingredient": {
     "item": "minecraft:cocoa_beans"
   },

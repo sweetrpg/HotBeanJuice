@@ -1,5 +1,6 @@
 {
   "type": "hotbeanjuice:percolator_coffee",
+  "group": "drinks",
   "ingredients": [
     {
       "item": "minecraft:water_bucket"
