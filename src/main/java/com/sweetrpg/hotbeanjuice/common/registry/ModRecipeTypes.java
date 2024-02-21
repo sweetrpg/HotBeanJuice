@@ -2,9 +2,9 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.recipes.CoffeeMakerRecipe;
-import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
-import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
-import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.WhiskingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.registries.DeferredRegister;

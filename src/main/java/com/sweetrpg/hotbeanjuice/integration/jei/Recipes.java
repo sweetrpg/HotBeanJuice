@@ -1,6 +1,6 @@
 //package com.sweetrpg.hotbeanjuice.common.integration.jei;
 //
-//import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
+//import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
 //import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeTypes;
 //import net.minecraft.client.Minecraft;
 //import net.minecraft.client.multiplayer.ClientLevel;

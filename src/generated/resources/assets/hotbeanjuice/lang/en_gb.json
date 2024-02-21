@@ -40,6 +40,8 @@
   "item.hotbeanjuice.steamed_milk": "Steamed Milk",
   "item.hotbeanjuice.whisk": "Whisk",
   "itemGroup.hotbeanjuice": "Hot Bean Juice",
+  "jei.category.drip_coffee.time.seconds": "%f XP",
+  "jei.category.drip_coffee.xp": "%1$d s",
   "jei.category.grinding.time.seconds": "%1$d s",
   "jei.category.roasting.time.seconds": "%1$d s",
   "jei.category.roasting.xp": "%f XP",

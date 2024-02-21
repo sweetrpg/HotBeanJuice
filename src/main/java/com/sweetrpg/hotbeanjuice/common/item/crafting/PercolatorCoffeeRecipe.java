@@ -11,6 +11,8 @@ import java.util.List;
 
 public class PercolatorCoffeeRecipe extends AbstractBrewingRecipe {
 
+    public static final String RECIPE_TYPE_NAME = "percolator_coffee";
+
     public PercolatorCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
@@ -25,6 +27,6 @@ public class PercolatorCoffeeRecipe extends AbstractBrewingRecipe {
 
         public static final PercolatorCoffeeRecipe.Type INSTANCE = new PercolatorCoffeeRecipe.Type();
 
-        public static final String ID = Constants.MOD_ID + ":percolator_coffee";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }

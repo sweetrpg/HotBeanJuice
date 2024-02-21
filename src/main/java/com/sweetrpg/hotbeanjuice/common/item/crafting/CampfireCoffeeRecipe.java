@@ -11,6 +11,8 @@ import java.util.List;
 
 public class CampfireCoffeeRecipe extends AbstractBrewingRecipe {
 
+    public static final String RECIPE_TYPE_NAME = "campfire_coffee";
+
     public CampfireCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
@@ -23,6 +25,6 @@ public class CampfireCoffeeRecipe extends AbstractBrewingRecipe {
     public static class Type implements RecipeType<CampfireCoffeeRecipe> {
         private Type() { }
         public static final CampfireCoffeeRecipe.Type INSTANCE = new CampfireCoffeeRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":campfire_coffee";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }

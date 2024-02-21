@@ -11,6 +11,8 @@ import java.util.List;
 
 public class EspressoRecipe extends AbstractBrewingRecipe {
 
+    public static final String RECIPE_TYPE_NAME = "espresso";
+
     public EspressoRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
@@ -23,6 +25,6 @@ public class EspressoRecipe extends AbstractBrewingRecipe {
     public static class Type implements RecipeType<EspressoRecipe> {
         private Type() { }
         public static final EspressoRecipe.Type INSTANCE = new EspressoRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":espresso";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }

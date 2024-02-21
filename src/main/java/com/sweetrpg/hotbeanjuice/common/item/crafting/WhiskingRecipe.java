@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.common.recipes;
+package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

@@ -11,6 +11,8 @@ import java.util.List;
 
 public class PodCoffeeRecipe extends AbstractBrewingRecipe {
 
+    public static final String RECIPE_TYPE_NAME = "pod_coffee";
+
     public PodCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
@@ -25,6 +27,6 @@ public class PodCoffeeRecipe extends AbstractBrewingRecipe {
 
         public static final PodCoffeeRecipe.Type INSTANCE = new PodCoffeeRecipe.Type();
 
-        public static final String ID = Constants.MOD_ID + ":pod_coffee";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }

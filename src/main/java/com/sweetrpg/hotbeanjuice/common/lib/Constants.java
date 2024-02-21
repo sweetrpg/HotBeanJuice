@@ -1,8 +1,8 @@
 package com.sweetrpg.hotbeanjuice.common.lib;
 
-import com.sweetrpg.hotbeanjuice.common.recipes.GrindingRecipe;
-import com.sweetrpg.hotbeanjuice.common.recipes.RoastingRecipe;
-import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.resources.ResourceLocation;
 
@@ -34,6 +34,8 @@ public class Constants {
     public static final String TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP = "jei.category.roasting.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_TIME_TOOLTIP = "jei.category.whisking.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_XP_TOOLTIP = "jei.category.whisking.time.seconds";
+    public static final String TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP = "jei.category.drip_coffee.xp";
+    public static final String TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP = "jei.category.drip_coffee.time.seconds";
     public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
     public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;

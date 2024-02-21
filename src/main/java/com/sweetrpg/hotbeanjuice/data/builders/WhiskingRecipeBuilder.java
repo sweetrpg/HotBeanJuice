@@ -2,7 +2,7 @@ package com.sweetrpg.hotbeanjuice.data.builders;
 
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.recipes.WhiskingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;

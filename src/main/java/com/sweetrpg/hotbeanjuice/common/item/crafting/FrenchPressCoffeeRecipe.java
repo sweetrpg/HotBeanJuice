@@ -11,6 +11,8 @@ import java.util.List;
 
 public class FrenchPressCoffeeRecipe extends AbstractBrewingRecipe {
 
+    public static final String RECIPE_TYPE_NAME = "french_press_coffee";
+
     public FrenchPressCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
         super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
@@ -23,6 +25,6 @@ public class FrenchPressCoffeeRecipe extends AbstractBrewingRecipe {
     public static class Type implements RecipeType<FrenchPressCoffeeRecipe> {
         private Type() { }
         public static final FrenchPressCoffeeRecipe.Type INSTANCE = new FrenchPressCoffeeRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":french_press_coffee";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }
