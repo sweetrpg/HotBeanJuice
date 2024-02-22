@@ -164,6 +164,15 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_sugar", has(Items.SUGAR))
                 .save(consumer);
 //        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get())
+        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+                .group("drinks")
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_FILTER.get()))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_filter", has(ModItems.COFFEE_FILTER.get()))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
         CoffeeMakerRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
                 .group("drinks")
                 .requires(Ingredient.of(ModItems.BOILING_WATER.get()))

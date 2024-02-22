@@ -45,6 +45,10 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
         return new CoffeeMakerRecipeBuilder(item, experience, brewingTime, ModRecipeSerializers.PERCOLATOR_COFFEE_RECIPE.get());
     }
 
+    public static CoffeeMakerRecipeBuilder drip(Item item, float experience, int brewingTime) {
+        return new CoffeeMakerRecipeBuilder(item, experience, brewingTime, ModRecipeSerializers.DRIP_COFFEE_RECIPE.get());
+    }
+
     public static CoffeeMakerRecipeBuilder frenchPress(Item item, float experience, int seepingTime) {
         return new CoffeeMakerRecipeBuilder(item, experience, seepingTime, ModRecipeSerializers.FRENCH_PRESS_COFFEE_RECIPE.get());
     }

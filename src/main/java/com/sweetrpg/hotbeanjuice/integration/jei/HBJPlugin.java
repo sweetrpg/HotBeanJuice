@@ -49,7 +49,7 @@ public class HBJPlugin implements IModPlugin {
         registration.addRecipes(findRecipesByType(ModRecipeTypes.GRINDING.get()), GrindingRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.ROASTING.get()), RoastingRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.WHISKING.get()), WhiskingRecipeCategory.UID);
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.BREWING.get()), DripCoffeeRecipeCategory.UID);
+        registration.addRecipes(findRecipesByType(ModRecipeTypes.DRIP_COFFEE.get()), DripCoffeeRecipeCategory.UID);
     }
 
     private static List<Recipe<?>> findRecipesByType(RecipeType<?> type) {
