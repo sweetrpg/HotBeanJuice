@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "drinks",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:espresso_drink"
+    },
+    {
+      "item": "hotbeanjuice:steamed_milk"
+    },
+    {
+      "item": "hotbeanjuice:cocoa_powder"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "hotbeanjuice:mocha_drink"
+  }
+}

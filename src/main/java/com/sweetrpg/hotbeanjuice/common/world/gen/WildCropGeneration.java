@@ -27,8 +27,12 @@ public class WildCropGeneration {
 
     public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
 
-    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_WILD_COFFEE_BUSH;
-    public static Holder<PlacedFeature> PATCH_WILD_COFFEE_BUSH;
+    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_WILD_COFFEA_ARABICA;
+    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_WILD_COFFEA_CANEPHORA;
+    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_WILD_COFFEA_RACEMOSA;
+    public static Holder<PlacedFeature> PATCH_WILD_COFFEA_ARABICA;
+    public static Holder<PlacedFeature> PATCH_WILD_COFFEA_CANEPHORA;
+    public static Holder<PlacedFeature> PATCH_WILD_COFFEA_RACEMOSA;
 
     public static RandomPatchConfiguration getWildCropConfiguration(Block block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
         return new RandomPatchConfiguration(tries, xzSpread, ySpread, PlacementUtils.filtered(
@@ -48,15 +52,44 @@ public class WildCropGeneration {
         return (Holder<V>) BuiltinRegistries.<T>register(registry, id, value);
     }
 
-    public static void registerWildCatnipGeneration() {
-        FEATURE_PATCH_WILD_COFFEE_BUSH = register(Util.modLoc("patch_wild_coffee_bush"),
+    public static void registerWildCropGeneration() {
+        // Arabica
+        FEATURE_PATCH_WILD_COFFEA_ARABICA = register(Util.modLoc("patch_wild_coffea_arabica"),
                 Feature.RANDOM_PATCH,
-                getWildCropConfiguration(ModBlocks.WILD_COFFEE_BUSH.get(),
+                getWildCropConfiguration(ModBlocks.WILD_COFFEA_ARABICA.get(),
                         64, ConfigHandler.SERVER.COFFEE_BUSH_SPREAD.get(), 3,
                         BlockPredicate.matchesBlocks(Arrays.asList(Blocks.GRASS_BLOCK, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.PODZOL), BLOCK_BELOW)));
 
-        PATCH_WILD_COFFEE_BUSH = registerPlacement(Util.modLoc("patch_wild_coffee_bush"),
-                FEATURE_PATCH_WILD_COFFEE_BUSH,
+        PATCH_WILD_COFFEA_ARABICA = registerPlacement(Util.modLoc("patch_wild_coffea_arabica"),
+                FEATURE_PATCH_WILD_COFFEA_ARABICA,
+                RarityFilter.onAverageOnceEvery(ConfigHandler.SERVER.CHANCE_COFFEE_BUSH.get()),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP,
+                BiomeFilter.biome());
+
+        // Canephora
+        FEATURE_PATCH_WILD_COFFEA_CANEPHORA = register(Util.modLoc("patch_wild_coffea_canephora"),
+                Feature.RANDOM_PATCH,
+                getWildCropConfiguration(ModBlocks.WILD_COFFEA_CANEPHORA.get(),
+                        64, ConfigHandler.SERVER.COFFEE_BUSH_SPREAD.get(), 3,
+                        BlockPredicate.matchesBlocks(Arrays.asList(Blocks.GRASS_BLOCK, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.PODZOL), BLOCK_BELOW)));
+
+        PATCH_WILD_COFFEA_CANEPHORA = registerPlacement(Util.modLoc("patch_wild_coffea_canephora"),
+                FEATURE_PATCH_WILD_COFFEA_CANEPHORA,
+                RarityFilter.onAverageOnceEvery(ConfigHandler.SERVER.CHANCE_COFFEE_BUSH.get()),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP,
+                BiomeFilter.biome());
+
+        // Racemosa
+        FEATURE_PATCH_WILD_COFFEA_RACEMOSA = register(Util.modLoc("patch_wild_coffea_racemosa"),
+                Feature.RANDOM_PATCH,
+                getWildCropConfiguration(ModBlocks.WILD_COFFEA_RACEMOSA.get(),
+                        64, ConfigHandler.SERVER.COFFEE_BUSH_SPREAD.get(), 3,
+                        BlockPredicate.matchesBlocks(Arrays.asList(Blocks.GRASS_BLOCK, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.PODZOL), BLOCK_BELOW)));
+
+        PATCH_WILD_COFFEA_RACEMOSA = registerPlacement(Util.modLoc("patch_wild_coffea_racemosa"),
+                FEATURE_PATCH_WILD_COFFEA_RACEMOSA,
                 RarityFilter.onAverageOnceEvery(ConfigHandler.SERVER.CHANCE_COFFEE_BUSH.get()),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,

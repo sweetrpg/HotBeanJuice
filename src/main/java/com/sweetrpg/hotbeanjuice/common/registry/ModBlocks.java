@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,9 +32,17 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Crops
-    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_ARABICA = BLOCKS.register("wild_coffea_arabica",
             () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
-    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_RACEMOSA = BLOCKS.register("wild_coffea_racemosa",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_CANEPHORA = BLOCKS.register("wild_coffea_canephora",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS.register("crop_coffee_arabica",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_RACEMOSA = BLOCKS.register("crop_coffee_racemosa",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_CANEPHORA = BLOCKS.register("crop_coffee_canephora",
             () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
@@ -47,12 +56,17 @@ public class ModBlocks {
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Coffee devices
+    // Coffee-making devices
 
     public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
             HandCoffeeGrinderBlock::new);
     public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
             PoweredCoffeeGrinderBlock::new);
+    public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
+            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
+
+    public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
+            () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
 
     // ----------------------------------------------------------------------------------------------------------------
 
@@ -61,6 +75,11 @@ public class ModBlocks {
     public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
 //    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
 //    public static final RegistryObject<TravelCupBlock> TRAVEL_CUP = registerWithItem("travel_cup", TravelCupBlock::new);
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee-processing devices
+    public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
@@ -107,9 +126,6 @@ public class ModBlocks {
 
     public static void logError() {
         // Only try to register if blocks were successfully registered
-        // Trying to avoid as reports like HotBeanJuice#242, where it says
-        // HotBeanJuice crashed but is not the CAUSE of the crash
-
         HotBeanJuice.LOGGER.info("Items/Blocks were not registered for some reason... probably because we are c...r..a..s.hing");
     }
 }

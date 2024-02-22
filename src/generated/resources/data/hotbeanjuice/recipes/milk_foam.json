@@ -1,0 +1,10 @@
+{
+  "type": "hotbeanjuice:whisking",
+  "group": "coffee_beans",
+  "ingredient": {
+    "item": "hotbeanjuice:steamed_milk"
+  },
+  "result": "hotbeanjuice:milk_foam",
+  "experience": 1.0,
+  "whisking_time": 180
+}

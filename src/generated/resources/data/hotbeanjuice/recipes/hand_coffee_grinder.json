@@ -1,9 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "processing",
   "pattern": [
-    " G ",
-    "IFI",
-    " I "
+    "LI ",
+    "GFG",
+    " G "
   ],
   "key": {
     "G": {
@@ -14,6 +15,9 @@
     },
     "F": {
       "item": "minecraft:flint"
+    },
+    "L": {
+      "item": "minecraft:lever"
     }
   },
   "result": {

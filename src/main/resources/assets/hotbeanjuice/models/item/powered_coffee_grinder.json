@@ -157,5 +157,23 @@
         "down": {"uv": [1.5, 1.5, 0, 3], "texture": "#0"}
       }
     }
-  ]
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, -1, 0],
+      "translation": [0, 3, -2]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, -1, 0],
+      "translation": [0, 3, -2]
+    },
+    "ground": {
+      "translation": [0, 2.5, 0]
+    },
+    "gui": {
+      "rotation": [37.5, -37.5, 0],
+      "translation": [0, 3.5, 0],
+      "scale": [1.2, 1.2, 1.2]
+    }
+  }
 }

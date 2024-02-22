@@ -1,5 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.block.entity.DripCoffeeMachineBlockEntity;
+import com.sweetrpg.hotbeanjuice.common.block.entity.CoffeeRoasterBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.block.entity.HandCoffeeGrinderBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.block.entity.PoweredCoffeeGrinderBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
@@ -14,17 +16,21 @@ import java.util.function.Supplier;
 
 public class ModBlockEntityTypes {
 
-    public static final DeferredRegister<BlockEntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES, Constants.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES, Constants.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<HandCoffeeGrinderBlockEntity>> HAND_COFFEE_GRINDER = register("hand_coffee_grinder", HandCoffeeGrinderBlockEntity::new, ModBlocks.HAND_COFFEE_GRINDER);
     public static final RegistryObject<BlockEntityType<PoweredCoffeeGrinderBlockEntity>> POWERED_COFFEE_GRINDER = register("powered_coffee_grinder", PoweredCoffeeGrinderBlockEntity::new, ModBlocks.POWERED_COFFEE_GRINDER);
+    public static final RegistryObject<BlockEntityType<CoffeeRoasterBlockEntity>> COFFEE_ROASTER = register("coffee_roaster", CoffeeRoasterBlockEntity::new, ModBlocks.COFFEE_ROASTER);
+
+    public static final RegistryObject<BlockEntityType<DripCoffeeMachineBlockEntity>> DRIP_COFFEE_MACHINE_BLOCK_ENTITY = register("drip_coffee_machine",
+            () -> BlockEntityType.Builder.of(DripCoffeeMachineBlockEntity::new, ModBlocks.DRIP_COFFEE_MACHINE.get()).build(null));
 
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(final String name, final BlockEntityType.BlockEntitySupplier<T> sup, Supplier<? extends Block> validBlock) {
         return register(name, () -> BlockEntityType.Builder.of(sup, validBlock.get()).build(null));
     }
 
     private static <T extends BlockEntityType<?>> RegistryObject<T> register(final String name, final Supplier<T> sup) {
-        return ENTITIES.register(name, sup);
+        return BLOCK_ENTITY_TYPES.register(name, sup);
     }
 
 }

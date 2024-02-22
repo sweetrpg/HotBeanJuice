@@ -16,6 +16,7 @@ buildscript {
 }
 
 plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id "com.modrinth.minotaur" version "2.+"
     // It's safest to have this on 2.+ to get the latest features and
     // bug fixes without having to worry about breaking changes.
@@ -128,7 +129,8 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${jupiter_version}")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${jupiter_version}")
 
-    runtimeOnly fg.deobf("curse.maven:the-one-probe-245211:${top_file_id}")
+    runtimeOnly fg.deobf("curse.maven:the-one-probe-${top_project_id}:${top_file_id}")
+    runtimeOnly fg.deobf("curse.maven:create-${create_project_id}:${create_file_id}")
 }
 
 // Define a task to create a jar of project sources
@@ -174,7 +176,7 @@ jar {
         attributes([
             "Specification-Title": project.name,
             "Specification-Vendor": "SweetRPG",
-            "Specification-Version": project.version, // "1",
+            "Specification-Version": project.version,
             "Implementation-Title": project.name,
             "Implementation-Version": project.version,
             "Implementation-Vendor" :"SweetRPG",
@@ -225,20 +227,4 @@ modrinth {
         optional.project "jei"
         optional.project "patchouli"
     }
-}
-
-// Must be done in afterEvaluate as the specific curseforge$id
-// task is generated lazily
-afterEvaluate {
-    // tasks.named("curseforge${project.curseforge_project_id}").get().dependsOn.add(makeChangelog)
-}
-
-if (project.hasProperty('UPDATE_MAPPINGS')) {
-    extractRangeMap {
-        sources sourceSets.api.java.srcDirs
-    }
-    applyRangeMap {
-        sources sourceSets.api.java.srcDirs
-    }
-    sourceSets.api.java.srcDirs.each { extractMappedNew.addTarget it }
 }

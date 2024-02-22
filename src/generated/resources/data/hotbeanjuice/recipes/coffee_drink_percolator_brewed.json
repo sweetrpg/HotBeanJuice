@@ -1,0 +1,15 @@
+{
+  "type": "hotbeanjuice:percolator_coffee",
+  "group": "drinks",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "hotbeanjuice:coffee_grounds"
+    }
+  ],
+  "result": "hotbeanjuice:coffee_drink",
+  "experience": 0.1,
+  "processing_time": 450
+}

@@ -1,7 +1,8 @@
 {
   "type": "minecraft:smelting",
+  "group": "coffee_ingredients",
   "ingredient": {
-    "item": "hotbeanjuice:coffee_cherry"
+    "tag": "hotbeanjuice:coffee_cherries"
   },
   "result": "hotbeanjuice:coffee_bean",
   "experience": 1.0,
