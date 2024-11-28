@@ -57,6 +57,7 @@ public class HotBeanJuice {
         ModContainerTypes.CONTAINERS.register(modEventBus);
         ModSerializers.SERIALIZERS.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(ModRegistries::newRegistry);
 //        modEventBus.addListener(ModEntityTypes::addEntityAttributes);
@@ -135,6 +136,7 @@ public class HotBeanJuice {
             gen.addProvider(new HBJItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));
             gen.addProvider(new HBJRecipeProvider(gen));
             gen.addProvider(new HBJLootTableProvider(gen));
+            gen.addProvider(new HBJItemModelProvider(gen, event.getExistingFileHelper()));
         }
     }
 }

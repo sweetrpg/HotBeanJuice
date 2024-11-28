@@ -39,6 +39,16 @@ public class Constants {
     public static final String TRANSLATION_KEY_ITEM_COFFEE_BUSH_TITLE = "item.hotbeanjuice.coffee_bush";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_CHERRY_TITLE = "item.hotbeanjuice.coffee_cherry";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_GROUNDS_TITLE = "item.hotbeanjuice.coffee_grounds";
+    public static final String TRANSLATION_KEY_ITEM_COFFEE_FILTER_TITLE = "item.hotbeanjuice.coffee_filter";
+    public static final String TRANSLATION_KEY_BLOCK_COFFEE_BAG_BEANS_TITLE = "block.hotbeanjuice.coffee_bag_beans";
+    public static final String TRANSLATION_KEY_BLOCK_COFFEE_BAG_GROUND_TITLE = "block.hotbeanjuice.coffee_bag_ground";
+    public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
+    public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
+    public static final String TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE = "block.hotbeanjuice.coffee_cup";
+    public static final String TRANSLATION_KEY_FIRED_COFFEE_CUP_BLOCK_TITLE = "block.hotbeanjuice.fired_coffee_cup";
+    public static final String TRANSLATION_KEY_TRAVEL_CUP_BLOCK_TITLE = "block.hotbeanjuice.travel_cup";
+    public static final String TRANSLATION_KEY_DISPOSABLE_CUP_BLOCK_TITLE = "block.hotbeanjuice.disposable_cup";
+    public static final String TRANSLATION_KEY_CLAY_MUG_ITEM_TITLE = "item.hotbeanjuice.clay_mug";
     public static final String TRANSLATION_KEY_ITEM_COFFEE_SEEDS_TITLE = "item.hotbeanjuice.coffee_seeds";
 
     // Advancements

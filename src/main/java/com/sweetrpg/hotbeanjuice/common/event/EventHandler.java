@@ -1,13 +1,17 @@
 package com.sweetrpg.hotbeanjuice.common.event;
 
+import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import net.minecraft.core.Registry;
 import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LootingLevelEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
@@ -61,5 +65,10 @@ public class EventHandler {
     @SubscribeEvent
     public void onLootDrop(final LootingLevelEvent event) {
 
+    }
+
+    @SubscribeEvent
+    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
+        Registry.register(Registry.RECIPE_TYPE, DripCoffeeRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
     }
 }

@@ -1,0 +1,8 @@
+{
+  "type": "hotbeanjuice:drip_coffee",
+  "group": "hotbeanjuice",
+  "ingredient": "minecraft:cocoa_beans",
+  "experience": 0.1,
+  "brewingTime": 100,
+  "millibuckets": 1000
+}

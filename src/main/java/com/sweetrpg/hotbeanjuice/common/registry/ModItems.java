@@ -1,7 +1,12 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
+import com.sweetrpg.hotbeanjuice.common.item.CoffeeBeanItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.util.Util;
+import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.world.item.*;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,16 +30,19 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // ----------------------------------------------------------------------------------------------------------------
-
     // Tea
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Kitchenware
+    // Coffee-making paraphernalia
 
-//    public static final RegistryObject<Item> COFFEE_CUP = ITEMS.register("coffee_cup", () -> new ItemNameBlockItem(ModBlocks.COFFEE_CUP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
+    public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee Maker Items
+
+    public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
 
