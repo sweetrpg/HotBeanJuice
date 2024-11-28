@@ -10,7 +10,7 @@ A coffee mod for Minecraft
   <img src="http://cf.way2muchnoise.eu/full_968123_downloads.svg" alt="Curseforge Downloads">
 </a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice">
-  <img src="https://img.shields.io/modrinth/dt/" alt="Modrinth Downloads">
+  <img src="https://img.shields.io/modrinth/dt/sqqCq3AL" alt="Modrinth Downloads">
 </a>
 
 [![CI (1.18)](https://github.com/sweetrpg/HotBeanJuice/actions/workflows/ci-build.yml/badge.svg?branch=1.18)](https://github.com/sweetrpg/HotBeanJuice/actions/workflows/ci-build.yml)

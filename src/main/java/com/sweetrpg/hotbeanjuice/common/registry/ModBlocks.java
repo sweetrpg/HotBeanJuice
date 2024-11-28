@@ -1,9 +1,11 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.block.CarafeBlock;
+import com.sweetrpg.hotbeanjuice.common.block.*;
+import com.sweetrpg.hotbeanjuice.common.block.*;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
-import com.sweetrpg.hotbeanjuice.common.block.DripCoffeeBlock;
+import com.sweetrpg.hotbeanjuice.common.block.HandCoffeeGrinderBlock;
 import com.sweetrpg.hotbeanjuice.common.block.WildCoffeeBushBlock;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.client.color.block.BlockColors;
@@ -35,24 +37,57 @@ public class ModBlocks {
             () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
             () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_ARABICA = BLOCKS.register("wild_coffea_arabica",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_RACEMOSA = BLOCKS.register("wild_coffea_racemosa",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_CANEPHORA = BLOCKS.register("wild_coffea_canephora",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS.register("crop_coffee_arabica",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_RACEMOSA = BLOCKS.register("crop_coffee_racemosa",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_CANEPHORA = BLOCKS.register("crop_coffee_canephora",
+            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Coffee Makers
+    // Miscellaneous coffee items
+
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
+            () -> new CoffeeBagBlock(true, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
+            () -> new CoffeeBagBlock(false, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
 
     public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
             () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
+
     public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
             () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
 
     // ----------------------------------------------------------------------------------------------------------------
 
-    // Coffee devices
+    // Coffee-making devices
 
     public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
             HandCoffeeGrinderBlock::new);
     public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
             PoweredCoffeeGrinderBlock::new);
+    public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
+            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
+
+    public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
+            () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
+
+    public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
+            HandCoffeeGrinderBlock::new);
+    public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
+            PoweredCoffeeGrinderBlock::new);
+
+    // ----------------------------------------------------------------------------------------------------------------
+
+    // Coffee-processing devices
+    public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 

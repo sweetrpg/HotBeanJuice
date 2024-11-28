@@ -7,9 +7,14 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 
-public class DripCoffeeRecipe extends AbstractBrewingRecipe{
-    public DripCoffeeRecipe(ResourceLocation id, String group, Ingredient ingredient, float experience, int brewingTime, int millibuckets) {
-        super(Type.INSTANCE, group, id, ingredient, experience, brewingTime, millibuckets);
+import java.util.List;
+
+public class DripCoffeeRecipe extends AbstractBrewingRecipe {
+
+    public static final String RECIPE_TYPE_NAME = "drip_coffee";
+
+    public DripCoffeeRecipe(ResourceLocation id, String group, List<Ingredient> ingredients, float experience, int brewingTime, int millibuckets) {
+        super(Type.INSTANCE, group, id, ingredients, experience, brewingTime, millibuckets);
     }
 
     @Override
@@ -19,7 +24,8 @@ public class DripCoffeeRecipe extends AbstractBrewingRecipe{
 
     public static class Type implements RecipeType<DripCoffeeRecipe> {
         private Type() { }
+
         public static final DripCoffeeRecipe.Type INSTANCE = new DripCoffeeRecipe.Type();
-        public static final String ID = Constants.MOD_ID + ":drip_coffee";
+        public static final String ID = Constants.MOD_ID + ":" + RECIPE_TYPE_NAME;
     }
 }
