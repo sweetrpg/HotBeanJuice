@@ -1,8 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.inventory.container.slot;
 
 import com.sweetrpg.hotbeanjuice.common.inventory.container.CoffeeRoastingContainer;
-import com.sweetrpg.hotbeanjuice.common.recipes.CoffeeMakerRecipe;
-import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.RecipeHolder;
