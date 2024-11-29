@@ -56,6 +56,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
 //        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
+        add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
@@ -102,6 +103,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
 //        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
+        add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
@@ -148,6 +150,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Filterkaffeemaschine");
 //        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Ofengebrannte Kaffeetasse");
+        add(ModBlocks.COFFEE_CUP.get(), "Kaffeetasse");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
