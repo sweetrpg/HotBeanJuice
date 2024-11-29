@@ -1,12 +1,15 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
+import com.sweetrpg.hotbeanjuice.common.item.DrinkItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
+
 import javax.annotation.Nullable;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -33,13 +36,13 @@ public class ModItems {
     // ----------------------------------------------------------------------------------------------------------------
 
     // Coffee drinks
-    public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink", () -> new Item(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> ESPRESSO_DRINK = ITEMS.register("espresso_drink", () -> new Item(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> CAPPUCCINO_DRINK = ITEMS.register("cappuccino_drink", () -> new Item(new Item.Properties().food(FoodValues.CAPPUCCINO).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> MOCHA_DRINK = ITEMS.register("mocha_drink", () -> new Item(new Item.Properties().food(FoodValues.MOCHA).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> LATTE_DRINK = ITEMS.register("latte_drink", () -> new Item(new Item.Properties().food(FoodValues.LATTE).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> MACCHIATO_DRINK = ITEMS.register("macchiato_drink", () -> new Item(new Item.Properties().food(FoodValues.MACCHIATO).tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> HOT_CHOCOLATE_DRINK = ITEMS.register("hot_chocolate_drink", () -> new Item(new Item.Properties().food(FoodValues.HOT_CHOCOLATE).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> ESPRESSO_DRINK = ITEMS.register("espresso_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> CAPPUCCINO_DRINK = ITEMS.register("cappuccino_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.CAPPUCCINO).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> MOCHA_DRINK = ITEMS.register("mocha_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.MOCHA).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> LATTE_DRINK = ITEMS.register("latte_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.LATTE).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> MACCHIATO_DRINK = ITEMS.register("macchiato_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.MACCHIATO).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> HOT_CHOCOLATE_DRINK = ITEMS.register("hot_chocolate_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.HOT_CHOCOLATE).tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
 
