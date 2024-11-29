@@ -131,6 +131,7 @@ dependencies {
     implementation fg.deobf("curse.maven:curios-${curios_project_id}:${curios_file_id}")
     implementation fg.deobf("curse.maven:celestial-exploration-${cexp_project_id}:${cexp_file_id}")
     implementation fg.deobf("curse.maven:azurelib-${azure_project_id}:${azure_file_id}")
+    implementation fg.deobf("curse.maven:craft-tracker-${ctrk_project_id}:${ctrk_file_id}")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${jupiter_version}")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${jupiter_version}")
