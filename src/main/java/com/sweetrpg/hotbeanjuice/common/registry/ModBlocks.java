@@ -26,9 +26,9 @@ public class ModBlocks {
     public static final DeferredRegister<Item> ITEMS = ModItems.ITEMS;
 
     // ----------------------------------------------------------------------------------------------------------------
-
     // Crops
-//    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
+
+    //    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
 //            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
 //    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
 //            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
@@ -46,7 +46,6 @@ public class ModBlocks {
             () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
-
     // Miscellaneous coffee items
 
     public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
@@ -58,7 +57,6 @@ public class ModBlocks {
             () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
 
     // ----------------------------------------------------------------------------------------------------------------
-
     // Coffee-making devices
 
     public static final RegistryObject<HandCoffeeGrinderBlock> HAND_COFFEE_GRINDER = registerWithItem("hand_coffee_grinder",
@@ -71,13 +69,11 @@ public class ModBlocks {
 //            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
 
     // ----------------------------------------------------------------------------------------------------------------
-
     // Coffee-processing devices
 
     public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
-
     // Kitchenware
 
     public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
