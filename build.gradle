@@ -10,12 +10,13 @@ buildscript {
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.0.+', changing: true
         classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.4.0"
-        classpath "org.ajoberstar.grgit:grgit-gradle:5.2.1"
+        classpath "org.ajoberstar.grgit:grgit-gradle:5.3.0"
         classpath 'org.parchmentmc:librarian:1.+'
     }
 }
 
 plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id "com.modrinth.minotaur" version "2.+"
     // It's safest to have this on 2.+ to get the latest features and
     // bug fixes without having to worry about breaking changes.
@@ -123,12 +124,18 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_version}")
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:${ptch_version}:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${ptch_version}")
-//    implementation fg.deobf("curse.maven:farmers-delight-398521:${fd_file_id}")
+
+    implementation fg.deobf("curse.maven:farmers-delight-${farmers_project_id}:${farmers_file_id}")
+    implementation fg.deobf("curse.maven:create-${create_project_id}:${create_file_id}")
+    implementation fg.deobf("curse.maven:ars-nouveau-${ars_project_id}:${ars_file_id}")
+    implementation fg.deobf("curse.maven:curios-${curios_project_id}:${curios_file_id}")
+    implementation fg.deobf("curse.maven:celestial-exploration-${cexp_project_id}:${cexp_file_id}")
+    implementation fg.deobf("curse.maven:azurelib-${azure_project_id}:${azure_file_id}")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${jupiter_version}")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${jupiter_version}")
 
-    runtimeOnly fg.deobf("curse.maven:the-one-probe-245211:${top_file_id}")
+    runtimeOnly fg.deobf("curse.maven:the-one-probe-${top_project_id}:${top_file_id}")
 }
 
 // Define a task to create a jar of project sources
@@ -174,7 +181,7 @@ jar {
         attributes([
             "Specification-Title": project.name,
             "Specification-Vendor": "SweetRPG",
-            "Specification-Version": project.version, // "1",
+            "Specification-Version": project.version,
             "Implementation-Title": project.name,
             "Implementation-Version": project.version,
             "Implementation-Vendor" :"SweetRPG",
@@ -225,20 +232,4 @@ modrinth {
         optional.project "jei"
         optional.project "patchouli"
     }
-}
-
-// Must be done in afterEvaluate as the specific curseforge$id
-// task is generated lazily
-afterEvaluate {
-    // tasks.named("curseforge${project.curseforge_project_id}").get().dependsOn.add(makeChangelog)
-}
-
-if (project.hasProperty('UPDATE_MAPPINGS')) {
-    extractRangeMap {
-        sources sourceSets.api.java.srcDirs
-    }
-    applyRangeMap {
-        sources sourceSets.api.java.srcDirs
-    }
-    sourceSets.api.java.srcDirs.each { extractMappedNew.addTarget it }
 }

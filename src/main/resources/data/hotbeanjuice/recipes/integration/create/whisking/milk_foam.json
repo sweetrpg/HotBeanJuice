@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:steamed_milk"
+    }
+  ],
+  "results": [
+    {
+      "item": "hotbeanjuice:milk_foam",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

@@ -29,11 +29,16 @@ public class HBJItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         generated(ModItems.COFFEE_BEAN);
-        generated(ModItems.COFFEE_CHERRY);
+        generated(ModItems.COFFEE_CHERRY_ARABICA);
         generated(ModItems.COFFEE_GROUNDS);
-        generated(ModItems.COFFEE_SEEDS);
+//        generated(ModItems.COFFEE_SEEDS);
 
-        blockItem(ModBlocks.WILD_COFFEE_BUSH);
+        blockItem(ModBlocks.DRIP_COFFEE_MACHINE);
+        blockItem(ModBlocks.DRIP_COFFEE_CARAFE);
+
+        blockItem(ModBlocks.WILD_COFFEA_ARABICA);
+        blockItem(ModBlocks.WILD_COFFEA_CANEPHORA);
+        blockItem(ModBlocks.WILD_COFFEA_RACEMOSA);
     }
 
     private ResourceLocation itemTexture(Supplier<? extends ItemLike> item) {

@@ -20,7 +20,22 @@
               }
             }
           ],
-          "name": "hotbeanjuice:coffee_seeds"
+          "name": "hotbeanjuice:coffee_bean"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 1.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "hotbeanjuice:bad_coffee_bean"
         }
       ]
     }

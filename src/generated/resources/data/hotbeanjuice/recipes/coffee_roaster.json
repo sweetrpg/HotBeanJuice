@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "processing",
+  "pattern": [
+    "  H",
+    "IFD",
+    "IRB"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:coffee_roaster"
+  }
+}

@@ -39,8 +39,12 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        stageBlock(ModBlocks.COFFEE_BUSH_CROP.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
-        wildCropBlock(ModBlocks.WILD_COFFEE_BUSH.get());
+        stageBlock(ModBlocks.CROP_COFFEE_ARABICA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+        stageBlock(ModBlocks.CROP_COFFEE_CANEPHORA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+        stageBlock(ModBlocks.CROP_COFFEE_RACEMOSA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+        wildCropBlock(ModBlocks.WILD_COFFEA_ARABICA.get());
+        wildCropBlock(ModBlocks.WILD_COFFEA_CANEPHORA.get());
+        wildCropBlock(ModBlocks.WILD_COFFEA_RACEMOSA.get());
     }
 
     private String blockName(Block block) {
