@@ -9,7 +9,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
@@ -49,10 +48,9 @@ public class ModBlocks {
     // Miscellaneous coffee items
 
     public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
-            () -> new CoffeeBagBlock(true, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+            () -> new CoffeeBagBlock(true));
     public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
-            () -> new CoffeeBagBlock(false, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
-
+            () -> new CoffeeBagBlock(false));
     public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
             () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
 
