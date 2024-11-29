@@ -17,7 +17,6 @@
   "block.hotbeanjuice.wild_coffea_racemosa": "Wild Racemosa Coffea Bush",
   "config.chance_coffee_bush.description": "Chance that coffee bushes appear in the wild",
   "config.coffee_bush_spread.description": "Horizontal spread of patches of coffee bushes",
-  "gui.hotbeanjuice.coffee_roaster": "Roaster",
   "item.hotbeanjuice.bad_coffee_bean": "Bad Coffee Bean",
   "item.hotbeanjuice.boiling_water": "Boiling Water",
   "item.hotbeanjuice.cappuccino_drink": "Cappuccino",
@@ -39,15 +38,5 @@
   "item.hotbeanjuice.mocha_drink": "Mocha",
   "item.hotbeanjuice.steamed_milk": "Steamed Milk",
   "item.hotbeanjuice.whisk": "Whisk",
-  "itemGroup.hotbeanjuice": "Hot Bean Juice",
-  "jei.category.drip_coffee.time.seconds": "%f XP",
-  "jei.category.drip_coffee.xp": "%1$d s",
-  "jei.category.grinding.time.seconds": "%1$d s",
-  "jei.category.roasting.time.seconds": "%1$d s",
-  "jei.category.roasting.xp": "%f XP",
-  "jei.category.whisking.time.seconds": "%f XP",
-  "jei.category.whisking.xp": "%1$d s",
-  "jei.grinding.hotbeanjuice": "Grinding",
-  "jei.roasting.hotbeanjuice": "Roasting",
-  "jei.whisking.hotbeanjuice": "Whisking"
+  "itemGroup.hotbeanjuice": "Hot Bean Juice"
 }
