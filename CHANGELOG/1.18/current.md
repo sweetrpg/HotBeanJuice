@@ -1,1 +1,1 @@
-- `[DEV]` Merged a bunch of disparate branches and did some cleanup
+- `[NEW]` Added plate and teacup blocks
