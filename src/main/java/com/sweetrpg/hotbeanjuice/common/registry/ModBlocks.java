@@ -38,11 +38,11 @@ public class ModBlocks {
     public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_CANEPHORA = BLOCKS.register("wild_coffea_canephora",
             () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS.register("crop_coffee_arabica",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+            () -> new CoffeeBushBlock(ModItems.COFFEE_CHERRY_ARABICA.get(), Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_RACEMOSA = BLOCKS.register("crop_coffee_racemosa",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+            () -> new CoffeeBushBlock(ModItems.COFFEE_CHERRY_RACEMOSA.get(), Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_CANEPHORA = BLOCKS.register("crop_coffee_canephora",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+            () -> new CoffeeBushBlock(ModItems.COFFEE_CHERRY_CANEPHORA.get(), Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Miscellaneous coffee items

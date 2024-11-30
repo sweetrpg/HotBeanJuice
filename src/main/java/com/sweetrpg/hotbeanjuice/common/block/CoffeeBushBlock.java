@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
-import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -24,8 +24,11 @@ public class CoffeeBushBlock extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
     };
 
-    public CoffeeBushBlock(Properties properties) {
+    private final Item seed;
+
+    public CoffeeBushBlock(Item seed, Properties properties) {
         super(properties);
+        this.seed = seed;
     }
 
     @Override
@@ -45,7 +48,7 @@ public class CoffeeBushBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.COFFEE_CHERRY_ARABICA.get();
+        return this.seed;
     }
 
     @Override
