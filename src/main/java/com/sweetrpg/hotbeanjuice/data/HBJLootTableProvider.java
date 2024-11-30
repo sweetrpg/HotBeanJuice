@@ -69,9 +69,11 @@ public class HBJLootTableProvider extends LootTableProvider {
             dropsSelf(ModBlocks.COFFEE_BAG_BEANS);
             dropsSelf(ModBlocks.COFFEE_BAG_GROUND);
             dropsSelf(ModBlocks.COFFEE_CUP);
+            dropsSelf(ModBlocks.TEACUP);
+            dropsSelf(ModBlocks.PLATE);
             dropsSelf(ModBlocks.FIRED_COFFEE_CUP);
 //            dropsSelf(ModBlocks.DISPOSABLE_CUP);
-//            dropsSelf(ModBlocks.TRAVEL_CUP);
+            dropsSelf(ModBlocks.TRAVEL_CUP);
             dropsSelf(ModBlocks.HAND_COFFEE_GRINDER);
             dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
             dropsSelf(ModBlocks.COFFEE_ROASTER);

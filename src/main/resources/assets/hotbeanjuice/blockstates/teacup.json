@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/teacup"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/teacup",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/teacup",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/teacup",
+      "y": 270
+    }
+  }
+}
