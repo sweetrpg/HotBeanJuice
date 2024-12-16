@@ -51,8 +51,8 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WILD_COFFEA_RACEMOSA.get());
         tag(ModTags.COFFEE_CUPS)
                 .add(ModBlocks.COFFEE_CUP.get())
-                /*.add(ModBlocks.TRAVEL_CUP.get())
-                .add(ModBlocks.DISPOSABLE_CUP.get())*/;
+                .add(ModBlocks.TRAVEL_CUP.get())
+        /*.add(ModBlocks.DISPOSABLE_CUP.get())*/;
 //        tag(ModTags.WILD_CROPS)
 //                .add(ModBlocks.WILD_CATNIP.get());
         tag(ModTags.BAGS_OF_COFFEE)
@@ -61,6 +61,9 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.COFFEE_GRINDERS)
                 .add(ModBlocks.HAND_COFFEE_GRINDER.get())
                 .add(ModBlocks.POWERED_COFFEE_GRINDER.get());
+        tag(ModTags.KITCHENWARE)
+                .add(ModBlocks.PLATE.get())
+                .add(ModBlocks.TEACUP.get());
     }
 
 }

@@ -22,11 +22,9 @@ public class Constants {
     public static final String LOCALE_DE_DE = "de_de";
 
     // Translation keys
-    public static final String TRANSLATION_KEY_BLOCK_WILD_COFFEE_BUSH_TITLE = "block.hotbeanjuice.wild_coffee_bush";
-    public static final String TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE = "block.hotbeanjuice.coffee_cup";
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
-    public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui.hotbeanjuice.coffee_roaster";
+    public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui." + Constants.MOD_ID + ".coffee_roaster";
     public static final String TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP = "jei.category.drip_coffee.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP = "jei.category.drip_coffee.time.seconds";
     public static final String TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP = "jei.category.grinding.time.seconds";
@@ -46,7 +44,7 @@ public class Constants {
     public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
 
     // Advancements
-    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements.hotbeanjuice.main.make_coffee.title";
-    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION = "advancements.hotbeanjuice.main.make_coffee.description";
+    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements." + Constants.MOD_ID + ".main.make_coffee.title";
+    public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION = "advancements." + Constants.MOD_ID + ".main.make_coffee.description";
 
 }

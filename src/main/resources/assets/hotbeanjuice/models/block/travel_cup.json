@@ -3,8 +3,8 @@
 	"parent": "minecraft:block/cube",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "hotbeanjuice:block/coffee_cup",
-		"particle": "hotbeanjuice:block/coffee_cup"
+      "0": "hotbeanjuice:block/travel_cup",
+      "particle": "hotbeanjuice:block/travel_cup"
 	},
 	"elements": [
 		{

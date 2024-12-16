@@ -45,6 +45,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
+
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
@@ -53,12 +54,18 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
         add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
+//        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
+        add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
+        add(ModBlocks.TEACUP.get(), "Teacup");
+        add(ModBlocks.PLATE.get(), "Plate");
+        add(ModBlocks.TRAVEL_CUP.get(), "Travel Coffee Cup");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+
         add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.BOILING_WATER.get(), "Boiling Water");
         add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
@@ -80,8 +87,6 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModItems.MOCHA_DRINK.get(), "Mocha");
         add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
         add(ModItems.WHISK.get(), "Whisk");
-//        add(ModBlocks.DISPOSABLE_CUP.get(), "Disposable Cup");
-//        add(ModBlocks.TRAVEL_CUP.get(), "Travel Cup");
     }
 
     private void processENGB() {
@@ -89,18 +94,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "We're Makin' Coffee");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
-        add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP, "%f XP");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_WHISKING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_WHISKING_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
+
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
@@ -109,12 +104,18 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
         add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
+//        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
+        add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
+        add(ModBlocks.TEACUP.get(), "Teacup");
+        add(ModBlocks.PLATE.get(), "Plate");
+        add(ModBlocks.TRAVEL_CUP.get(), "Travel Coffee Cup");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+
         add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.BOILING_WATER.get(), "Boiling Water");
         add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
@@ -136,52 +137,44 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModItems.MOCHA_DRINK.get(), "Mocha");
         add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
         add(ModItems.WHISK.get(), "Whisk");
-//        add(ModBlocks.DISPOSABLE_CUP.get(), "Disposable Cup");
-//        add(ModBlocks.TRAVEL_CUP.get(), "Travel Cup");
     }
 
     private void processDEDE() {
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_DESCRIPTION, "Machen Sie Ihre erste Tasse Kaffee");
         add(Constants.TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE, "Wir machen Kaffee");
-        add(Constants.TRANSLATION_KEY_BLOCK_WILD_COFFEE_BUSH_TITLE, "Kaffeebusch");
-        add(Constants.TRANSLATION_KEY_COFFEE_CUP_BLOCK_TITLE, "Kaffeetasse");
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
-        add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Röster");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP, "%f XP");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_WHISKING_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_WHISKING_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Heißer Bohnensaft");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Schleifen");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Knallheiß");
-        add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Rührend");
+
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Kaffeebeutel (Bohnen)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Kaffeebeutel (gemahlen)");
         add(ModBlocks.COFFEE_ROASTER.get(), "Kaffeeröster");
         add(ModBlocks.CROP_COFFEE_ARABICA.get(), "Arabica-Kaffeestrauch");
         add(ModBlocks.CROP_COFFEE_CANEPHORA.get(), "Canephora-Kaffeestrauch");
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa-Kaffeestrauch");
-        add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Tropfkaffeekaraffe");
+        add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Filterkaffeekanne");
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Filterkaffeemaschine");
-        add(ModBlocks.FIRED_COFFEE_CUP.get(), "Im Ofen gebrannte Kaffeetasse");
+//        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
+        add(ModBlocks.FIRED_COFFEE_CUP.get(), "Ofengebrannte Kaffeetasse");
+        add(ModBlocks.COFFEE_CUP.get(), "Kaffeetasse");
+        add(ModBlocks.TEACUP.get(), "Teetasse");
+        add(ModBlocks.PLATE.get(), "Teller");
+        add(ModBlocks.TRAVEL_CUP.get(), "Reise-Kaffeetasse");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
-        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Angetriebene Kaffeemühle mit Mahlwerk");
+        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");
+
         add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
         add(ModItems.BOILING_WATER.get(), "Kochendes Wasser");
         add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
         add(ModItems.CLAY_MUG.get(), "Tonbecher");
         add(ModItems.COCOA_POWDER.get(), "Kakaopulver");
         add(ModItems.COFFEE_BEAN.get(), "Kaffeebohne");
-        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica-Kaffeekirsche");
-        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora-Kaffeekirsche");
-        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa-Kaffeekirsche");
+        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Kaffeekirsche");
+        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Kaffeekirsche");
+        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Kaffeekirsche");
         add(ModItems.COFFEE_DRINK.get(), "Kaffee");
         add(ModItems.COFFEE_FILTER.get(), "Kaffeefilter");
         add(ModItems.COFFEE_GROUNDS.get(), "Kaffeesatz");
@@ -192,10 +185,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
         add(ModItems.MILK_FOAM.get(), "Milchschaum");
         add(ModItems.MOCHA_DRINK.get(), "Mokka");
-        add(ModItems.STEAMED_MILK.get(), "Aufgeschäumte Milch");
+        add(ModItems.STEAMED_MILK.get(), "Gedämpfte Milch");
         add(ModItems.WHISK.get(), "Schneebesen");
-//        add(ModBlocks.DISPOSABLE_CUP.get(),"Einwegbecher");
-//        add(ModBlocks.TRAVEL_CUP.get(), "Reisebecher");
     }
 
 }

@@ -3,15 +3,16 @@ loaderVersion="${fml_version_range}"
 license="MIT"
 issueTrackerURL="https://github.com/sweetrpg/HotBeanJuice/issues"
 displayURL="https://minecraft.curseforge.com/projects/hot-bean-juice/"
-logoFile= "hbj_logo.png"
+logoFile = "hbj_logo.png"
+displayName = "Hot Bean Juice"
 
 [[mods]]
     modId="hotbeanjuice"
     version="${version}"
     updateJSONURL="https://minecraft.sweetrpg.com/mods/hotbeanjuice/version.json"
     displayName="Hot Bean Juice"
-    credits="paulyhedral shimaginary primal_zerg_"
-    authors="paulyhedral shimaginary primal_zerg_"
+credits = "paulyhedral shimaginary sirmatterator"
+authors = "paulyhedral shimaginary sirmatterator"
     description='''
     Coffee!
     '''
@@ -37,5 +38,6 @@ logoFile= "hbj_logo.png"
     side="BOTH"
 
 [modproperties.configured]
-    catalogueImageIcon="configured_icon.png"
-    configuredBackground="minecraft:textures/block/gray_wool.png"
+displayName = "Hot Bean Juice"
+catalogueImageIcon = "configured_icon.png"
+configuredBackground = "minecraft:textures/block/gray_wool.png"

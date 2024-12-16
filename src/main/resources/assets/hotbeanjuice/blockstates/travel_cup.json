@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "hotbeanjuice:block/coffee_cup"
+      "model": "hotbeanjuice:block/travel_cup"
     },
     "facing=south": {
-      "model": "hotbeanjuice:block/coffee_cup",
+      "model": "hotbeanjuice:block/travel_cup",
       "y": 180
     },
     "facing=east": {
-      "model": "hotbeanjuice:block/coffee_cup",
+      "model": "hotbeanjuice:block/travel_cup",
       "y": 90
     },
     "facing=west": {
-      "model": "hotbeanjuice:block/coffee_cup",
+      "model": "hotbeanjuice:block/travel_cup",
       "y": 270
     }
   }
