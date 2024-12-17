@@ -27,10 +27,10 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class DripCoffeeBlock extends AbstractPoweredCoffeeMakerBlock {
+public class DripCoffeeMakerBlock extends AbstractPoweredCoffeeMakerBlock {
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED; //by carafe
 
-    public DripCoffeeBlock(Properties properties) {
+    public DripCoffeeMakerBlock(Properties properties) {
         super(properties);
     }
 

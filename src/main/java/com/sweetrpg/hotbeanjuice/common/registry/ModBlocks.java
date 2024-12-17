@@ -62,7 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
             PoweredCoffeeGrinderBlock::new);
     public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
-            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
+            () -> new DripCoffeeMakerBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
 //    public static final RegistryObject<Block> DRIP_COFFEE_MAKER = registerWithItem("drip_coffee",
 //            () -> new DripCoffeeBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion())); //?
 

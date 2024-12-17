@@ -5,10 +5,14 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
-import com.sweetrpg.hotbeanjuice.data.builders.*;
+import com.sweetrpg.hotbeanjuice.data.builders.CoffeeMakerRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.WhiskingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -106,9 +110,11 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("kitchenware")
                 .pattern("X X")
                 .pattern("X X")
-                .pattern("XXX")
-                .define('X', Items.STONE)
-                .unlockedBy("has_stone", has(Items.STONE))
+                .pattern("___")
+                .define('X', ItemTags.PLANKS)
+                .define('_', ItemTags.WOODEN_SLABS)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_slabs", has(ItemTags.WOODEN_SLABS))
                 .save(consumer);
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CLAY_MUG.get()), ModBlocks.FIRED_COFFEE_CUP.get(), 0.1f, 240)
                 .group("kitchenware")
@@ -121,7 +127,28 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .pattern("CCC")
                 .define('C', Items.CLAY_BALL)
                 .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
-//                .group()
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TEACUP.get(), 1)
+                .group("kitchenware")
+                .pattern("C C")
+                .pattern("CCC")
+                .define('C', Items.CLAY_BALL)
+                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PLATE.get(), 1)
+                .group("kitchenware")
+                .pattern("CCC")
+                .define('C', Items.CLAY_BALL)
+                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TRAVEL_CUP.get(), 1)
+                .group("kitchenware")
+                .pattern("IGI")
+                .pattern("I I")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .define('G', Items.GLASS)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(consumer);
 
         // Tea ingredients
@@ -302,6 +329,5 @@ public class HBJRecipeProvider extends RecipeProvider {
 
     @Override
     protected void saveAdvancement(HashCache cache, JsonObject advancementJson, Path pathIn) {
-        // NOOP - We don't replace any of the advancement things yet...
     }
 }

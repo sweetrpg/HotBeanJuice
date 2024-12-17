@@ -1,41 +1,41 @@
-modLoader="javafml"
-loaderVersion="${fml_version_range}"
-license="MIT"
-issueTrackerURL="https://github.com/sweetrpg/HotBeanJuice/issues"
-displayURL="https://minecraft.curseforge.com/projects/hot-bean-juice/"
+modLoader = "javafml"
+loaderVersion = "${fml_version_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/sweetrpg/HotBeanJuice/issues"
+displayURL = "https://minecraft.curseforge.com/projects/hot-bean-juice/"
 logoFile = "hbj_logo.png"
 displayName = "Hot Bean Juice"
 
 [[mods]]
-    modId="hotbeanjuice"
-    version="${version}"
-    updateJSONURL="https://minecraft.sweetrpg.com/mods/hotbeanjuice/version.json"
-    displayName="Hot Bean Juice"
+modId = "hotbeanjuice"
+version = "${version}"
+updateJSONURL = "https://minecraft.sweetrpg.com/mods/hotbeanjuice/version.json"
+displayName = "Hot Bean Juice"
 credits = "paulyhedral shimaginary sirmatterator"
 authors = "paulyhedral shimaginary sirmatterator"
-    description='''
+description = '''
     Coffee!
     '''
 [[dependencies.hotbeanjuice]]
-    modId="forge"
-    mandatory=true
-    versionRange="${forge_version_range}"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.hotbeanjuice]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="${minecraft_version_range}"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.hotbeanjuice]]
-    modId="configured"
-    mandatory=false
-    versionRange="[1.5.4,)"
-    ordering="NONE"
-    side="BOTH"
+modId = "configured"
+mandatory = false
+versionRange = "[1.5.4,)"
+ordering = "NONE"
+side = "BOTH"
 
 [modproperties.configured]
 displayName = "Hot Bean Juice"

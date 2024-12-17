@@ -30,7 +30,10 @@ import java.util.Random;
 
 public class CoffeeRoasterBlock extends BaseEntityBlock {
 
-    protected static final VoxelShape SHAPE = Block.box(0D, 0.0D, 0D, 16D, 13.0D, 16D);
+    protected static final VoxelShape EAST_SHAPE = Block.box(1D, 0.0D, 2D, 15D, 13.0D, 12D);
+    protected static final VoxelShape WEST_SHAPE = Block.box(1D, 0.0D, 4D, 15D, 13.0D, 14D);
+    protected static final VoxelShape NORTH_SHAPE = Block.box(2D, 0.0D, 1D, 12D, 13.0D, 15D);
+    protected static final VoxelShape SOUTH_SHAPE = Block.box(4D, 0.0D, 1D, 14D, 13.0D, 15D);
 
     public CoffeeRoasterBlock() {
         super(Properties.of(Material.METAL).strength(4, 15).sound(SoundType.METAL));
@@ -69,7 +72,12 @@ public class CoffeeRoasterBlock extends BaseEntityBlock {
     @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-        return SHAPE;
+        return switch(state.getValue(BlockStateProperties.HORIZONTAL_FACING)) {
+            case UP, DOWN, NORTH -> NORTH_SHAPE;
+            case SOUTH -> SOUTH_SHAPE;
+            case WEST -> WEST_SHAPE;
+            case EAST -> EAST_SHAPE;
+        };
     }
 
     @SuppressWarnings("deprecation")
@@ -93,13 +101,15 @@ public class CoffeeRoasterBlock extends BaseEntityBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(BlockStateProperties.POWERED, false);
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(BlockStateProperties.HORIZONTAL_FACING);
+        builder.add(BlockStateProperties.POWERED);
     }
 
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRand) {
