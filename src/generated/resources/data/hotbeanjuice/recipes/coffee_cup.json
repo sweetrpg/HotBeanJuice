@@ -4,11 +4,14 @@
   "pattern": [
     "X X",
     "X X",
-    "XXX"
+    "___"
   ],
   "key": {
     "X": {
-      "item": "minecraft:stone"
+      "tag": "minecraft:planks"
+    },
+    "_": {
+      "tag": "minecraft:wooden_slabs"
     }
   },
   "result": {
