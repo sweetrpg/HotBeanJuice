@@ -1,26 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "processing",
   "pattern": [
-    "LI ",
-    "GFG",
-    " G "
+    " H ",
+    "ILI",
+    "IRI"
   ],
   "key": {
-    "G": {
-      "tag": "forge:glass"
+    "H": {
+      "item": "minecraft:hopper"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     },
-    "F": {
-      "item": "minecraft:flint"
-    },
     "L": {
       "item": "minecraft:lever"
+    },
+    "R": {
+      "item": "minecraft:redstone"
     }
   },
   "result": {
-    "item": "hotbeanjuice:hand_coffee_grinder"
+    "item": "hotbeanjuice:espresso_machine"
   }
 }

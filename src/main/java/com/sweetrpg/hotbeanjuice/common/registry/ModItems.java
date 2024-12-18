@@ -32,17 +32,40 @@ public class ModItems {
 //    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BUSH_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> FINE_COFFEE_GROUNDS = ITEMS.register("fine_coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> DECAF_COFFEE_BEAN = ITEMS.register("decaf_coffee_bean", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Tea resources
+
+    public static final RegistryObject<Item> TEA_LEAF = register("tea_leaf", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee drinks
 
-    public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.COFFEE).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> DECAF_COFFEE_DRINK = ITEMS.register("decaf_coffee_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.DECAF_COFFEE).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> ESPRESSO_DRINK = ITEMS.register("espresso_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.ESPRESSO).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> CAPPUCCINO_DRINK = ITEMS.register("cappuccino_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.CAPPUCCINO).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> MOCHA_DRINK = ITEMS.register("mocha_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.MOCHA).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> LATTE_DRINK = ITEMS.register("latte_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.LATTE).tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> MACCHIATO_DRINK = ITEMS.register("macchiato_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.MACCHIATO).tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Tea drinks
+
+    public static final RegistryObject<Item> CHAMOMILE_TEA_DRINK = ITEMS.register("chamomile_tea_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.DECAF_TEA).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> GREEN_TEA_DRINK = ITEMS.register("green_tea_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.GREEN_TEA).tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> SUN_TEA_DRINK = ITEMS.register("sun_tea_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.BLACK_TEA).tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Cocoa drinks
+
     public static final RegistryObject<Item> HOT_CHOCOLATE_DRINK = ITEMS.register("hot_chocolate_drink", () -> new DrinkItem(new Item.Properties().food(FoodValues.HOT_CHOCOLATE).tab(ModItemGroups.GENERAL)));
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Tea-making paraphernalia
+
+    public static final RegistryObject<Item> TEA_BAG = register("tea_bag");
 
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee-making paraphernalia
@@ -55,9 +78,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
     public static final RegistryObject<Item> WHISK = register("whisk");
-
-    // ----------------------------------------------------------------------------------------------------------------
-    // Tea
 
     // ----------------------------------------------------------------------------------------------------------------
     // Miscellaneous ingredients

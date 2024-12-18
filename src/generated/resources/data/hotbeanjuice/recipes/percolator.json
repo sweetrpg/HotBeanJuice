@@ -1,26 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "processing",
   "pattern": [
-    "LI ",
-    "GFG",
-    " G "
+    " G ",
+    "IBI",
+    "IRI"
   ],
   "key": {
     "G": {
       "tag": "forge:glass"
     },
+    "B": {
+      "item": "hotbeanjuice:boiling_water"
+    },
     "I": {
       "item": "minecraft:iron_ingot"
     },
-    "F": {
-      "item": "minecraft:flint"
-    },
-    "L": {
-      "item": "minecraft:lever"
+    "R": {
+      "item": "minecraft:redstone"
     }
   },
   "result": {
-    "item": "hotbeanjuice:hand_coffee_grinder"
+    "item": "hotbeanjuice:percolator"
   }
 }

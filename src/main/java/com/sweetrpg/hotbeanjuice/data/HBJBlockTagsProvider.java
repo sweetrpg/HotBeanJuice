@@ -51,7 +51,7 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WILD_COFFEA_RACEMOSA.get());
         tag(ModTags.COFFEE_CUPS)
                 .add(ModBlocks.COFFEE_CUP.get())
-                .add(ModBlocks.TRAVEL_CUP.get())
+                .add(ModBlocks.TRAVEL_MUG.get())
         /*.add(ModBlocks.DISPOSABLE_CUP.get())*/;
 //        tag(ModTags.WILD_CROPS)
 //                .add(ModBlocks.WILD_CATNIP.get());

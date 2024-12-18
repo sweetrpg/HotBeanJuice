@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "kitchenware",
   "pattern": [
-    "IGI",
-    "I I",
-    "III"
+    " _ ",
+    "G G",
+    "GGG"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
+    "_": {
+      "tag": "minecraft:slabs"
     },
     "G": {
       "tag": "forge:glass"
     }
   },
   "result": {
-    "item": "hotbeanjuice:travel_cup"
+    "item": "hotbeanjuice:sun_tea_jar"
   }
 }
