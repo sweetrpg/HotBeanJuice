@@ -57,8 +57,8 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
     // Tea-making devices
 
-    public static final RegistryObject<TeaKettleBlock> TEA_KETTLE = registerWithItem("tea_kettle",
-            () -> new TeaKettleBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion())); //?
+    public static final RegistryObject<KettleBlock> KETTLE = registerWithItem("tea_kettle",
+            () -> new KettleBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion())); //?
     public static final RegistryObject<SunTeaJarBlock> SUN_TEA_JAR = registerWithItem("sun_tea_jar",
             () -> new SunTeaJarBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion())); //?
 
@@ -93,7 +93,7 @@ public class ModBlocks {
     public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
     public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
     public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
-    public static final RegistryObject<TravelCupBlock> TRAVEL_MUG = registerWithItem("travel_cup", TravelCupBlock::new);
+    public static final RegistryObject<TravelMugBlock> TRAVEL_MUG = registerWithItem("travel_cup", TravelMugBlock::new);
     public static final RegistryObject<TeacupBlock> TEACUP = registerWithItem("teacup", TeacupBlock::new);
     public static final RegistryObject<PlateBlock> PLATE = registerWithItem("plate", PlateBlock::new);
 

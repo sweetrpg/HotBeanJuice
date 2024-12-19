@@ -14,11 +14,11 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TeaKettleBlock extends Block {
+public class KettleBlock extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final IntegerProperty FULLNESS = IntegerProperty.create("fullness", 0, 4);
 
-    public TeaKettleBlock(Properties pProperties) {
+    public KettleBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FULLNESS, 0));
     }

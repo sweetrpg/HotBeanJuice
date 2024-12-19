@@ -19,6 +19,9 @@ public class ModBlockEntityTypes {
     public static final RegistryObject<BlockEntityType<PoweredCoffeeGrinderBlockEntity>> POWERED_COFFEE_GRINDER = register("powered_coffee_grinder", PoweredCoffeeGrinderBlockEntity::new, ModBlocks.POWERED_COFFEE_GRINDER);
     public static final RegistryObject<BlockEntityType<CoffeeRoasterBlockEntity>> COFFEE_ROASTER = register("coffee_roaster", CoffeeRoasterBlockEntity::new, ModBlocks.COFFEE_ROASTER);
 
+    public static final RegistryObject<BlockEntityType<KettleBlockEntity>> KETTLE_BLOCK_ENTITY = register("kettle",
+            () -> BlockEntityType.Builder.of(KettleBlockEntity::new, ModBlocks.KETTLE.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<FrenchPressBlockEntity>> FRENCH_PRESS_BLOCK_ENTITY = register("french_press",
             () -> BlockEntityType.Builder.of(FrenchPressBlockEntity::new, ModBlocks.FRENCH_PRESS.get()).build(null));
     public static final RegistryObject<BlockEntityType<CampfirePotBlockEntity>> CAMPFIRE_POT_BLOCK_ENTITY = register("campfire_pot",

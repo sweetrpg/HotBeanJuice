@@ -1,9 +1,10 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/coffee_press",
-		"particle": "block/coffee_press"
+		"0": "hotbeanjuice:block/french_press",
+		"particle": "hotbeanjuice:block/french_press"
 	},
 	"elements": [
 		{

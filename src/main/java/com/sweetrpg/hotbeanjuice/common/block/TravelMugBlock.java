@@ -14,14 +14,14 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TravelCupBlock extends AbstractCoffeeCup {
+public class TravelMugBlock extends AbstractCoffeeCup {
 
     protected static final VoxelShape NORTH_SHAPE = Block.box(5.5D, 0.0D, 3.5D, 10.5D, 6.0D, 10.5D);
     protected static final VoxelShape SOUTH_SHAPE = Block.box(5.5D, 0.0D, 5.5D, 10.5D, 6.0D, 12.5D);
     protected static final VoxelShape EAST_SHAPE = Block.box(5.5D, 0.0D, 5.5D, 12.5D, 6.0D, 10.5D);
     protected static final VoxelShape WEST_SHAPE = Block.box(3.5D, 0.0D, 5.5D, 10.5D, 6.0D, 10.5D);
 
-    public TravelCupBlock() {
+    public TravelMugBlock() {
         super(Properties.of(Material.METAL).strength(1.5F, 8.0F).sound(SoundType.METAL));
     }
 

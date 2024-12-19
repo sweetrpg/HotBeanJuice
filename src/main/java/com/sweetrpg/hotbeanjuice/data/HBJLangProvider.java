@@ -59,6 +59,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
         add(ModBlocks.ESPRESSO_MACHINE.get(), "Espresso Machine");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
+        add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PLATE.get(), "Plate");
@@ -66,8 +67,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
         add(ModBlocks.TEACUP.get(), "Teacup");
-        add(ModBlocks.TEA_KETTLE.get(), "Tea Kettle");
-        add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Cup");
+        add(ModBlocks.KETTLE.get(), "Tea Kettle");
+        add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Mug");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");

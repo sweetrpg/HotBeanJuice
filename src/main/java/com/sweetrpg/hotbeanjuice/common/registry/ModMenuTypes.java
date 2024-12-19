@@ -18,6 +18,8 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<EspressoMachineMenu>> ESPRESSO_MACHINE_MENU = MENU_TYPES.register("espresso_machine", () -> IForgeMenuType.create(EspressoMachineMenu::new));
     public static final RegistryObject<MenuType<PercolatorMenu>> PERCOLATOR_MENU = MENU_TYPES.register("percolator", () -> IForgeMenuType.create(PercolatorMenu::new));
 
+    public static final RegistryObject<MenuType<KettleMenu>> KETTLE_MENU = MENU_TYPES.register("kettle", () -> IForgeMenuType.create(KettleMenu::new));
+
     public static final RegistryObject<MenuType<CoffeeRoasterMenu>> COFFEE_ROASTER_MENU = MENU_TYPES.register("coffee_roaster", () -> IForgeMenuType.create(CoffeeRoasterMenu::new));
 
     public static void register(IEventBus event) {

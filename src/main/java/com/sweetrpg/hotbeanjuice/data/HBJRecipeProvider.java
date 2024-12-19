@@ -123,7 +123,7 @@ public class HBJRecipeProvider extends RecipeProvider {
         // ----------------------------------------------------------------------------------------------------------------
         // Tea-making paraphernalia
 
-        ShapedRecipeBuilder.shaped(ModBlocks.TEA_KETTLE.get(), 1)
+        ShapedRecipeBuilder.shaped(ModBlocks.KETTLE.get(), 1)
                 .pattern(" C ")
                 .pattern("C C")
                 .pattern("CCC")
