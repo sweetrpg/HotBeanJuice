@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hotbeanjuice:tea_kettle"
+          "name": "hotbeanjuice:kettle"
         }
       ],
       "conditions": [
