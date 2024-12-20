@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/travel_mug"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/travel_mug",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/travel_mug",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/travel_mug",
+      "y": 270
+    }
+  }
+}

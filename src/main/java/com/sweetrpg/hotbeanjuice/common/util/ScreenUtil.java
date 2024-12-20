@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.client.screen;
+package com.sweetrpg.hotbeanjuice.common.util;
 
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;

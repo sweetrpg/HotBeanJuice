@@ -1,4 +1,5 @@
-package com.sweetrpg.hotbeanjuice.common.inventory.screens;
+package com.sweetrpg.hotbeanjuice.client.screen;
+
 
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -56,7 +57,7 @@ public class AbstractCoffeeMakerScreen<T extends AbstractCoffeeMakerMenu> extend
 
     public void renderFluidSlot(PoseStack poseStack, int mouseX, int mouseY, int positionX, int positionY, int height, int width, FluidStack fluid, int maxCapacity) {
         //Render fluid
-        if (!fluid.isEmpty()) {
+        if(!fluid.isEmpty()) {
             RenderSystem.resetTextureMatrix();
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
             poseStack.pushPose();
@@ -69,13 +70,13 @@ public class AbstractCoffeeMakerScreen<T extends AbstractCoffeeMakerMenu> extend
             setGLColorFromInt(color, 1.0F);
 
             RenderSystem.setShaderTexture(0, tex);
-            if (animationTick % 16 == 0) animationLoc += 16;
+            if(animationTick % 16 == 0) animationLoc += 16;
             int texLength = 512;
             blit(poseStack, positionX, positionY + height - fluidLevel, 0, animationLoc, width, fluidLevel, 16, texLength); //FLUID LEVEL
 
             poseStack.popPose();
             animationTick++;
-            if (animationTick > (texLength)) {
+            if(animationTick > (texLength)) {
                 animationTick = 0;
                 animationLoc = 0;
             }
@@ -83,9 +84,9 @@ public class AbstractCoffeeMakerScreen<T extends AbstractCoffeeMakerMenu> extend
 
         //Render highlight and tooltip
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        if (isHovering(positionX - this.leftPos, positionY - this.topPos, width, height, mouseX, mouseY)) {
+        if(isHovering(positionX - this.leftPos, positionY - this.topPos, width, height, mouseX, mouseY)) {
             renderFluidSlotHighlight(poseStack, positionX, positionY, width, height, 400, slotColor, slotColor);
-            if (!fluid.isEmpty()) {
+            if(!fluid.isEmpty()) {
                 tooltip = Lists.newArrayList();
                 this.tooltip.add(fluid.getDisplayName());
                 this.tooltip.add(new TranslatableComponent(fluid.getAmount() + " / " + maxCapacity + " mb"));
