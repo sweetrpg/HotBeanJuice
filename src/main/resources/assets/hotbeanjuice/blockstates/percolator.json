@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/percolator"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/percolator",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/percolator",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/percolator",
+      "y": 270
+    }
+  }
+}

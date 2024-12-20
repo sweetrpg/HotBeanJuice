@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bL ",
+    "CBC",
+    "CRC"
+  ],
+  "key": {
+    "b": {
+      "tag": "minecraft:buttons"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "B": {
+      "item": "hotbeanjuice:boiling_water"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:pod_machine"
+  }
+}

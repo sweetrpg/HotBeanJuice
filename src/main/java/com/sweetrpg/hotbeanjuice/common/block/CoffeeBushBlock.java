@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
+import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -15,17 +16,20 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CoffeeBushBlock extends CropBlock {
 
+    private final CoffeeType coffeeType;
+
     public static final IntegerProperty COFFEE_BUSH_AGE = BlockStateProperties.AGE_3;
 
-    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[] {
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
     };
 
-    public CoffeeBushBlock(Properties properties) {
+    public CoffeeBushBlock(CoffeeType coffeeType, Properties properties) {
         super(properties);
+        this.coffeeType = coffeeType;
     }
 
     @Override
@@ -45,7 +49,11 @@ public class CoffeeBushBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.COFFEE_CHERRY_ARABICA.get();
+        return switch(this.coffeeType) {
+            case ARABICA -> ModItems.COFFEE_CHERRY_ARABICA.get();
+            case CANEPHORA -> ModItems.COFFEE_CHERRY_CANEPHORA.get();
+            case RACEMOSA -> ModItems.COFFEE_CHERRY_RACEMOSA.get();
+        };
     }
 
     @Override

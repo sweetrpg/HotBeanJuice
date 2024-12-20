@@ -45,39 +45,43 @@ public class DripCoffeeMakerBlock extends AbstractPoweredCoffeeMakerBlock {
         ItemStack itemStack = player.getItemInHand(hand);
         BlockEntity blockEntity = level.getBlockEntity(pos);
 
-        if (player.isSecondaryUseActive()) {
+        if(player.isSecondaryUseActive()) {
             HotBeanJuice.LOGGER.debug("Occupied: " + state.getValue(OCCUPIED));
-            if (state.getValue(OCCUPIED)) {
+            if(state.getValue(OCCUPIED)) {
                 state = state.setValue(OCCUPIED, false).setValue(FULLNESS, 0);
-                if (blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
+                if(blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
 //                    dripCoffeeBlockEntity.emptyCoffee();
                 }
                 //TODO transfer fluid capability/contents to carafe item
                 player.addItem(new ItemStack(ModItems.DRIP_COFFEE_CARAFE.get(), 1));
                 level.setBlock(pos, state, 3);
             }
-        } else if (itemStack.is(ModItems.DRIP_COFFEE_CARAFE.get()) && !state.getValue(OCCUPIED)) {
-            if (itemStack.is(ModItems.DRIP_COFFEE_CARAFE.get())) {
+        }
+        else if(itemStack.is(ModItems.DRIP_COFFEE_CARAFE.get()) && !state.getValue(OCCUPIED)) {
+            if(itemStack.is(ModItems.DRIP_COFFEE_CARAFE.get())) {
                 itemStack.shrink(1);
                 state = state.setValue(OCCUPIED, true);
                 level.setBlock(pos, state, 3);
                 //TODO transfer contents of carafe item to pot
             }
-        } else if (itemStack.is(Items.WATER_BUCKET) && blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
-            if (AbstractPoweredCoffeeMakerBlockEntity.hasRoomForWater(dripCoffeeMachineBlockEntity)) {
+        }
+        else if(itemStack.is(Items.WATER_BUCKET) && blockEntity instanceof DripCoffeeMachineBlockEntity dripCoffeeMachineBlockEntity) {
+            if(AbstractPoweredCoffeeMakerBlockEntity.hasRoomForWater(dripCoffeeMachineBlockEntity)) {
                 dripCoffeeMachineBlockEntity.addWater(1000);
                 itemStack.shrink(1);
                 player.addItem(new ItemStack(Items.BUCKET, 1));
             }
-        } else {
-                if (!level.isClientSide()) {
-                    BlockEntity entity = level.getBlockEntity(pos);
-                    if (entity instanceof DripCoffeeMachineBlockEntity) {
-                        NetworkHooks.openGui(((ServerPlayer) player), (DripCoffeeMachineBlockEntity) entity, pos);
-                    } else {
-                        throw new IllegalStateException("Our Container provider is missing!");
-                    }
+        }
+        else {
+            if(!level.isClientSide()) {
+                BlockEntity entity = level.getBlockEntity(pos);
+                if(entity instanceof DripCoffeeMachineBlockEntity) {
+                    NetworkHooks.openGui(((ServerPlayer) player), (DripCoffeeMachineBlockEntity) entity, pos);
                 }
+                else {
+                    throw new IllegalStateException("Our Container provider is missing!");
+                }
+            }
 
         }
         return InteractionResult.sidedSuccess(level.isClientSide());
@@ -85,7 +89,7 @@ public class DripCoffeeMakerBlock extends AbstractPoweredCoffeeMakerBlock {
 
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (state.getValue(OCCUPIED)) {
+        if(state.getValue(OCCUPIED)) {
             state.setValue(OCCUPIED, false);
             state.setValue(FULLNESS, 0);
             //TODO transfer fluid capability/contents to carafe item

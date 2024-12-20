@@ -1,8 +1,9 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
 	"textures": {
-		"0": "block/travel_mug",
-		"particle": "block/travel_mug"
+		"0": "hotbeanjuice:block/travel_mug",
+		"particle": "hotbeanjuice:block/travel_mug"
 	},
 	"elements": [
 		{

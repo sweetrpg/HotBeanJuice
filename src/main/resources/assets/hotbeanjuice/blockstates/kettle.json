@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/kettle"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/kettle",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/kettle",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/kettle",
+      "y": 270
+    }
+  }
+}
