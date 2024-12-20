@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
+import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.entity.FrenchPressBlockEntity;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
@@ -59,14 +60,17 @@ public class FrenchPressBlock extends AbstractCoffeeMakerBlock {
 
         // TODO: if the player's hand is empty, press the coffee; the strength of the coffee depends on the amount of time seeping
         if(itemStack.isEmpty()) {
+            HotBeanJuice.LOGGER.debug("empty hand to french press");
 
         }
         // TODO: if the player is holding hot water, fill the press
         else if(itemStack.getItem().equals(ModItems.BOILING_WATER.get())) {
+            HotBeanJuice.LOGGER.debug("adding boiling water to french press");
 
         }
         // TODO: if the player is holding coffee grounds, add them to the press
         else if(itemStack.getItem().equals(ModItems.COFFEE_GROUNDS.get())) {
+            HotBeanJuice.LOGGER.debug("adding coffee grounds to french press");
 
         }
 
