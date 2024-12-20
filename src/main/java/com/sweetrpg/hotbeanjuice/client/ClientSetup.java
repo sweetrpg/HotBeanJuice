@@ -40,6 +40,5 @@ public class ClientSetup {
     }
 
     public static void addClientReloadListeners(final RegisterClientReloadListenersEvent event) {
-//        event.registerReloadListener(CatTextureManager.INSTANCE);
     }
 }
