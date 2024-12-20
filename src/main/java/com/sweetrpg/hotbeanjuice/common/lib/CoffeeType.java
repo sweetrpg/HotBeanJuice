@@ -1,7 +1,15 @@
 package com.sweetrpg.hotbeanjuice.common.lib;
 
-public enum CoffeeType {
+import net.minecraft.util.StringRepresentable;
+
+public enum CoffeeType implements StringRepresentable {
     ARABICA,
     CANEPHORA,
     RACEMOSA,
+    ;
+
+    @Override
+    public String getSerializedName() {
+        return this.name();
+    }
 }
