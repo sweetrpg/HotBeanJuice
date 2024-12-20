@@ -2,8 +2,8 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.block.*;
+import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,24 +25,20 @@ public class ModBlocks {
     public static final DeferredRegister<Item> ITEMS = ModItems.ITEMS;
 
     // ----------------------------------------------------------------------------------------------------------------
-    // Crops
+    // Crops and plants
 
-    //    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEE_BUSH = BLOCKS.register("wild_coffee_bush",
-//            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
-//    public static final RegistryObject<CoffeeBushBlock> COFFEE_BUSH_CROP = BLOCKS.register("coffee_bush",
-//            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_ARABICA = BLOCKS.register("wild_coffea_arabica",
-            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
-    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_RACEMOSA = BLOCKS.register("wild_coffea_racemosa",
             () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_CANEPHORA = BLOCKS.register("wild_coffea_canephora",
             () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<WildCoffeeBushBlock> WILD_COFFEA_RACEMOSA = BLOCKS.register("wild_coffea_racemosa",
+            () -> new WildCoffeeBushBlock(MobEffects.DIG_SLOWDOWN, 6, Block.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS.register("crop_coffee_arabica",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
-    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_RACEMOSA = BLOCKS.register("crop_coffee_racemosa",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+            () -> new CoffeeBushBlock(CoffeeType.ARABICA, Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_CANEPHORA = BLOCKS.register("crop_coffee_canephora",
-            () -> new CoffeeBushBlock(Block.Properties.copy(Blocks.WHEAT)));
+            () -> new CoffeeBushBlock(CoffeeType.CANEPHORA, Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_RACEMOSA = BLOCKS.register("crop_coffee_racemosa",
+            () -> new CoffeeBushBlock(CoffeeType.RACEMOSA, Block.Properties.copy(Blocks.WHEAT)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Miscellaneous coffee items
@@ -131,20 +127,9 @@ public class ModBlocks {
     }
 
     public static void registerBlockColors(final ColorHandlerEvent.Block event) {
-        BlockColors blockColors = event.getBlockColors();
-
-//        Util.acceptOrElse(CatBlocks.CAT_BATH, (block) -> {
-//            blockColors.register((state, world, pos, tintIndex) -> {
-//                return world != null && pos != null ? BiomeColors.getAverageWaterColor(world, pos) : -1;
-//             }, block);
-//        }, CatBlocks::logError);
     }
 
     public static void logError() {
-        // Only try to register if blocks were successfully registered
-        // Trying to avoid as reports like HotBeanJuice#242, where it says
-        // HotBeanJuice crashed but is not the CAUSE of the crash
-
         HotBeanJuice.LOGGER.info("Items/Blocks were not registered for some reason... probably because we are c...r..a..s.hing");
     }
 }
