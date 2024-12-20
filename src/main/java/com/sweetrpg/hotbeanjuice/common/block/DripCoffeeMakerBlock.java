@@ -100,7 +100,7 @@ public class DripCoffeeMakerBlock extends AbstractPoweredCoffeeMakerBlock {
         }
     }
 
-    @javax.annotation.Nullable
+    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new DripCoffeeMachineBlockEntity(pos, state);
