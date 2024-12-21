@@ -64,6 +64,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.KETTLE.get(), "Kettle");
         add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PLATE.get(), "Plate");
+        add(ModBlocks.PINT_MUG.get(), "Pint Mug");
         add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
@@ -118,9 +119,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
         add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
         add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
-//        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
         add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
+        add(ModBlocks.PINT_MUG.get(), "Pint Mug");
         add(ModBlocks.TEACUP.get(), "Teacup");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Cup");
@@ -171,6 +172,7 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.DRIP_COFFEE_MAKER.get(), "Drip Coffee Maker");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Ofengebrannte Kaffeetasse");
         add(ModBlocks.COFFEE_CUP.get(), "Kaffeetasse");
+        add(ModBlocks.PINT_MUG.get(), "Pint-Becher");
         add(ModBlocks.TEACUP.get(), "Teetasse");
         add(ModBlocks.PLATE.get(), "Teller");
         add(ModBlocks.TRAVEL_MUG.get(), "Reise-Kaffeetasse");
