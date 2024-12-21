@@ -3,7 +3,7 @@ package com.sweetrpg.hotbeanjuice.integration.jei.category;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
 import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
@@ -34,17 +34,15 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
     private final IDrawable background;
     private final IDrawable icon;
     private final IDrawable slot;
-    private final IDrawable slotChance;
-    protected final IDrawableAnimated arrow;
+    protected final IDrawableAnimated heat;
 
     public KettleHeatingRecipeCategory(IGuiHelper helper) {
         title = TextUtils.getTranslation("jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/kettle_heating.png");
-        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.WHISK.get()));
-        arrow = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
-                .buildAnimated(200, IDrawableAnimated.StartDirection.LEFT, false);
+        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.KETTLE.get()));
+        heat = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
+                .buildAnimated(200, IDrawableAnimated.StartDirection.BOTTOM, false);
         slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
-        slotChance = helper.createDrawable(backgroundImage, 18, 58, 18, 18);
         background = helper.createDrawable(backgroundImage, 0, 0, 117, 57);
     }
 
@@ -59,9 +57,9 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
-        // Draw grinder
+        // Draw kettle
         itemStacks.init(0, true, 15, 30);
-        itemStacks.set(0, List.of(new ItemStack(ModItems.WHISK.get())));
+        itemStacks.set(0, List.of(new ItemStack(ModBlocks.KETTLE.get())));
 
         // Draw input
         itemStacks.init(1, true, 15, 8);
@@ -70,22 +68,11 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
         itemStacks.init(2, false, 84, 20);
         itemStacks.set(2, recipe.getResultItem());
 
-        // TODO: for rollable result chance items
-//        itemStacks.addTooltipCallback((slotIndex, input, ingredient, tooltip) -> {
-//            if (input || slotIndex < 2) {
-//                return;
-//            }
-//            ChanceResult output = recipeOutputs.get(slotIndex - 2);
-//            float chance = output.getChance();
-//            if (chance != 1)
-//                tooltip.add(1, TextUtils.getTranslation("jei.chance", chance < 0.01 ? "<1" : (int) (chance * 100))
-//                        .withStyle(ChatFormatting.GOLD));
-//        });
     }
 
     @Override
     public void draw(KettleHeatingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
-        arrow.draw(poseStack, 49, 21);
+        heat.draw(poseStack, 49, 21);
 
 //        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
 //
