@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.apache.commons.lang3.ObjectUtils;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -112,7 +113,7 @@ public class CoffeeMakerRecipeBuilder implements RecipeBuilder {
         }
         ResourceLocation resLoc = new ResourceLocation(resourceLocation.getNamespace(), newPath);
         consumer.accept(new CoffeeMakerRecipeBuilder.Result(resLoc,
-                this.group == null ? "" : this.group,
+                ObjectUtils.defaultIfNull(this.group, ""),
                 this.ingredients,
                 this.result,
                 this.experience,

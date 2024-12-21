@@ -5,10 +5,7 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
-import com.sweetrpg.hotbeanjuice.data.builders.CoffeeMakerRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.WhiskingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
@@ -251,7 +248,6 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cocoa_powder", has(ModItems.COCOA_POWDER.get()))
                 .unlockedBy("has_sugar", has(Items.SUGAR))
                 .save(consumer);
-//        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get())
         CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
                 .group("drinks")
                 .requires(Ingredient.of(Items.WATER_BUCKET))
@@ -314,6 +310,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_milk", has(Items.MILK_BUCKET))
                 .save(consumer);
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
+                .group("miscellaneous")
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .save(consumer);
+        KettleHeatingRecipeBuilder.heating(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
                 .group("miscellaneous")
                 .unlockedBy("has_water", has(Items.WATER_BUCKET))
                 .save(consumer);

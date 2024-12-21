@@ -22,6 +22,7 @@ public class ModRecipeTypes {
     public static final RegistryObject<RecipeType<?>> POD_COFFEE = register(PodCoffeeRecipe.RECIPE_TYPE_NAME, () -> PodCoffeeRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> ROASTING = register(RoastingRecipe.RECIPE_TYPE_NAME, () -> RoastingRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> WHISKING = register(WhiskingRecipe.RECIPE_TYPE_NAME, () -> WhiskingRecipe.Type.INSTANCE);
+    public static final RegistryObject<RecipeType<?>> KETTLE_HEATING = register(KettleHeatingRecipe.RECIPE_TYPE_NAME, () -> KettleHeatingRecipe.Type.INSTANCE);
 
     private static <T extends RecipeType> RegistryObject<T> register(final String name, final Supplier<T> sup) {
         return RECIPE_TYPES.register(name, sup);
