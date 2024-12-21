@@ -7,4 +7,5 @@ public class CoffeeCherryItem extends Item {
     public CoffeeCherryItem(Properties properties) {
         super(properties);
     }
+
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GSG",
+    "GPG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:glass"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "minecraft:light_weighted_pressure_plate"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:french_press"
+  }
+}

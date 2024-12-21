@@ -12,6 +12,11 @@ public class FoodValues {
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED), 0.5f)
             .alwaysEat()
             .build();
+    public static final FoodProperties DECAF_COFFEE = (new FoodProperties.Builder())
+            .nutrition(3) // TODO
+            .saturationMod(0.5f) // TODO
+            .alwaysEat()
+            .build();
     public static final FoodProperties ESPRESSO = (new FoodProperties.Builder())
             .nutrition(3)
             .saturationMod(0.5f)
@@ -46,6 +51,21 @@ public class FoodValues {
     public static final FoodProperties HOT_CHOCOLATE = (new FoodProperties.Builder())
             .nutrition(1)
             .saturationMod(0.5f)
+            .alwaysEat()
+            .build();
+    public static final FoodProperties DECAF_TEA = (new FoodProperties.Builder())
+            .nutrition(1) // TODO
+            .saturationMod(0.5f) // TODO
+            .alwaysEat()
+            .build();
+    public static final FoodProperties GREEN_TEA = (new FoodProperties.Builder())
+            .nutrition(1) // TODO
+            .saturationMod(0.5f) // TODO
+            .alwaysEat()
+            .build();
+    public static final FoodProperties BLACK_TEA = (new FoodProperties.Builder())
+            .nutrition(1) // TODO
+            .saturationMod(0.5f) // TODO
             .alwaysEat()
             .build();
 
