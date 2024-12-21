@@ -5,6 +5,7 @@ import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class HBJBlockTagsProvider extends BlockTagsProvider {
@@ -32,9 +33,7 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     }
 
     protected void registerMinecraftTags() {
-//        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS)
-//                .add(ModBlocks.WILD_CATNIP.get());
-        tag(net.minecraft.tags.BlockTags.CROPS)
+        tag(BlockTags.CROPS)
                 .add(ModBlocks.CROP_COFFEE_ARABICA.get())
                 .add(ModBlocks.CROP_COFFEE_CANEPHORA.get())
                 .add(ModBlocks.CROP_COFFEE_RACEMOSA.get());
@@ -51,10 +50,16 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WILD_COFFEA_RACEMOSA.get());
         tag(ModTags.COFFEE_CUPS)
                 .add(ModBlocks.COFFEE_CUP.get())
-                .add(ModBlocks.TRAVEL_CUP.get())
-        /*.add(ModBlocks.DISPOSABLE_CUP.get())*/;
-//        tag(ModTags.WILD_CROPS)
-//                .add(ModBlocks.WILD_CATNIP.get());
+                .add(ModBlocks.TRAVEL_MUG.get())
+                .add(ModBlocks.DISPOSABLE_CUP.get())
+                .add(ModBlocks.FIRED_COFFEE_CUP.get());
+        tag(ModTags.COFFEE_MACHINES)
+                .add(ModBlocks.DRIP_COFFEE_MACHINE.get())
+                .add(ModBlocks.PERCOLATOR.get())
+                .add(ModBlocks.ESPRESSO_MACHINE.get())
+                .add(ModBlocks.CAMPFIRE_COFFEE_POT.get())
+                .add(ModBlocks.FRENCH_PRESS.get())
+                .add(ModBlocks.POD_MACHINE.get());
         tag(ModTags.BAGS_OF_COFFEE)
                 .add(ModBlocks.COFFEE_BAG_BEANS.get())
                 .add(ModBlocks.COFFEE_BAG_GROUND.get());
@@ -62,8 +67,10 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.HAND_COFFEE_GRINDER.get())
                 .add(ModBlocks.POWERED_COFFEE_GRINDER.get());
         tag(ModTags.KITCHENWARE)
+                .add(ModBlocks.PINT_MUG.get())
                 .add(ModBlocks.PLATE.get())
                 .add(ModBlocks.TEACUP.get());
+
     }
 
 }

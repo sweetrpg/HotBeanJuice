@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "IBI",
+    "IRI"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:glass"
+    },
+    "B": {
+      "item": "hotbeanjuice:boiling_water"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:percolator"
+  }
+}

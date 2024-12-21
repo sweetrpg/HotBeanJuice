@@ -22,6 +22,7 @@ public class Constants {
     public static final String LOCALE_DE_DE = "de_de";
 
     // Translation keys
+    public static final String TRANSLATION_KEY_GUI_KETTLE_FULLNESS = "gui." + MOD_ID + ".kettle.fullness";
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
     public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui." + Constants.MOD_ID + ".coffee_roaster";
@@ -32,6 +33,8 @@ public class Constants {
     public static final String TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP = "jei.category.roasting.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_TIME_TOOLTIP = "jei.category.whisking.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_WHISKING_XP_TOOLTIP = "jei.category.whisking.time.seconds";
+    public static final String TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_TIME_TOOLTIP = "jei.category.kettle_heating.xp";
+    public static final String TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP = "jei.category.kettle_heating.time.seconds";
     public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
     public static final String TRANSLATION_KEY_RECIPETYPE_CAMPFIRECOFFEE_TITLE = "jei." + CampfireCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_DRIPCOFFEE_TITLE = "jei." + DripCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
@@ -42,6 +45,7 @@ public class Constants {
     public static final String TRANSLATION_KEY_RECIPETYPE_PODCOFFEE_TITLE = "jei." + PodCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+    public static final String TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE = "jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
 
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements." + Constants.MOD_ID + ".main.make_coffee.title";

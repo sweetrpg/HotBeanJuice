@@ -66,19 +66,27 @@ public class HBJLootTableProvider extends LootTableProvider {
         protected void addTables() {
             dropWildCoffeeBushes();
             dropCoffeeCrop();
+            dropsSelf(ModBlocks.CAMPFIRE_COFFEE_POT);
             dropsSelf(ModBlocks.COFFEE_BAG_BEANS);
             dropsSelf(ModBlocks.COFFEE_BAG_GROUND);
             dropsSelf(ModBlocks.COFFEE_CUP);
-            dropsSelf(ModBlocks.TEACUP);
-            dropsSelf(ModBlocks.PLATE);
-            dropsSelf(ModBlocks.FIRED_COFFEE_CUP);
-//            dropsSelf(ModBlocks.DISPOSABLE_CUP);
-            dropsSelf(ModBlocks.TRAVEL_CUP);
-            dropsSelf(ModBlocks.HAND_COFFEE_GRINDER);
-            dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
             dropsSelf(ModBlocks.COFFEE_ROASTER);
-            dropsSelf(ModBlocks.DRIP_COFFEE_MACHINE);
+            dropsSelf(ModBlocks.DISPOSABLE_CUP);
             dropsSelf(ModBlocks.DRIP_COFFEE_CARAFE);
+            dropsSelf(ModBlocks.DRIP_COFFEE_MACHINE);
+            dropsSelf(ModBlocks.ESPRESSO_MACHINE);
+            dropsSelf(ModBlocks.FIRED_COFFEE_CUP);
+            dropsSelf(ModBlocks.FRENCH_PRESS);
+            dropsSelf(ModBlocks.HAND_COFFEE_GRINDER);
+            dropsSelf(ModBlocks.KETTLE);
+            dropsSelf(ModBlocks.PERCOLATOR);
+            dropsSelf(ModBlocks.PINT_MUG);
+            dropsSelf(ModBlocks.PLATE);
+            dropsSelf(ModBlocks.POD_MACHINE);
+            dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
+            dropsSelf(ModBlocks.SUN_TEA_JAR);
+            dropsSelf(ModBlocks.TEACUP);
+            dropsSelf(ModBlocks.TRAVEL_MUG);
         }
 
 
