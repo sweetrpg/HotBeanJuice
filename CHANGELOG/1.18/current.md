@@ -1,0 +1,4 @@
+- `[NEW]` Added travel mug
+- `[NEW]` Added kettle
+- `[NEW]` Added French press
+- `[NEW]` Added pint mug
