@@ -18,6 +18,7 @@
   "block.hotbeanjuice.hand_coffee_grinder": "Hand-crank Burr Coffee Grinder",
   "block.hotbeanjuice.kettle": "Kettle",
   "block.hotbeanjuice.percolator": "Percolator",
+  "block.hotbeanjuice.pint_mug": "Pint Mug",
   "block.hotbeanjuice.plate": "Plate",
   "block.hotbeanjuice.pod_machine": "Pod Coffee Maker",
   "block.hotbeanjuice.powered_coffee_grinder": "Powered Burr Coffee Grinder",
@@ -62,11 +63,14 @@
   "jei.category.drip_coffee.time.seconds": "%f XP",
   "jei.category.drip_coffee.xp": "%1$d s",
   "jei.category.grinding.time.seconds": "%1$d s",
+  "jei.category.kettle_heating.time.seconds": "%f XP",
+  "jei.category.kettle_heating.xp": "%1$d s",
   "jei.category.roasting.time.seconds": "%1$d s",
   "jei.category.roasting.xp": "%f XP",
   "jei.category.whisking.time.seconds": "%f XP",
   "jei.category.whisking.xp": "%1$d s",
   "jei.grinding.hotbeanjuice": "Grinding",
+  "jei.kettle_heating.hotbeanjuice": "Kettle Heating",
   "jei.roasting.hotbeanjuice": "Roasting",
   "jei.whisking.hotbeanjuice": "Whisking"
 }

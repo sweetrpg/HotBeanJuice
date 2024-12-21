@@ -8,6 +8,7 @@ import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -31,6 +32,13 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.COFFEE_CHERRY_ARABICA.get())
                 .add(ModItems.COFFEE_CHERRY_CANEPHORA.get())
                 .add(ModItems.COFFEE_CHERRY_RACEMOSA.get());
+        tag(ModTags.STRIPPED_WOOD)
+                .add(Items.STRIPPED_OAK_WOOD)
+                .add(Items.STRIPPED_ACACIA_WOOD)
+                .add(Items.STRIPPED_BIRCH_WOOD)
+                .add(Items.STRIPPED_DARK_OAK_WOOD)
+                .add(Items.STRIPPED_JUNGLE_WOOD)
+                .add(Items.STRIPPED_SPRUCE_WOOD);
     }
 
     @SafeVarargs

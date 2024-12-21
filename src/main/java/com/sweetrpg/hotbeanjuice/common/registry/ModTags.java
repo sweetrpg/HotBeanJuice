@@ -18,6 +18,8 @@ public class ModTags {
 
     public static final TagKey<Block> KITCHENWARE = modBlockTag("kitchenware");
 
+    public static final TagKey<Item> STRIPPED_WOOD = modItemTag("stripped_wood");
+
     private static TagKey<Item> modItemTag(String name) {
         return ItemTags.create(Util.getResource(name));
     }

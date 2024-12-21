@@ -67,8 +67,10 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.HAND_COFFEE_GRINDER.get())
                 .add(ModBlocks.POWERED_COFFEE_GRINDER.get());
         tag(ModTags.KITCHENWARE)
+                .add(ModBlocks.PINT_MUG.get())
                 .add(ModBlocks.PLATE.get())
                 .add(ModBlocks.TEACUP.get());
+
     }
 
 }

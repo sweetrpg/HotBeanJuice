@@ -92,6 +92,7 @@ public class ModBlocks {
     public static final RegistryObject<TravelMugBlock> TRAVEL_MUG = registerWithItem("travel_mug", TravelMugBlock::new);
     public static final RegistryObject<TeacupBlock> TEACUP = registerWithItem("teacup", TeacupBlock::new);
     public static final RegistryObject<PlateBlock> PLATE = registerWithItem("plate", PlateBlock::new);
+    public static final RegistryObject<PintMugBlock> PINT_MUG = registerWithItem("pint_mug", PintMugBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 
