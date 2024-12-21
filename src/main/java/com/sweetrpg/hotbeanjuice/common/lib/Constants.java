@@ -22,6 +22,7 @@ public class Constants {
     public static final String LOCALE_DE_DE = "de_de";
 
     // Translation keys
+    public static final String TRANSLATION_KEY_GUI_KETTLE_FULLNESS = "gui." + MOD_ID + ".kettle.fullness";
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";
     public static final String TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD = "config.coffee_bush_spread.description";
     public static final String TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE = "gui." + Constants.MOD_ID + ".coffee_roaster";
