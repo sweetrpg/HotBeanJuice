@@ -58,39 +58,24 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
 //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw kettle
-        itemStacks.init(0, true, 15, 30);
+        itemStacks.init(0, true, 53, 22);
         itemStacks.set(0, List.of(new ItemStack(ModBlocks.KETTLE.get())));
 
         // Draw input
-        itemStacks.init(1, true, 15, 8);
+        itemStacks.init(1, true, 19, 5);
         itemStacks.set(1, Arrays.asList(recipe.getIngredients().get(0).getItems()));
 
-        itemStacks.init(2, false, 84, 20);
+        // Draw result
+        itemStacks.init(2, false, 94, 21);
         itemStacks.set(2, recipe.getResultItem());
 
     }
 
     @Override
     public void draw(KettleHeatingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
-        heat.draw(poseStack, 49, 21);
-
-//        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
-//
-//        int size = recipe.getResults().size();
-//        int centerX = size > 1 ? 0 : 9;
-//        int centerY = size > 2 ? 0 : 9;
-//
-//        for (int i = 0; i < size; i++) {
-//            int xOffset = centerX + (i % 2 == 0 ? 0 : 19);
-//            int yOffset = centerY + ((i / 2) * 19);
-//
-//            if (recipeOutputs.get(i).getChance() != 1) {
-//                slotChance.draw(matrixStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
-//            } else {
-//                slot.draw(poseStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
-        slot.draw(poseStack, 84, 20);
-//            }
-//        }
+        heat.draw(poseStack, 55, 42);
+        slot.draw(poseStack, 94, 21);
+        slot.draw(poseStack, 53, 22);
     }
 
     @Override

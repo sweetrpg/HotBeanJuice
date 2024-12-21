@@ -5,6 +5,7 @@ import com.sweetrpg.hotbeanjuice.common.block.KettleBlock;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.MagmaBlock;
@@ -70,8 +71,13 @@ public class KettleBlockEntity extends PlacedBlockEntity {
                 return blockBelowState.getValue(BlockStateProperties.LIT);
             }
 
+            // check for Farmer's Delight stove
+            if(blockBelowState.getBlock().getRegistryName().equals(new ResourceLocation("farmersdelight", "stove"))) {
+                return true;
+            }
+
             // check for magma block
-            if(blockBelow.getBlockState().getBlock() instanceof MagmaBlock) {
+            if(blockBelowState.getBlock() instanceof MagmaBlock) {
                 return true;
             }
 

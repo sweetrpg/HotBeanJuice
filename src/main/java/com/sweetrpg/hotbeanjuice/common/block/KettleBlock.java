@@ -20,7 +20,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -28,39 +27,51 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
+
 public class KettleBlock extends BaseEntityBlock {
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+
+    protected static final VoxelShape WEST_SHAPE = Block.box(5.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
+    protected static final VoxelShape NORTH_SHAPE = Block.box(4.0D, 0.0D, 5.0D, 12.0D, 8.0D, 12.0D);
+    protected static final VoxelShape EAST_SHAPE = Block.box(4.0D, 0.0D, 4.0D, 11.0D, 8.0D, 12.0D);
+    protected static final VoxelShape SOUTH_SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 11.0D);
+
     public static final IntegerProperty FULLNESS = IntegerProperty.create("fullness", 0, 4); // holds 4 buckets of water
     public static final BooleanProperty HOT = BooleanProperty.create("is_hot");
 
     public KettleBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any()
-                .setValue(FACING, Direction.NORTH)
+                .setValue(HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(FULLNESS, 0)
                 .setValue(HOT, false));
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, FULLNESS, HOT);
+        builder.add(HORIZONTAL_FACING, FULLNESS, HOT);
     }
 
     @Override
-    public VoxelShape getVisualShape(BlockState pState, BlockGetter pReader, BlockPos pPos, CollisionContext pContext) {
-        return this.getShape(pState, pReader, pPos, pContext);
+    public @NotNull VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext context) {
+        return switch(state.getValue(HORIZONTAL_FACING)) {
+            case UP, DOWN, NORTH -> NORTH_SHAPE;
+            case SOUTH -> SOUTH_SHAPE;
+            case WEST -> WEST_SHAPE;
+            case EAST -> EAST_SHAPE;
+        };
     }
 
     @Override
