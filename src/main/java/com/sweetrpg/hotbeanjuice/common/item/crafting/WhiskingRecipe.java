@@ -96,7 +96,7 @@ public class WhiskingRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<WhiskingRecipe> {
         public static final WhiskingRecipe.Serializer INSTANCE = new WhiskingRecipe.Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID,RECIPE_TYPE_NAME);
+        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID, RECIPE_TYPE_NAME);
 
         @Override
         public WhiskingRecipe fromJson(ResourceLocation id, JsonObject json) {

@@ -30,7 +30,7 @@ public class ClientSetup {
         MenuScreens.register(ModMenuTypes.ESPRESSO_MACHINE_MENU.get(), EspressoMachineScreen::new);
         MenuScreens.register(ModMenuTypes.PERCOLATOR_MENU.get(), PercolatorScreen::new);
         MenuScreens.register(ModMenuTypes.POD_MACHINE_MENU.get(), PodMachineScreen::new);
-        MenuScreens.register(ModMenuTypes.KETTLE_MENU.get(), KettleScreen::new);
+//        MenuScreens.register(ModMenuTypes.KETTLE_MENU.get(), KettleScreen::new);
     }
 
     public static void setupEntityRenderers(final EntityRenderersEvent.RegisterLayerDefinitions event) {
