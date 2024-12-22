@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/campfire_coffee_pot"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/campfire_coffee_pot",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/campfire_coffee_pot",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/campfire_coffee_pot",
+      "y": 270
+    }
+  }
+}

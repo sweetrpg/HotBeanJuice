@@ -24,22 +24,15 @@ public class HBJPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-//        registration.addRecipeCategories(new CofeeBrewingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new GrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new RoastingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new KettleHeatingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-//        registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.COOKING_POT.get()), FDRecipeTypes.COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.CUTTING_BOARD.get()), FDRecipeTypes.CUTTING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.STOVE.get()), RecipeTypes.CAMPFIRE_COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.SKILLET.get()), RecipeTypes.CAMPFIRE_COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModBlocks.ORGANIC_COMPOST.get()), FDRecipeTypes.DECOMPOSITION);
     }
 
     @Override

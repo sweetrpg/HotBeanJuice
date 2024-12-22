@@ -34,7 +34,6 @@ public class DripCoffeeMakerBlock extends AbstractPoweredCoffeeMakerBlock {
         super(properties);
     }
 
-    //TODO update block hitbox?
     @Override
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;

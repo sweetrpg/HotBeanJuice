@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/sun_tea_jar"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/sun_tea_jar",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/sun_tea_jar",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/sun_tea_jar",
+      "y": 270
+    }
+  }
+}

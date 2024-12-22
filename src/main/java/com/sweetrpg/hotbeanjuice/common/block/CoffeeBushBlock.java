@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.common.block;
 import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -66,4 +68,13 @@ public class CoffeeBushBlock extends CropBlock {
         builder.add(COFFEE_BUSH_AGE);
     }
 
+    @Override
+    public boolean canBeReplaced(BlockState pState, BlockPlaceContext pUseContext) {
+        return true;
+    }
+
+    @Override
+    public boolean canBeReplaced(BlockState pState, Fluid pFluid) {
+        return true;
+    }
 }

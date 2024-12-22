@@ -1,9 +1,10 @@
 package com.sweetrpg.hotbeanjuice.common.event;
 
 import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import net.minecraft.core.Registry;
 import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
+import net.minecraft.core.Registry;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -80,5 +81,6 @@ public class EventHandler {
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
         Registry.register(Registry.RECIPE_TYPE, DripCoffeeRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, KettleHeatingRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
     }
 }

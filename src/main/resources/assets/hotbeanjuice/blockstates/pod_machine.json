@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hotbeanjuice:block/pod_machine"
+    },
+    "facing=south": {
+      "model": "hotbeanjuice:block/pod_machine",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hotbeanjuice:block/pod_machine",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "hotbeanjuice:block/pod_machine",
+      "y": 270
+    }
+  }
+}

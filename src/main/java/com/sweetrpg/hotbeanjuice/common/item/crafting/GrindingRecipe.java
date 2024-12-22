@@ -96,7 +96,7 @@ public class GrindingRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<GrindingRecipe> {
         public static final GrindingRecipe.Serializer INSTANCE = new GrindingRecipe.Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID,RECIPE_TYPE_NAME);
+        public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID, RECIPE_TYPE_NAME);
 
         @Override
         public GrindingRecipe fromJson(ResourceLocation id, JsonObject json) {

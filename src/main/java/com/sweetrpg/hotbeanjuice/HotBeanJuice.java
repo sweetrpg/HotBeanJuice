@@ -3,7 +3,6 @@ package com.sweetrpg.hotbeanjuice;
 import com.sweetrpg.hotbeanjuice.client.ClientSetup;
 import com.sweetrpg.hotbeanjuice.client.event.ClientEventHandler;
 import com.sweetrpg.hotbeanjuice.common.CommonSetup;
-import com.sweetrpg.hotbeanjuice.integration.AddonManager;
 import com.sweetrpg.hotbeanjuice.common.config.ConfigHandler;
 import com.sweetrpg.hotbeanjuice.common.event.EventHandler;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
@@ -61,7 +60,6 @@ public class HotBeanJuice {
         ModSounds.SOUNDS.register(modEventBus);
 
         modEventBus.addListener(ModRegistries::newRegistry);
-//        modEventBus.addListener(ModEntityTypes::addEntityAttributes);
 //        modEventBus.addListener(Capabilities::registerCaps);
 
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
@@ -69,7 +67,6 @@ public class HotBeanJuice {
         forgeEventBus.addListener(this::registerCommands);
 
         forgeEventBus.register(new EventHandler());
-//        forgeEventBus.register(new BackwardsComp());
 
         // Client Events
         DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
@@ -85,11 +82,8 @@ public class HotBeanJuice {
 
         ConfigHandler.init(modEventBus);
 
-        AddonManager.init();
+//        AddonManager.init();
     }
-
-//    public void commonSetup(final FMLCommonSetupEvent event) {
-//    }
 
     public void serverStarting(final ServerStartingEvent event) {
         LOGGER.debug("Server starting");
@@ -110,10 +104,6 @@ public class HotBeanJuice {
     protected void interModProcess(final InterModProcessEvent event) {
         LOGGER.debug("event {}", event);
 
-        //        BackwardsComp.init();
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        AddonManager.init();
     }
 
     private void gatherData(final GatherDataEvent event) {

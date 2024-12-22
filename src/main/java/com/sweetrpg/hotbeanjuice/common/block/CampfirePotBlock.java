@@ -35,6 +35,8 @@ public class CampfirePotBlock extends AbstractCoffeeMakerBlock {
         ItemStack itemStack = player.getItemInHand(hand);
         BlockEntity blockEntity = level.getBlockEntity(pos);
 
+        // TODO
+
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
 
