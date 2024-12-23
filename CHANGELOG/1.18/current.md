@@ -1,1 +1,0 @@
-- `[DEV]` Remove JEI recipe registration (troubleshooting)
