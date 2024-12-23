@@ -44,11 +44,6 @@ public class CoffeeBushBlock extends CropBlock {
         return 3;
     }
 
-//	@Override
-//	public BlockState getPlant(BlockGetter world, BlockPos pos) {
-//		return ModBlocks.CATNIP_CROP.get().defaultBlockState();
-//	}
-
     @Override
     protected ItemLike getBaseSeedId() {
         return switch(this.coffeeType) {
