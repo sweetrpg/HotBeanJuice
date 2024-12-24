@@ -2,6 +2,7 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModEntityTypes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
@@ -52,7 +53,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 //            dropsSelf(ModBlocks.CAMPFIRE_COFFEE_POT);
 //            dropsSelf(ModBlocks.COFFEE_BAG_BEANS);
 //            dropsSelf(ModBlocks.COFFEE_BAG_GROUND);
-//            dropsSelf(ModBlocks.COFFEE_CUP);
+            dropsSelf(ModBlocks.COFFEE_CUP);
 //            dropsSelf(ModBlocks.COFFEE_ROASTER);
 //            dropsSelf(ModBlocks.DISPOSABLE_CUP);
 //            dropsSelf(ModBlocks.DRIP_COFFEE_CARAFE);
@@ -64,11 +65,11 @@ public class HBJLootTableProvider extends LootTableProvider {
 //            dropsSelf(ModBlocks.KETTLE);
 //            dropsSelf(ModBlocks.PERCOLATOR);
 //            dropsSelf(ModBlocks.PINT_MUG);
-//            dropsSelf(ModBlocks.PLATE);
+            dropsSelf(ModBlocks.PLATE);
 //            dropsSelf(ModBlocks.POD_MACHINE);
 //            dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
 //            dropsSelf(ModBlocks.SUN_TEA_JAR);
-//            dropsSelf(ModBlocks.TEACUP);
+            dropsSelf(ModBlocks.TEACUP);
 //            dropsSelf(ModBlocks.TRAVEL_MUG);
         }
 
