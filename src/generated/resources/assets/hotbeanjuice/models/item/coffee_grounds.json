@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hotbeanjuice:item/coffee_grounds"
+  }
+}

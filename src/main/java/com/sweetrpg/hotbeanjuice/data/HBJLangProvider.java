@@ -77,34 +77,34 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
 //        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
 //
-//        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
-//        add(ModItems.BOILING_WATER.get(), "Boiling Water");
-//        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
-//        add(ModItems.CHAMOMILE_TEA_DRINK.get(), "Chamomile Tea");
-//        add(ModItems.CLAY_MUG.get(), "Clay Mug");
-//        add(ModItems.COCOA_POWDER.get(), "Cocoa Powder");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
+        add(ModItems.BOILING_WATER.get(), "Boiling Water");
+        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
+        add(ModItems.CHAMOMILE_TEA_DRINK.get(), "Chamomile Tea");
+        add(ModItems.CLAY_MUG.get(), "Clay Mug");
+        add(ModItems.COCOA_POWDER.get(), "Cocoa Powder");
         add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
-//        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
-//        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Coffea Cherry");
-//        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Coffea Cherry");
-//        add(ModItems.COFFEE_DRINK.get(), "Coffee");
-//        add(ModItems.COFFEE_FILTER.get(), "Coffee Filter");
+        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
+        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Coffea Cherry");
+        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Coffea Cherry");
+        add(ModItems.COFFEE_DRINK.get(), "Coffee");
+        add(ModItems.COFFEE_FILTER.get(), "Coffee Filter");
         add(ModItems.COFFEE_GROUNDS.get(), "Coffee Grounds");
-//        add(ModItems.DECAF_COFFEE_BEAN.get(), "Decaffeinated Coffee Bean");
-//        add(ModItems.DECAF_COFFEE_DRINK.get(), "Decaffeinated Coffee");
-//        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
-//        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Fine Coffee Grounds");
-//        add(ModItems.GREEN_TEA_DRINK.get(), "Green Tea");
-//        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Hot Chocolate");
-//        add(ModItems.LATTE_DRINK.get(), "Latté");
-//        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
-//        add(ModItems.MILK_FOAM.get(), "Milk Foam");
-//        add(ModItems.MOCHA_DRINK.get(), "Mocha");
-//        add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
-//        add(ModItems.SUN_TEA_DRINK.get(), "Sun Tea");
-//        add(ModItems.TEA_BAG.get(), "Tea Bag");
-//        add(ModItems.TEA_LEAF.get(), "Tea Leaf");
-//        add(ModItems.WHISK.get(), "Whisk");
+        add(ModItems.DECAF_COFFEE_BEAN.get(), "Decaffeinated Coffee Bean");
+        add(ModItems.DECAF_COFFEE_DRINK.get(), "Decaffeinated Coffee");
+        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
+        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Fine Coffee Grounds");
+        add(ModItems.GREEN_TEA_DRINK.get(), "Green Tea");
+        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Hot Chocolate");
+        add(ModItems.LATTE_DRINK.get(), "Latté");
+        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
+        add(ModItems.MILK_FOAM.get(), "Milk Foam");
+        add(ModItems.MOCHA_DRINK.get(), "Mocha");
+        add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
+        add(ModItems.SUN_TEA_DRINK.get(), "Sun Tea");
+        add(ModItems.TEA_BAG.get(), "Tea Bag");
+        add(ModItems.TEA_LEAF.get(), "Tea Leaf");
+        add(ModItems.WHISK.get(), "Whisk");
     }
 
     private void processENGB() {
@@ -134,27 +134,27 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
 //        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
 //
-//        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
-//        add(ModItems.BOILING_WATER.get(), "Boiling Water");
-//        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
-//        add(ModItems.CLAY_MUG.get(), "Clay Mug");
-//        add(ModItems.COCOA_POWDER.get(), "Cocoa Powder");
-//        add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
-//        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
-//        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Coffea Cherry");
-//        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Coffea Cherry");
-//        add(ModItems.COFFEE_DRINK.get(), "Coffee");
-//        add(ModItems.COFFEE_FILTER.get(), "Coffee Filter");
-//        add(ModItems.COFFEE_GROUNDS.get(), "Coffee Grounds");
-//        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
-//        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Fine Coffee Grounds");
-//        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Hot Chocolate");
-//        add(ModItems.LATTE_DRINK.get(), "Latté");
-//        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
-//        add(ModItems.MILK_FOAM.get(), "Milk Foam");
-//        add(ModItems.MOCHA_DRINK.get(), "Mocha");
-//        add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
-//        add(ModItems.WHISK.get(), "Whisk");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
+        add(ModItems.BOILING_WATER.get(), "Boiling Water");
+        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
+        add(ModItems.CLAY_MUG.get(), "Clay Mug");
+        add(ModItems.COCOA_POWDER.get(), "Cocoa Powder");
+        add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
+        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
+        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Coffea Cherry");
+        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Coffea Cherry");
+        add(ModItems.COFFEE_DRINK.get(), "Coffee");
+        add(ModItems.COFFEE_FILTER.get(), "Coffee Filter");
+        add(ModItems.COFFEE_GROUNDS.get(), "Coffee Grounds");
+        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
+        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Fine Coffee Grounds");
+        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Hot Chocolate");
+        add(ModItems.LATTE_DRINK.get(), "Latté");
+        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
+        add(ModItems.MILK_FOAM.get(), "Milk Foam");
+        add(ModItems.MOCHA_DRINK.get(), "Mocha");
+        add(ModItems.STEAMED_MILK.get(), "Steamed Milk");
+        add(ModItems.WHISK.get(), "Whisk");
     }
 
     private void processDEDE() {
@@ -184,27 +184,27 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
 //        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");
 //
-//        add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
-//        add(ModItems.BOILING_WATER.get(), "Kochendes Wasser");
-//        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
-//        add(ModItems.CLAY_MUG.get(), "Tonbecher");
-//        add(ModItems.COCOA_POWDER.get(), "Kakaopulver");
-//        add(ModItems.COFFEE_BEAN.get(), "Kaffeebohne");
-//        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Kaffeekirsche");
-//        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Kaffeekirsche");
-//        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Kaffeekirsche");
-//        add(ModItems.COFFEE_DRINK.get(), "Kaffee");
-//        add(ModItems.COFFEE_FILTER.get(), "Kaffeefilter");
-//        add(ModItems.COFFEE_GROUNDS.get(), "Kaffeesatz");
-//        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
-//        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Feiner Kaffeesatz");
-//        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Heiße Schokolade");
-//        add(ModItems.LATTE_DRINK.get(), "Latté");
-//        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
-//        add(ModItems.MILK_FOAM.get(), "Milchschaum");
-//        add(ModItems.MOCHA_DRINK.get(), "Mokka");
-//        add(ModItems.STEAMED_MILK.get(), "Gedämpfte Milch");
-//        add(ModItems.WHISK.get(), "Schneebesen");
+        add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
+        add(ModItems.BOILING_WATER.get(), "Kochendes Wasser");
+        add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
+        add(ModItems.CLAY_MUG.get(), "Tonbecher");
+        add(ModItems.COCOA_POWDER.get(), "Kakaopulver");
+        add(ModItems.COFFEE_BEAN.get(), "Kaffeebohne");
+        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Kaffeekirsche");
+        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Kaffeekirsche");
+        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Kaffeekirsche");
+        add(ModItems.COFFEE_DRINK.get(), "Kaffee");
+        add(ModItems.COFFEE_FILTER.get(), "Kaffeefilter");
+        add(ModItems.COFFEE_GROUNDS.get(), "Kaffeesatz");
+        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");
+        add(ModItems.FINE_COFFEE_GROUNDS.get(), "Feiner Kaffeesatz");
+        add(ModItems.HOT_CHOCOLATE_DRINK.get(), "Heiße Schokolade");
+        add(ModItems.LATTE_DRINK.get(), "Latté");
+        add(ModItems.MACCHIATO_DRINK.get(), "Macchiato");
+        add(ModItems.MILK_FOAM.get(), "Milchschaum");
+        add(ModItems.MOCHA_DRINK.get(), "Mokka");
+        add(ModItems.STEAMED_MILK.get(), "Gedämpfte Milch");
+        add(ModItems.WHISK.get(), "Schneebesen");
     }
 
 }
