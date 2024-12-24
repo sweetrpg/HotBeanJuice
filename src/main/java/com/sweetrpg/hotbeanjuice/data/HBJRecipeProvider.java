@@ -2,10 +2,14 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 
 import java.nio.file.Path;
 import java.util.function.Consumer;
@@ -25,9 +29,9 @@ public class HBJRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         HotBeanJuice.LOGGER.debug("Build crafting recipes: {}", consumer);
 
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Coffee ingredients
-//
+        // ----------------------------------------------------------------------------------------------------------------
+        // Coffee ingredients
+
 //        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.COFFEE_CHERRIES), ModItems.COFFEE_BEAN.get(), 1, 180)
 //                .group("coffee_ingredients")
 //                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
@@ -36,10 +40,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .group("coffee_ingredients")
 //                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Coffee beans
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Coffee beans
+
 //        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
 //                .group("coffee_beans")
 //                .pattern("PBP")
@@ -88,10 +92,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_charcoal", has(Items.CHARCOAL))
 //                .unlockedBy("has_water", has(Items.WATER_BUCKET))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Coffee-making paraphernalia
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Coffee-making paraphernalia
+
 //        ShapedRecipeBuilder.shaped(ModItems.COFFEE_FILTER.get())
 //                .group("coffee_paraphernalia")
 //                .pattern("P P")
@@ -108,10 +112,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_iron_bars", has(Items.IRON_BARS))
 //                .unlockedBy("has_stick", has(Items.STICK))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Tea-making paraphernalia
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Tea-making paraphernalia
+
 //        ShapedRecipeBuilder.shaped(ModBlocks.KETTLE.get(), 1)
 //                .pattern(" C ")
 //                .pattern("C C")
@@ -128,33 +132,33 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_glass", has(Tags.Items.GLASS))
 //                .unlockedBy("has_slabs", has(ItemTags.SLABS))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Kitchenware
-//
-//        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_CUP.get())
-//                .group("kitchenware")
-//                .pattern("X X")
-//                .pattern("X X")
-//                .pattern("___")
-//                .define('X', ItemTags.PLANKS)
-//                .define('_', ItemTags.WOODEN_SLABS)
-//                .unlockedBy("has_planks", has(ItemTags.PLANKS))
-//                .unlockedBy("has_slabs", has(ItemTags.WOODEN_SLABS))
-//                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.TEACUP.get(), 1)
-//                .group("kitchenware")
-//                .pattern("C C")
-//                .pattern("CCC")
-//                .define('C', Items.CLAY_BALL)
-//                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
-//                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.PLATE.get(), 1)
-//                .group("kitchenware")
-//                .pattern("CCC")
-//                .define('C', Items.CLAY_BALL)
-//                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
-//                .save(consumer);
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Kitchenware
+
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_CUP.get())
+                .group("kitchenware")
+                .pattern("X X")
+                .pattern("X X")
+                .pattern("___")
+                .define('X', ItemTags.PLANKS)
+                .define('_', ItemTags.WOODEN_SLABS)
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_slabs", has(ItemTags.WOODEN_SLABS))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TEACUP.get(), 1)
+                .group("kitchenware")
+                .pattern("C C")
+                .pattern("CCC")
+                .define('C', Items.CLAY_BALL)
+                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PLATE.get(), 1)
+                .group("kitchenware")
+                .pattern("CCC")
+                .define('C', Items.CLAY_BALL)
+                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
+                .save(consumer);
 //        ShapedRecipeBuilder.shaped(ModBlocks.PINT_MUG.get(), 1)
 //                .group("kitchenware")
 //                .pattern("SSS")
@@ -187,10 +191,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
 //                .unlockedBy("has_glass", has(Tags.Items.GLASS))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Tea ingredients
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Tea ingredients
+
 //        ShapedRecipeBuilder.shaped(ModItems.TEA_BAG.get(), 1)
 //                .pattern(" S ")
 //                .pattern("PTP")
@@ -202,10 +206,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_paper", has(Items.PAPER))
 //                .unlockedBy("has_tea_leaf", has(ModItems.TEA_LEAF.get()))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Drinks
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Drinks
+
 //        ShapelessRecipeBuilder.shapeless(ModItems.MACCHIATO_DRINK.get())
 //                .group("drinks")
 //                .requires(ModItems.ESPRESSO_DRINK.get())
@@ -293,10 +297,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 ////        TeaRecipeBuilder.brewed(ModItems.GREEN_TEA_DRINK.get(), 0.1f, 300)
 ////                // TODO
 ////                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Miscellaneous ingredients
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Miscellaneous ingredients
+
 //        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.MILK_BUCKET), ModItems.STEAMED_MILK.get(), 0.1f, 240)
 //                .group("miscellaneous")
 //                .unlockedBy("has_milk", has(Items.MILK_BUCKET))
@@ -321,10 +325,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .define('C', Items.CLAY_BALL)
 //                .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Coffee-processing devices
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Coffee-processing devices
+
 //        ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
 //                .group("processing")
 //                .pattern("LI ")
@@ -369,10 +373,10 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_bucket", has(Items.BUCKET))
 //                .unlockedBy("has_redstone", has(Items.REDSTONE))
 //                .save(consumer);
-//
-//        // ----------------------------------------------------------------------------------------------------------------
-//        // Coffee-making devices
-//
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // Coffee-making devices
+
 //        ShapedRecipeBuilder.shaped(ModBlocks.PERCOLATOR.get(), 1)
 //                .pattern(" G ")
 //                .pattern("IBI")
@@ -473,4 +477,5 @@ public class HBJRecipeProvider extends RecipeProvider {
     @Override
     protected void saveAdvancement(HashCache cache, JsonObject advancementJson, Path pathIn) {
     }
+
 }

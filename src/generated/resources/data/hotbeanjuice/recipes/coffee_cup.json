@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "kitchenware",
+  "pattern": [
+    "X X",
+    "X X",
+    "___"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:planks"
+    },
+    "_": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:coffee_cup"
+  }
+}
