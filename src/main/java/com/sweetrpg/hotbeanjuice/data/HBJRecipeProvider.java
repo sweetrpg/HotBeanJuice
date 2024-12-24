@@ -5,6 +5,7 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
+import com.sweetrpg.hotbeanjuice.data.builders.KettleHeatingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
@@ -310,10 +311,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("miscellaneous")
                 .unlockedBy("has_water", has(Items.WATER_BUCKET))
                 .save(consumer);
-//        KettleHeatingRecipeBuilder.heating(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
-//                .group("miscellaneous")
-//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-//                .save(consumer);
+        KettleHeatingRecipeBuilder.heating(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
+                .group("miscellaneous")
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .save(consumer);
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CLAY_MUG.get()), ModBlocks.FIRED_COFFEE_CUP.get(), 0.1f, 240)
                 .group("kitchenware")
                 .unlockedBy("has_clay_mug", has(ModItems.CLAY_MUG.get()))

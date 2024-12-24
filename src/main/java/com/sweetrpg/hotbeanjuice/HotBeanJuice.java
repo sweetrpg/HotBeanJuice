@@ -27,7 +27,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @author Paulyhedral, Shazean, PrimalZerg
+ * @author Paulyhedral, shimaginary, SirMatterator
  */
 @Mod(Constants.MOD_ID)
 public class HotBeanJuice {
@@ -130,4 +130,5 @@ public class HotBeanJuice {
             gen.addProvider(new HBJItemModelProvider(gen, event.getExistingFileHelper()));
         }
     }
+
 }

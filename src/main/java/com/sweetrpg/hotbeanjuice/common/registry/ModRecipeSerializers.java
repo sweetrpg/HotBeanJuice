@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
@@ -19,8 +20,8 @@ public class ModRecipeSerializers {
 //    public static final RegistryObject<RecipeSerializer<GrindingRecipe>> GRINDING_SERIALIZER = RECIPE_SERIALIZERS.register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Serializer.INSTANCE);
 //    public static final RegistryObject<RecipeSerializer<RoastingRecipe>> ROASTING_SERIALIZER = RECIPE_SERIALIZERS.register(RoastingRecipe.RECIPE_TYPE_NAME, () -> RoastingRecipe.Serializer.INSTANCE);
 //    public static final RegistryObject<RecipeSerializer<WhiskingRecipe>> WHISKING_SERIALIZER = RECIPE_SERIALIZERS.register("whisking", () -> WhiskingRecipe.Serializer.INSTANCE);
-//    public static final RegistryObject<RecipeSerializer<KettleHeatingRecipe>> KETTLE_HEATING_SERIALIZER = RECIPE_SERIALIZERS.register("kettle_heating", () -> KettleHeatingRecipe.Serializer.INSTANCE);
-//
+public static final RegistryObject<RecipeSerializer<KettleHeatingRecipe>> KETTLE_HEATING_SERIALIZER = RECIPE_SERIALIZERS.register("kettle_heating", () -> KettleHeatingRecipe.Serializer.INSTANCE);
+
 //    public static final RegistryObject<BrewingSerializer<DripCoffeeRecipe>> DRIP_COFFEE_RECIPE = register("drip_coffee", () -> new BrewingSerializer<>(DripCoffeeRecipe::new, 200, "drip"));
 //    public static final RegistryObject<BrewingSerializer<PercolatorCoffeeRecipe>> PERCOLATOR_COFFEE_RECIPE = register("percolator_coffee", () -> new BrewingSerializer<>(PercolatorCoffeeRecipe::new, 600, "percolator"));
 //    public static final RegistryObject<BrewingSerializer<CampfireCoffeeRecipe>> CAMPFIRE_COFFEE_RECIPE = register("campfire_coffee", () -> new BrewingSerializer<>(CampfireCoffeeRecipe::new, 300, "campfire"));
