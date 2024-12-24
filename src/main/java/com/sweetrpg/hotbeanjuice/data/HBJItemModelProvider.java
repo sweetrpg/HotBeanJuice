@@ -28,7 +28,9 @@ public class HBJItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         generated(ModItems.COFFEE_BEAN);
-//        generated(ModItems.COFFEE_CHERRY_ARABICA);
+        generated(ModItems.COFFEE_CHERRY_ARABICA);
+        generated(ModItems.COFFEE_CHERRY_CANEPHORA);
+        generated(ModItems.COFFEE_CHERRY_RACEMOSA);
         generated(ModItems.COFFEE_GROUNDS);
 //
 //        blockItem(ModBlocks.DRIP_COFFEE_MACHINE);

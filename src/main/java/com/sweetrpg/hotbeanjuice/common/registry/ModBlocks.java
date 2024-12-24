@@ -85,12 +85,12 @@ public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS
     // Kitchenware
 
     public static final RegistryObject<CoffeeCupBlock> COFFEE_CUP = registerWithItem("coffee_cup", CoffeeCupBlock::new);
-    //    public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
-//    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
-//    public static final RegistryObject<TravelMugBlock> TRAVEL_MUG = registerWithItem("travel_mug", TravelMugBlock::new);
+    public static final RegistryObject<CoffeeCupBlock> FIRED_COFFEE_CUP = registerWithItem("fired_coffee_cup", CoffeeCupBlock::new);
+    public static final RegistryObject<DisposableCupBlock> DISPOSABLE_CUP = registerWithItem("disposable_cup", DisposableCupBlock::new);
+    public static final RegistryObject<TravelMugBlock> TRAVEL_MUG = registerWithItem("travel_mug", TravelMugBlock::new);
     public static final RegistryObject<TeacupBlock> TEACUP = registerWithItem("teacup", TeacupBlock::new);
     public static final RegistryObject<PlateBlock> PLATE = registerWithItem("plate", PlateBlock::new);
-//    public static final RegistryObject<PintMugBlock> PINT_MUG = registerWithItem("pint_mug", PintMugBlock::new);
+    public static final RegistryObject<PintMugBlock> PINT_MUG = registerWithItem("pint_mug", PintMugBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
 

@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -27,10 +28,10 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public void addTags() {
-//        tag(ModTags.COFFEE_CHERRIES)
-//                .add(ModItems.COFFEE_CHERRY_ARABICA.get())
-//                .add(ModItems.COFFEE_CHERRY_CANEPHORA.get())
-//                .add(ModItems.COFFEE_CHERRY_RACEMOSA.get());
+        tag(ModTags.COFFEE_CHERRIES)
+                .add(ModItems.COFFEE_CHERRY_ARABICA.get())
+                .add(ModItems.COFFEE_CHERRY_CANEPHORA.get())
+                .add(ModItems.COFFEE_CHERRY_RACEMOSA.get());
         tag(ModTags.STRIPPED_WOOD)
                 .add(Items.STRIPPED_OAK_WOOD)
                 .add(Items.STRIPPED_ACACIA_WOOD)
