@@ -1,7 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +11,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
+
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -39,12 +38,12 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        stageBlock(ModBlocks.CROP_COFFEE_ARABICA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
-        stageBlock(ModBlocks.CROP_COFFEE_CANEPHORA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
-        stageBlock(ModBlocks.CROP_COFFEE_RACEMOSA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
-        wildCropBlock(ModBlocks.WILD_COFFEA_ARABICA.get());
-        wildCropBlock(ModBlocks.WILD_COFFEA_CANEPHORA.get());
-        wildCropBlock(ModBlocks.WILD_COFFEA_RACEMOSA.get());
+//        stageBlock(ModBlocks.CROP_COFFEE_ARABICA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+//        stageBlock(ModBlocks.CROP_COFFEE_CANEPHORA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+//        stageBlock(ModBlocks.CROP_COFFEE_RACEMOSA.get(), CoffeeBushBlock.COFFEE_BUSH_AGE);
+//        wildCropBlock(ModBlocks.WILD_COFFEA_ARABICA.get());
+//        wildCropBlock(ModBlocks.WILD_COFFEA_CANEPHORA.get());
+//        wildCropBlock(ModBlocks.WILD_COFFEA_RACEMOSA.get());
     }
 
     private String blockName(Block block) {
@@ -61,17 +60,17 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     protected void createFromShape(Supplier<? extends Block> blockIn, AABB bb) {
         BlockModelBuilder model = this.models()
-                                      .getBuilder(name(blockIn))
-                                      .parent(this.models().getExistingFile(mcLoc(ModelProvider.BLOCK_FOLDER + "/block")))
-                                      .texture("particle", extend(blockTexture(blockIn), "_bottom"))
-                                      .texture("bottom", extend(blockTexture(blockIn), "_bottom"))
-                                      .texture("top", extend(blockTexture(blockIn), "_top"))
-                                      .texture("side", extend(blockTexture(blockIn), "_side"));
+                .getBuilder(name(blockIn))
+                .parent(this.models().getExistingFile(mcLoc(ModelProvider.BLOCK_FOLDER + "/block")))
+                .texture("particle", extend(blockTexture(blockIn), "_bottom"))
+                .texture("bottom", extend(blockTexture(blockIn), "_bottom"))
+                .texture("top", extend(blockTexture(blockIn), "_top"))
+                .texture("side", extend(blockTexture(blockIn), "_side"));
 
         model.element()
-             .from((float) bb.minX, (float) bb.minY, (float) bb.minZ)
-             .to((float) bb.maxX, (float) bb.maxY, (float) bb.maxZ)
-             .allFaces((d, f) -> f.cullface(d == Direction.DOWN ? d : null).texture(d.getAxis().isHorizontal() ? "#side" : d == Direction.DOWN ? "#bottom" : "#top"));
+                .from((float) bb.minX, (float) bb.minY, (float) bb.minZ)
+                .to((float) bb.maxX, (float) bb.maxY, (float) bb.maxZ)
+                .allFaces((d, f) -> f.cullface(d == Direction.DOWN ? d : null).texture(d.getAxis().isHorizontal() ? "#side" : d == Direction.DOWN ? "#bottom" : "#top"));
 
         this.simpleBlock(blockIn.get(), model);
     }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "kitchenware",
+  "pattern": [
+    "SSS",
+    "SPI",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "tag": "hotbeanjuice:stripped_wood"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:pint_mug"
+  }
+}

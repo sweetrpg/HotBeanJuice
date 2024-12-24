@@ -1,11 +1,6 @@
 package com.sweetrpg.hotbeanjuice.integration.jei;
 
-import com.sweetrpg.hotbeanjuice.integration.jei.category.DripCoffeeRecipeCategory;
-import com.sweetrpg.hotbeanjuice.integration.jei.category.GrindingRecipeCategory;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeTypes;
-import com.sweetrpg.hotbeanjuice.integration.jei.category.RoastingRecipeCategory;
-import com.sweetrpg.hotbeanjuice.integration.jei.category.WhiskingRecipeCategory;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
@@ -27,29 +22,24 @@ public class HBJPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-//        registration.addRecipeCategories(new CofeeBrewingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new GrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new RoastingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+//        registration.addRecipeCategories(new GrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+//        registration.addRecipeCategories(new RoastingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 //        registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+//        registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+//        registration.addRecipeCategories(new KettleHeatingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.COOKING_POT.get()), FDRecipeTypes.COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.CUTTING_BOARD.get()), FDRecipeTypes.CUTTING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.STOVE.get()), RecipeTypes.CAMPFIRE_COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModItems.SKILLET.get()), RecipeTypes.CAMPFIRE_COOKING);
-//        registration.addRecipeCatalyst(new ItemStack(ModBlocks.ORGANIC_COMPOST.get()), FDRecipeTypes.DECOMPOSITION);
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.GRINDING.get()), GrindingRecipeCategory.UID);
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.ROASTING.get()), RoastingRecipeCategory.UID);
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.WHISKING.get()), WhiskingRecipeCategory.UID);
-        registration.addRecipes(findRecipesByType(ModRecipeTypes.DRIP_COFFEE.get()), DripCoffeeRecipeCategory.UID);
+//        registration.addRecipes(findRecipesByType(ModRecipeTypes.GRINDING.get()), GrindingRecipeCategory.UID);
+//        registration.addRecipes(findRecipesByType(ModRecipeTypes.ROASTING.get()), RoastingRecipeCategory.UID);
+//        registration.addRecipes(findRecipesByType(ModRecipeTypes.WHISKING.get()), WhiskingRecipeCategory.UID);
+//        registration.addRecipes(findRecipesByType(ModRecipeTypes.KETTLE_HEATING.get()), KettleHeatingRecipeCategory.UID);
+//        registration.addRecipes(findRecipesByType(ModRecipeTypes.DRIP_COFFEE.get()), DripCoffeeRecipeCategory.UID);
     }
 
     private static List<Recipe<?>> findRecipesByType(RecipeType<?> type) {

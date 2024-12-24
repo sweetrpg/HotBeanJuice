@@ -1,15 +1,11 @@
 package com.sweetrpg.hotbeanjuice.common.event;
 
-import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import net.minecraft.core.Registry;
-import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
@@ -45,18 +41,18 @@ public class EventHandler {
                 event.getCategory().equals(Biome.BiomeCategory.TAIGA) ||
                 event.getCategory().equals(Biome.BiomeCategory.MOUNTAIN)) &&
                 (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
-            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_ARABICA);
+//            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_ARABICA);
         }
         else if((event.getCategory().equals(Biome.BiomeCategory.DESERT) ||
                 event.getCategory().equals(Biome.BiomeCategory.SAVANNA)) &&
                 (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
-            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_CANEPHORA);
+//            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_CANEPHORA);
         }
         else if((event.getCategory().equals(Biome.BiomeCategory.PLAINS) ||
                 event.getCategory().equals(Biome.BiomeCategory.EXTREME_HILLS) ||
                 event.getCategory().equals(Biome.BiomeCategory.TAIGA)) &&
                 (climate.temperature >= 0.2F && climate.temperature < 1.5F)) {
-            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_RACEMOSA);
+//            builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, WildCropGeneration.PATCH_WILD_COFFEA_RACEMOSA);
         }
     }
 
@@ -79,6 +75,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-        Registry.register(Registry.RECIPE_TYPE, DripCoffeeRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
+//        Registry.register(Registry.RECIPE_TYPE, DripCoffeeRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
+//        Registry.register(Registry.RECIPE_TYPE, KettleHeatingRecipe.Type.ID, DripCoffeeRecipe.Type.INSTANCE);
     }
 }

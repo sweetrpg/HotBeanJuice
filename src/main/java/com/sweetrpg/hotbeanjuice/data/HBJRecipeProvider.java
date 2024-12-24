@@ -5,15 +5,10 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
-import com.sweetrpg.hotbeanjuice.data.builders.CoffeeMakerRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.WhiskingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
@@ -43,10 +38,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("coffee_ingredients")
                 .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
                 .save(consumer);
-        CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
-                .group("coffee_ingredients")
-                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
-                .save(consumer);
+//        CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
+//                .group("coffee_ingredients")
+//                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
+//                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee beans
@@ -75,22 +70,22 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
                 .unlockedBy("has_leather", has(Items.LEATHER))
                 .save(consumer);
-        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
-                .group("coffee_beans")
-                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
-                .save(consumer);
-        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_GROUNDS.get()), new ItemStack(ModItems.FINE_COFFEE_GROUNDS.get()), 1, 180)
-                .group("coffee_beans")
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
-                .group("coffee_beans")
-                .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
-                .save(consumer);
-        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
-                .group("coffee_beans")
-                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
-                .save(consumer);
+//        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
+//                .group("coffee_beans")
+//                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+//                .save(consumer);
+//        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_GROUNDS.get()), new ItemStack(ModItems.FINE_COFFEE_GROUNDS.get()), 1, 180)
+//                .group("coffee_beans")
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+//                .save(consumer);
+//        GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
+//                .group("coffee_beans")
+//                .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
+//                .save(consumer);
+//        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
+//                .group("coffee_beans")
+//                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+//                .save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.DECAF_COFFEE_BEAN.get())
                 .requires(ModItems.COFFEE_BEAN.get())
                 .requires(Items.CHARCOAL)
@@ -130,15 +125,15 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .define('C', Tags.Items.INGOTS_COPPER)
                 .unlockedBy("has_copper", has(Tags.Items.INGOTS_COPPER))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.SUN_TEA_JAR.get(), 1)
-                .pattern(" _ ")
-                .pattern("G G")
-                .pattern("GGG")
-                .define('_', ItemTags.SLABS)
-                .define('G', Tags.Items.GLASS)
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-                .unlockedBy("has_slabs", has(ItemTags.SLABS))
-                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.SUN_TEA_JAR.get(), 1)
+//                .pattern(" _ ")
+//                .pattern("G G")
+//                .pattern("GGG")
+//                .define('_', ItemTags.SLABS)
+//                .define('G', Tags.Items.GLASS)
+//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+//                .unlockedBy("has_slabs", has(ItemTags.SLABS))
+//                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Kitchenware
@@ -165,6 +160,18 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .pattern("CCC")
                 .define('C', Items.CLAY_BALL)
                 .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PINT_MUG.get(), 1)
+                .group("kitchenware")
+                .pattern("SSS")
+                .pattern("SPI")
+                .pattern("SSS")
+                .define('S', ModTags.STRIPPED_WOOD)
+                .define('P', ItemTags.PLANKS)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_stripped_wood", has(ModTags.STRIPPED_WOOD))
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.TRAVEL_MUG.get(), 1)
                 .group("kitchenware")
@@ -239,60 +246,59 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cocoa_powder", has(ModItems.COCOA_POWDER.get()))
                 .unlockedBy("has_sugar", has(Items.SUGAR))
                 .save(consumer);
-//        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get())
-        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
-                .group("drinks")
-                .requires(Ingredient.of(Items.WATER_BUCKET))
-                .requires(Ingredient.of(ModItems.COFFEE_FILTER.get()))
-                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-                .unlockedBy("has_filter", has(ModItems.COFFEE_FILTER.get()))
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        CoffeeMakerRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
-                .group("drinks")
-                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
-                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        CoffeeMakerRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
-                .group("drinks")
-                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
-                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        CoffeeMakerRecipeBuilder.percolated(ModItems.COFFEE_DRINK.get(), 0.1f, 450)
-                .group("drinks")
-                .requires(Ingredient.of(Items.WATER_BUCKET))
-                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        CoffeeMakerRecipeBuilder.pod(ModItems.COFFEE_DRINK.get(), 0.1f, 180)
-                .group("drinks")
-                .requires(Ingredient.of(Items.WATER_BUCKET))
-                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-                .save(consumer);
-        CoffeeMakerRecipeBuilder.espresso(ModItems.ESPRESSO_DRINK.get(), 0.3f, 300)
-                .group("drinks")
-                .requires(Ingredient.of(Items.WATER_BUCKET))
-                .requires(Ingredient.of(ModItems.FINE_COFFEE_GROUNDS.get()))
-                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-                .unlockedBy("has_fine_coffee_grounds", has(ModItems.FINE_COFFEE_GROUNDS.get()))
-                .save(consumer);
-//        TeaRecipeBuilder.seeped(ModItems.CHAMOMILE_TEA_DRINK.get(), 0.1f, 300)
-//                // TODO
+//        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+//                .group("drinks")
+//                .requires(Ingredient.of(Items.WATER_BUCKET))
+//                .requires(Ingredient.of(ModItems.COFFEE_FILTER.get()))
+//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+//                .unlockedBy("has_filter", has(ModItems.COFFEE_FILTER.get()))
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
 //                .save(consumer);
-//        TeaRecipeBuilder.brewed(ModItems.SUN_TEA_DRINK.get(), 0.1f, 300)
-//                // TODO
+//        CoffeeMakerRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+//                .group("drinks")
+//                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
+//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
 //                .save(consumer);
-//        TeaRecipeBuilder.brewed(ModItems.GREEN_TEA_DRINK.get(), 0.1f, 300)
-//                // TODO
+//        CoffeeMakerRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
+//                .group("drinks")
+//                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
+//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
 //                .save(consumer);
+//        CoffeeMakerRecipeBuilder.percolated(ModItems.COFFEE_DRINK.get(), 0.1f, 450)
+//                .group("drinks")
+//                .requires(Ingredient.of(Items.WATER_BUCKET))
+//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+//                .save(consumer);
+//        CoffeeMakerRecipeBuilder.pod(ModItems.COFFEE_DRINK.get(), 0.1f, 180)
+//                .group("drinks")
+//                .requires(Ingredient.of(Items.WATER_BUCKET))
+//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+//                .save(consumer);
+//        CoffeeMakerRecipeBuilder.espresso(ModItems.ESPRESSO_DRINK.get(), 0.3f, 300)
+//                .group("drinks")
+//                .requires(Ingredient.of(Items.WATER_BUCKET))
+//                .requires(Ingredient.of(ModItems.FINE_COFFEE_GROUNDS.get()))
+//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+//                .unlockedBy("has_fine_coffee_grounds", has(ModItems.FINE_COFFEE_GROUNDS.get()))
+//                .save(consumer);
+////        TeaRecipeBuilder.seeped(ModItems.CHAMOMILE_TEA_DRINK.get(), 0.1f, 300)
+////                // TODO
+////                .save(consumer);
+////        TeaRecipeBuilder.brewed(ModItems.SUN_TEA_DRINK.get(), 0.1f, 300)
+////                // TODO
+////                .save(consumer);
+////        TeaRecipeBuilder.brewed(ModItems.GREEN_TEA_DRINK.get(), 0.1f, 300)
+////                // TODO
+////                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Miscellaneous ingredients
@@ -305,6 +311,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("miscellaneous")
                 .unlockedBy("has_water", has(Items.WATER_BUCKET))
                 .save(consumer);
+//        KettleHeatingRecipeBuilder.heating(Ingredient.of(Items.WATER_BUCKET), ModItems.BOILING_WATER.get(), 0.1f, 240)
+//                .group("miscellaneous")
+//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+//                .save(consumer);
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CLAY_MUG.get()), ModBlocks.FIRED_COFFEE_CUP.get(), 0.1f, 240)
                 .group("kitchenware")
                 .unlockedBy("has_clay_mug", has(ModItems.CLAY_MUG.get()))
@@ -321,152 +331,153 @@ public class HBJRecipeProvider extends RecipeProvider {
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee-processing devices
 
-        ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
-                .group("processing")
-                .pattern("LI ")
-                .pattern("GFG")
-                .pattern(" G ")
-                .define('G', Tags.Items.GLASS)
-                .define('I', Items.IRON_INGOT)
-                .define('F', Items.FLINT)
-                .define('L', Items.LEVER)
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-                .unlockedBy("has_flint", has(Items.FLINT))
-                .unlockedBy("has_lever", has(Items.LEVER))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.POWERED_COFFEE_GRINDER.get(), 1)
-                .group("processing")
-                .pattern(" G ")
-                .pattern("IFI")
-                .pattern("IRI")
-                .define('G', Tags.Items.GLASS)
-                .define('I', Items.IRON_INGOT)
-                .define('F', Items.FLINT)
-                .define('R', Items.REDSTONE)
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-                .unlockedBy("has_flint", has(Items.FLINT))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_ROASTER.get(), 1)
-                .group("processing")
-                .pattern("  H")
-                .pattern("IFD")
-                .pattern("IRB")
-                .define('H', Items.HOPPER)
-                .define('D', Items.DISPENSER)
-                .define('F', Items.FURNACE)
-                .define('I', Items.IRON_INGOT)
-                .define('B', Items.BUCKET)
-                .define('R', Items.REDSTONE)
-                .unlockedBy("has_hopper", has(Items.HOPPER))
-                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-                .unlockedBy("has_bucket", has(Items.BUCKET))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.HAND_COFFEE_GRINDER.get(), 1)
+//                .group("processing")
+//                .pattern("LI ")
+//                .pattern("GFG")
+//                .pattern(" G ")
+//                .define('G', Tags.Items.GLASS)
+//                .define('I', Items.IRON_INGOT)
+//                .define('F', Items.FLINT)
+//                .define('L', Items.LEVER)
+//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+//                .unlockedBy("has_flint", has(Items.FLINT))
+//                .unlockedBy("has_lever", has(Items.LEVER))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.POWERED_COFFEE_GRINDER.get(), 1)
+//                .group("processing")
+//                .pattern(" G ")
+//                .pattern("IFI")
+//                .pattern("IRI")
+//                .define('G', Tags.Items.GLASS)
+//                .define('I', Items.IRON_INGOT)
+//                .define('F', Items.FLINT)
+//                .define('R', Items.REDSTONE)
+//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+//                .unlockedBy("has_flint", has(Items.FLINT))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_ROASTER.get(), 1)
+//                .group("processing")
+//                .pattern("  H")
+//                .pattern("IFD")
+//                .pattern("IRB")
+//                .define('H', Items.HOPPER)
+//                .define('D', Items.DISPENSER)
+//                .define('F', Items.FURNACE)
+//                .define('I', Items.IRON_INGOT)
+//                .define('B', Items.BUCKET)
+//                .define('R', Items.REDSTONE)
+//                .unlockedBy("has_hopper", has(Items.HOPPER))
+//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+//                .unlockedBy("has_bucket", has(Items.BUCKET))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee-making devices
 
-        ShapedRecipeBuilder.shaped(ModBlocks.PERCOLATOR.get(), 1)
-                .pattern(" G ")
-                .pattern("IBI")
-                .pattern("IRI")
-                .define('G', Tags.Items.GLASS)
-                .define('B', ModItems.BOILING_WATER.get())
-                .define('I', Items.IRON_INGOT)
-                .define('R', Items.REDSTONE)
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .unlockedBy("has_boiling_water", has(ModItems.BOILING_WATER.get()))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.POD_MACHINE.get(), 1)
-                .pattern("bL ")
-                .pattern("CBC")
-                .pattern("CRC")
-                .define('b', ItemTags.BUTTONS)
-                .define('L', Items.LEVER)
-                .define('C', Tags.Items.INGOTS_COPPER)
-                .define('B', ModItems.BOILING_WATER.get())
-                .define('R', Items.REDSTONE)
-                .unlockedBy("has_button", has(ItemTags.BUTTONS))
-                .unlockedBy("has_lever", has(Items.LEVER))
-                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
-                .unlockedBy("has_boiling_water", has(ModItems.BOILING_WATER.get()))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.ESPRESSO_MACHINE.get(), 1)
-                .pattern(" H ")
-                .pattern("ILI")
-                .pattern("IRI")
-                .define('H', Items.HOPPER)
-                .define('I', Items.IRON_INGOT)
-                .define('L', Items.LEVER)
-                .define('R', Items.REDSTONE)
-                .unlockedBy("has_hopper", has(Items.HOPPER))
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .unlockedBy("has_lever", has(Items.LEVER))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.CAMPFIRE_COFFEE_POT.get(), 1)
-                .pattern("CSC")
-                .pattern("CPC")
-                .pattern("CCC")
-                .define('C', Tags.Items.INGOTS_COPPER)
-                .define('S', Items.STICK)
-                .define('P', Items.LIGHT_WEIGHTED_PRESSURE_PLATE)
-                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
-                .unlockedBy("has_stick", has(Items.STICK))
-                .unlockedBy("has_light_pressure_plate", has(Items.LIGHT_WEIGHTED_PRESSURE_PLATE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.FRENCH_PRESS.get(), 1)
-                .pattern("GSG")
-                .pattern("GPG")
-                .pattern("GGG")
-                .define('G', Tags.Items.GLASS)
-                .define('S', Items.STICK)
-                .define('P', Items.LIGHT_WEIGHTED_PRESSURE_PLATE)
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-                .unlockedBy("has_stick", has(Items.STICK))
-                .unlockedBy("has_light_pressure_plate", has(Items.LIGHT_WEIGHTED_PRESSURE_PLATE))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_CARAFE.get(), 1)
-                .group("coffee_making")
-                .pattern("GHG")
-                .pattern("III")
-                .pattern("GGG")
-                .define('G', Items.GLASS)
-                .define('H', Items.HOPPER)
-                .define('I', Items.IRON_INGOT)
-                .unlockedBy("has_hopper", has(Items.HOPPER))
-                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-                .unlockedBy("has_glass", has(Items.GLASS))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_MACHINE.get(), 1)
-                .group("coffee_making")
-                .pattern("KHB")
-                .pattern(" CF")
-                .pattern("IRI")
-                .define('B', Items.BUCKET)
-                .define('H', Items.HOPPER)
-                .define('I', Items.IRON_INGOT)
-                .define('R', Items.REDSTONE)
-                .define('K', Items.CLOCK)
-                .define('F', Items.FURNACE)
-                .define('C', ModBlocks.DRIP_COFFEE_CARAFE.get())
-                .unlockedBy("has_hopper", has(Items.HOPPER))
-                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-                .unlockedBy("has_bucket", has(Items.BUCKET))
-                .unlockedBy("has_clock", has(Items.CLOCK))
-                .unlockedBy("has_redstone", has(Items.REDSTONE))
-                .unlockedBy("has_furnace", has(Items.FURNACE))
-                .unlockedBy("has_carafe", has(ModBlocks.DRIP_COFFEE_CARAFE.get()))
-                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.PERCOLATOR.get(), 1)
+//                .pattern(" G ")
+//                .pattern("IBI")
+//                .pattern("IRI")
+//                .define('G', Tags.Items.GLASS)
+//                .define('B', ModItems.BOILING_WATER.get())
+//                .define('I', Items.IRON_INGOT)
+//                .define('R', Items.REDSTONE)
+//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+//                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+//                .unlockedBy("has_boiling_water", has(ModItems.BOILING_WATER.get()))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.POD_MACHINE.get(), 1)
+//                .pattern("bL ")
+//                .pattern("CBC")
+//                .pattern("CRC")
+//                .define('b', ItemTags.BUTTONS)
+//                .define('L', Items.LEVER)
+//                .define('C', Tags.Items.INGOTS_COPPER)
+//                .define('B', ModItems.BOILING_WATER.get())
+//                .define('R', Items.REDSTONE)
+//                .unlockedBy("has_button", has(ItemTags.BUTTONS))
+//                .unlockedBy("has_lever", has(Items.LEVER))
+//                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
+//                .unlockedBy("has_boiling_water", has(ModItems.BOILING_WATER.get()))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.ESPRESSO_MACHINE.get(), 1)
+//                .pattern(" H ")
+//                .pattern("ILI")
+//                .pattern("IRI")
+//                .define('H', Items.HOPPER)
+//                .define('I', Items.IRON_INGOT)
+//                .define('L', Items.LEVER)
+//                .define('R', Items.REDSTONE)
+//                .unlockedBy("has_hopper", has(Items.HOPPER))
+//                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+//                .unlockedBy("has_lever", has(Items.LEVER))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.CAMPFIRE_COFFEE_POT.get(), 1)
+//                .pattern("CSC")
+//                .pattern("CPC")
+//                .pattern("CCC")
+//                .define('C', Tags.Items.INGOTS_COPPER)
+//                .define('S', Items.STICK)
+//                .define('P', Items.LIGHT_WEIGHTED_PRESSURE_PLATE)
+//                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
+//                .unlockedBy("has_stick", has(Items.STICK))
+//                .unlockedBy("has_light_pressure_plate", has(Items.LIGHT_WEIGHTED_PRESSURE_PLATE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.FRENCH_PRESS.get(), 1)
+//                .pattern("GSG")
+//                .pattern("GPG")
+//                .pattern("GGG")
+//                .define('G', Tags.Items.GLASS)
+//                .define('S', Items.STICK)
+//                .define('P', Items.LIGHT_WEIGHTED_PRESSURE_PLATE)
+//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+//                .unlockedBy("has_stick", has(Items.STICK))
+//                .unlockedBy("has_light_pressure_plate", has(Items.LIGHT_WEIGHTED_PRESSURE_PLATE))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_CARAFE.get(), 1)
+//                .group("coffee_making")
+//                .pattern("GHG")
+//                .pattern("III")
+//                .pattern("GGG")
+//                .define('G', Items.GLASS)
+//                .define('H', Items.HOPPER)
+//                .define('I', Items.IRON_INGOT)
+//                .unlockedBy("has_hopper", has(Items.HOPPER))
+//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+//                .unlockedBy("has_glass", has(Items.GLASS))
+//                .save(consumer);
+//        ShapedRecipeBuilder.shaped(ModBlocks.DRIP_COFFEE_MACHINE.get(), 1)
+//                .group("coffee_making")
+//                .pattern("KHB")
+//                .pattern(" CF")
+//                .pattern("IRI")
+//                .define('B', Items.BUCKET)
+//                .define('H', Items.HOPPER)
+//                .define('I', Items.IRON_INGOT)
+//                .define('R', Items.REDSTONE)
+//                .define('K', Items.CLOCK)
+//                .define('F', Items.FURNACE)
+//                .define('C', ModBlocks.DRIP_COFFEE_CARAFE.get())
+//                .unlockedBy("has_hopper", has(Items.HOPPER))
+//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+//                .unlockedBy("has_bucket", has(Items.BUCKET))
+//                .unlockedBy("has_clock", has(Items.CLOCK))
+//                .unlockedBy("has_redstone", has(Items.REDSTONE))
+//                .unlockedBy("has_furnace", has(Items.FURNACE))
+//                .unlockedBy("has_carafe", has(ModBlocks.DRIP_COFFEE_CARAFE.get()))
+//                .save(consumer);
     }
 
     @Override
     protected void saveAdvancement(HashCache cache, JsonObject advancementJson, Path pathIn) {
     }
+
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "hotbeanjuice:pint_mug",
     "hotbeanjuice:plate",
     "hotbeanjuice:teacup"
   ]
