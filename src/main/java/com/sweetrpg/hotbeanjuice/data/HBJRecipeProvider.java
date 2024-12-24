@@ -184,14 +184,13 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_glass", has(Tags.Items.GLASS))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.DISPOSABLE_CUP.get(), 1)
-                .group("kitchenware")
                 .pattern("IGI")
                 .pattern("I I")
                 .pattern("III")
-                .define('I', Items.IRON_INGOT)
-                .define('G', Tags.Items.GLASS)
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+                .define('I', Items.PAPER)
+                .define('G', ItemTags.WOODEN_SLABS)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_wooden_slab", has(ItemTags.WOODEN_SLABS))
                 .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
