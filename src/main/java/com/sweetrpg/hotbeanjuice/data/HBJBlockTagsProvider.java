@@ -44,10 +44,10 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
     }
 
     protected void registerModTags() {
-//        tag(ModTags.WILD_CROPS)
-//                .add(ModBlocks.WILD_COFFEA_ARABICA.get())
-//                .add(ModBlocks.WILD_COFFEA_CANEPHORA.get())
-//                .add(ModBlocks.WILD_COFFEA_RACEMOSA.get());
+        tag(ModTags.WILD_CROPS)
+                .add(ModBlocks.WILD_COFFEA_ARABICA.get())
+                .add(ModBlocks.WILD_COFFEA_CANEPHORA.get())
+                .add(ModBlocks.WILD_COFFEA_RACEMOSA.get());
         tag(ModTags.COFFEE_CUPS)
                 .add(ModBlocks.COFFEE_CUP.get())
                 .add(ModBlocks.TRAVEL_MUG.get())

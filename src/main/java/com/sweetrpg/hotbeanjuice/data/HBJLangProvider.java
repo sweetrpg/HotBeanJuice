@@ -73,9 +73,9 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
         add(ModBlocks.TEACUP.get(), "Teacup");
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Mug");
-//        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
-//        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
-//        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
 //
         add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.BOILING_WATER.get(), "Boiling Water");
@@ -131,9 +131,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Cup");
 //        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
 //        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
-//        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
-//        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
-//        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
+        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
 //
         add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.BOILING_WATER.get(), "Boiling Water");
@@ -182,9 +182,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.TRAVEL_MUG.get(), "Reise-Kaffeetasse");
 //        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
 //        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
-//        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
-//        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
-//        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");
+        add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
+        add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
+        add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");
 //
         add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
         add(ModItems.BOILING_WATER.get(), "Kochendes Wasser");
