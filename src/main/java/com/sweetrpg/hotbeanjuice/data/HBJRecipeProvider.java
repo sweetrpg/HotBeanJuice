@@ -11,6 +11,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.nio.file.Path;
 import java.util.function.Consumer;
@@ -117,13 +118,13 @@ public class HBJRecipeProvider extends RecipeProvider {
         // ----------------------------------------------------------------------------------------------------------------
         // Tea-making paraphernalia
 
-//        ShapedRecipeBuilder.shaped(ModBlocks.KETTLE.get(), 1)
-//                .pattern(" C ")
-//                .pattern("C C")
-//                .pattern("CCC")
-//                .define('C', Tags.Items.INGOTS_COPPER)
-//                .unlockedBy("has_copper", has(Tags.Items.INGOTS_COPPER))
-//                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.KETTLE.get(), 1)
+                .pattern(" C ")
+                .pattern("C C")
+                .pattern("CCC")
+                .define('C', Tags.Items.INGOTS_COPPER)
+                .unlockedBy("has_copper", has(Tags.Items.INGOTS_COPPER))
+                .save(consumer);
 //        ShapedRecipeBuilder.shaped(ModBlocks.SUN_TEA_JAR.get(), 1)
 //                .pattern(" _ ")
 //                .pattern("G G")
@@ -160,38 +161,38 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .define('C', Items.CLAY_BALL)
                 .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
                 .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.PINT_MUG.get(), 1)
-//                .group("kitchenware")
-//                .pattern("SSS")
-//                .pattern("SPI")
-//                .pattern("SSS")
-//                .define('S', ModTags.STRIPPED_WOOD)
-//                .define('P', ItemTags.PLANKS)
-//                .define('I', Items.IRON_INGOT)
-//                .unlockedBy("has_stripped_wood", has(ModTags.STRIPPED_WOOD))
-//                .unlockedBy("has_planks", has(ItemTags.PLANKS))
-//                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-//                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.TRAVEL_MUG.get(), 1)
-//                .group("kitchenware")
-//                .pattern("IGI")
-//                .pattern("I I")
-//                .pattern("III")
-//                .define('I', Items.IRON_INGOT)
-//                .define('G', Tags.Items.GLASS)
-//                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-//                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.DISPOSABLE_CUP.get(), 1)
-//                .group("kitchenware")
-//                .pattern("IGI")
-//                .pattern("I I")
-//                .pattern("III")
-//                .define('I', Items.IRON_INGOT)
-//                .define('G', Tags.Items.GLASS)
-//                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-//                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PINT_MUG.get(), 1)
+                .group("kitchenware")
+                .pattern("SSS")
+                .pattern("SPI")
+                .pattern("SSS")
+                .define('S', ModTags.STRIPPED_WOOD)
+                .define('P', ItemTags.PLANKS)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_stripped_wood", has(ModTags.STRIPPED_WOOD))
+                .unlockedBy("has_planks", has(ItemTags.PLANKS))
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TRAVEL_MUG.get(), 1)
+                .group("kitchenware")
+                .pattern("IGI")
+                .pattern("I I")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.GLASS)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.DISPOSABLE_CUP.get(), 1)
+                .group("kitchenware")
+                .pattern("IGI")
+                .pattern("I I")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.GLASS)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Tea ingredients

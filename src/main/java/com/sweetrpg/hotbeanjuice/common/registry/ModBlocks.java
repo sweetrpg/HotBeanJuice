@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,8 +52,8 @@ public static final RegistryObject<CoffeeBushBlock> CROP_COFFEE_ARABICA = BLOCKS
     // ----------------------------------------------------------------------------------------------------------------
     // Tea-making devices
 
-//    public static final RegistryObject<KettleBlock> KETTLE = registerWithItem("kettle",
-//            () -> new KettleBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<KettleBlock> KETTLE = registerWithItem("kettle",
+            () -> new KettleBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<SunTeaJarBlock> SUN_TEA_JAR = registerWithItem("sun_tea_jar",
 //            () -> new SunTeaJarBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
 
