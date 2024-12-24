@@ -97,7 +97,9 @@ public class KettleBlock extends BaseEntityBlock {
                 state = state.setValue(HOT, false);
             }
             level.setBlock(pos, state, 3);
+
             player.setItemInHand(hand, new ItemStack(ModItems.BOILING_WATER.get()));
+
             return InteractionResult.SUCCESS;
         }
         // with a water bucket, fill kettle
@@ -108,15 +110,17 @@ public class KettleBlock extends BaseEntityBlock {
             if(KettleBlock.FULLNESS.getPossibleValues().contains(fullness)) {
                 state = state.setValue(FULLNESS, fullness);
                 level.setBlock(pos, state, 3);
-                player.setItemInHand(hand, new ItemStack(Items.BUCKET));
+
+                if(!player.getAbilities().instabuild) {
+                    player.setItemInHand(hand, new ItemStack(Items.BUCKET));
+                }
+
                 return InteractionResult.SUCCESS;
             }
         }
 
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
-
-    // TODO: can be placed over a fire or other heat source to heat the water
 
     @Nullable
     @Override
@@ -139,10 +143,9 @@ public class KettleBlock extends BaseEntityBlock {
         // add tooltip text for fullness
 
         var text = I18n.get(Constants.TRANSLATION_KEY_GUI_KETTLE_FULLNESS, 0);
-//        tooltip.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_KETTLE_FULLNESS, )
+        //        tooltip.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_KETTLE_FULLNESS, )
 
         // add tooltip text if the kettle is hot
     }
-
 
 }

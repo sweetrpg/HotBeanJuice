@@ -1,6 +1,5 @@
 package com.sweetrpg.hotbeanjuice.common.lib;
 
-import com.sweetrpg.hotbeanjuice.common.item.crafting.*;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.resources.ResourceLocation;
 
@@ -36,16 +35,16 @@ public class Constants {
     public static final String TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_TIME_TOOLTIP = "jei.category.kettle_heating.xp";
     public static final String TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP = "jei.category.kettle_heating.time.seconds";
     public static final String TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE = "itemGroup.hotbeanjuice";
-    public static final String TRANSLATION_KEY_RECIPETYPE_CAMPFIRECOFFEE_TITLE = "jei." + CampfireCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_DRIPCOFFEE_TITLE = "jei." + DripCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_ESPRESSO_TITLE = "jei." + EspressoRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_FRENCHPRESSCOFFEE_TITLE = "jei." + FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_PERCOLATORCOFFEE_TITLE = "jei." + PercolatorCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_PODCOFFEE_TITLE = "jei." + PodCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    public static final String TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE = "jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_CAMPFIRECOFFEE_TITLE = "jei." + CampfireCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_DRIPCOFFEE_TITLE = "jei." + DripCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_ESPRESSO_TITLE = "jei." + EspressoRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_FRENCHPRESSCOFFEE_TITLE = "jei." + FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_PERCOLATORCOFFEE_TITLE = "jei." + PercolatorCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_PODCOFFEE_TITLE = "jei." + PodCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+//    public static final String TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE = "jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
 
     // Advancements
     public static final String TRANSLATION_KEY_ADVANCEMENT_MAKE_COFFEE_TITLE = "advancements." + Constants.MOD_ID + ".main.make_coffee.title";

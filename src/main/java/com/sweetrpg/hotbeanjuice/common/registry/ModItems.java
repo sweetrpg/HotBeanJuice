@@ -1,10 +1,8 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.hotbeanjuice.common.item.CarafeItem;
 import com.sweetrpg.hotbeanjuice.common.item.DrinkItem;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,18 +20,18 @@ public class ModItems {
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee resources
 
-    public static final RegistryObject<Item> WILD_COFFEA_ARABICA = register("wild_coffea_arabica", () -> new BlockItem(ModBlocks.WILD_COFFEA_ARABICA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> WILD_COFFEA_CANEPHORA = register("wild_coffea_canephora", () -> new BlockItem(ModBlocks.WILD_COFFEA_CANEPHORA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> WILD_COFFEA_RACEMOSA = register("wild_coffea_racemosa", () -> new BlockItem(ModBlocks.WILD_COFFEA_RACEMOSA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    //    public static final RegistryObject<Item> WILD_COFFEA_ARABICA = register("wild_coffea_arabica", () -> new BlockItem(ModBlocks.WILD_COFFEA_ARABICA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+//    public static final RegistryObject<Item> WILD_COFFEA_CANEPHORA = register("wild_coffea_canephora", () -> new BlockItem(ModBlocks.WILD_COFFEA_CANEPHORA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+//    public static final RegistryObject<Item> WILD_COFFEA_RACEMOSA = register("wild_coffea_racemosa", () -> new BlockItem(ModBlocks.WILD_COFFEA_RACEMOSA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_CHERRY_ARABICA = ITEMS.register("coffee_cherry_arabica", () -> new ItemNameBlockItem(ModBlocks.CROP_COFFEE_ARABICA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_CHERRY_CANEPHORA = ITEMS.register("coffee_cherry_canephora", () -> new ItemNameBlockItem(ModBlocks.CROP_COFFEE_CANEPHORA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_CHERRY_RACEMOSA = ITEMS.register("coffee_cherry_racemosa", () -> new ItemNameBlockItem(ModBlocks.CROP_COFFEE_RACEMOSA.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> COFFEE_BEAN = ITEMS.register("coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> BAD_COFFEE_BEAN = ITEMS.register("bad_coffee_bean", () -> new Item(new Item.Properties()./*food(FoodValues.CATNIP).*/tab(ModItemGroups.GENERAL)));
-//    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds", () -> new ItemNameBlockItem(ModBlocks.COFFEE_BUSH_CROP.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+    public static final RegistryObject<Item> DECAF_COFFEE_BEAN = ITEMS.register("decaf_coffee_bean", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
+
     public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
     public static final RegistryObject<Item> FINE_COFFEE_GROUNDS = ITEMS.register("fine_coffee_grounds", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
-    public static final RegistryObject<Item> DECAF_COFFEE_BEAN = ITEMS.register("decaf_coffee_bean", () -> new Item(new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Tea resources
@@ -72,7 +70,7 @@ public class ModItems {
     // Coffee-making paraphernalia
 
     public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
-    public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
+//    public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Kitchenware

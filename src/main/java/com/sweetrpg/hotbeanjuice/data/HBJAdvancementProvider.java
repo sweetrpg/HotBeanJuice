@@ -3,13 +3,7 @@ package com.sweetrpg.hotbeanjuice.data;
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
-import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.FrameType;
-import net.minecraft.advancements.RequirementsStrategy;
-import net.minecraft.advancements.critereon.EntityPredicate;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -64,13 +58,13 @@ public class HBJAdvancementProvider extends AdvancementProvider {
         };
 
         // Coffee
-        Advancement makeCoffee = Advancement.Builder.advancement()
-//                .parent(Util.mcLoc("tame_animal"))
-                .display(DisplayInfoBuilder.create().icon(ModBlocks.COFFEE_CUP).frame(FrameType.TASK).translate("hotbeanjuice.main.make_coffee").background("stone.png").build())
-                .addCriterion("make_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.COFFEE_CUP.get()))
-                //.withCriterion("get_cat", ItemUseTrigger.TameAnimalTrigger.Instance.create(EntityPredicate.Builder.create().type(CatEntityTypes.CAT.get()).build()))
-                .requirements(RequirementsStrategy.OR)
-                .save(consumer, Util.getResourcePath("main/make_coffee"));
+//        Advancement makeCoffee = Advancement.Builder.advancement()
+////                .parent(Util.mcLoc("tame_animal"))
+//                .display(DisplayInfoBuilder.create().icon(ModBlocks.COFFEE_CUP).frame(FrameType.TASK).translate("hotbeanjuice.main.make_coffee").background("stone.png").build())
+//                .addCriterion("make_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.COFFEE_CUP.get()))
+//                //.withCriterion("get_cat", ItemUseTrigger.TameAnimalTrigger.Instance.create(EntityPredicate.Builder.create().type(CatEntityTypes.CAT.get()).build()))
+//                .requirements(RequirementsStrategy.OR)
+//                .save(consumer, Util.getResourcePath("main/make_coffee"));
 
     }
 }

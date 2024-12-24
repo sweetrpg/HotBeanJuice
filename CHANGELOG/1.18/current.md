@@ -1,1 +1,1 @@
-- `[DEV]` Remove JEI recipe registration (troubleshooting)
+- `[FIX]` Reset the mod and start re-adding items

@@ -2,7 +2,6 @@ package com.sweetrpg.hotbeanjuice.common.registry;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 import java.util.function.Supplier;
 

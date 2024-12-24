@@ -16,7 +16,8 @@ import java.util.UUID;
 
 public class PlacedBlockEntity extends BlockEntity {
 
-    private @Deprecated @Nullable LivingEntity placer;
+    private @Deprecated
+    @Nullable LivingEntity placer;
     private @Nullable UUID placerUUID;
 
     public PlacedBlockEntity(BlockEntityType<?> tileEntityTypeIn, BlockPos pos, BlockState blockState) {
