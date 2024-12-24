@@ -2,14 +2,10 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
-import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
-import com.sweetrpg.hotbeanjuice.common.registry.ModEntityTypes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
-import net.minecraft.data.loot.EntityLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
@@ -22,7 +18,6 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class HBJLootTableProvider extends LootTableProvider {
 
@@ -37,7 +32,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return ImmutableList.of(Pair.of(Blocks::new, LootContextParamSets.BLOCK), Pair.of(Entities::new, LootContextParamSets.ENTITY));
+        return ImmutableList.of(Pair.of(Blocks::new, LootContextParamSets.BLOCK) /*, Pair.of(Entities::new, LootContextParamSets.ENTITY) */);
     }
 
     @Override
@@ -53,7 +48,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 //            dropsSelf(ModBlocks.CAMPFIRE_COFFEE_POT);
 //            dropsSelf(ModBlocks.COFFEE_BAG_BEANS);
 //            dropsSelf(ModBlocks.COFFEE_BAG_GROUND);
-            dropsSelf(ModBlocks.COFFEE_CUP);
+//            dropsSelf(ModBlocks.COFFEE_CUP);
 //            dropsSelf(ModBlocks.COFFEE_ROASTER);
 //            dropsSelf(ModBlocks.DISPOSABLE_CUP);
 //            dropsSelf(ModBlocks.DRIP_COFFEE_CARAFE);
@@ -65,11 +60,11 @@ public class HBJLootTableProvider extends LootTableProvider {
 //            dropsSelf(ModBlocks.KETTLE);
 //            dropsSelf(ModBlocks.PERCOLATOR);
 //            dropsSelf(ModBlocks.PINT_MUG);
-            dropsSelf(ModBlocks.PLATE);
+//            dropsSelf(ModBlocks.PLATE);
 //            dropsSelf(ModBlocks.POD_MACHINE);
 //            dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
 //            dropsSelf(ModBlocks.SUN_TEA_JAR);
-            dropsSelf(ModBlocks.TEACUP);
+//            dropsSelf(ModBlocks.TEACUP);
 //            dropsSelf(ModBlocks.TRAVEL_MUG);
         }
 
@@ -162,20 +157,20 @@ public class HBJLootTableProvider extends LootTableProvider {
         }
     }
 
-    private static class Entities extends EntityLoot {
-
-        @Override
-        protected void addTables() {
-
-        }
-
-        protected void registerNoLoot(Supplier<? extends EntityType<?>> type) {
-            this.add(type.get(), LootTable.lootTable());
-        }
-
-        @Override
-        protected Iterable<EntityType<?>> getKnownEntities() {
-            return ModEntityTypes.ENTITY_TYPES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
-        }
-    }
+//    private static class Entities extends EntityLoot {
+//
+//        @Override
+//        protected void addTables() {
+//
+//        }
+//
+//        protected void registerNoLoot(Supplier<? extends EntityType<?>> type) {
+//            this.add(type.get(), LootTable.lootTable());
+//        }
+//
+//        @Override
+//        protected Iterable<EntityType<?>> getKnownEntities() {
+//            return ModEntityTypes.ENTITY_TYPES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
+//        }
+//    }
 }

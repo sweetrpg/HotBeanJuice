@@ -2,6 +2,7 @@ package com.sweetrpg.hotbeanjuice.data;
 
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -49,8 +50,8 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
 
 //        add(ModBlocks.CAMPFIRE_COFFEE_POT.get(), "Campfire Coffee Pot");
-//        add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
-//        add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
+        add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
+        add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
 //        add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
 //        add(ModBlocks.CROP_COFFEE_ARABICA.get(), "Arabica Coffea Bush");
@@ -82,13 +83,13 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModItems.CHAMOMILE_TEA_DRINK.get(), "Chamomile Tea");
 //        add(ModItems.CLAY_MUG.get(), "Clay Mug");
 //        add(ModItems.COCOA_POWDER.get(), "Cocoa Powder");
-//        add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
+        add(ModItems.COFFEE_BEAN.get(), "Coffee Bean");
 //        add(ModItems.COFFEE_CHERRY_ARABICA.get(), "Arabica Coffea Cherry");
 //        add(ModItems.COFFEE_CHERRY_CANEPHORA.get(), "Canephora Coffea Cherry");
 //        add(ModItems.COFFEE_CHERRY_RACEMOSA.get(), "Racemosa Coffea Cherry");
 //        add(ModItems.COFFEE_DRINK.get(), "Coffee");
 //        add(ModItems.COFFEE_FILTER.get(), "Coffee Filter");
-//        add(ModItems.COFFEE_GROUNDS.get(), "Coffee Grounds");
+        add(ModItems.COFFEE_GROUNDS.get(), "Coffee Grounds");
 //        add(ModItems.DECAF_COFFEE_BEAN.get(), "Decaffeinated Coffee Bean");
 //        add(ModItems.DECAF_COFFEE_DRINK.get(), "Decaffeinated Coffee");
 //        add(ModItems.ESPRESSO_DRINK.get(), "Espresso");

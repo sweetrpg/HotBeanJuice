@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.data;
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
+import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -44,30 +45,30 @@ public class HBJRecipeProvider extends RecipeProvider {
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee beans
 
-//        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
-//                .group("coffee_beans")
-//                .pattern("PBP")
-//                .pattern("PBP")
-//                .pattern("PLP")
-//                .define('P', Items.PAPER)
-//                .define('B', ModItems.COFFEE_BEAN.get())
-//                .define('L', Items.LEATHER)
-//                .unlockedBy("has_paper", has(Items.PAPER))
-//                .unlockedBy("has_beans", has(ModItems.COFFEE_BEAN.get()))
-//                .unlockedBy("has_leather", has(Items.LEATHER))
-//                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_GROUND.get())
-//                .group("coffee_beans")
-//                .pattern("PGP")
-//                .pattern("PGP")
-//                .pattern("PLP")
-//                .define('P', Items.PAPER)
-//                .define('G', ModItems.COFFEE_GROUNDS.get())
-//                .define('L', Items.LEATHER)
-//                .unlockedBy("has_paper", has(Items.PAPER))
-//                .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .unlockedBy("has_leather", has(Items.LEATHER))
-//                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_BEANS.get())
+                .group("coffee_beans")
+                .pattern("PBP")
+                .pattern("PBP")
+                .pattern("PLP")
+                .define('P', Items.PAPER)
+                .define('B', ModItems.COFFEE_BEAN.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_beans", has(ModItems.COFFEE_BEAN.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_BAG_GROUND.get())
+                .group("coffee_beans")
+                .pattern("PGP")
+                .pattern("PGP")
+                .pattern("PLP")
+                .define('P', Items.PAPER)
+                .define('G', ModItems.COFFEE_GROUNDS.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(consumer);
 //        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
 //                .group("coffee_beans")
 //                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))

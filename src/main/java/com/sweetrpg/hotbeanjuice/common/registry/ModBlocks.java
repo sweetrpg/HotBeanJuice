@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.block.CoffeeBagBlock;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeCupBlock;
 import com.sweetrpg.hotbeanjuice.common.block.PlateBlock;
 import com.sweetrpg.hotbeanjuice.common.block.TeacupBlock;
@@ -41,10 +42,10 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
     // Miscellaneous coffee items
 
-//    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
-//            () -> new CoffeeBagBlock(true));
-//    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
-//            () -> new CoffeeBagBlock(false));
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_BEANS = registerWithItem("coffee_bag_beans",
+            () -> new CoffeeBagBlock(true));
+    public static final RegistryObject<CoffeeBagBlock> COFFEE_BAG_GROUND = registerWithItem("coffee_bag_ground",
+            () -> new CoffeeBagBlock(false));
 //    public static final RegistryObject<Block> DRIP_COFFEE_CARAFE = BLOCKS.register("drip_coffee_carafe",
 //            () -> new CarafeBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
 

@@ -29,7 +29,6 @@ public class HBJItemModelProvider extends ItemModelProvider {
 //        generated(ModItems.COFFEE_BEAN);
 //        generated(ModItems.COFFEE_CHERRY_ARABICA);
 //        generated(ModItems.COFFEE_GROUNDS);
-////        generated(ModItems.COFFEE_SEEDS);
 //
 //        blockItem(ModBlocks.DRIP_COFFEE_MACHINE);
 //        blockItem(ModBlocks.DRIP_COFFEE_CARAFE);
