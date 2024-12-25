@@ -3,6 +3,7 @@ package com.sweetrpg.hotbeanjuice.common.lib;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.resources.ResourceLocation;
 
@@ -46,7 +47,7 @@ public class Constants {
     //    public static final String TRANSLATION_KEY_RECIPETYPE_PERCOLATOR_COFFEE_TITLE = "jei." + PercolatorCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     //    public static final String TRANSLATION_KEY_RECIPETYPE_POD_COFFEE_TITLE = "jei." + PodCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    //    public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+    public static final String TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE = "jei." + WhiskingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE = "jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
 
     // Advancements

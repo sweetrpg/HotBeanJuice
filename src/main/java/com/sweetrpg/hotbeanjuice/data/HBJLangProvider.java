@@ -46,7 +46,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
-//        add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
 
 //        add(ModBlocks.CAMPFIRE_COFFEE_POT.get(), "Campfire Coffee Pot");
@@ -62,7 +62,7 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
 //        add(ModBlocks.ESPRESSO_MACHINE.get(), "Espresso Machine");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
-//        add(ModBlocks.FRENCH_PRESS.get(), "French Press");
+        add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
 //        add(ModBlocks.PERCOLATOR.get(), "Percolator");

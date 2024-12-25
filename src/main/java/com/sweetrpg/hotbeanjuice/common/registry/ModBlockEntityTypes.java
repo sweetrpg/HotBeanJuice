@@ -1,9 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
-import com.sweetrpg.hotbeanjuice.common.block.entity.CoffeeRoasterBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.block.entity.HandCoffeeGrinderBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.block.entity.KettleBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.block.entity.PoweredCoffeeGrinderBlockEntity;
+import com.sweetrpg.hotbeanjuice.common.block.entity.*;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -34,8 +31,8 @@ public class ModBlockEntityTypes {
     public static final RegistryObject<BlockEntityType<KettleBlockEntity>> KETTLE_BLOCK_ENTITY = register("kettle",
             () -> BlockEntityType.Builder.of(KettleBlockEntity::new, ModBlocks.KETTLE.get()).build(null));
 
-    //    public static final RegistryObject<BlockEntityType<FrenchPressBlockEntity>> FRENCH_PRESS_BLOCK_ENTITY = register("french_press",
-    //            () -> BlockEntityType.Builder.of(FrenchPressBlockEntity::new, ModBlocks.FRENCH_PRESS.get()).build(null));
+    public static final RegistryObject<BlockEntityType<FrenchPressBlockEntity>> FRENCH_PRESS_BLOCK_ENTITY = register("french_press",
+            () -> BlockEntityType.Builder.of(FrenchPressBlockEntity::new, ModBlocks.FRENCH_PRESS.get()).build(null));
     //    public static final RegistryObject<BlockEntityType<CampfirePotBlockEntity>> CAMPFIRE_POT_BLOCK_ENTITY = register("campfire_pot",
     //            () -> BlockEntityType.Builder.of(CampfirePotBlockEntity::new, ModBlocks.CAMPFIRE_COFFEE_POT.get()).build(null));
     //    public static final RegistryObject<BlockEntityType<DripCoffeeMachineBlockEntity>> DRIP_COFFEE_MACHINE_BLOCK_ENTITY = register("drip_coffee_machine",

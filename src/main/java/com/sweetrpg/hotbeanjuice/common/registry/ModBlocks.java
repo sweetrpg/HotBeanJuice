@@ -71,8 +71,8 @@ public class ModBlocks {
 //            () -> new EspressoMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<Block> CAMPFIRE_COFFEE_POT = registerWithItem("campfire_coffee_pot",
 //            () -> new CampfirePotBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> FRENCH_PRESS = registerWithItem("french_press",
-//            () -> new FrenchPressBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
+public static final RegistryObject<Block> FRENCH_PRESS = registerWithItem("french_press",
+        () -> new FrenchPressBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee-processing devices
