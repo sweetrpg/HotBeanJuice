@@ -120,15 +120,15 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .define('C', Tags.Items.INGOTS_COPPER)
                 .unlockedBy("has_copper", has(Tags.Items.INGOTS_COPPER))
                 .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.SUN_TEA_JAR.get(), 1)
-//                .pattern(" _ ")
-//                .pattern("G G")
-//                .pattern("GGG")
-//                .define('_', ItemTags.SLABS)
-//                .define('G', Tags.Items.GLASS)
-//                .unlockedBy("has_glass", has(Tags.Items.GLASS))
-//                .unlockedBy("has_slabs", has(ItemTags.SLABS))
-//                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SUN_TEA_JAR.get(), 1)
+                .pattern(" _ ")
+                .pattern("G G")
+                .pattern("GGG")
+                .define('_', ItemTags.SLABS)
+                .define('G', Tags.Items.GLASS)
+                .unlockedBy("has_glass", has(Tags.Items.GLASS))
+                .unlockedBy("has_slabs", has(ItemTags.SLABS))
+                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Kitchenware
