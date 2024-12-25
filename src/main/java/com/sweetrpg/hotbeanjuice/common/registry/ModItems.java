@@ -77,6 +77,10 @@ public class ModItems {
     // Kitchenware
 
     public static final RegistryObject<Item> CLAY_MUG = register("clay_mug");
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Kitchen utensils
+
     public static final RegistryObject<Item> WHISK = register("whisk");
 
     // ----------------------------------------------------------------------------------------------------------------

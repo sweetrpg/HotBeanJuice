@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "hotbeanjuice:coffee_cup",
+    "hotbeanjuice:fired_coffee_cup",
+    "hotbeanjuice:disposable_cup",
+    "hotbeanjuice:travel_mug",
     "hotbeanjuice:pint_mug",
     "hotbeanjuice:plate",
     "hotbeanjuice:teacup"

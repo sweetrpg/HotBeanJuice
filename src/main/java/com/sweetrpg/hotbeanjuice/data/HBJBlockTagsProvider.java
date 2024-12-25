@@ -63,10 +63,24 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.BAGS_OF_COFFEE)
                 .add(ModBlocks.COFFEE_BAG_BEANS.get())
                 .add(ModBlocks.COFFEE_BAG_GROUND.get());
+//        tag(ModTags.COFFEE_ITEMS)
+        tag(ModTags.TEA_MAKING_DEVICES)
+                .add(ModBlocks.KETTLE.get())
+                .add(ModBlocks.SUN_TEA_JAR.get());
+//        tag(ModTags.COFFEE_MAKING_DEVICES)
+        tag(ModTags.COFFEE_PROCESSING_DEVICES)
+                .add(ModBlocks.HAND_COFFEE_GRINDER.get())
+                .add(ModBlocks.POWERED_COFFEE_GRINDER.get())
+                .add(ModBlocks.COFFEE_ROASTER.get());
+//        tag(ModTags.MISCELLANEOUS_INGREDIENTS)
         tag(ModTags.COFFEE_GRINDERS)
                 .add(ModBlocks.HAND_COFFEE_GRINDER.get())
                 .add(ModBlocks.POWERED_COFFEE_GRINDER.get());
         tag(ModTags.KITCHENWARE)
+                .add(ModBlocks.COFFEE_CUP.get())
+                .add(ModBlocks.FIRED_COFFEE_CUP.get())
+                .add(ModBlocks.DISPOSABLE_CUP.get())
+                .add(ModBlocks.TRAVEL_MUG.get())
                 .add(ModBlocks.PINT_MUG.get())
                 .add(ModBlocks.PLATE.get())
                 .add(ModBlocks.TEACUP.get());
