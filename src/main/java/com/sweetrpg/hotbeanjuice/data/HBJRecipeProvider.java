@@ -5,11 +5,13 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
+import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
 import com.sweetrpg.hotbeanjuice.data.builders.KettleHeatingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
@@ -39,10 +41,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("coffee_ingredients")
                 .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
                 .save(consumer);
-//        CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
-//                .group("coffee_ingredients")
-//                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
-//                .save(consumer);
+        CoffeeRoastingRecipeBuilder.roasting(Ingredient.of(ModTags.COFFEE_CHERRIES), new ItemStack(ModItems.COFFEE_BEAN.get()), 1, 180)
+                .group("coffee_ingredients")
+                .unlockedBy("has_coffee_cherry", has(ModTags.COFFEE_CHERRIES))
+                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee beans
@@ -359,22 +361,22 @@ public class HBJRecipeProvider extends RecipeProvider {
 //                .unlockedBy("has_flint", has(Items.FLINT))
 //                .unlockedBy("has_redstone", has(Items.REDSTONE))
 //                .save(consumer);
-//        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_ROASTER.get(), 1)
-//                .group("processing")
-//                .pattern("  H")
-//                .pattern("IFD")
-//                .pattern("IRB")
-//                .define('H', Items.HOPPER)
-//                .define('D', Items.DISPENSER)
-//                .define('F', Items.FURNACE)
-//                .define('I', Items.IRON_INGOT)
-//                .define('B', Items.BUCKET)
-//                .define('R', Items.REDSTONE)
-//                .unlockedBy("has_hopper", has(Items.HOPPER))
-//                .unlockedBy("has_iron", has(Items.IRON_INGOT))
-//                .unlockedBy("has_bucket", has(Items.BUCKET))
-//                .unlockedBy("has_redstone", has(Items.REDSTONE))
-//                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.COFFEE_ROASTER.get(), 1)
+                .group("processing")
+                .pattern("  H")
+                .pattern("IFD")
+                .pattern("IRB")
+                .define('H', Items.HOPPER)
+                .define('D', Items.DISPENSER)
+                .define('F', Items.FURNACE)
+                .define('I', Items.IRON_INGOT)
+                .define('B', Items.BUCKET)
+                .define('R', Items.REDSTONE)
+                .unlockedBy("has_hopper", has(Items.HOPPER))
+                .unlockedBy("has_iron", has(Items.IRON_INGOT))
+                .unlockedBy("has_bucket", has(Items.BUCKET))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .save(consumer);
 
         // ----------------------------------------------------------------------------------------------------------------
         // Coffee-making devices

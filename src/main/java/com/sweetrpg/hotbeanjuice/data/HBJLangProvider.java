@@ -45,15 +45,15 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_ITEMGROUP_GENERAL_TITLE, "Hot Bean Juice");
 //        add(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE, "Grinding");
-//        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
 //        add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
-//        add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
 
 //        add(ModBlocks.CAMPFIRE_COFFEE_POT.get(), "Campfire Coffee Pot");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
         add(ModBlocks.COFFEE_CUP.get(), "Coffee Cup");
-//        add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
+        add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
         add(ModBlocks.CROP_COFFEE_ARABICA.get(), "Arabica Coffea Bush");
         add(ModBlocks.CROP_COFFEE_CANEPHORA.get(), "Canephora Coffea Bush");
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
@@ -116,7 +116,7 @@ public class HBJLangProvider extends LanguageProvider {
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
-//        add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
+        add(ModBlocks.COFFEE_ROASTER.get(), "Coffee Roaster");
         add(ModBlocks.CROP_COFFEE_ARABICA.get(), "Arabica Coffea Bush");
         add(ModBlocks.CROP_COFFEE_CANEPHORA.get(), "Canephora Coffea Bush");
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
@@ -167,7 +167,7 @@ public class HBJLangProvider extends LanguageProvider {
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Kaffeebeutel (Bohnen)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Kaffeebeutel (gemahlen)");
-//        add(ModBlocks.COFFEE_ROASTER.get(), "Kaffeeröster");
+        add(ModBlocks.COFFEE_ROASTER.get(), "Kaffeeröster");
         add(ModBlocks.CROP_COFFEE_ARABICA.get(), "Arabica-Kaffeestrauch");
         add(ModBlocks.CROP_COFFEE_CANEPHORA.get(), "Canephora-Kaffeestrauch");
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa-Kaffeestrauch");

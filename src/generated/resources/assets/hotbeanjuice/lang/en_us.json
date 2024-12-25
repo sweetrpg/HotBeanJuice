@@ -4,6 +4,7 @@
   "block.hotbeanjuice.coffee_bag_beans": "Coffee Bag (Beans)",
   "block.hotbeanjuice.coffee_bag_ground": "Coffee Bag (Ground)",
   "block.hotbeanjuice.coffee_cup": "Coffee Cup",
+  "block.hotbeanjuice.coffee_roaster": "Coffee Roaster",
   "block.hotbeanjuice.crop_coffee_arabica": "Arabica Coffea Bush",
   "block.hotbeanjuice.crop_coffee_canephora": "Canephora Coffea Bush",
   "block.hotbeanjuice.crop_coffee_racemosa": "Racemosa Coffea Bush",
@@ -57,5 +58,7 @@
   "jei.category.roasting.time.seconds": "%1$d s",
   "jei.category.roasting.xp": "%f XP",
   "jei.category.whisking.time.seconds": "%f XP",
-  "jei.category.whisking.xp": "%1$d s"
+  "jei.category.whisking.xp": "%1$d s",
+  "jei.kettle_heating.hotbeanjuice": "Kettle Heating",
+  "jei.roasting.hotbeanjuice": "Roasting"
 }

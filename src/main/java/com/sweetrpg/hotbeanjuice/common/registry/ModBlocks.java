@@ -81,7 +81,7 @@ public class ModBlocks {
 //            HandCoffeeGrinderBlock::new);
 //    public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
 //            PoweredCoffeeGrinderBlock::new);
-//    public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
+public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
     // Kitchenware

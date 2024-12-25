@@ -66,7 +66,7 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
         itemStacks.set(1, Arrays.asList(recipe.getIngredients().get(0).getItems()));
 
         // Draw result
-        itemStacks.init(2, false, 94, 21);
+        itemStacks.init(2, false, 94, 22);
         itemStacks.set(2, recipe.getResultItem());
 
     }
@@ -74,7 +74,7 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
     @Override
     public void draw(KettleHeatingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         heat.draw(poseStack, 55, 42);
-        slot.draw(poseStack, 94, 21);
+        slot.draw(poseStack, 94, 22);
         slot.draw(poseStack, 53, 22);
     }
 
@@ -82,13 +82,13 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
     public List<Component> getTooltipStrings(KettleHeatingRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
         List<Component> tooltipStrings = new ArrayList<>();
 
-        if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
+        if(ClientRenderUtil.isCursorInsideBounds(94, 7, 9, 9, mouseX, mouseY)) {
             float experience = recipe.getExperience();
             if(experience > 0) {
                 tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP, experience));
             }
         }
-        else if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 28, mouseX, mouseY)) {
+        else if(ClientRenderUtil.isCursorInsideBounds(70, 20, 22, 28, mouseX, mouseY)) {
             int processingTime = recipe.getHeatingTime();
             if(processingTime > 0) {
                 int processingTimeSeconds = processingTime / 20;
