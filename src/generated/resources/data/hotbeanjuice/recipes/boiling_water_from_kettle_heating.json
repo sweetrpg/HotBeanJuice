@@ -1,6 +1,5 @@
 {
   "type": "hotbeanjuice:kettle_heating",
-  "group": "miscellaneous",
   "ingredient": {
     "item": "minecraft:water_bucket"
   },

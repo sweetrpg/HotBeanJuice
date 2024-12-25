@@ -1,6 +1,5 @@
 {
   "type": "hotbeanjuice:roasting",
-  "group": "coffee_ingredients",
   "ingredient": {
     "tag": "hotbeanjuice:coffee_cherries"
   },
