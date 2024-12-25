@@ -70,7 +70,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
 //        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
-//        add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
+        add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
         add(ModBlocks.TEACUP.get(), "Teacup");
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Mug");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
@@ -134,7 +134,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
-//
+        add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
+
         add(ModItems.BAD_COFFEE_BEAN.get(), "Bad Coffee Bean");
         add(ModItems.BOILING_WATER.get(), "Boiling Water");
         add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
@@ -185,7 +186,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");
-//
+        add(ModBlocks.SUN_TEA_JAR.get(), "Sonnenteeglas");
+
         add(ModItems.BAD_COFFEE_BEAN.get(), "Schlechte Kaffeebohne");
         add(ModItems.BOILING_WATER.get(), "Kochendes Wasser");
         add(ModItems.CAPPUCCINO_DRINK.get(), "Cappuccino");
