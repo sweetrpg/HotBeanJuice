@@ -84,7 +84,7 @@ public class HBJLootTableProvider extends LootTableProvider {
             dropsSelf(ModBlocks.PLATE);
 //            dropsSelf(ModBlocks.POD_MACHINE);
             dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
-//            dropsSelf(ModBlocks.SUN_TEA_JAR);
+            dropsSelf(ModBlocks.SUN_TEA_JAR);
             dropsSelf(ModBlocks.TEACUP);
             dropsSelf(ModBlocks.TRAVEL_MUG);
         }
