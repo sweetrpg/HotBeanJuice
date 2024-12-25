@@ -6,6 +6,7 @@ import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
 import com.sweetrpg.hotbeanjuice.data.builders.KettleHeatingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
@@ -73,18 +74,18 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_grounds", has(ModItems.COFFEE_GROUNDS.get()))
                 .unlockedBy("has_leather", has(Items.LEATHER))
                 .save(consumer);
-//        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
-//                .group("coffee_beans")
-//                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
-//                .save(consumer);
-//        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_GROUNDS.get()), new ItemStack(ModItems.FINE_COFFEE_GROUNDS.get()), 1, 180)
-//                .group("coffee_beans")
-//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .save(consumer);
-//        GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
-//                .group("coffee_beans")
-//                .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
-//                .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_BEAN.get()), new ItemStack(ModItems.COFFEE_GROUNDS.get()), 1, 180)
+                .group("coffee_beans")
+                .unlockedBy("has_coffee_bean", has(ModItems.COFFEE_BEAN.get()))
+                .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(ModItems.COFFEE_GROUNDS.get()), new ItemStack(ModItems.FINE_COFFEE_GROUNDS.get()), 1, 180)
+                .group("coffee_beans")
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        GrindingRecipeBuilder.grinding(Ingredient.of(Items.COCOA_BEANS), new ItemStack(ModItems.COCOA_POWDER.get()), 1, 180)
+                .group("coffee_beans")
+                .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
+                .save(consumer);
 //        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
 //                .group("coffee_beans")
 //                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))

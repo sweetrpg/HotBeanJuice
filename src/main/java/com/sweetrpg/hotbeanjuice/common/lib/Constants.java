@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.lib;
 
+import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.util.Util;
@@ -41,7 +42,7 @@ public class Constants {
     //    public static final String TRANSLATION_KEY_RECIPETYPE_DRIPCOFFEE_TITLE = "jei." + DripCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     //    public static final String TRANSLATION_KEY_RECIPETYPE_ESPRESSO_TITLE = "jei." + EspressoRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     //    public static final String TRANSLATION_KEY_RECIPETYPE_FRENCHPRESSCOFFEE_TITLE = "jei." + FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
-    //    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
+    public static final String TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE = "jei." + GrindingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     //    public static final String TRANSLATION_KEY_RECIPETYPE_PERCOLATORCOFFEE_TITLE = "jei." + PercolatorCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     //    public static final String TRANSLATION_KEY_RECIPETYPE_PODCOFFEE_TITLE = "jei." + PodCoffeeRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;
     public static final String TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE = "jei." + RoastingRecipe.RECIPE_TYPE_NAME + "." + Constants.MOD_ID;

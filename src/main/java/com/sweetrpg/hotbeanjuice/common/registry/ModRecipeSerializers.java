@@ -1,5 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
@@ -18,7 +19,7 @@ public class ModRecipeSerializers {
 
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Constants.MOD_ID);
 
-    //    public static final RegistryObject<RecipeSerializer<GrindingRecipe>> GRINDING_SERIALIZER = RECIPE_SERIALIZERS.register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<GrindingRecipe>> GRINDING_SERIALIZER = RECIPE_SERIALIZERS.register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<RoastingRecipe>> ROASTING_SERIALIZER = RECIPE_SERIALIZERS.register(RoastingRecipe.RECIPE_TYPE_NAME, () -> RoastingRecipe.Serializer.INSTANCE);
     //    public static final RegistryObject<RecipeSerializer<WhiskingRecipe>> WHISKING_SERIALIZER = RECIPE_SERIALIZERS.register("whisking", () -> WhiskingRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<KettleHeatingRecipe>> KETTLE_HEATING_SERIALIZER = RECIPE_SERIALIZERS.register("kettle_heating", () -> KettleHeatingRecipe.Serializer.INSTANCE);
