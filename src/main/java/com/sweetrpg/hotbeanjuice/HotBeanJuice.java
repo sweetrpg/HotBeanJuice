@@ -125,9 +125,9 @@ public class HotBeanJuice {
             HBJBlockTagsProvider blockTagProvider = new HBJBlockTagsProvider(gen, event.getExistingFileHelper());
             gen.addProvider(blockTagProvider);
             gen.addProvider(new HBJItemTagsProvider(gen, blockTagProvider, event.getExistingFileHelper()));
+            gen.addProvider(new HBJItemModelProvider(gen, event.getExistingFileHelper()));
             gen.addProvider(new HBJRecipeProvider(gen));
             gen.addProvider(new HBJLootTableProvider(gen));
-            gen.addProvider(new HBJItemModelProvider(gen, event.getExistingFileHelper()));
         }
     }
 
