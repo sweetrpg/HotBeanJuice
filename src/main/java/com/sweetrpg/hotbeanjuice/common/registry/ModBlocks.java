@@ -55,8 +55,8 @@ public class ModBlocks {
 
     public static final RegistryObject<KettleBlock> KETTLE = registerWithItem("kettle",
             () -> new KettleBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<SunTeaJarBlock> SUN_TEA_JAR = registerWithItem("sun_tea_jar",
-//            () -> new SunTeaJarBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<SunTeaJarBlock> SUN_TEA_JAR = registerWithItem("sun_tea_jar",
+            () -> new SunTeaJarBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee-making devices
