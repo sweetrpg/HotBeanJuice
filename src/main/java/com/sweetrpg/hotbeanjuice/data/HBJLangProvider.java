@@ -63,13 +63,13 @@ public class HBJLangProvider extends LanguageProvider {
 //        add(ModBlocks.ESPRESSO_MACHINE.get(), "Espresso Machine");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
 //        add(ModBlocks.FRENCH_PRESS.get(), "French Press");
-//        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
+        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
 //        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
 //        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
-//        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
+        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
 //        add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
         add(ModBlocks.TEACUP.get(), "Teacup");
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Mug");
@@ -129,8 +129,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.TEACUP.get(), "Teacup");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.TRAVEL_MUG.get(), "Travel Coffee Cup");
-//        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
-//        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
+        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
+        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wild Arabica Coffea Bush");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wild Canephora Coffea Bush");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wild Racemosa Coffea Bush");
@@ -180,8 +180,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.TEACUP.get(), "Teetasse");
         add(ModBlocks.PLATE.get(), "Teller");
         add(ModBlocks.TRAVEL_MUG.get(), "Reise-Kaffeetasse");
-//        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
-//        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
+        add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
+        add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
         add(ModBlocks.WILD_COFFEA_ARABICA.get(), "Wilder Arabica-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_CANEPHORA.get(), "Wilder Canephora-Kaffeestrauch");
         add(ModBlocks.WILD_COFFEA_RACEMOSA.get(), "Wilder Racemosa-Kaffeestrauch");

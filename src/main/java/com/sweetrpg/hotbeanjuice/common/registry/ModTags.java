@@ -13,7 +13,7 @@ public class ModTags {
     public static final TagKey<Item> COFFEE_CHERRIES = modItemTag("coffee_cherries");
     public static final TagKey<Block> COFFEE_CUPS = modBlockTag("coffee_cups");
     public static final TagKey<Block> BAGS_OF_COFFEE = modBlockTag("bags_of_coffee");
-    //    public static final TagKey<Block> COFFEE_GRINDERS = modBlockTag("coffee_grinders");
+    public static final TagKey<Block> COFFEE_GRINDERS = modBlockTag("coffee_grinders");
     //    public static final TagKey<Block> COFFEE_MACHINES = modBlockTag("coffee_machines");
 
     public static final TagKey<Block> KITCHENWARE = modBlockTag("kitchenware");
