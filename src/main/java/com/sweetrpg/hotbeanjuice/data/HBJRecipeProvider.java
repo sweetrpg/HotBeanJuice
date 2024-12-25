@@ -8,6 +8,7 @@ import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
 import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
 import com.sweetrpg.hotbeanjuice.data.builders.KettleHeatingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.WhiskingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
@@ -86,10 +87,10 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .group("coffee_beans")
                 .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
                 .save(consumer);
-//        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
-//                .group("coffee_beans")
-//                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
-//                .save(consumer);
+        WhiskingRecipeBuilder.whisking(Ingredient.of(ModItems.STEAMED_MILK.get()), new ItemStack(ModItems.MILK_FOAM.get()), 1, 180)
+                .group("coffee_beans")
+                .unlockedBy("has_steamed_milk", has(ModItems.STEAMED_MILK.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.DECAF_COFFEE_BEAN.get())
                 .requires(ModItems.COFFEE_BEAN.get())
                 .requires(Items.CHARCOAL)
