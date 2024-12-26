@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "KHB",
+    " CF",
+    "IRI"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "K": {
+      "item": "minecraft:clock"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "hotbeanjuice:drip_coffee_carafe"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:drip_coffee_machine"
+  }
+}
