@@ -39,6 +39,11 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
                 .add(Items.STRIPPED_DARK_OAK_WOOD)
                 .add(Items.STRIPPED_JUNGLE_WOOD)
                 .add(Items.STRIPPED_SPRUCE_WOOD);
+//        tag(ModTags.COFFEE_DRINKS)
+//        tag(ModTags.TEA_DRINKS)
+//        tag(ModTags.COCOA_DRINKS)
+        tag(ModTags.KITCHEN_UTENSILS)
+                .add(ModItems.WHISK.get());
     }
 
     @SafeVarargs
