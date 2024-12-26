@@ -1,8 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
-import com.google.gson.JsonElement;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.util.JsonUtil;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -102,13 +103,13 @@ public class RoastingRecipe implements Recipe<SimpleContainer> {
 
         @Override
         public RoastingRecipe fromJson(ResourceLocation id, JsonObject json) {
-            ItemStack result = new ItemStack(GsonHelper.getAsItem(json, "result"));
+            ItemStack result = new ItemStack(GsonHelper.getAsItem(json, Constants.RECIPE_SERIALIZER_DATA_RESULT));
 
-            JsonElement jsonelement = GsonHelper.isArrayNode(json, "ingredient") ? GsonHelper.getAsJsonArray(json, "ingredient") : GsonHelper.getAsJsonObject(json, "ingredient");
-            Ingredient ingredient = Ingredient.fromJson(jsonelement);
+            JsonArray jsonArray = GsonHelper.getAsJsonArray(json, Constants.RECIPE_SERIALIZER_DATA_INGREDIENTS);
+            Ingredient ingredient = JsonUtil.ingredientsFrom(jsonArray).get(0);
 
-            float experience = GsonHelper.getAsFloat(json, "experience", 0.0F);
-            int cookingTime = GsonHelper.getAsInt(json, "roasting_time", 100);
+            float experience = GsonHelper.getAsFloat(json, Constants.RECIPE_SERIALIZER_DATA_EXPERIENCE, 0.0F);
+            int cookingTime = GsonHelper.getAsInt(json, Constants.RECIPE_SERIALIZER_DATA_PROCESSING_TIME, 100);
             return new RoastingRecipe(id, result, ingredient, experience, cookingTime);
         }
 

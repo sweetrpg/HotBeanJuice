@@ -24,6 +24,15 @@ public class Constants {
     public static final String LOCALE_EN_GB = "en_gb";
     public static final String LOCALE_DE_DE = "de_de";
 
+    // Recipe serialization
+    public static final String RECIPE_SERIALIZER_DATA_GROUP = "group";
+    public static final String RECIPE_SERIALIZER_DATA_INGREDIENTS = "ingredients";
+    public static final String RECIPE_SERIALIZER_DATA_RESULT = "result";
+    public static final String RECIPE_SERIALIZER_DATA_EXPERIENCE = "experience";
+    public static final String RECIPE_SERIALIZER_DATA_PROCESSING_TIME = "processing_time";
+    public static final String RECIPE_SERIALIZER_DATA_MILLIBUCKETS = "millibuckets";
+    public static final String RECIPE_SERIALIZER_CRITERION_HAS_RECIPE = "has_the_recipe";
+
     // Translation keys
     public static final String TRANSLATION_KEY_GUI_KETTLE_FULLNESS = "gui." + MOD_ID + ".kettle.fullness";
     public static final String TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH = "config.chance_coffee_bush.description";

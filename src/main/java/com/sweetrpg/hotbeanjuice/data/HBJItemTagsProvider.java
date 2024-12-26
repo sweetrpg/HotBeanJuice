@@ -39,9 +39,12 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
                 .add(Items.STRIPPED_DARK_OAK_WOOD)
                 .add(Items.STRIPPED_JUNGLE_WOOD)
                 .add(Items.STRIPPED_SPRUCE_WOOD);
-//        tag(ModTags.COFFEE_DRINKS)
-//        tag(ModTags.TEA_DRINKS)
-//        tag(ModTags.COCOA_DRINKS)
+        tag(ModTags.COFFEE_DRINKS)
+                .add(ModItems.COFFEE_DRINK.get())
+                .add(ModItems.DECAF_COFFEE_DRINK.get());
+        //        tag(ModTags.TEA_DRINKS)
+        tag(ModTags.COCOA_DRINKS)
+                .add(ModItems.HOT_CHOCOLATE_DRINK.get());
         tag(ModTags.KITCHEN_UTENSILS)
                 .add(ModItems.WHISK.get());
     }

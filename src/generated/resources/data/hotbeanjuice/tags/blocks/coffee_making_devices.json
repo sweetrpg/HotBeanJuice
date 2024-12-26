@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "hotbeanjuice:drip_coffee_machine"
+    "hotbeanjuice:drip_coffee_machine",
+    "hotbeanjuice:french_press"
   ]
 }

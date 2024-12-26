@@ -5,10 +5,7 @@ import com.sweetrpg.hotbeanjuice.HotBeanJuice;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
-import com.sweetrpg.hotbeanjuice.data.builders.CoffeeRoastingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.GrindingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.KettleHeatingRecipeBuilder;
-import com.sweetrpg.hotbeanjuice.data.builders.WhiskingRecipeBuilder;
+import com.sweetrpg.hotbeanjuice.data.builders.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.*;
@@ -231,20 +228,20 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cocoa_powder", has(ModItems.COCOA_POWDER.get()))
                 .unlockedBy("has_sugar", has(Items.SUGAR))
                 .save(consumer);
-//        CoffeeMakerRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
-//                .requires(Ingredient.of(Items.WATER_BUCKET))
-//                .requires(Ingredient.of(ModItems.COFFEE_FILTER.get()))
-//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-//                .unlockedBy("has_filter", has(ModItems.COFFEE_FILTER.get()))
-//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .save(consumer);
-//        CoffeeMakerRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
-//                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
-//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-//                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
-//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .save(consumer);
+        CoffeeRecipeBuilder.drip(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_FILTER.get()))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_filter", has(ModItems.COFFEE_FILTER.get()))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeRecipeBuilder.frenchPress(ModItems.COFFEE_DRINK.get(), 0.1f, 300)
+                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
 //        CoffeeMakerRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
 //                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
 //                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
