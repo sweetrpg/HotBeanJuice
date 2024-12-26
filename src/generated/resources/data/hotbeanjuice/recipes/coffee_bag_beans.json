@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "coffee_beans",
   "pattern": [
     "PBP",
     "PBP",
