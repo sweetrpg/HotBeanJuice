@@ -5,7 +5,6 @@ import com.sweetrpg.hotbeanjuice.common.item.crafting.RoastingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
-import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -39,7 +38,7 @@ public class RoastingRecipeCategory implements IRecipeCategory<RoastingRecipe> {
     protected final IDrawableAnimated heat;
 
     public RoastingRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + RoastingRecipe.RECIPE_TYPE_NAME);
+        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/roasting.png");
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.COFFEE_ROASTER.get()));
         heat = helper.drawableBuilder(backgroundImage, 36, 58, 14, 14)
