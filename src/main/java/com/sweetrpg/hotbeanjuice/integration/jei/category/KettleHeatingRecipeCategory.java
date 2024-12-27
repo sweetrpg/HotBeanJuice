@@ -99,7 +99,6 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
         return tooltipStrings;
     }
 
-
     @Override
     public ResourceLocation getUid() {
         return this.getRecipeType().getUid();

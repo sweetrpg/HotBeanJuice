@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.integration.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.sweetrpg.hotbeanjuice.common.item.crafting.DripCoffeeRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.FrenchPressCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
@@ -26,9 +26,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DripCoffeeRecipeCategory implements IRecipeCategory<DripCoffeeRecipe> {
+public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPressCoffeeRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, DripCoffeeRecipe.RECIPE_TYPE_NAME);
+    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME);
 
     private final Component title;
     private final IDrawable background;
@@ -38,10 +38,10 @@ public class DripCoffeeRecipeCategory implements IRecipeCategory<DripCoffeeRecip
     private final IDrawable slotChance;
     protected final IDrawableAnimated heat;
 
-    public DripCoffeeRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + DripCoffeeRecipe.RECIPE_TYPE_NAME);
-        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/drip_coffee.png");
-        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.DRIP_COFFEE_MACHINE.get()));
+    public FrenchPressCoffeeRecipeCategory(IGuiHelper helper) {
+        title = TextUtils.getTranslation("jei." + FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME);
+        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/french_press_coffee.png");
+        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.FRENCH_PRESS.get()));
         heat = helper.drawableBuilder(backgroundImage, 36, 58, 14, 14)
                 .buildAnimated(200, IDrawableAnimated.StartDirection.BOTTOM, false);
         slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
@@ -51,13 +51,13 @@ public class DripCoffeeRecipeCategory implements IRecipeCategory<DripCoffeeRecip
     }
 
     @Override
-    public void setIngredients(DripCoffeeRecipe dripCoffeeRecipe, IIngredients ingredients) {
-        ingredients.setInputIngredients(dripCoffeeRecipe.getIngredients());
-        ingredients.setOutput(VanillaTypes.ITEM, dripCoffeeRecipe.getResultItem());
+    public void setIngredients(FrenchPressCoffeeRecipe frenchPressCoffeeRecipe, IIngredients ingredients) {
+        ingredients.setInputIngredients(frenchPressCoffeeRecipe.getIngredients());
+        ingredients.setOutput(VanillaTypes.ITEM, frenchPressCoffeeRecipe.getResultItem());
     }
 
     @Override
-    public void setRecipe(IRecipeLayout recipeLayout, DripCoffeeRecipe recipe, IIngredients ingredients) {
+    public void setRecipe(IRecipeLayout recipeLayout, FrenchPressCoffeeRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
@@ -70,26 +70,26 @@ public class DripCoffeeRecipeCategory implements IRecipeCategory<DripCoffeeRecip
     }
 
     @Override
-    public void draw(DripCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
+    public void draw(FrenchPressCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         heat.draw(poseStack, 18, 33);
         slot.draw(poseStack, 84, 20);
     }
 
     @Override
-    public List<Component> getTooltipStrings(DripCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
+    public List<Component> getTooltipStrings(FrenchPressCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
         List<Component> tooltipStrings = new ArrayList<>();
 
         if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
             float experience = recipe.getExperience();
             if(experience > 0) {
-                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_XP_TOOLTIP, experience));
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_FRENCH_PRESS_COFFEE_XP_TOOLTIP, experience));
             }
         }
         else if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 38, mouseX, mouseY)) {
             int processingTime = recipe.getBrewingTime();
             if(processingTime > 0) {
                 int processingTimeSeconds = processingTime / 20;
-                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_TIME_TOOLTIP, processingTimeSeconds));
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_FRENCH_PRESS_COFFEE_TIME_TOOLTIP, processingTimeSeconds));
             }
         }
 
@@ -102,13 +102,13 @@ public class DripCoffeeRecipeCategory implements IRecipeCategory<DripCoffeeRecip
     }
 
     @Override
-    public Class<? extends DripCoffeeRecipe> getRecipeClass() {
+    public Class<? extends FrenchPressCoffeeRecipe> getRecipeClass() {
         return this.getRecipeType().getRecipeClass();
     }
 
     @Override
-    public RecipeType<DripCoffeeRecipe> getRecipeType() {
-        return RecipeTypes.DRIP_COFFEE;
+    public RecipeType<FrenchPressCoffeeRecipe> getRecipeType() {
+        return RecipeTypes.FRENCH_PRESS_COFFEE;
     }
 
     @Override

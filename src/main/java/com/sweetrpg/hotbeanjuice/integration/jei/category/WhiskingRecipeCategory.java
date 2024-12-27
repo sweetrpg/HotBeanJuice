@@ -57,7 +57,6 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, WhiskingRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
-//        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw grinder
         itemStacks.init(0, true, 15, 30);
@@ -69,41 +68,12 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
 
         itemStacks.init(2, false, 84, 20);
         itemStacks.set(2, recipe.getResultItem());
-
-        // TODO: for rollable result chance items
-//        itemStacks.addTooltipCallback((slotIndex, input, ingredient, tooltip) -> {
-//            if (input || slotIndex < 2) {
-//                return;
-//            }
-//            ChanceResult output = recipeOutputs.get(slotIndex - 2);
-//            float chance = output.getChance();
-//            if (chance != 1)
-//                tooltip.add(1, TextUtils.getTranslation("jei.chance", chance < 0.01 ? "<1" : (int) (chance * 100))
-//                        .withStyle(ChatFormatting.GOLD));
-//        });
     }
 
     @Override
     public void draw(WhiskingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         arrow.draw(poseStack, 49, 21);
-
-//        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
-//
-//        int size = recipe.getResults().size();
-//        int centerX = size > 1 ? 0 : 9;
-//        int centerY = size > 2 ? 0 : 9;
-//
-//        for (int i = 0; i < size; i++) {
-//            int xOffset = centerX + (i % 2 == 0 ? 0 : 19);
-//            int yOffset = centerY + ((i / 2) * 19);
-//
-//            if (recipeOutputs.get(i).getChance() != 1) {
-//                slotChance.draw(matrixStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
-//            } else {
-//                slot.draw(poseStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
         slot.draw(poseStack, 84, 20);
-//            }
-//        }
     }
 
     @Override
@@ -126,7 +96,6 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
 
         return tooltipStrings;
     }
-
 
     @Override
     public ResourceLocation getUid() {

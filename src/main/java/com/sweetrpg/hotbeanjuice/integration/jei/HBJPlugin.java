@@ -27,8 +27,9 @@ public class HBJPlugin implements IModPlugin {
         registration.addRecipeCategories(new GrindingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new RoastingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new WhiskingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new KettleHeatingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new FrenchPressCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -42,6 +43,7 @@ public class HBJPlugin implements IModPlugin {
         registration.addRecipes(findRecipesByType(ModRecipeTypes.WHISKING.get()), WhiskingRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.KETTLE_HEATING.get()), KettleHeatingRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.DRIP_COFFEE.get()), DripCoffeeRecipeCategory.UID);
+        registration.addRecipes(findRecipesByType(ModRecipeTypes.FRENCH_PRESS_COFFEE.get()), FrenchPressCoffeeRecipeCategory.UID);
     }
 
     private static List<Recipe<?>> findRecipesByType(RecipeType<?> type) {
