@@ -29,6 +29,7 @@ public class CommonSetup {
         ComposterBlock.COMPOSTABLES.put(ModItems.FINE_COFFEE_GROUNDS.get(), 1.5F);
         ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_BEAN.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModItems.BAD_COFFEE_BEAN.get(), 1.0F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.DECAF_COFFEE_BEAN.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModItems.TEA_LEAF.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModItems.TEA_BAG.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModBlocks.DISPOSABLE_CUP.get(), 1.0F);

@@ -5,7 +5,6 @@ import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
-import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -39,7 +38,7 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
     protected final IDrawableAnimated arrow;
 
     public GrindingRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + GrindingRecipe.RECIPE_TYPE_NAME);
+        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_GRINDING_TITLE);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/grinding.png");
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.HAND_COFFEE_GRINDER.get()));
         arrow = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
@@ -70,41 +69,12 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
 
         itemStacks.init(2, false, 84, 20);
         itemStacks.set(2, recipe.getResultItem());
-
-        // TODO: for rollable result chance items
-//        itemStacks.addTooltipCallback((slotIndex, input, ingredient, tooltip) -> {
-//            if (input || slotIndex < 2) {
-//                return;
-//            }
-//            ChanceResult output = recipeOutputs.get(slotIndex - 2);
-//            float chance = output.getChance();
-//            if (chance != 1)
-//                tooltip.add(1, TextUtils.getTranslation("jei.chance", chance < 0.01 ? "<1" : (int) (chance * 100))
-//                        .withStyle(ChatFormatting.GOLD));
-//        });
     }
 
     @Override
     public void draw(GrindingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         arrow.draw(poseStack, 49, 20);
-
-//        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
-//
-//        int size = recipe.getResults().size();
-//        int centerX = size > 1 ? 0 : 9;
-//        int centerY = size > 2 ? 0 : 9;
-//
-//        for (int i = 0; i < size; i++) {
-//            int xOffset = centerX + (i % 2 == 0 ? 0 : 19);
-//            int yOffset = centerY + ((i / 2) * 19);
-//
-//            if (recipeOutputs.get(i).getChance() != 1) {
-//                slotChance.draw(matrixStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
-//            } else {
-//                slot.draw(poseStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
         slot.draw(poseStack, 84, 20);
-//            }
-//        }
     }
 
     @Override
@@ -117,10 +87,6 @@ public class GrindingRecipeCategory implements IRecipeCategory<GrindingRecipe> {
                 int processingTimeSeconds = processingTime / 20;
                 tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, processingTimeSeconds));
             }
-//            float experience = recipe.getExperience();
-//            if (experience > 0) {
-//                tooltipStrings.add(new TranslatableComponent("gui.jei.category.smelting.experience", experience));
-//            }
 
             return tooltipStrings;
         }

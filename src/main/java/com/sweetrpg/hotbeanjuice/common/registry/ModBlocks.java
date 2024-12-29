@@ -61,8 +61,8 @@ public class ModBlocks {
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee-making devices
 
-//    public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
-//            () -> new DripCoffeeMakerBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
+            () -> new DripCoffeeMachineBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<Block> PERCOLATOR = registerWithItem("percolator",
 //            () -> new PercolatorBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<Block> POD_MACHINE = registerWithItem("pod_machine",

@@ -64,8 +64,10 @@
   "jei.category.roasting.xp": "%f XP",
   "jei.category.whisking.time.seconds": "%f XP",
   "jei.category.whisking.xp": "%1$d s",
-  "jei.grinding.hotbeanjuice": "Grinding",
-  "jei.kettle_heating.hotbeanjuice": "Kettle Heating",
-  "jei.roasting.hotbeanjuice": "Roasting",
-  "jei.whisking.hotbeanjuice": "Whisking"
+  "jei.hotbeanjuice.drip_coffee": "Drip Coffee-making",
+  "jei.hotbeanjuice.french_press_coffee": "French Press Coffee-making",
+  "jei.hotbeanjuice.grinding": "Grinding",
+  "jei.hotbeanjuice.kettle_heating": "Kettle Heating",
+  "jei.hotbeanjuice.roasting": "Roasting",
+  "jei.hotbeanjuice.whisking": "Whisking"
 }

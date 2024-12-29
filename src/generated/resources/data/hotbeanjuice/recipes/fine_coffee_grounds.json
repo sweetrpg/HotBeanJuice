@@ -1,9 +1,9 @@
 {
   "type": "hotbeanjuice:grinding",
-  "ingredient": {
+  "ingredients": {
     "item": "hotbeanjuice:coffee_grounds"
   },
   "result": "hotbeanjuice:fine_coffee_grounds",
   "experience": 1.0,
-  "grinding_time": 180
+  "processing_time": 180
 }

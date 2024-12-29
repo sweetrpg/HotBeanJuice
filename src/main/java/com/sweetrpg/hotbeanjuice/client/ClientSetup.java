@@ -1,6 +1,7 @@
 package com.sweetrpg.hotbeanjuice.client;
 
 import com.sweetrpg.hotbeanjuice.client.screen.CoffeeRoasterScreen;
+import com.sweetrpg.hotbeanjuice.client.screen.DripCoffeeMachineScreen;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -16,8 +17,8 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_ARABICA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_CANEPHORA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_RACEMOSA.get(), RenderType.cutout());
-//        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
-//        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MACHINE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MACHINE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FRENCH_PRESS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAND_COFFEE_GRINDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POWERED_COFFEE_GRINDER.get(), RenderType.cutout());
@@ -26,7 +27,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_RACEMOSA.get(), RenderType.cutout());
 //
         MenuScreens.register(ModMenuTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
-//        MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeMachineScreen::new);
+        MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeMachineScreen::new);
 //        MenuScreens.register(ModMenuTypes.ESPRESSO_MACHINE_MENU.get(), EspressoMachineScreen::new);
 //        MenuScreens.register(ModMenuTypes.PERCOLATOR_MENU.get(), PercolatorScreen::new);
 //        MenuScreens.register(ModMenuTypes.POD_MACHINE_MENU.get(), PodMachineScreen::new);

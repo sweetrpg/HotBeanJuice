@@ -16,8 +16,4 @@ public class TextUtils {
         return new TranslatableComponent(type + "." + Constants.MOD_ID + "." + key, args);
     }
 
-    public static MutableComponent getTranslation(String type) {
-        return new TranslatableComponent(type + "." + Constants.MOD_ID);
-    }
-
 }

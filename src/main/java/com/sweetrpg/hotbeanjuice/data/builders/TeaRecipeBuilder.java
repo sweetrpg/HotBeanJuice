@@ -86,7 +86,7 @@
 //        this.ensureValid(resourceLocation);
 //
 //        this.advancement.parent(new ResourceLocation("recipes/root"))
-//                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
+//                .addCriterion(Constants.RECIPE_SERIALIZER_CRITERION_HAS_RECIPE, RecipeUnlockedTrigger.unlocked(resourceLocation))
 //                .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
 //                .requirements(RequirementsStrategy.OR);
 //
@@ -137,18 +137,14 @@
 //
 //        public void serializeRecipeData(JsonObject json) {
 //            if(!this.group.isEmpty()) {
-//                json.addProperty("group", this.group);
+//                json.addProperty(Constants.RECIPE_SERIALIZER_DATA_GROUP, this.group);
 //            }
 //
-//            JsonArray jsonarray = new JsonArray();
-//            for(Ingredient ingredient : this.ingredients) {
-//                jsonarray.add(ingredient.toJson());
-//            }
-//            json.add("ingredients", jsonarray);
+//            json.add(Constants.RECIPE_SERIALIZER_DATA_INGREDIENTS, JsonUtil.arrayFrom(this.ingredients));
 //
-//            json.addProperty("result", ForgeRegistries.ITEMS.getKey(this.result).toString());
-//            json.addProperty("experience", this.experience);
-//            json.addProperty("processing_time", this.processingTime);
+//            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_RESULT, ForgeRegistries.ITEMS.getKey(this.result).toString());
+//            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_EXPERIENCE, this.experience);
+//            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_PROCESSING_TIME, this.processingTime);
 //        }
 //
 //        public RecipeSerializer<?> getType() {
