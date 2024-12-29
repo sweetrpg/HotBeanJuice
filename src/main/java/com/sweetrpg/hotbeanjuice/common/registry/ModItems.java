@@ -71,7 +71,6 @@ public class ModItems {
     // Coffee-making paraphernalia
 
     public static final RegistryObject<Item> COFFEE_FILTER = register("coffee_filter");
-//    public static final RegistryObject<Item> DRIP_COFFEE_CARAFE = ITEMS.register("drip_coffee_carafe", () -> new CarafeItem(ModBlocks.DRIP_COFFEE_CARAFE.get(), new Item.Properties().tab(ModItemGroups.GENERAL)));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Kitchenware

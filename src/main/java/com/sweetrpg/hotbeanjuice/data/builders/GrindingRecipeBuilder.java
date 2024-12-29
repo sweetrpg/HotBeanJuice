@@ -65,7 +65,7 @@ public class GrindingRecipeBuilder implements RecipeBuilder {
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
         this.advancement.parent(new ResourceLocation("recipes/root"))
-                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
+                .addCriterion(Constants.RECIPE_SERIALIZER_CRITERION_HAS_RECIPE, RecipeUnlockedTrigger.unlocked(resourceLocation))
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
         consumer.accept(new GrindingRecipeBuilder.Result(resourceLocation,
@@ -103,13 +103,13 @@ public class GrindingRecipeBuilder implements RecipeBuilder {
 
         public void serializeRecipeData(JsonObject json) {
             if(!this.group.isEmpty()) {
-                json.addProperty("group", this.group);
+                json.addProperty(Constants.RECIPE_SERIALIZER_DATA_GROUP, this.group);
             }
 
-            json.add("ingredient", this.ingredient.toJson());
-            json.addProperty("result", ForgeRegistries.ITEMS.getKey(this.result.getItem()).toString());
-            json.addProperty("experience", this.experience);
-            json.addProperty("grinding_time", this.grindingTime);
+            json.add(Constants.RECIPE_SERIALIZER_DATA_INGREDIENTS, this.ingredient.toJson());
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_RESULT, ForgeRegistries.ITEMS.getKey(this.result.getItem()).toString());
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_EXPERIENCE, this.experience);
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_PROCESSING_TIME, this.grindingTime);
 
         }
 

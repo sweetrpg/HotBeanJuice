@@ -5,7 +5,6 @@ import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
-import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -37,7 +36,7 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
     protected final IDrawableAnimated heat;
 
     public KettleHeatingRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + KettleHeatingRecipe.RECIPE_TYPE_NAME);
+        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/kettle_heating.png");
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.KETTLE.get()));
         heat = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
@@ -98,7 +97,6 @@ public class KettleHeatingRecipeCategory implements IRecipeCategory<KettleHeatin
 
         return tooltipStrings;
     }
-
 
     @Override
     public ResourceLocation getUid() {

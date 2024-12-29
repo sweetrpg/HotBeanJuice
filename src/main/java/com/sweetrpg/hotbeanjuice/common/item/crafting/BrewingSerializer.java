@@ -1,7 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
-import com.google.gson.JsonElement;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.util.JsonUtil;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -25,45 +27,46 @@ public class BrewingSerializer<T extends AbstractBrewingRecipe> extends ForgeReg
 
     @Override
     public T fromJson(ResourceLocation id, JsonObject json) {
-        String group = GsonHelper.getAsString(json, "group", "");
+        String group = GsonHelper.getAsString(json, Constants.RECIPE_SERIALIZER_DATA_GROUP, "");
 
-        JsonElement jsonelement = GsonHelper.isArrayNode(json, "ingredients") ? GsonHelper.getAsJsonArray(json, "ingredients") : GsonHelper.getAsJsonObject(json, "ingredients");
-        List<Ingredient> ingredients = new ArrayList<>();
-        // TODO
-        Ingredient ingredient = Ingredient.fromJson(jsonelement);
+//        JsonElement jsonElement = GsonHelper.isArrayNode(json, "ingredients") ? GsonHelper.getAsJsonArray(json, "ingredients") : GsonHelper.getAsJsonObject(json, "ingredients");
+        JsonArray jsonArray = GsonHelper.getAsJsonArray(json, Constants.RECIPE_SERIALIZER_DATA_INGREDIENTS);
+        List<Ingredient> ingredients = JsonUtil.ingredientsFrom(jsonArray);
 
-        float experience = GsonHelper.getAsFloat(json, "experience", 0.0F);
-        int brewingTime = GsonHelper.getAsInt(json, "brewingTime", defaultBrewingTime);
-        int millibuckets = GsonHelper.getAsInt(json, "millibuckets", 1000);
+        float experience = GsonHelper.getAsFloat(json, Constants.RECIPE_SERIALIZER_DATA_EXPERIENCE, 0.0F);
+        int brewingTime = GsonHelper.getAsInt(json, Constants.RECIPE_SERIALIZER_DATA_PROCESSING_TIME, defaultBrewingTime);
+        int millibuckets = GsonHelper.getAsInt(json, Constants.RECIPE_SERIALIZER_DATA_MILLIBUCKETS, 1000);
 
         return this.factory.create(id, group, ingredients, experience, brewingTime, millibuckets);
     }
 
     @Override
     public T fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+        String group = buf.readUtf();
+
         int ingredientCount = buf.readInt();
         List<Ingredient> ingredients = new ArrayList<>();
         for(int i = 0; i < ingredientCount; i++) {
             Ingredient ingredient = Ingredient.fromNetwork(buf);
             ingredients.add(ingredient);
         }
-        String group = buf.readUtf();
 
         float experience = buf.readFloat();
-        int brewingTime = buf.readVarInt();
-        int millibuckets = buf.readVarInt();
+        int brewingTime = buf.readInt();
+        int millibuckets = buf.readInt();
 
         return this.factory.create(id, group, ingredients, experience, brewingTime, millibuckets);
     }
 
     @Override
     public void toNetwork(FriendlyByteBuf buf, AbstractBrewingRecipe recipe) {
-        buf.writeInt(recipe.ingredients.size());
-        recipe.ingredients.forEach((i) -> i.toNetwork(buf));
         buf.writeUtf(recipe.group);
 
+        buf.writeInt(recipe.ingredients.size());
+        recipe.ingredients.forEach(i -> i.toNetwork(buf));
+
         buf.writeFloat(recipe.experience);
-        buf.writeVarInt(recipe.brewingTime);
+        buf.writeInt(recipe.brewingTime);
         buf.writeInt(recipe.millibuckets);
     }
 

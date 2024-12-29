@@ -34,8 +34,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP, "%f XP");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_ROASTING_XP_TOOLTIP, "%f XP");
@@ -48,6 +48,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
 
 //        add(ModBlocks.CAMPFIRE_COFFEE_POT.get(), "Campfire Coffee Pot");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
@@ -59,7 +61,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.CROP_COFFEE_RACEMOSA.get(), "Racemosa Coffea Bush");
         add(ModBlocks.DISPOSABLE_CUP.get(), "Disposable Cup");
         add(ModBlocks.DRIP_COFFEE_CARAFE.get(), "Drip Coffee Carafe");
-//        add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
+        add(ModBlocks.DRIP_COFFEE_MACHINE.get(), "Drip Coffee Machine");
 //        add(ModBlocks.ESPRESSO_MACHINE.get(), "Espresso Machine");
         add(ModBlocks.FIRED_COFFEE_CUP.get(), "Kiln-fired Coffee Cup");
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
@@ -113,8 +115,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Chance that coffee bushes appear in the wild");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontal spread of patches of coffee bushes");
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP, "%f XP");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP, "%f XP");
@@ -127,6 +129,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
@@ -187,8 +191,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_CONFIG_CHANCE_COFFEE_BUSH, "Es besteht die Möglichkeit, dass Kaffeesträucher in freier Wildbahn auftauchen");
         add(Constants.TRANSLATION_KEY_CONFIG_COFFEE_BUSH_SPREAD, "Horizontale Ausbreitung von Kaffeebüschen");
         add(Constants.TRANSLATION_KEY_GUI_COFFEE_ROASTER_TITLE, "Roaster");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_TIME_TOOLTIP, "%1$d s");
-        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIPCOFFEE_XP_TOOLTIP, "%f XP");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_TIME_TOOLTIP, "%1$d s");
+        add(Constants.TRANSLATION_KEY_GUI_JEI_DRIP_COFFEE_XP_TOOLTIP, "%f XP");
         add(Constants.TRANSLATION_KEY_GUI_JEI_GRINDING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_TIME_TOOLTIP, "%1$d s");
         add(Constants.TRANSLATION_KEY_GUI_JEI_KETTLE_HEATING_XP_TOOLTIP, "%f XP");
@@ -201,6 +205,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_ROASTING_TITLE, "Roasting");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Kaffeebeutel (Bohnen)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Kaffeebeutel (gemahlen)");

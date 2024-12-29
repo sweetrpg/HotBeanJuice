@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
+import com.sweetrpg.hotbeanjuice.common.util.JsonUtil;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
@@ -67,7 +68,7 @@ public class KettleHeatingRecipeBuilder implements RecipeBuilder {
     public void save(Consumer<FinishedRecipe> consumer, @NotNull ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
         this.advancement.parent(new ResourceLocation("recipes/root"))
-                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
+                .addCriterion(Constants.RECIPE_SERIALIZER_CRITERION_HAS_RECIPE, RecipeUnlockedTrigger.unlocked(resourceLocation))
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
         var newLoc = new ResourceLocation(resourceLocation.getNamespace(), resourceLocation.getPath() + "_from_kettle_heating");
@@ -113,14 +114,13 @@ public class KettleHeatingRecipeBuilder implements RecipeBuilder {
 
         public void serializeRecipeData(JsonObject json) {
             if(!this.group.isEmpty()) {
-                json.addProperty("group", this.group);
+                json.addProperty(Constants.RECIPE_SERIALIZER_DATA_GROUP, this.group);
             }
 
-            json.add("ingredient", this.ingredient.toJson());
-            json.addProperty("result", ForgeRegistries.ITEMS.getKey(this.result.getItem()).toString());
-            json.addProperty("experience", this.experience);
-            json.addProperty("heating_time", this.heatingTime);
-
+            json.add(Constants.RECIPE_SERIALIZER_DATA_INGREDIENTS, JsonUtil.arrayFrom(this.ingredient.toJson()));
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_RESULT, ForgeRegistries.ITEMS.getKey(this.result.getItem()).toString());
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_EXPERIENCE, this.experience);
+            json.addProperty(Constants.RECIPE_SERIALIZER_DATA_PROCESSING_TIME, this.heatingTime);
         }
 
         public RecipeSerializer<?> getType() {

@@ -5,7 +5,6 @@ import com.sweetrpg.hotbeanjuice.common.item.crafting.WhiskingRecipe;
 import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
-import com.sweetrpg.hotbeanjuice.common.util.TextUtils;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -38,7 +37,7 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
     protected final IDrawableAnimated arrow;
 
     public WhiskingRecipeCategory(IGuiHelper helper) {
-        title = TextUtils.getTranslation("jei." + WhiskingRecipe.RECIPE_TYPE_NAME);
+        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE);
         ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/whisking.png");
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.WHISK.get()));
         arrow = helper.drawableBuilder(backgroundImage, 36, 58, 24, 14)
@@ -57,7 +56,6 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, WhiskingRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
-//        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw grinder
         itemStacks.init(0, true, 15, 30);
@@ -69,41 +67,12 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
 
         itemStacks.init(2, false, 84, 20);
         itemStacks.set(2, recipe.getResultItem());
-
-        // TODO: for rollable result chance items
-//        itemStacks.addTooltipCallback((slotIndex, input, ingredient, tooltip) -> {
-//            if (input || slotIndex < 2) {
-//                return;
-//            }
-//            ChanceResult output = recipeOutputs.get(slotIndex - 2);
-//            float chance = output.getChance();
-//            if (chance != 1)
-//                tooltip.add(1, TextUtils.getTranslation("jei.chance", chance < 0.01 ? "<1" : (int) (chance * 100))
-//                        .withStyle(ChatFormatting.GOLD));
-//        });
     }
 
     @Override
     public void draw(WhiskingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         arrow.draw(poseStack, 49, 21);
-
-//        NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
-//
-//        int size = recipe.getResults().size();
-//        int centerX = size > 1 ? 0 : 9;
-//        int centerY = size > 2 ? 0 : 9;
-//
-//        for (int i = 0; i < size; i++) {
-//            int xOffset = centerX + (i % 2 == 0 ? 0 : 19);
-//            int yOffset = centerY + ((i / 2) * 19);
-//
-//            if (recipeOutputs.get(i).getChance() != 1) {
-//                slotChance.draw(matrixStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
-//            } else {
-//                slot.draw(poseStack, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
         slot.draw(poseStack, 84, 20);
-//            }
-//        }
     }
 
     @Override
@@ -126,7 +95,6 @@ public class WhiskingRecipeCategory implements IRecipeCategory<WhiskingRecipe> {
 
         return tooltipStrings;
     }
-
 
     @Override
     public ResourceLocation getUid() {
