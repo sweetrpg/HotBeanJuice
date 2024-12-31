@@ -1,0 +1,11 @@
+{
+  "type": "hotbeanjuice:roasting",
+  "ingredients": [
+    {
+      "tag": "hotbeanjuice:coffee_cherries"
+    }
+  ],
+  "result": "hotbeanjuice:coffee_bean",
+  "experience": 1.0,
+  "processing_time": 180
+}

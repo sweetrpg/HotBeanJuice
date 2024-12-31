@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " _ ",
+    "G G",
+    "GGG"
+  ],
+  "key": {
+    "_": {
+      "tag": "minecraft:slabs"
+    },
+    "G": {
+      "tag": "forge:glass"
+    }
+  },
+  "result": {
+    "item": "hotbeanjuice:sun_tea_jar"
+  }
+}

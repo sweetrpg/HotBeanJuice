@@ -123,7 +123,7 @@ public class Util {
     /**
      * @param modId The namespace
      * @param name The path
-     * @return The total path of the resource e.g "minecraft:air"
+     * @return The total path of the resource, e.g., "minecraft:air"
      */
     public static String getResourcePath(String modId, String name) {
         return getResource(modId, name).toString();
@@ -148,7 +148,8 @@ public class Util {
     public static <T extends IForgeRegistryEntry<? super T>> RegistryObject<T> acceptOrElse(RegistryObject<T> opt, Consumer<T> consumer, Runnable orElse) {
         if (opt.isPresent()) {
             consumer.accept(opt.get());
-        } else {
+        }
+        else {
             orElse.run();
         }
 

@@ -1,0 +1,11 @@
+{
+  "type": "hotbeanjuice:whisking",
+  "ingredients": [
+    {
+      "item": "hotbeanjuice:steamed_milk"
+    }
+  ],
+  "result": "hotbeanjuice:milk_foam",
+  "experience": 1.0,
+  "processing_time": 180
+}
