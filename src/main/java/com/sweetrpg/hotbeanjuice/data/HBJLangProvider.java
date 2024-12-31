@@ -67,7 +67,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
-//        add(ModBlocks.PERCOLATOR.get(), "Percolator");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
 //        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
@@ -145,6 +145,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
@@ -221,6 +222,7 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
         add(ModBlocks.KETTLE.get(), "Kettle");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PINT_MUG.get(), "Pint-Becher");
         add(ModBlocks.PLATE.get(), "Teller");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");

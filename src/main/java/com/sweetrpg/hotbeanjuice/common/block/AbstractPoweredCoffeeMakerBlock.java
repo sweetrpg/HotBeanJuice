@@ -46,4 +46,5 @@ public abstract class AbstractPoweredCoffeeMakerBlock extends AbstractCoffeeMake
             pLevel.setBlock(pPos, pState.cycle(LIT), 2);
         }
     }
+
 }

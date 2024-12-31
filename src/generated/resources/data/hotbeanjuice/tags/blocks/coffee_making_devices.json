@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "hotbeanjuice:drip_coffee_machine",
+    "hotbeanjuice:percolator",
     "hotbeanjuice:french_press"
   ]
 }

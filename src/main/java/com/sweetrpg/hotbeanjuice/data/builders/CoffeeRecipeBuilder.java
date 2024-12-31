@@ -42,9 +42,9 @@ public class CoffeeRecipeBuilder implements RecipeBuilder {
         this.serializer = serializer;
     }
 
-//    public static CoffeeMakerRecipeBuilder percolated(Item item, float experience, int brewingTime) {
-//        return new CoffeeMakerRecipeBuilder(item, experience, brewingTime, ModRecipeSerializers.PERCOLATOR_COFFEE_RECIPE.get());
-//    }
+    public static CoffeeRecipeBuilder percolated(Item item, float experience, int brewingTime) {
+        return new CoffeeRecipeBuilder(item, experience, brewingTime, ModRecipeSerializers.PERCOLATOR_COFFEE_RECIPE.get());
+    }
 
     public static CoffeeRecipeBuilder drip(Item item, float experience, int brewingTime) {
         return new CoffeeRecipeBuilder(item, experience, brewingTime, ModRecipeSerializers.DRIP_COFFEE_RECIPE.get());
@@ -54,16 +54,16 @@ public class CoffeeRecipeBuilder implements RecipeBuilder {
         return new CoffeeRecipeBuilder(item, experience, seepingTime, ModRecipeSerializers.FRENCH_PRESS_COFFEE_RECIPE.get());
     }
 
-//    public static CoffeeMakerRecipeBuilder campfire(Item item, float experience, int heatingTime) {
-//        return new CoffeeMakerRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.CAMPFIRE_COFFEE_RECIPE.get());
+//    public static CoffeeRecipeBuilder campfire(Item item, float experience, int heatingTime) {
+//        return new CoffeeRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.CAMPFIRE_COFFEE_RECIPE.get());
 //    }
 //
-//    public static CoffeeMakerRecipeBuilder pod(Item item, float experience, int processingTime) {
-//        return new CoffeeMakerRecipeBuilder(item, experience, processingTime, ModRecipeSerializers.POD_COFFEE_RECIPE.get());
+//    public static CoffeeRecipeBuilder pod(Item item, float experience, int processingTime) {
+//        return new CoffeeRecipeBuilder(item, experience, processingTime, ModRecipeSerializers.POD_COFFEE_RECIPE.get());
 //    }
 //
-//    public static CoffeeMakerRecipeBuilder espresso(Item item, float experience, int heatingTime) {
-//        return new CoffeeMakerRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.ESPRESSO_RECIPE.get());
+//    public static CoffeeRecipeBuilder espresso(Item item, float experience, int heatingTime) {
+//        return new CoffeeRecipeBuilder(item, experience, heatingTime, ModRecipeSerializers.ESPRESSO_RECIPE.get());
 //    }
 
     public CoffeeRecipeBuilder requires(Ingredient pIngredient) {

@@ -12,5 +12,6 @@ public final class RecipeTypes {
     public static final RecipeType<KettleHeatingRecipe> KETTLE_HEATING = RecipeType.create(Constants.MOD_ID, KettleHeatingRecipe.RECIPE_TYPE_NAME, KettleHeatingRecipe.class);
     public static final RecipeType<DripCoffeeRecipe> DRIP_COFFEE = RecipeType.create(Constants.MOD_ID, DripCoffeeRecipe.RECIPE_TYPE_NAME, DripCoffeeRecipe.class);
     public static final RecipeType<FrenchPressCoffeeRecipe> FRENCH_PRESS_COFFEE = RecipeType.create(Constants.MOD_ID, FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME, FrenchPressCoffeeRecipe.class);
+    public static final RecipeType<PercolatorCoffeeRecipe> PERCOLATOR_COFFEE = RecipeType.create(Constants.MOD_ID, PercolatorCoffeeRecipe.RECIPE_TYPE_NAME, PercolatorCoffeeRecipe.class);
 
 }

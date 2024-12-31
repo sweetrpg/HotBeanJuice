@@ -55,7 +55,7 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.FIRED_COFFEE_CUP.get());
         tag(ModTags.COFFEE_MAKING_DEVICES)
                 .add(ModBlocks.DRIP_COFFEE_MACHINE.get())
-//                .add(ModBlocks.PERCOLATOR.get())
+                .add(ModBlocks.PERCOLATOR.get())
 //                .add(ModBlocks.ESPRESSO_MACHINE.get())
 //                .add(ModBlocks.CAMPFIRE_COFFEE_POT.get())
                 .add(ModBlocks.FRENCH_PRESS.get())

@@ -32,7 +32,7 @@ public class FrenchPressBlock extends AbstractCoffeeMakerBlock {
     public static final BooleanProperty HAS_WATER = BooleanProperty.create("has_water");
     public static final IntegerProperty STRENGTH = IntegerProperty.create("strength", 0, 50);
 
-    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 13.0D, 12.0D);
+    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D);
 
     public FrenchPressBlock(Properties properties) {
         super(properties);

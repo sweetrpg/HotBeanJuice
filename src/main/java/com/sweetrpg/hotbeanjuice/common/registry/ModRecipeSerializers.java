@@ -23,7 +23,7 @@ public class ModRecipeSerializers {
     public static final RegistryObject<RecipeSerializer<KettleHeatingRecipe>> KETTLE_HEATING_SERIALIZER = RECIPE_SERIALIZERS.register(KettleHeatingRecipe.RECIPE_TYPE_NAME, () -> KettleHeatingRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<BrewingSerializer<DripCoffeeRecipe>> DRIP_COFFEE_RECIPE = register("drip_coffee", () -> new BrewingSerializer<>(DripCoffeeRecipe::new, 200, "drip"));
-    //    public static final RegistryObject<BrewingSerializer<PercolatorCoffeeRecipe>> PERCOLATOR_COFFEE_RECIPE = register("percolator_coffee", () -> new BrewingSerializer<>(PercolatorCoffeeRecipe::new, 600, "percolator"));
+    public static final RegistryObject<BrewingSerializer<PercolatorCoffeeRecipe>> PERCOLATOR_COFFEE_RECIPE = register("percolator_coffee", () -> new BrewingSerializer<>(PercolatorCoffeeRecipe::new, 600, "percolator"));
     //    public static final RegistryObject<BrewingSerializer<CampfireCoffeeRecipe>> CAMPFIRE_COFFEE_RECIPE = register("campfire_coffee", () -> new BrewingSerializer<>(CampfireCoffeeRecipe::new, 300, "campfire"));
     public static final RegistryObject<BrewingSerializer<FrenchPressCoffeeRecipe>> FRENCH_PRESS_COFFEE_RECIPE = register("french_press_coffee", () -> new BrewingSerializer<>(FrenchPressCoffeeRecipe::new, 500, "french_press"));
     //    public static final RegistryObject<BrewingSerializer<PodCoffeeRecipe>> POD_COFFEE_RECIPE = register("pod_coffee", () -> new BrewingSerializer<>(PodCoffeeRecipe::new, 100, "pod"));

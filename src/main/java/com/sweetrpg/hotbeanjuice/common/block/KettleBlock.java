@@ -21,6 +21,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -48,8 +49,9 @@ public class KettleBlock extends BaseEntityBlock {
     public static final IntegerProperty FULLNESS = IntegerProperty.create("fullness", 0, 4); // holds 4 buckets of water
     public static final BooleanProperty HOT = BooleanProperty.create("is_hot");
 
-    public KettleBlock(Properties pProperties) {
-        super(pProperties);
+    public KettleBlock(Properties properties) {
+        super(properties
+                .sound(SoundType.METAL));
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(FULLNESS, 0)

@@ -18,7 +18,7 @@ public class ModRecipeTypes {
     //    public static final RegistryObject<RecipeType<?>> ESPRESSO = register(EspressoRecipe.RECIPE_TYPE_NAME, () -> EspressoRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> FRENCH_PRESS_COFFEE = register(FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME, () -> FrenchPressCoffeeRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> GRINDING = register(GrindingRecipe.RECIPE_TYPE_NAME, () -> GrindingRecipe.Type.INSTANCE);
-    //    public static final RegistryObject<RecipeType<?>> PERCOLATOR_COFFEE = register(PercolatorCoffeeRecipe.RECIPE_TYPE_NAME, () -> PercolatorCoffeeRecipe.Type.INSTANCE);
+    public static final RegistryObject<RecipeType<?>> PERCOLATOR_COFFEE = register(PercolatorCoffeeRecipe.RECIPE_TYPE_NAME, () -> PercolatorCoffeeRecipe.Type.INSTANCE);
     //    public static final RegistryObject<RecipeType<?>> POD_COFFEE = register(PodCoffeeRecipe.RECIPE_TYPE_NAME, () -> PodCoffeeRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> ROASTING = register(RoastingRecipe.RECIPE_TYPE_NAME, () -> RoastingRecipe.Type.INSTANCE);
     public static final RegistryObject<RecipeType<?>> WHISKING = register(WhiskingRecipe.RECIPE_TYPE_NAME, () -> WhiskingRecipe.Type.INSTANCE);
