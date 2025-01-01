@@ -1,2 +1,2 @@
 - `[NEW]` Added percolator and pod machine (Keurig) coffee makers (non-functional)
-- `[DEV]` Made some miscellaneous tweaks to other models and block classes, reorganized some packages
+- `[DEV]` Miscellaneous tweaks to other models and block classes, reorganized some packages
