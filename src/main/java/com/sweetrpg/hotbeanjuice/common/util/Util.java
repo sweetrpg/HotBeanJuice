@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.util;
 
 import com.google.common.collect.Lists;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import io.netty.buffer.Unpooled;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

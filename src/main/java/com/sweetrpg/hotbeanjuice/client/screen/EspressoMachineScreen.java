@@ -6,7 +6,7 @@
 //import com.sweetrpg.hotbeanjuice.common.inventory.menus.AbstractCoffeeMakerMenu;
 //import com.sweetrpg.hotbeanjuice.common.inventory.menus.DripCoffeeMachineMenu;
 //import com.sweetrpg.hotbeanjuice.common.inventory.menus.EspressoMachineMenu;
-//import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+//import com.sweetrpg.hotbeanjuice.common.Constants;
 //import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 //import net.minecraft.client.renderer.GameRenderer;
 //import net.minecraft.network.chat.Component;

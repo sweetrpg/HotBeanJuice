@@ -48,7 +48,7 @@ public class HBJLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Loot Tables";
+        return "Hot Bean Juice - Loot Tables";
     }
 
     @Override
@@ -79,10 +79,10 @@ public class HBJLootTableProvider extends LootTableProvider {
             dropsSelf(ModBlocks.FRENCH_PRESS);
             dropsSelf(ModBlocks.HAND_COFFEE_GRINDER);
             dropsSelf(ModBlocks.KETTLE);
-//            dropsSelf(ModBlocks.PERCOLATOR);
+            dropsSelf(ModBlocks.PERCOLATOR);
             dropsSelf(ModBlocks.PINT_MUG);
             dropsSelf(ModBlocks.PLATE);
-//            dropsSelf(ModBlocks.POD_MACHINE);
+            dropsSelf(ModBlocks.POD_MACHINE);
             dropsSelf(ModBlocks.POWERED_COFFEE_GRINDER);
             dropsSelf(ModBlocks.SUN_TEA_JAR);
             dropsSelf(ModBlocks.TEACUP);

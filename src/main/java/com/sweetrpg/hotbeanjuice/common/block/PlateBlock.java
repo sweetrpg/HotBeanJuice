@@ -15,7 +15,9 @@ public class PlateBlock extends Block {
     protected static final VoxelShape SHAPE = Block.box(1D, 0.0D, 1D, 15D, 1.0D, 15D);
 
     public PlateBlock() {
-        super(Properties.of(Material.BUILDABLE_GLASS).strength(1, 5).sound(SoundType.GLASS));
+        super(Properties.of(Material.BUILDABLE_GLASS)
+                .strength(1, 5)
+                .sound(SoundType.GLASS));
     }
 
     @SuppressWarnings("deprecation")

@@ -1,6 +1,5 @@
-package com.sweetrpg.hotbeanjuice.common.lib;
+package com.sweetrpg.hotbeanjuice.common.util;
 
-import com.sweetrpg.hotbeanjuice.common.util.Util;
 import net.minecraft.resources.ResourceLocation;
 
 public class Resources {

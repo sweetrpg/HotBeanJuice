@@ -15,6 +15,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class SunTeaJarBlock extends Block {
+
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final IntegerProperty FULLNESS = IntegerProperty.create("fullness", 0, 4);
 
@@ -43,4 +44,5 @@ public class SunTeaJarBlock extends Block {
     }
 
     // TODO: place water and tea bags inside, place in world, brews during daylight hours
+
 }

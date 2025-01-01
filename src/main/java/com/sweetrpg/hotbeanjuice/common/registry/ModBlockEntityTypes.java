@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.block.entity.*;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -37,12 +37,11 @@ public class ModBlockEntityTypes {
     //            () -> BlockEntityType.Builder.of(CampfirePotBlockEntity::new, ModBlocks.CAMPFIRE_COFFEE_POT.get()).build(null));
     public static final RegistryObject<BlockEntityType<DripCoffeeMachineBlockEntity>> DRIP_COFFEE_MACHINE_BLOCK_ENTITY = register("drip_coffee_machine",
             () -> BlockEntityType.Builder.of(DripCoffeeMachineBlockEntity::new, ModBlocks.DRIP_COFFEE_MACHINE.get()).build(null));
-    //    public static final RegistryObject<BlockEntityType<PercolatorBlockEntity>> PERCOLATOR_BLOCK_ENTITY = register("percolator",
-    //            () -> BlockEntityType.Builder.of(PercolatorBlockEntity::new, ModBlocks.PERCOLATOR.get()).build(null));
-    //    public static final RegistryObject<BlockEntityType<PodMachineBlockEntity>> POD_MACHINE_BLOCK_ENTITY = register("pod_machine",
-    //            () -> BlockEntityType.Builder.of(PodMachineBlockEntity::new, ModBlocks.POD_MACHINE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<PercolatorBlockEntity>> PERCOLATOR_BLOCK_ENTITY = register("percolator",
+            () -> BlockEntityType.Builder.of(PercolatorBlockEntity::new, ModBlocks.PERCOLATOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<PodMachineBlockEntity>> POD_MACHINE_BLOCK_ENTITY = register("pod_machine",
+            () -> BlockEntityType.Builder.of(PodMachineBlockEntity::new, ModBlocks.POD_MACHINE.get()).build(null));
     //    public static final RegistryObject<BlockEntityType<EspressoMachineBlockEntity>> ESPRESSO_MACHINE_BLOCK_ENTITY = register("espresso_machine",
     //            () -> BlockEntityType.Builder.of(EspressoMachineBlockEntity::new, ModBlocks.ESPRESSO_MACHINE.get()).build(null));
-
 
 }

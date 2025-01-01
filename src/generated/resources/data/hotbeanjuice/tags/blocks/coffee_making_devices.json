@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "hotbeanjuice:drip_coffee_machine",
-    "hotbeanjuice:french_press"
+    "hotbeanjuice:percolator",
+    "hotbeanjuice:french_press",
+    "hotbeanjuice:drip_coffee_machine",
+    "hotbeanjuice:percolator",
+    "hotbeanjuice:pod_machine"
   ]
 }

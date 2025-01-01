@@ -1,8 +1,8 @@
 package com.sweetrpg.hotbeanjuice.data.builders;
 
 import com.google.gson.JsonObject;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.GrindingRecipe;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;

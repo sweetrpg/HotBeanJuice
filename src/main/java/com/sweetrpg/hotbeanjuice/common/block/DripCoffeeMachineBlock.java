@@ -13,7 +13,9 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -22,12 +24,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
 public class DripCoffeeMachineBlock extends AbstractPoweredCoffeeMakerBlock {
+
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED; //by carafe
 
     public DripCoffeeMachineBlock(Properties properties) {
@@ -37,6 +42,12 @@ public class DripCoffeeMachineBlock extends AbstractPoweredCoffeeMakerBlock {
     @Override
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return Block.box(2, 0, 2, 14, 14, 14);
     }
 
     @Override
@@ -110,4 +121,5 @@ public class DripCoffeeMachineBlock extends AbstractPoweredCoffeeMakerBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_MACHINE_BLOCK_ENTITY.get(), DripCoffeeMachineBlockEntity::tick);
     }
+
 }

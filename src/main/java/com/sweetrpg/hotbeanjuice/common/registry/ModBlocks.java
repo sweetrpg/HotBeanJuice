@@ -1,9 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.block.*;
-import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.data.CoffeeType;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -63,16 +63,16 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DRIP_COFFEE_MACHINE = registerWithItem("drip_coffee_machine",
             () -> new DripCoffeeMachineBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> PERCOLATOR = registerWithItem("percolator",
-//            () -> new PercolatorBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> POD_MACHINE = registerWithItem("pod_machine",
-//            () -> new PodMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> ESPRESSO_MACHINE = registerWithItem("espresso_machine",
-//            () -> new EspressoMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> CAMPFIRE_COFFEE_POT = registerWithItem("campfire_coffee_pot",
-//            () -> new CampfirePotBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
-public static final RegistryObject<Block> FRENCH_PRESS = registerWithItem("french_press",
-        () -> new FrenchPressBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<Block> PERCOLATOR = registerWithItem("percolator",
+            () -> new PercolatorBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<Block> POD_MACHINE = registerWithItem("pod_machine",
+            () -> new PodMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
+    //    public static final RegistryObject<Block> ESPRESSO_MACHINE = registerWithItem("espresso_machine",
+    //            () -> new EspressoMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
+    //    public static final RegistryObject<Block> CAMPFIRE_COFFEE_POT = registerWithItem("campfire_coffee_pot",
+    //            () -> new CampfirePotBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<Block> FRENCH_PRESS = registerWithItem("french_press",
+            () -> new FrenchPressBlock(Block.Properties.of(Material.GLASS).strength(0.5F).noOcclusion()));
 
     // ----------------------------------------------------------------------------------------------------------------
     // Coffee-processing devices
@@ -81,7 +81,7 @@ public static final RegistryObject<Block> FRENCH_PRESS = registerWithItem("frenc
             HandCoffeeGrinderBlock::new);
     public static final RegistryObject<PoweredCoffeeGrinderBlock> POWERED_COFFEE_GRINDER = registerWithItem("powered_coffee_grinder",
             PoweredCoffeeGrinderBlock::new);
-public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
+    public static final RegistryObject<CoffeeRoasterBlock> COFFEE_ROASTER = registerWithItem("coffee_roaster", CoffeeRoasterBlock::new);
 
     // ----------------------------------------------------------------------------------------------------------------
     // Kitchenware

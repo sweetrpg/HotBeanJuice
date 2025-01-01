@@ -1,8 +1,8 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.DrinkItem;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
-import com.sweetrpg.hotbeanjuice.common.lib.FoodValues;
+import com.sweetrpg.hotbeanjuice.data.FoodValues;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;

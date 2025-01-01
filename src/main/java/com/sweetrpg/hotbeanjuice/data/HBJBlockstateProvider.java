@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.data;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.block.CoffeeBushBlock;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
@@ -35,7 +35,7 @@ public class HBJBlockstateProvider extends BlockStateProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Blockstates/Block Models";
+        return "Hot Bean Juice - Blockstates/Block Models";
     }
 
     @Override

@@ -37,6 +37,7 @@ import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public abstract class AbstractPoweredCoffeeMakerBlockEntity extends BlockEntity implements MenuProvider {
+
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
@@ -321,4 +322,5 @@ public abstract class AbstractPoweredCoffeeMakerBlockEntity extends BlockEntity 
         this.coffeeHandler.drain(this.coffeeHandler.getCapacity(), IFluidHandler.FluidAction.EXECUTE);
         HotBeanJuice.LOGGER.debug("coffee: " + this.coffeeHandler.getFluidAmount() + " " + this.coffeeLevel);
     }
+
 }

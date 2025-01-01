@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.event;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.world.gen.WildCropGeneration;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.Entity;
