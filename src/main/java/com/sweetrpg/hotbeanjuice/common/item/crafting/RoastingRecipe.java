@@ -2,7 +2,7 @@ package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.util.JsonUtil;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;

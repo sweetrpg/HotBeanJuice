@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.integration.jei;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeTypes;
 import com.sweetrpg.hotbeanjuice.integration.jei.category.*;
 import mezz.jei.api.IModPlugin;
@@ -30,6 +30,8 @@ public class HBJPlugin implements IModPlugin {
         registration.addRecipeCategories(new KettleHeatingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new DripCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new FrenchPressCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new PercolatorCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new PodCoffeeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -44,6 +46,8 @@ public class HBJPlugin implements IModPlugin {
         registration.addRecipes(findRecipesByType(ModRecipeTypes.KETTLE_HEATING.get()), KettleHeatingRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.DRIP_COFFEE.get()), DripCoffeeRecipeCategory.UID);
         registration.addRecipes(findRecipesByType(ModRecipeTypes.FRENCH_PRESS_COFFEE.get()), FrenchPressCoffeeRecipeCategory.UID);
+        registration.addRecipes(findRecipesByType(ModRecipeTypes.PERCOLATOR_COFFEE.get()), PercolatorCoffeeRecipeCategory.UID);
+        registration.addRecipes(findRecipesByType(ModRecipeTypes.POD_COFFEE.get()), PodCoffeeRecipeCategory.UID);
     }
 
     private static List<Recipe<?>> findRecipesByType(RecipeType<?> type) {

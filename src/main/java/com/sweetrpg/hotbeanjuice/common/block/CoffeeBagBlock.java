@@ -62,4 +62,5 @@ public class CoffeeBagBlock extends Block {
         super.createBlockStateDefinition(builder);
         builder.add(BlockStateProperties.HORIZONTAL_FACING);
     }
+
 }

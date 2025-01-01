@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
@@ -16,7 +16,7 @@ public class HBJLangProvider extends LanguageProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Language Provider";
+        return "Hot Bean Juice - Language Strings";
     }
 
     @Override
@@ -50,6 +50,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_KETTLE_HEATING_TITLE, "Kettle Heating");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_PERCOLATOR_COFFEE_TITLE, "Percolator Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_POD_COFFEE_TITLE, "Pod Machine Coffee-making");
 
 //        add(ModBlocks.CAMPFIRE_COFFEE_POT.get(), "Campfire Coffee Pot");
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
@@ -67,10 +69,10 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
-//        add(ModBlocks.PERCOLATOR.get(), "Percolator");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
-//        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
+        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
         add(ModBlocks.TEACUP.get(), "Teacup");
@@ -131,6 +133,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_PERCOLATOR_COFFEE_TITLE, "Percolator Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_POD_COFFEE_TITLE, "Pod Machine Coffee-making");
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Coffee Bag (Beans)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Coffee Bag (Ground)");
@@ -145,7 +149,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Hand-crank Burr Coffee Grinder");
         add(ModBlocks.KETTLE.get(), "Kettle");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PINT_MUG.get(), "Pint Mug");
+        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
         add(ModBlocks.PLATE.get(), "Plate");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Powered Burr Coffee Grinder");
         add(ModBlocks.SUN_TEA_JAR.get(), "Sun Tea Jar");
@@ -207,6 +213,8 @@ public class HBJLangProvider extends LanguageProvider {
         add(Constants.TRANSLATION_KEY_RECIPETYPE_WHISKING_TITLE, "Whisking");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_DRIP_COFFEE_TITLE, "Drip Coffee-making");
         add(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE, "French Press Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_PERCOLATOR_COFFEE_TITLE, "Percolator Coffee-making");
+        add(Constants.TRANSLATION_KEY_RECIPETYPE_POD_COFFEE_TITLE, "Pod Machine Coffee-making");
 
         add(ModBlocks.COFFEE_BAG_BEANS.get(), "Kaffeebeutel (Bohnen)");
         add(ModBlocks.COFFEE_BAG_GROUND.get(), "Kaffeebeutel (gemahlen)");
@@ -221,7 +229,9 @@ public class HBJLangProvider extends LanguageProvider {
         add(ModBlocks.FRENCH_PRESS.get(), "French Press");
         add(ModBlocks.HAND_COFFEE_GRINDER.get(), "Kaffeemühle mit Handkurbel");
         add(ModBlocks.KETTLE.get(), "Kettle");
+        add(ModBlocks.PERCOLATOR.get(), "Percolator");
         add(ModBlocks.PINT_MUG.get(), "Pint-Becher");
+        add(ModBlocks.POD_MACHINE.get(), "Pod Coffee Maker");
         add(ModBlocks.PLATE.get(), "Teller");
         add(ModBlocks.POWERED_COFFEE_GRINDER.get(), "Kaffeemühle mit elektrischem Mahlwerk");
         add(ModBlocks.SUN_TEA_JAR.get(), "Sonnenteeglas");

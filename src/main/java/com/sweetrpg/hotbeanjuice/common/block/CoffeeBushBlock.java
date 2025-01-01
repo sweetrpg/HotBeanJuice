@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
-import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
+import com.sweetrpg.hotbeanjuice.data.CoffeeType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -72,4 +72,5 @@ public class CoffeeBushBlock extends CropBlock {
     public boolean canBeReplaced(BlockState pState, Fluid pFluid) {
         return true;
     }
+
 }

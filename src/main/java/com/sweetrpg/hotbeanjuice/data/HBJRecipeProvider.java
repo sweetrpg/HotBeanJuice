@@ -26,7 +26,7 @@ public class HBJRecipeProvider extends RecipeProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Recipes";
+        return "Hot Bean Juice - Recipes";
     }
 
     @Override
@@ -242,25 +242,25 @@ public class HBJRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
                 .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
                 .save(consumer);
-//        CoffeeMakerRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
+//        CoffeeRecipeBuilder.campfire(ModItems.COFFEE_DRINK.get(), 0.2f, 600)
 //                .requires(Ingredient.of(ModItems.BOILING_WATER.get()))
 //                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
 //                .unlockedBy("has_hot_water", has(ModItems.BOILING_WATER.get()))
 //                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
 //                .save(consumer);
-//        CoffeeMakerRecipeBuilder.percolated(ModItems.COFFEE_DRINK.get(), 0.1f, 450)
-//                .requires(Ingredient.of(Items.WATER_BUCKET))
-//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .save(consumer);
-//        CoffeeMakerRecipeBuilder.pod(ModItems.COFFEE_DRINK.get(), 0.1f, 180)
-//                .requires(Ingredient.of(Items.WATER_BUCKET))
-//                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
-//                .unlockedBy("has_water", has(Items.WATER_BUCKET))
-//                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
-//                .save(consumer);
-//        CoffeeMakerRecipeBuilder.espresso(ModItems.ESPRESSO_DRINK.get(), 0.3f, 300)
+        CoffeeRecipeBuilder.percolated(ModItems.COFFEE_DRINK.get(), 0.1f, 450)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+        CoffeeRecipeBuilder.pod(ModItems.COFFEE_DRINK.get(), 0.1f, 180)
+                .requires(Ingredient.of(Items.WATER_BUCKET))
+                .requires(Ingredient.of(ModItems.COFFEE_GROUNDS.get()))
+                .unlockedBy("has_water", has(Items.WATER_BUCKET))
+                .unlockedBy("has_coffee_grounds", has(ModItems.COFFEE_GROUNDS.get()))
+                .save(consumer);
+//        CoffeeRecipeBuilder.espresso(ModItems.ESPRESSO_DRINK.get(), 0.3f, 300)
 //                .requires(Ingredient.of(Items.WATER_BUCKET))
 //                .requires(Ingredient.of(ModItems.FINE_COFFEE_GROUNDS.get()))
 //                .unlockedBy("has_water", has(Items.WATER_BUCKET))

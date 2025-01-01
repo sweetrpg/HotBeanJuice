@@ -1,9 +1,10 @@
 {
 	"credit": "Made with Blockbench",
+  "parent": "minecraft:block/cube",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "block/percolator",
-		"particle": "block/percolator"
+      "0": "hotbeanjuice:block/percolator",
+      "particle": "hotbeanjuice:block/percolator"
 	},
 	"elements": [
 		{
@@ -116,5 +117,26 @@
 				"down": {"uv": [8, 7, 6.5, 8.5], "texture": "#0"}
 			}
 		}
-	]
+    ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, -1, 0 ],
+      "translation": [ 0, 3, -2 ],
+      "scale": [ 0.8, 0.8, 0.8 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, -1, 0 ],
+      "translation": [ 0, 3, -2 ],
+      "scale": [ 0.8, 0.8, 0.8 ]
+    },
+    "ground": {
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.8, 0.8, 0.8 ]
+    },
+    "gui": {
+      "rotation": [ 37.5, -37.5, 0 ],
+      "translation": [ 0, 3.5, 0 ],
+      "scale": [ 0.8, 0.8, 0.8 ]
+    }
+  }
 }

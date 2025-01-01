@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
@@ -23,7 +23,7 @@ public class HBJItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Item Tags";
+        return "Hot Bean Juice - Item Tags";
     }
 
     @Override

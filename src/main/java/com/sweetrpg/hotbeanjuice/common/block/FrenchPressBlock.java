@@ -32,7 +32,7 @@ public class FrenchPressBlock extends AbstractCoffeeMakerBlock {
     public static final BooleanProperty HAS_WATER = BooleanProperty.create("has_water");
     public static final IntegerProperty STRENGTH = IntegerProperty.create("strength", 0, 50);
 
-    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 13.0D, 12.0D);
+    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D);
 
     public FrenchPressBlock(Properties properties) {
         super(properties);
@@ -98,8 +98,8 @@ public class FrenchPressBlock extends AbstractCoffeeMakerBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
 //        builder.add(BlockStateProperties.HORIZONTAL_FACING);
-        builder.add(FrenchPressBlock.HAS_GROUNDS);
-        builder.add(FrenchPressBlock.HAS_WATER);
-        builder.add(FrenchPressBlock.STRENGTH);
+        builder.add(HAS_GROUNDS);
+        builder.add(HAS_WATER);
+        builder.add(STRENGTH);
     }
 }

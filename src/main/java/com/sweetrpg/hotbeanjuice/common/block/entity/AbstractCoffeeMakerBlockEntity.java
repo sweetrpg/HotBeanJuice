@@ -35,6 +35,7 @@ import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public abstract class AbstractCoffeeMakerBlockEntity extends BlockEntity implements MenuProvider {
+
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
@@ -322,4 +323,5 @@ public abstract class AbstractCoffeeMakerBlockEntity extends BlockEntity impleme
     private static boolean hasRoomForFluid(AbstractCoffeeMakerBlockEntity blockEntity, AbstractBrewingRecipe recipe) {
         return blockEntity.fluidHandler.getSpace() >= (int) (recipe.getMillibuckets() * (float) FluidAttributes.BUCKET_VOLUME);
     }
+
 }

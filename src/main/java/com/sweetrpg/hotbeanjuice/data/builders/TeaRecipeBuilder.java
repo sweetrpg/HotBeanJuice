@@ -4,7 +4,7 @@
 //import com.google.gson.JsonArray;
 //import com.google.gson.JsonObject;
 //import com.sweetrpg.hotbeanjuice.common.item.crafting.BrewingSerializer;
-//import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+//import com.sweetrpg.hotbeanjuice.common.Constants;
 //import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 //import net.minecraft.advancements.Advancement;
 //import net.minecraft.advancements.AdvancementRewards;

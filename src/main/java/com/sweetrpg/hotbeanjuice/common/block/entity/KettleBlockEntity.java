@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class KettleBlockEntity extends PlacedBlockEntity {
+
     private int progress = 0;
     private int maxProgress = 100;
 

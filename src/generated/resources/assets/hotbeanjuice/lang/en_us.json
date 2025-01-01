@@ -15,8 +15,10 @@
   "block.hotbeanjuice.french_press": "French Press",
   "block.hotbeanjuice.hand_coffee_grinder": "Hand-crank Burr Coffee Grinder",
   "block.hotbeanjuice.kettle": "Kettle",
+  "block.hotbeanjuice.percolator": "Percolator",
   "block.hotbeanjuice.pint_mug": "Pint Mug",
   "block.hotbeanjuice.plate": "Plate",
+  "block.hotbeanjuice.pod_machine": "Pod Coffee Maker",
   "block.hotbeanjuice.powered_coffee_grinder": "Powered Burr Coffee Grinder",
   "block.hotbeanjuice.sun_tea_jar": "Sun Tea Jar",
   "block.hotbeanjuice.teacup": "Teacup",
@@ -69,6 +71,8 @@
   "jei.hotbeanjuice.french_press_coffee": "French Press Coffee-making",
   "jei.hotbeanjuice.grinding": "Grinding",
   "jei.hotbeanjuice.kettle_heating": "Kettle Heating",
+  "jei.hotbeanjuice.percolator_coffee": "Percolator Coffee-making",
+  "jei.hotbeanjuice.pod_coffee": "Pod Machine Coffee-making",
   "jei.hotbeanjuice.roasting": "Roasting",
   "jei.hotbeanjuice.whisking": "Whisking"
 }
