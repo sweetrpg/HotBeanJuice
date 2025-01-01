@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
@@ -23,7 +23,7 @@ public class HBJItemModelProvider extends ItemModelProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Item Models";
+        return "Hot Bean Juice - Item Models";
     }
 
     @Override
@@ -38,6 +38,7 @@ public class HBJItemModelProvider extends ItemModelProvider {
         blockItem(ModBlocks.DRIP_COFFEE_CARAFE);
         blockItem(ModBlocks.FRENCH_PRESS);
         blockItem(ModBlocks.PERCOLATOR);
+        blockItem(ModBlocks.POD_MACHINE);
 
         blockItem(ModBlocks.WILD_COFFEA_ARABICA);
         blockItem(ModBlocks.WILD_COFFEA_CANEPHORA);

@@ -1,4 +1,4 @@
-package com.sweetrpg.hotbeanjuice.common.lib;
+package com.sweetrpg.hotbeanjuice.data;
 
 import net.minecraft.util.StringRepresentable;
 

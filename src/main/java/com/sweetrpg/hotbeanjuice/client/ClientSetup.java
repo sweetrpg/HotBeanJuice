@@ -2,6 +2,8 @@ package com.sweetrpg.hotbeanjuice.client;
 
 import com.sweetrpg.hotbeanjuice.client.screen.CoffeeRoasterScreen;
 import com.sweetrpg.hotbeanjuice.client.screen.DripCoffeeMachineScreen;
+import com.sweetrpg.hotbeanjuice.client.screen.PercolatorScreen;
+import com.sweetrpg.hotbeanjuice.client.screen.PodMachineScreen;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -29,8 +31,8 @@ public class ClientSetup {
         MenuScreens.register(ModMenuTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
         MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeMachineScreen::new);
 //        MenuScreens.register(ModMenuTypes.ESPRESSO_MACHINE_MENU.get(), EspressoMachineScreen::new);
-//        MenuScreens.register(ModMenuTypes.PERCOLATOR_MENU.get(), PercolatorScreen::new);
-//        MenuScreens.register(ModMenuTypes.POD_MACHINE_MENU.get(), PodMachineScreen::new);
+        MenuScreens.register(ModMenuTypes.PERCOLATOR_MENU.get(), PercolatorScreen::new);
+        MenuScreens.register(ModMenuTypes.POD_MACHINE_MENU.get(), PodMachineScreen::new);
     }
 
     public static void setupEntityRenderers(final EntityRenderersEvent.RegisterLayerDefinitions event) {

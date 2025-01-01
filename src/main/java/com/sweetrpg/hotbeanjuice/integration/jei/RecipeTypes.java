@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.integration.jei;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.*;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import mezz.jei.api.recipe.RecipeType;
 
 public final class RecipeTypes {
@@ -13,5 +13,6 @@ public final class RecipeTypes {
     public static final RecipeType<DripCoffeeRecipe> DRIP_COFFEE = RecipeType.create(Constants.MOD_ID, DripCoffeeRecipe.RECIPE_TYPE_NAME, DripCoffeeRecipe.class);
     public static final RecipeType<FrenchPressCoffeeRecipe> FRENCH_PRESS_COFFEE = RecipeType.create(Constants.MOD_ID, FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME, FrenchPressCoffeeRecipe.class);
     public static final RecipeType<PercolatorCoffeeRecipe> PERCOLATOR_COFFEE = RecipeType.create(Constants.MOD_ID, PercolatorCoffeeRecipe.RECIPE_TYPE_NAME, PercolatorCoffeeRecipe.class);
+    public static final RecipeType<PodCoffeeRecipe> POD_COFFEE = RecipeType.create(Constants.MOD_ID, PodCoffeeRecipe.RECIPE_TYPE_NAME, PodCoffeeRecipe.class);
 
 }

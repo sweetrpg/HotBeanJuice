@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.data;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.registry.ModTags;
 import net.minecraft.data.DataGenerator;
@@ -16,7 +16,7 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     public String getName() {
-        return "Hot Bean Juice Block Tags";
+        return "Hot Bean Juice - Block Tags";
     }
 
     @Override
@@ -68,7 +68,10 @@ public class HBJBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.TEA_MAKING_DEVICES)
                 .add(ModBlocks.KETTLE.get())
                 .add(ModBlocks.SUN_TEA_JAR.get());
-//        tag(ModTags.COFFEE_MAKING_DEVICES)
+        tag(ModTags.COFFEE_MAKING_DEVICES)
+                .add(ModBlocks.DRIP_COFFEE_MACHINE.get())
+                .add(ModBlocks.PERCOLATOR.get())
+                .add(ModBlocks.POD_MACHINE.get());
         tag(ModTags.COFFEE_PROCESSING_DEVICES)
                 .add(ModBlocks.HAND_COFFEE_GRINDER.get())
                 .add(ModBlocks.POWERED_COFFEE_GRINDER.get())

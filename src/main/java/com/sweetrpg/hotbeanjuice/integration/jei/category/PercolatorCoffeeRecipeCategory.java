@@ -2,7 +2,7 @@ package com.sweetrpg.hotbeanjuice.integration.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.sweetrpg.hotbeanjuice.common.Constants;
-import com.sweetrpg.hotbeanjuice.common.item.crafting.FrenchPressCoffeeRecipe;
+import com.sweetrpg.hotbeanjuice.common.item.crafting.PercolatorCoffeeRecipe;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;
@@ -25,9 +25,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPressCoffeeRecipe> {
+public class PercolatorCoffeeRecipeCategory implements IRecipeCategory<PercolatorCoffeeRecipe> {
 
-    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, FrenchPressCoffeeRecipe.RECIPE_TYPE_NAME);
+    public static final ResourceLocation UID = new ResourceLocation(Constants.MOD_ID, PercolatorCoffeeRecipe.RECIPE_TYPE_NAME);
 
     private final Component title;
     private final IDrawable background;
@@ -37,10 +37,10 @@ public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPr
     private final IDrawable slotChance;
     protected final IDrawableAnimated heat;
 
-    public FrenchPressCoffeeRecipeCategory(IGuiHelper helper) {
-        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_FRENCHPRESS_COFFEE_TITLE);
-        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/french_press_coffee.png");
-        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.FRENCH_PRESS.get()));
+    public PercolatorCoffeeRecipeCategory(IGuiHelper helper) {
+        title = new TranslatableComponent(Constants.TRANSLATION_KEY_RECIPETYPE_PERCOLATOR_COFFEE_TITLE);
+        ResourceLocation backgroundImage = new ResourceLocation(Constants.MOD_ID, "textures/gui/jei/percolator_coffee.png");
+        icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.PERCOLATOR.get()));
         heat = helper.drawableBuilder(backgroundImage, 36, 58, 14, 14)
                 .buildAnimated(200, IDrawableAnimated.StartDirection.BOTTOM, false);
         slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
@@ -50,13 +50,13 @@ public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPr
     }
 
     @Override
-    public void setIngredients(FrenchPressCoffeeRecipe frenchPressCoffeeRecipe, IIngredients ingredients) {
-        ingredients.setInputIngredients(frenchPressCoffeeRecipe.getIngredients());
-        ingredients.setOutput(VanillaTypes.ITEM, frenchPressCoffeeRecipe.getResultItem());
+    public void setIngredients(PercolatorCoffeeRecipe percolatorCoffeeRecipe, IIngredients ingredients) {
+        ingredients.setInputIngredients(percolatorCoffeeRecipe.getIngredients());
+        ingredients.setOutput(VanillaTypes.ITEM, percolatorCoffeeRecipe.getResultItem());
     }
 
     @Override
-    public void setRecipe(IRecipeLayout recipeLayout, FrenchPressCoffeeRecipe recipe, IIngredients ingredients) {
+    public void setRecipe(IRecipeLayout recipeLayout, PercolatorCoffeeRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
@@ -69,26 +69,26 @@ public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPr
     }
 
     @Override
-    public void draw(FrenchPressCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
+    public void draw(PercolatorCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack poseStack, double mouseX, double mouseY) {
         heat.draw(poseStack, 18, 33);
         slot.draw(poseStack, 84, 20);
     }
 
     @Override
-    public List<Component> getTooltipStrings(FrenchPressCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
+    public List<Component> getTooltipStrings(PercolatorCoffeeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
         List<Component> tooltipStrings = new ArrayList<>();
 
         if(ClientRenderUtil.isCursorInsideBounds(86, 7, 9, 9, mouseX, mouseY)) {
             float experience = recipe.getExperience();
             if(experience > 0) {
-                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_FRENCH_PRESS_COFFEE_XP_TOOLTIP, experience));
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_PERCOLATOR_COFFEE_XP_TOOLTIP, experience));
             }
         }
         else if(ClientRenderUtil.isCursorInsideBounds(51, 15, 22, 38, mouseX, mouseY)) {
             int processingTime = recipe.getBrewingTime();
             if(processingTime > 0) {
                 int processingTimeSeconds = processingTime / 20;
-                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_FRENCH_PRESS_COFFEE_TIME_TOOLTIP, processingTimeSeconds));
+                tooltipStrings.add(new TranslatableComponent(Constants.TRANSLATION_KEY_GUI_JEI_PERCOLATOR_COFFEE_TIME_TOOLTIP, processingTimeSeconds));
             }
         }
 
@@ -101,13 +101,13 @@ public class FrenchPressCoffeeRecipeCategory implements IRecipeCategory<FrenchPr
     }
 
     @Override
-    public Class<? extends FrenchPressCoffeeRecipe> getRecipeClass() {
+    public Class<? extends PercolatorCoffeeRecipe> getRecipeClass() {
         return this.getRecipeType().getRecipeClass();
     }
 
     @Override
-    public RecipeType<FrenchPressCoffeeRecipe> getRecipeType() {
-        return RecipeTypes.FRENCH_PRESS_COFFEE;
+    public RecipeType<PercolatorCoffeeRecipe> getRecipeType() {
+        return RecipeTypes.PERCOLATOR_COFFEE;
     }
 
     @Override

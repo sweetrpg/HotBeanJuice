@@ -1,15 +1,12 @@
 package com.sweetrpg.hotbeanjuice.common.config;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import org.apache.commons.lang3.tuple.Pair;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ConfigHandler {
 

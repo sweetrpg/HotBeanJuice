@@ -1,6 +1,6 @@
 package com.sweetrpg.hotbeanjuice.common.item.crafting;
 
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModRecipeSerializers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;

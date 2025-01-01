@@ -3,6 +3,9 @@
   "values": [
     "hotbeanjuice:drip_coffee_machine",
     "hotbeanjuice:percolator",
-    "hotbeanjuice:french_press"
+    "hotbeanjuice:french_press",
+    "hotbeanjuice:drip_coffee_machine",
+    "hotbeanjuice:percolator",
+    "hotbeanjuice:pod_machine"
   ]
 }

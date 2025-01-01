@@ -1,9 +1,9 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.block.*;
-import com.sweetrpg.hotbeanjuice.common.lib.CoffeeType;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
+import com.sweetrpg.hotbeanjuice.data.CoffeeType;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -65,8 +65,8 @@ public class ModBlocks {
             () -> new DripCoffeeMachineBlock(Block.Properties.of(Material.WOOD).strength(0.5F).noOcclusion()));
     public static final RegistryObject<Block> PERCOLATOR = registerWithItem("percolator",
             () -> new PercolatorBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
-//    public static final RegistryObject<Block> POD_MACHINE = registerWithItem("pod_machine",
-//            () -> new PodMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
+    public static final RegistryObject<Block> POD_MACHINE = registerWithItem("pod_machine",
+            () -> new PodMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<Block> ESPRESSO_MACHINE = registerWithItem("espresso_machine",
 //            () -> new EspressoMachineBlock(Block.Properties.of(Material.METAL).strength(0.5F).noOcclusion()));
 //    public static final RegistryObject<Block> CAMPFIRE_COFFEE_POT = registerWithItem("campfire_coffee_pot",

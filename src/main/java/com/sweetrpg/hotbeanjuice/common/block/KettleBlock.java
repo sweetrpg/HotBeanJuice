@@ -1,8 +1,8 @@
 package com.sweetrpg.hotbeanjuice.common.block;
 
 import com.sweetrpg.hotbeanjuice.HotBeanJuice;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.block.entity.KettleBlockEntity;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlockEntityTypes;
 import com.sweetrpg.hotbeanjuice.common.registry.ModItems;
 import net.minecraft.client.resources.language.I18n;

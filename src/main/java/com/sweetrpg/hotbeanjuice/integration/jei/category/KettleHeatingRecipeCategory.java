@@ -1,8 +1,8 @@
 package com.sweetrpg.hotbeanjuice.integration.jei.category;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.KettleHeatingRecipe;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import com.sweetrpg.hotbeanjuice.common.registry.ModBlocks;
 import com.sweetrpg.hotbeanjuice.common.util.ClientRenderUtil;
 import com.sweetrpg.hotbeanjuice.integration.jei.RecipeTypes;

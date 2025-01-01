@@ -1,7 +1,7 @@
 package com.sweetrpg.hotbeanjuice.common.registry;
 
+import com.sweetrpg.hotbeanjuice.common.Constants;
 import com.sweetrpg.hotbeanjuice.common.item.crafting.*;
-import com.sweetrpg.hotbeanjuice.common.lib.Constants;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -26,7 +26,7 @@ public class ModRecipeSerializers {
     public static final RegistryObject<BrewingSerializer<PercolatorCoffeeRecipe>> PERCOLATOR_COFFEE_RECIPE = register("percolator_coffee", () -> new BrewingSerializer<>(PercolatorCoffeeRecipe::new, 600, "percolator"));
     //    public static final RegistryObject<BrewingSerializer<CampfireCoffeeRecipe>> CAMPFIRE_COFFEE_RECIPE = register("campfire_coffee", () -> new BrewingSerializer<>(CampfireCoffeeRecipe::new, 300, "campfire"));
     public static final RegistryObject<BrewingSerializer<FrenchPressCoffeeRecipe>> FRENCH_PRESS_COFFEE_RECIPE = register("french_press_coffee", () -> new BrewingSerializer<>(FrenchPressCoffeeRecipe::new, 500, "french_press"));
-    //    public static final RegistryObject<BrewingSerializer<PodCoffeeRecipe>> POD_COFFEE_RECIPE = register("pod_coffee", () -> new BrewingSerializer<>(PodCoffeeRecipe::new, 100, "pod"));
+    public static final RegistryObject<BrewingSerializer<PodCoffeeRecipe>> POD_COFFEE_RECIPE = register("pod_coffee", () -> new BrewingSerializer<>(PodCoffeeRecipe::new, 100, "pod"));
     //    public static final RegistryObject<BrewingSerializer<EspressoRecipe>> ESPRESSO_RECIPE = register("espresso", () -> new BrewingSerializer<>(EspressoRecipe::new, 150, ""));
 
 //        public static final RegistryObject<BrewingSerializer<BrewedTeaRecipe>> BREWED_TEA_RECIPE = register("brewed_tea", () -> new BrewingSerializer<>(BrewedTeaRecipe::new, 150, "_from_brewing"));
