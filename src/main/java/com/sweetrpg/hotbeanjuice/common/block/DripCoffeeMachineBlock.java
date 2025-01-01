@@ -121,4 +121,5 @@ public class DripCoffeeMachineBlock extends AbstractPoweredCoffeeMakerBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, ModBlockEntityTypes.DRIP_COFFEE_MACHINE_BLOCK_ENTITY.get(), DripCoffeeMachineBlockEntity::tick);
     }
+
 }

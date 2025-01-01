@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class PodMachineBlockEntity extends AbstractPoweredCoffeeMakerBlockEntity {
+
     public PodMachineBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntityTypes.POD_MACHINE_BLOCK_ENTITY.get(), pos, blockState, PodCoffeeRecipe.Type.INSTANCE);
     }
@@ -28,4 +29,5 @@ public class PodMachineBlockEntity extends AbstractPoweredCoffeeMakerBlockEntity
     public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
         return new PodMachineMenu(containerId, inventory, this, this.data);
     }
+
 }

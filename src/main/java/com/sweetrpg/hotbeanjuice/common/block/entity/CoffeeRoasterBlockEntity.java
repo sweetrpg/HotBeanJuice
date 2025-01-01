@@ -28,6 +28,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class CoffeeRoasterBlockEntity extends BlockEntity implements MenuProvider {
+
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;

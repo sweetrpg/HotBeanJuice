@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 public abstract class AbstractCoffeeMakerBlock extends BaseEntityBlock {
+
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final IntegerProperty FULLNESS = IntegerProperty.create("fullness", 0, 4);
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED; //by carafe

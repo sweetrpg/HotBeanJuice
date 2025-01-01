@@ -98,8 +98,8 @@ public class FrenchPressBlock extends AbstractCoffeeMakerBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
 //        builder.add(BlockStateProperties.HORIZONTAL_FACING);
-        builder.add(FrenchPressBlock.HAS_GROUNDS);
-        builder.add(FrenchPressBlock.HAS_WATER);
-        builder.add(FrenchPressBlock.STRENGTH);
+        builder.add(HAS_GROUNDS);
+        builder.add(HAS_WATER);
+        builder.add(STRENGTH);
     }
 }

@@ -44,5 +44,4 @@ public class ModBlockEntityTypes {
     //    public static final RegistryObject<BlockEntityType<EspressoMachineBlockEntity>> ESPRESSO_MACHINE_BLOCK_ENTITY = register("espresso_machine",
     //            () -> BlockEntityType.Builder.of(EspressoMachineBlockEntity::new, ModBlocks.ESPRESSO_MACHINE.get()).build(null));
 
-
 }

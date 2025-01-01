@@ -58,7 +58,7 @@ public class PercolatorCoffeeRecipeCategory implements IRecipeCategory<Percolato
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, PercolatorCoffeeRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
-//        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
+        //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw input
         itemStacks.init(0, true, 15, 8);

@@ -29,8 +29,8 @@ public class ModRecipeSerializers {
     public static final RegistryObject<BrewingSerializer<PodCoffeeRecipe>> POD_COFFEE_RECIPE = register("pod_coffee", () -> new BrewingSerializer<>(PodCoffeeRecipe::new, 100, "pod"));
     //    public static final RegistryObject<BrewingSerializer<EspressoRecipe>> ESPRESSO_RECIPE = register("espresso", () -> new BrewingSerializer<>(EspressoRecipe::new, 150, ""));
 
-//        public static final RegistryObject<BrewingSerializer<BrewedTeaRecipe>> BREWED_TEA_RECIPE = register("brewed_tea", () -> new BrewingSerializer<>(BrewedTeaRecipe::new, 150, "_from_brewing"));
-//        public static final RegistryObject<BrewingSerializer<SeepedTeaRecipe>> SEEPED_TEA_RECIPE = register("seeped_tea", () -> new BrewingSerializer<>(SeepedTeaRecipe::new, 150, "_from_seeping"));
+    //        public static final RegistryObject<BrewingSerializer<BrewedTeaRecipe>> BREWED_TEA_RECIPE = register("brewed_tea", () -> new BrewingSerializer<>(BrewedTeaRecipe::new, 150, "_from_brewing"));
+    //        public static final RegistryObject<BrewingSerializer<SeepedTeaRecipe>> SEEPED_TEA_RECIPE = register("seeped_tea", () -> new BrewingSerializer<>(SeepedTeaRecipe::new, 150, "_from_seeping"));
 
     private static <R extends Recipe<?>, T extends RecipeSerializer<R>> RegistryObject<SimpleRecipeSerializer<R>> register(final String name, Function<ResourceLocation, R> factory) {
         return register(name, () -> new SimpleRecipeSerializer<>(factory));

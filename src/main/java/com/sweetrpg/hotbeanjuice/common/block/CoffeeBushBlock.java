@@ -72,4 +72,5 @@ public class CoffeeBushBlock extends CropBlock {
     public boolean canBeReplaced(BlockState pState, Fluid pFluid) {
         return true;
     }
+
 }

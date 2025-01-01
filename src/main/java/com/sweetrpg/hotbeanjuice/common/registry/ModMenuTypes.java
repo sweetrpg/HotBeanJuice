@@ -27,5 +27,4 @@ public class ModMenuTypes {
         MENU_TYPES.register(event);
     }
 
-
 }

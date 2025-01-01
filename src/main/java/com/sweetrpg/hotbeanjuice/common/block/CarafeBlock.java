@@ -37,7 +37,7 @@ public class CarafeBlock extends Block {
     }
 
     @Override
-    public VoxelShape getVisualShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return Block.box(3, 0, 3, 13, 6, 13);
     }
 

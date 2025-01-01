@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class PercolatorBlockEntity extends AbstractPoweredCoffeeMakerBlockEntity {
+
     public PercolatorBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntityTypes.PERCOLATOR_BLOCK_ENTITY.get(), pos, blockState, PercolatorCoffeeRecipe.Type.INSTANCE);
     }
@@ -28,4 +29,5 @@ public class PercolatorBlockEntity extends AbstractPoweredCoffeeMakerBlockEntity
     public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
         return new PercolatorMenu(containerId, inventory, this, this.data);
     }
+
 }

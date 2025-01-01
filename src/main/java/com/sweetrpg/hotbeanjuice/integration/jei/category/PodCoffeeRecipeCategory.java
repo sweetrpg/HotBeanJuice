@@ -58,7 +58,7 @@ public class PodCoffeeRecipeCategory implements IRecipeCategory<PodCoffeeRecipe>
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, PodCoffeeRecipe recipe, IIngredients ingredients) {
         IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
-//        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
+        //        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
 
         // Draw input
         itemStacks.init(0, true, 15, 8);

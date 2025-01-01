@@ -66,6 +66,8 @@ public class CoffeeRoasterBlock extends BaseEntityBlock {
             }
         }
 
+        // TODO?
+
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
 

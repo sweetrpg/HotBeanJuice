@@ -46,5 +46,4 @@ public class PintMugBlock extends AbstractCoffeeCup {
         return state.setValue(BlockStateProperties.HORIZONTAL_FACING, rot.rotate(state.getValue(BlockStateProperties.HORIZONTAL_FACING)));
     }
 
-
 }
