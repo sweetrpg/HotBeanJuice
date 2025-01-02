@@ -9,7 +9,7 @@ A coffee mod for Minecraft
 <a href="https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice">
   <img src="http://cf.way2muchnoise.eu/full_968123_downloads.svg" alt="Curseforge Downloads">
 </a>
-<a href="https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice">
+<a href="https://modrinth.com/mod/hot-bean-juice">
   <img src="https://img.shields.io/modrinth/dt/sqqCq3AL" alt="Modrinth Downloads">
 </a>
 
