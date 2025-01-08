@@ -27,6 +27,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_ARABICA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_CANEPHORA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_RACEMOSA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEACUP.get(), RenderType.cutout());
 //
         MenuScreens.register(ModMenuTypes.COFFEE_ROASTER_MENU.get(), CoffeeRoasterScreen::new);
         MenuScreens.register(ModMenuTypes.DRIP_COFFEE_MACHINE_MENU.get(), DripCoffeeMachineScreen::new);
