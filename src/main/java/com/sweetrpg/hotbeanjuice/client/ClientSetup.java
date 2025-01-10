@@ -19,9 +19,10 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_ARABICA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_CANEPHORA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CROP_COFFEE_RACEMOSA.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_CARAFE.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRIP_COFFEE_MACHINE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FRENCH_PRESS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FRENCH_PRESS.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PERCOLATOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAND_COFFEE_GRINDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POWERED_COFFEE_GRINDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_COFFEA_ARABICA.get(), RenderType.cutout());

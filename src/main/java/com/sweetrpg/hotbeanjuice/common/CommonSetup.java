@@ -19,9 +19,9 @@ public class CommonSetup {
     }
 
     public static void registerCompostables() {
-        ComposterBlock.COMPOSTABLES.put(ModItems.WILD_COFFEA_ARABICA.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItems.WILD_COFFEA_CANEPHORA.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItems.WILD_COFFEA_RACEMOSA.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModBlocks.WILD_COFFEA_ARABICA.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModBlocks.WILD_COFFEA_CANEPHORA.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModBlocks.WILD_COFFEA_RACEMOSA.get(), 0.65F);
         ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRY_ARABICA.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRY_CANEPHORA.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRY_RACEMOSA.get(), 1.0F);

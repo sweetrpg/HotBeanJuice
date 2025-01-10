@@ -13,10 +13,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class TeacupBlock extends AbstractCoffeeCup {
 
-    protected static final VoxelShape NORTH_SHAPE = Block.box(4.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
-    protected static final VoxelShape EAST_SHAPE = Block.box(5.0D, 0.0D, 4.0D, 11.0D, 6.0D, 11.0D);
-    protected static final VoxelShape SOUTH_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 12.0D, 6.0D, 11.0D);
-    protected static final VoxelShape WEST_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 12.0D);
+    protected static final VoxelShape NORTH_SHAPE = Block.box(4.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
+    protected static final VoxelShape EAST_SHAPE = Block.box(5.0D, 0.0D, 4.0D, 11.0D, 5.0D, 11.0D);
+    protected static final VoxelShape SOUTH_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 12.0D, 5.0D, 11.0D);
+    protected static final VoxelShape WEST_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 12.0D);
 
     public TeacupBlock() {
         super(Properties.of(Material.CLAY).strength(1.0F, 5.0F).sound(SoundType.GLASS));

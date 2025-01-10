@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hotbeanjuice:item/green_tea_drink"
+  }
+}

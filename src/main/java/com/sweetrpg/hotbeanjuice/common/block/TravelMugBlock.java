@@ -9,17 +9,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class TravelMugBlock extends AbstractCoffeeCup {
 
-    protected static final VoxelShape NORTH_SHAPE = Block.box(5.5D, 0.0D, 3.5D, 10.5D, 6.0D, 10.5D);
-    protected static final VoxelShape SOUTH_SHAPE = Block.box(5.5D, 0.0D, 5.5D, 10.5D, 6.0D, 12.5D);
-    protected static final VoxelShape EAST_SHAPE = Block.box(5.5D, 0.0D, 5.5D, 12.5D, 6.0D, 10.5D);
-    protected static final VoxelShape WEST_SHAPE = Block.box(3.5D, 0.0D, 5.5D, 10.5D, 6.0D, 10.5D);
+    protected static final VoxelShape SHAPE = Block.box(6D, 0.0D, 6D, 10D, 9D, 10D);
 
     public TravelMugBlock() {
         super(Properties.of(Material.METAL).strength(1.5F, 8.0F).sound(SoundType.METAL));
@@ -28,12 +24,7 @@ public class TravelMugBlock extends AbstractCoffeeCup {
     @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-        return switch(state.getValue(BlockStateProperties.HORIZONTAL_FACING)) {
-            case UP, DOWN, NORTH -> NORTH_SHAPE;
-            case SOUTH -> SOUTH_SHAPE;
-            case WEST -> WEST_SHAPE;
-            case EAST -> EAST_SHAPE;
-        };
+        return SHAPE;
     }
 
     @SuppressWarnings("deprecation")

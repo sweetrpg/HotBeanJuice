@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class PintMugBlock extends AbstractCoffeeCup {
 
-    protected static final VoxelShape SHAPE = Block.box(1D, 0.0D, 1D, 15D, 12.0D, 15D);
+    protected static final VoxelShape SHAPE = Block.box(1D, 0.0D, 1D, 15D, 11.0D, 15D);
 
     public PintMugBlock() {
         super(Properties.of(Material.WOOD)
