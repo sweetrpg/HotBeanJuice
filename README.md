@@ -42,3 +42,7 @@ Thanks to everyone that has contributed/helped/inspired. This includes but is no
 Download it from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hot-bean-juice) or [Modrinth](https://modrinth.com/mod/hot-bean-juice).
 
 Want to know more about the mod? Take a peek at the [wiki](https://github.com/sweetrpg/HotBeanJuice/wiki)!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
